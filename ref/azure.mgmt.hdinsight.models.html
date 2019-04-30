@@ -1,0 +1,1524 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.hdinsight.models module &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="azure.mgmt.hdinsight.operations module" href="azure.mgmt.hdinsight.operations.html" />
+    <link rel="prev" title="azure.mgmt.hdinsight package" href="azure.mgmt.hdinsight.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Management Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../resourcemanagement.html">Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resourcemanagementapps.html">Apps Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resourcemanagementbatch.html">Batch Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resourcemanagementcdn.html">Content Delivery Network Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resourcemanagementcomputenetwork.html">Compute and Network Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resourcemanagementredis.html">Redis Cache Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resourcemanagementscheduler.html">Scheduler Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resourcemanagementstorage.html">Storage Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-authorization.html">Authorization Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-cognitiveservices.html">Cognitive Services Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-commerce.html">Commerce - Billing API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-datalake-analytics.html">Azure Data Lake Management Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-datalake-store.html">Azure Data Lake Management Store</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-devtestlabs.html">DevTestLabs Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-dns.html">DNS Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-iothub.html">IoTHub Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-keyvault.html">KeyVault Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-manageddisks.html">Managed Disks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-notificationhubs.html">Notification Hubs Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-powerbiembedded.html">PowerBI Embedded Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-servermanager.html">ServerManager Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-sql.html">SQL Database Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-mgmt-trafficmanager.html">Traffic Manager Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Runtime Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../batch.html">Batch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-monitor.html">Azure Monitor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_azure-keyvault.html">KeyVault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../graphrbac.html">Azure Active Directory Graph Rbac API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicebus.html">Service Bus</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="azure.mgmt.hdinsight.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.hdinsight.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="azure.mgmt.hdinsight.operations.html">azure.mgmt.hdinsight.operations module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.hdinsight.html#module-azure.mgmt.hdinsight">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a> &raquo;</li>
+        
+      <li>azure.mgmt.hdinsight.models module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/azure.mgmt.hdinsight.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-azure.mgmt.hdinsight.models">
+<span id="azure-mgmt-hdinsight-models-module"></span><h1>azure.mgmt.hdinsight.models module<a class="headerlink" href="#module-azure.mgmt.hdinsight.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterDefinition">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterDefinition</code><span class="sig-paren">(</span><em>*</em>, <em>blueprint: str = None</em>, <em>kind: str = None</em>, <em>component_version=None</em>, <em>configurations=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_definition_py3.html#ClusterDefinition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterDefinition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The cluster definition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>blueprint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the blueprint.</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of cluster.</p></li>
+<li><p><strong>component_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The versions of different services in the
+cluster.</p></li>
+<li><p><strong>configurations</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – The cluster configurations.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.SecurityProfile">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">SecurityProfile</code><span class="sig-paren">(</span><em>*</em>, <em>directory_type=None</em>, <em>domain: str = None</em>, <em>organizational_unit_dn: str = None</em>, <em>ldaps_urls=None</em>, <em>domain_username: str = None</em>, <em>domain_user_password: str = None</em>, <em>cluster_users_group_dns=None</em>, <em>aadds_resource_id: str = None</em>, <em>msi_resource_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/security_profile_py3.html#SecurityProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.SecurityProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The security profile which contains Ssh public key for the HDInsight
+cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.hdinsight.models.DirectoryType" title="azure.mgmt.hdinsight.models.DirectoryType"><em>DirectoryType</em></a>) – The directory type. Possible values include:
+‘ActiveDirectory’</p></li>
+<li><p><strong>domain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The organization’s active directory domain.</p></li>
+<li><p><strong>organizational_unit_dn</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The organizational unit within the Active
+Directory to place the cluster and service accounts.</p></li>
+<li><p><strong>ldaps_urls</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The LDAPS protocol URLs to communicate with the Active
+Directory.</p></li>
+<li><p><strong>domain_username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The domain user account that will have admin
+privileges on the cluster.</p></li>
+<li><p><strong>domain_user_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The domain admin password.</p></li>
+<li><p><strong>cluster_users_group_dns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Optional. The Distinguished Names for
+cluster user groups</p></li>
+<li><p><strong>aadds_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource ID of the user’s Azure Active
+Directory Domain Service.</p></li>
+<li><p><strong>msi_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User assigned identity that has permissions to
+read and create cluster-related artifacts in the user’s AADDS.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.HardwareProfile">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">HardwareProfile</code><span class="sig-paren">(</span><em>*</em>, <em>vm_size: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/hardware_profile_py3.html#HardwareProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.HardwareProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The hardware profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>vm_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The size of the VM</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.VirtualNetworkProfile">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">VirtualNetworkProfile</code><span class="sig-paren">(</span><em>*</em>, <em>id: str = None</em>, <em>subnet: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/virtual_network_profile_py3.html#VirtualNetworkProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.VirtualNetworkProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The virtual network properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ID of the virtual network.</p></li>
+<li><p><strong>subnet</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the subnet.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.DataDisksGroups">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">DataDisksGroups</code><span class="sig-paren">(</span><em>*</em>, <em>disks_per_node: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/data_disks_groups_py3.html#DataDisksGroups"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.DataDisksGroups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The data disks groups for the role.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>disks_per_node</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of disks per node.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>storage_account_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ReadOnly. The storage account type. Do not set
+this value.</p></li>
+<li><p><strong>disk_size_gb</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – ReadOnly. The DiskSize in GB. Do not set this value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.SshPublicKey">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">SshPublicKey</code><span class="sig-paren">(</span><em>*</em>, <em>certificate_data: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/ssh_public_key_py3.html#SshPublicKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.SshPublicKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The SSH public key for the cluster nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>certificate_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The certificate for SSH.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.SshProfile">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">SshProfile</code><span class="sig-paren">(</span><em>*</em>, <em>public_keys=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/ssh_profile_py3.html#SshProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.SshProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The list of SSH public keys.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>public_keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.SshPublicKey" title="azure.mgmt.hdinsight.models.SshPublicKey"><em>SshPublicKey</em></a><em>]</em>) – The list of SSH public keys.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.LinuxOperatingSystemProfile">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">LinuxOperatingSystemProfile</code><span class="sig-paren">(</span><em>*</em>, <em>username: str = None</em>, <em>password: str = None</em>, <em>ssh_profile=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/linux_operating_system_profile_py3.html#LinuxOperatingSystemProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.LinuxOperatingSystemProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The ssh username, password, and ssh public key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The username.</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The password.</p></li>
+<li><p><strong>ssh_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.SshProfile" title="azure.mgmt.hdinsight.models.SshProfile"><em>SshProfile</em></a>) – The SSH profile.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.OsProfile">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">OsProfile</code><span class="sig-paren">(</span><em>*</em>, <em>linux_operating_system_profile=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/os_profile_py3.html#OsProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.OsProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Linux operation systems profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>linux_operating_system_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.LinuxOperatingSystemProfile" title="azure.mgmt.hdinsight.models.LinuxOperatingSystemProfile"><em>LinuxOperatingSystemProfile</em></a>) – The Linux OS profile.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ScriptAction">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ScriptAction</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>uri: str</em>, <em>parameters: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/script_action_py3.html#ScriptAction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ScriptAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Describes a script action on role on the cluster.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name of the script action.</p></li>
+<li><p><strong>uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The URI to the script.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The parameters for the script provided.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.Role">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">Role</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>min_instance_count: int = None</em>, <em>target_instance_count: int = None</em>, <em>hardware_profile=None</em>, <em>os_profile=None</em>, <em>virtual_network_profile=None</em>, <em>data_disks_groups=None</em>, <em>script_actions=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/role_py3.html#Role"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.Role" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Describes a role on the cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the role.</p></li>
+<li><p><strong>min_instance_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The minimum instance count of the cluster.</p></li>
+<li><p><strong>target_instance_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The instance count of the cluster.</p></li>
+<li><p><strong>hardware_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.HardwareProfile" title="azure.mgmt.hdinsight.models.HardwareProfile"><em>HardwareProfile</em></a>) – The hardware profile.</p></li>
+<li><p><strong>os_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.OsProfile" title="azure.mgmt.hdinsight.models.OsProfile"><em>OsProfile</em></a>) – The operating system profile.</p></li>
+<li><p><strong>virtual_network_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.VirtualNetworkProfile" title="azure.mgmt.hdinsight.models.VirtualNetworkProfile"><em>VirtualNetworkProfile</em></a>) – The virtual network profile.</p></li>
+<li><p><strong>data_disks_groups</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.DataDisksGroups" title="azure.mgmt.hdinsight.models.DataDisksGroups"><em>DataDisksGroups</em></a><em>]</em>) – The data disks groups for the role.</p></li>
+<li><p><strong>script_actions</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.ScriptAction" title="azure.mgmt.hdinsight.models.ScriptAction"><em>ScriptAction</em></a><em>]</em>) – The list of script actions on the role.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ComputeProfile">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ComputeProfile</code><span class="sig-paren">(</span><em>*</em>, <em>roles=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/compute_profile_py3.html#ComputeProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ComputeProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Describes the compute profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>roles</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.Role" title="azure.mgmt.hdinsight.models.Role"><em>Role</em></a><em>]</em>) – The list of roles in the cluster.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.StorageAccount">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">StorageAccount</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>is_default: bool = None</em>, <em>container: str = None</em>, <em>file_system: str = None</em>, <em>key: str = None</em>, <em>resource_id: str = None</em>, <em>msi_resource_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/storage_account_py3.html#StorageAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.StorageAccount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The storage Account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the storage account.</p></li>
+<li><p><strong>is_default</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether or not the storage account is the default
+storage account.</p></li>
+<li><p><strong>container</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The container in the storage account, only to be
+specified for WASB storage accounts.</p></li>
+<li><p><strong>file_system</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The filesystem, only to be specified for Azure Data
+Lake Storage type Gen 2.</p></li>
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The storage account access key.</p></li>
+<li><p><strong>resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource ID of storage account, only to be
+specified for Azure Data Lake Storage Gen 2.</p></li>
+<li><p><strong>msi_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The managed identity (MSI) that is allowed to
+access the storage account, only to be specified for Azure Data Lake
+Storage Gen 2.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.StorageProfile">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">StorageProfile</code><span class="sig-paren">(</span><em>*</em>, <em>storageaccounts=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/storage_profile_py3.html#StorageProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.StorageProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The storage profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>storageaccounts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.StorageAccount" title="azure.mgmt.hdinsight.models.StorageAccount"><em>StorageAccount</em></a><em>]</em>) – The list of storage accounts in the cluster.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.DiskEncryptionProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">DiskEncryptionProperties</code><span class="sig-paren">(</span><em>*</em>, <em>vault_uri: str = None</em>, <em>key_name: str = None</em>, <em>key_version: str = None</em>, <em>encryption_algorithm=None</em>, <em>msi_resource_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/disk_encryption_properties_py3.html#DiskEncryptionProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.DiskEncryptionProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The disk encryption properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vault_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Base key vault URI where the customers key is located
+eg. <a class="reference external" href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p></li>
+<li><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Key name that is used for enabling disk encryption.</p></li>
+<li><p><strong>key_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specific key version that is used for enabling disk
+encryption.</p></li>
+<li><p><strong>encryption_algorithm</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.JsonWebKeyEncryptionAlgorithm" title="azure.mgmt.hdinsight.models.JsonWebKeyEncryptionAlgorithm"><em>JsonWebKeyEncryptionAlgorithm</em></a>) – Algorithm identifier for encryption, default
+RSA-OAEP. Possible values include: ‘RSA-OAEP’, ‘RSA-OAEP-256’, ‘RSA1_5’</p></li>
+<li><p><strong>msi_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID of Managed Identity that is used to
+access the key vault.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterCreateProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterCreateProperties</code><span class="sig-paren">(</span><em>*</em>, <em>cluster_version: str = None</em>, <em>os_type=None</em>, <em>tier=None</em>, <em>cluster_definition=None</em>, <em>security_profile=None</em>, <em>compute_profile=None</em>, <em>storage_profile=None</em>, <em>disk_encryption_properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_create_properties_py3.html#ClusterCreateProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterCreateProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The cluster create parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The version of the cluster.</p></li>
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.hdinsight.models.OSType" title="azure.mgmt.hdinsight.models.OSType"><em>OSType</em></a>) – The type of operating system. Possible values include:
+‘Windows’, ‘Linux’</p></li>
+<li><p><strong>tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.hdinsight.models.Tier" title="azure.mgmt.hdinsight.models.Tier"><em>Tier</em></a>) – The cluster tier. Possible values include: ‘Standard’,
+‘Premium’</p></li>
+<li><p><strong>cluster_definition</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.ClusterDefinition" title="azure.mgmt.hdinsight.models.ClusterDefinition"><em>ClusterDefinition</em></a>) – The cluster definition.</p></li>
+<li><p><strong>security_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.SecurityProfile" title="azure.mgmt.hdinsight.models.SecurityProfile"><em>SecurityProfile</em></a>) – The security profile.</p></li>
+<li><p><strong>compute_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.ComputeProfile" title="azure.mgmt.hdinsight.models.ComputeProfile"><em>ComputeProfile</em></a>) – The compute profile.</p></li>
+<li><p><strong>storage_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.StorageProfile" title="azure.mgmt.hdinsight.models.StorageProfile"><em>StorageProfile</em></a>) – The storage profile.</p></li>
+<li><p><strong>disk_encryption_properties</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.DiskEncryptionProperties" title="azure.mgmt.hdinsight.models.DiskEncryptionProperties"><em>DiskEncryptionProperties</em></a>) – The disk encryption properties.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterIdentityUserAssignedIdentitiesValue">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterIdentityUserAssignedIdentitiesValue</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_identity_user_assigned_identities_value_py3.html#ClusterIdentityUserAssignedIdentitiesValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterIdentityUserAssignedIdentitiesValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ClusterIdentityUserAssignedIdentitiesValue.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The principal id of user assigned identity.</p></li>
+<li><p><strong>client_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The client id of user assigned identity.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterIdentity">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterIdentity</code><span class="sig-paren">(</span><em>*</em>, <em>type=None</em>, <em>user_assigned_identities=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_identity_py3.html#ClusterIdentity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Identity for the cluster.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The principal id of cluster identity. This property
+will only be provided for a system assigned identity.</p></li>
+<li><p><strong>tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The tenant id associated with the cluster. This property
+will only be provided for a system assigned identity.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.hdinsight.models.ResourceIdentityType" title="azure.mgmt.hdinsight.models.ResourceIdentityType"><em>ResourceIdentityType</em></a>) – The type of identity used for the cluster. The type
+‘SystemAssigned, UserAssigned’ includes both an implicitly created
+identity and a set of user assigned identities. Possible values include:
+‘SystemAssigned’, ‘UserAssigned’, ‘SystemAssigned, UserAssigned’, ‘None’</p></li>
+<li><p><strong>user_assigned_identities</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>,
+</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.ClusterIdentityUserAssignedIdentitiesValue" title="azure.mgmt.hdinsight.models.ClusterIdentityUserAssignedIdentitiesValue"><em>ClusterIdentityUserAssignedIdentitiesValue</em></a><em>]</em>) – The list of user identities associated
+with the cluster. The user identity dictionary key references will be ARM
+resource ids in the form:
+‘/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterCreateParametersExtended">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterCreateParametersExtended</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>properties=None</em>, <em>identity=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_create_parameters_extended_py3.html#ClusterCreateParametersExtended"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterCreateParametersExtended" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The CreateCluster request parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the cluster.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The resource tags.</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.ClusterCreateProperties" title="azure.mgmt.hdinsight.models.ClusterCreateProperties"><em>ClusterCreateProperties</em></a>) – The cluster create parameters.</p></li>
+<li><p><strong>identity</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.ClusterIdentity" title="azure.mgmt.hdinsight.models.ClusterIdentity"><em>ClusterIdentity</em></a>) – The identity of the cluster, if configured.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterPatchParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterPatchParameters</code><span class="sig-paren">(</span><em>*</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_patch_parameters_py3.html#ClusterPatchParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterPatchParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The PatchCluster request parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The resource tags.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.QuotaInfo">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">QuotaInfo</code><span class="sig-paren">(</span><em>*</em>, <em>cores_used: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/quota_info_py3.html#QuotaInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.QuotaInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The quota properties for the cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cores_used</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The cores used by the cluster.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.Errors">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">Errors</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/errors_py3.html#Errors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.Errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The error message associated with the cluster creation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error code.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error message.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ConnectivityEndpoint">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ConnectivityEndpoint</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>protocol: str = None</em>, <em>location: str = None</em>, <em>port: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/connectivity_endpoint_py3.html#ConnectivityEndpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ConnectivityEndpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The connectivity properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the endpoint.</p></li>
+<li><p><strong>protocol</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The protocol of the endpoint.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the endpoint.</p></li>
+<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The port to connect to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterGetProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterGetProperties</code><span class="sig-paren">(</span><em>*</em>, <em>cluster_definition</em>, <em>cluster_version: str = None</em>, <em>os_type=None</em>, <em>tier=None</em>, <em>security_profile=None</em>, <em>compute_profile=None</em>, <em>provisioning_state=None</em>, <em>created_date: str = None</em>, <em>cluster_state: str = None</em>, <em>quota_info=None</em>, <em>errors=None</em>, <em>connectivity_endpoints=None</em>, <em>disk_encryption_properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_get_properties_py3.html#ClusterGetProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterGetProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The properties of cluster.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The version of the cluster.</p></li>
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.hdinsight.models.OSType" title="azure.mgmt.hdinsight.models.OSType"><em>OSType</em></a>) – The type of operating system. Possible values include:
+‘Windows’, ‘Linux’</p></li>
+<li><p><strong>tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.hdinsight.models.Tier" title="azure.mgmt.hdinsight.models.Tier"><em>Tier</em></a>) – The cluster tier. Possible values include: ‘Standard’,
+‘Premium’</p></li>
+<li><p><strong>cluster_definition</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.ClusterDefinition" title="azure.mgmt.hdinsight.models.ClusterDefinition"><em>ClusterDefinition</em></a>) – Required. The cluster definition.</p></li>
+<li><p><strong>security_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.SecurityProfile" title="azure.mgmt.hdinsight.models.SecurityProfile"><em>SecurityProfile</em></a>) – The security profile.</p></li>
+<li><p><strong>compute_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.ComputeProfile" title="azure.mgmt.hdinsight.models.ComputeProfile"><em>ComputeProfile</em></a>) – The compute profile.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState" title="azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState"><em>HDInsightClusterProvisioningState</em></a>) – The provisioning state, which only appears in
+the response. Possible values include: ‘InProgress’, ‘Failed’,
+‘Succeeded’, ‘Canceled’, ‘Deleting’</p></li>
+<li><p><strong>created_date</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The date on which the cluster was created.</p></li>
+<li><p><strong>cluster_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The state of the cluster.</p></li>
+<li><p><strong>quota_info</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.QuotaInfo" title="azure.mgmt.hdinsight.models.QuotaInfo"><em>QuotaInfo</em></a>) – The quota information.</p></li>
+<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.Errors" title="azure.mgmt.hdinsight.models.Errors"><em>Errors</em></a><em>]</em>) – The list of errors.</p></li>
+<li><p><strong>connectivity_endpoints</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.ConnectivityEndpoint" title="azure.mgmt.hdinsight.models.ConnectivityEndpoint"><em>ConnectivityEndpoint</em></a><em>]</em>) – The list of connectivity endpoints.</p></li>
+<li><p><strong>disk_encryption_properties</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.DiskEncryptionProperties" title="azure.mgmt.hdinsight.models.DiskEncryptionProperties"><em>DiskEncryptionProperties</em></a>) – The disk encryption properties.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.Cluster">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">Cluster</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>etag: str = None</em>, <em>properties=None</em>, <em>identity=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_py3.html#Cluster"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.Cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.hdinsight.models.tracked_resource_py3.TrackedResource</span></code></p>
+<p>The HDInsight cluster.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified resource Id for the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2018_01_01_preview.models.html#azure.mgmt.eventhub.v2018_01_01_preview.models.ClusterSku.name" title="azure.mgmt.eventhub.v2018_01_01_preview.models.ClusterSku.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Region where the resource lives</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ETag for the resource</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.ClusterGetProperties" title="azure.mgmt.hdinsight.models.ClusterGetProperties"><em>ClusterGetProperties</em></a>) – The properties of the cluster.</p></li>
+<li><p><strong>identity</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.ClusterIdentity" title="azure.mgmt.hdinsight.models.ClusterIdentity"><em>ClusterIdentity</em></a>) – The identity of the cluster, if configured.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.RuntimeScriptAction">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">RuntimeScriptAction</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>uri: str</em>, <em>roles</em>, <em>parameters: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/runtime_script_action_py3.html#RuntimeScriptAction"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.RuntimeScriptAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Describes a script action on a running cluster.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name of the script action.</p></li>
+<li><p><strong>uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The URI to the script.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The parameters for the script</p></li>
+<li><p><strong>roles</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. The list of roles where script will be executed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The application name of the script action, if any.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ExecuteScriptActionParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ExecuteScriptActionParameters</code><span class="sig-paren">(</span><em>*</em>, <em>persist_on_success: bool</em>, <em>script_actions=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/execute_script_action_parameters_py3.html#ExecuteScriptActionParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ExecuteScriptActionParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The parameters for the script actions to execute on a running cluster.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>script_actions</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.RuntimeScriptAction" title="azure.mgmt.hdinsight.models.RuntimeScriptAction"><em>RuntimeScriptAction</em></a><em>]</em>) – The list of run time script actions.</p></li>
+<li><p><strong>persist_on_success</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. Gets or sets if the scripts needs to
+be persisted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterListPersistedScriptActionsResult">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterListPersistedScriptActionsResult</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_list_persisted_script_actions_result_py3.html#ClusterListPersistedScriptActionsResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterListPersistedScriptActionsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The ListPersistedScriptActions operation response.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.RuntimeScriptAction" title="azure.mgmt.hdinsight.models.RuntimeScriptAction"><em>RuntimeScriptAction</em></a><em>]</em>) – The list of Persisted Script Actions.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>next_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link (url) to the next page of results.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ScriptActionExecutionSummary">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ScriptActionExecutionSummary</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/script_action_execution_summary_py3.html#ScriptActionExecutionSummary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ScriptActionExecutionSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The execution summary of a script action.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.RunQueryFilterOperand.status" title="azure.mgmt.datafactory.models.RunQueryFilterOperand.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The status of script action execution.</p></li>
+<li><p><strong>instance_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The instance count for a given script action
+execution status.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.RuntimeScriptActionDetail">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">RuntimeScriptActionDetail</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>uri: str</em>, <em>roles</em>, <em>parameters: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/runtime_script_action_detail_py3.html#RuntimeScriptActionDetail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.RuntimeScriptActionDetail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.hdinsight.models.runtime_script_action_py3.RuntimeScriptAction</span></code></p>
+<p>The execution details of a script action.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name of the script action.</p></li>
+<li><p><strong>uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The URI to the script.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The parameters for the script</p></li>
+<li><p><strong>roles</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. The list of roles where script will be executed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The application name of the script action, if any.</p></li>
+<li><p><strong>script_execution_id</strong> (<em>long</em>) – The execution id of the script action.</p></li>
+<li><p><strong>start_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The start time of script action execution.</p></li>
+<li><p><strong>end_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The end time of script action execution.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.RunQueryFilterOperand.status" title="azure.mgmt.datafactory.models.RunQueryFilterOperand.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The current execution status of the script action.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.monitor.models.html#azure.mgmt.monitor.models.AutoscaleNotification.operation" title="azure.mgmt.monitor.models.AutoscaleNotification.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The reason why the script action was executed.</p></li>
+<li><p><strong>execution_summary</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.ScriptActionExecutionSummary" title="azure.mgmt.hdinsight.models.ScriptActionExecutionSummary"><em>ScriptActionExecutionSummary</em></a><em>]</em>) – The summary of script action execution result.</p></li>
+<li><p><strong>debug_information</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The script action execution debug information.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterListRuntimeScriptActionDetailResult">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterListRuntimeScriptActionDetailResult</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_list_runtime_script_action_detail_result_py3.html#ClusterListRuntimeScriptActionDetailResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterListRuntimeScriptActionDetailResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The list runtime script action detail response.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.RuntimeScriptActionDetail" title="azure.mgmt.hdinsight.models.RuntimeScriptActionDetail"><em>RuntimeScriptActionDetail</em></a><em>]</em>) – The list of persisted script action details for the cluster.</p></li>
+<li><p><strong>next_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link (url) to the next page of results.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterResizeParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterResizeParameters</code><span class="sig-paren">(</span><em>*</em>, <em>target_instance_count: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_resize_parameters_py3.html#ClusterResizeParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterResizeParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Resize Cluster request parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>target_instance_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The target instance count for the operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterDiskEncryptionParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterDiskEncryptionParameters</code><span class="sig-paren">(</span><em>*</em>, <em>vault_uri: str = None</em>, <em>key_name: str = None</em>, <em>key_version: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_disk_encryption_parameters_py3.html#ClusterDiskEncryptionParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterDiskEncryptionParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Disk Encryption Cluster request parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vault_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Base key vault URI where the customers key is located
+eg. <a class="reference external" href="https://myvault.vault.azure.net">https://myvault.vault.azure.net</a></p></li>
+<li><p><strong>key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Key name that is used for enabling disk encryption.</p></li>
+<li><p><strong>key_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specific key version that is used for enabling disk
+encryption.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.UpdateGatewaySettingsParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">UpdateGatewaySettingsParameters</code><span class="sig-paren">(</span><em>*</em>, <em>is_credential_enabled: bool = True</em>, <em>user_name: str = None</em>, <em>password: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/update_gateway_settings_parameters_py3.html#UpdateGatewaySettingsParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.UpdateGatewaySettingsParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The update gateway settings request parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>is_credential_enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates whether or not the gateway
+settings based authorization is enabled. Default value: True .</p></li>
+<li><p><strong>user_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The gateway settings user name.</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The gateway settings user password.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.GatewaySettings">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">GatewaySettings</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/gateway_settings_py3.html#GatewaySettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.GatewaySettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Gateway settings.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>is_credential_enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Indicates whether or not the gateway settings
+based authorization is enabled.</p></li>
+<li><p><strong>user_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The gateway settings user name.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.containerregistry.v2017_03_01.models.html#azure.mgmt.containerregistry.v2017_03_01.models.PasswordName.password" title="azure.mgmt.containerregistry.v2017_03_01.models.PasswordName.password"><strong>password</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The gateway settings user password.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.OperationResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">OperationResource</code><span class="sig-paren">(</span><em>*</em>, <em>status=None</em>, <em>error=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/operation_resource_py3.html#OperationResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.OperationResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The azure async operation response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.hdinsight.models.AsyncOperationState" title="azure.mgmt.hdinsight.models.AsyncOperationState"><em>AsyncOperationState</em></a>) – The async operation state. Possible values include:
+‘InProgress’, ‘Succeeded’, ‘Failed’</p></li>
+<li><p><strong>error</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.Errors" title="azure.mgmt.hdinsight.models.Errors"><em>Errors</em></a>) – The operation error information.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.Resource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The core properties of ARM resources.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified resource Id for the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2018_01_01_preview.models.html#azure.mgmt.eventhub.v2018_01_01_preview.models.ClusterSku.name" title="azure.mgmt.eventhub.v2018_01_01_preview.models.ClusterSku.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.TrackedResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">TrackedResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.hdinsight.models.resource_py3.Resource</span></code></p>
+<p>The resource model definition for a ARM tracked top level resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified resource Id for the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2018_01_01_preview.models.html#azure.mgmt.eventhub.v2018_01_01_preview.models.ClusterSku.name" title="azure.mgmt.eventhub.v2018_01_01_preview.models.ClusterSku.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Region where the resource lives</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ProxyResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ProxyResource</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/proxy_resource_py3.html#ProxyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ProxyResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.hdinsight.models.resource_py3.Resource</span></code></p>
+<p>The resource model definition for a ARM proxy resource. It will have
+everything other than required location and tags.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified resource Id for the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2018_01_01_preview.models.html#azure.mgmt.eventhub.v2018_01_01_preview.models.ClusterSku.name" title="azure.mgmt.eventhub.v2018_01_01_preview.models.ClusterSku.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ErrorResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Describes the format of Error response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error code</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error message indicating why the operation failed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.mgmt.hdinsight.models.ErrorResponseException">
+<em class="property">exception </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘ErrorResponse’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ApplicationGetHttpsEndpoint">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ApplicationGetHttpsEndpoint</code><span class="sig-paren">(</span><em>*</em>, <em>access_modes=None</em>, <em>location: str = None</em>, <em>destination_port: int = None</em>, <em>public_port: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/application_get_https_endpoint_py3.html#ApplicationGetHttpsEndpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ApplicationGetHttpsEndpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Gets the application HTTP endpoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access_modes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of access modes for the application.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the endpoint.</p></li>
+<li><p><strong>destination_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The destination port to connect to.</p></li>
+<li><p><strong>public_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The public port to connect to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ApplicationGetEndpoint">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ApplicationGetEndpoint</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>destination_port: int = None</em>, <em>public_port: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/application_get_endpoint_py3.html#ApplicationGetEndpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ApplicationGetEndpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Gets the application SSH endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the endpoint.</p></li>
+<li><p><strong>destination_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The destination port to connect to.</p></li>
+<li><p><strong>public_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The public port to connect to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ApplicationProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ApplicationProperties</code><span class="sig-paren">(</span><em>*</em>, <em>compute_profile=None</em>, <em>install_script_actions=None</em>, <em>uninstall_script_actions=None</em>, <em>https_endpoints=None</em>, <em>ssh_endpoints=None</em>, <em>application_type: str = None</em>, <em>errors=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/application_properties_py3.html#ApplicationProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ApplicationProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The HDInsight cluster application GET response.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_profile</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.ComputeProfile" title="azure.mgmt.hdinsight.models.ComputeProfile"><em>ComputeProfile</em></a>) – The list of roles in the cluster.</p></li>
+<li><p><strong>install_script_actions</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.RuntimeScriptAction" title="azure.mgmt.hdinsight.models.RuntimeScriptAction"><em>RuntimeScriptAction</em></a><em>]</em>) – The list of install script actions.</p></li>
+<li><p><strong>uninstall_script_actions</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.RuntimeScriptAction" title="azure.mgmt.hdinsight.models.RuntimeScriptAction"><em>RuntimeScriptAction</em></a><em>]</em>) – The list of uninstall script actions.</p></li>
+<li><p><strong>https_endpoints</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.ApplicationGetHttpsEndpoint" title="azure.mgmt.hdinsight.models.ApplicationGetHttpsEndpoint"><em>ApplicationGetHttpsEndpoint</em></a><em>]</em>) – The list of application HTTPS endpoints.</p></li>
+<li><p><strong>ssh_endpoints</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.ApplicationGetEndpoint" title="azure.mgmt.hdinsight.models.ApplicationGetEndpoint"><em>ApplicationGetEndpoint</em></a><em>]</em>) – The list of application SSH endpoints.</p></li>
+<li><p><strong>application_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The application type.</p></li>
+<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.Errors" title="azure.mgmt.hdinsight.models.Errors"><em>Errors</em></a><em>]</em>) – The list of errors.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning state of the application.</p></li>
+<li><p><strong>application_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The application state.</p></li>
+<li><p><strong>created_date</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The application create date time.</p></li>
+<li><p><strong>marketplace_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The marketplace identifier.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.Application">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">Application</code><span class="sig-paren">(</span><em>*</em>, <em>etag: str = None</em>, <em>tags=None</em>, <em>properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/application_py3.html#Application"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.Application" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.hdinsight.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>The HDInsight cluster application.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified resource Id for the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.eventhub.v2018_01_01_preview.models.html#azure.mgmt.eventhub.v2018_01_01_preview.models.ClusterSku.name" title="azure.mgmt.eventhub.v2018_01_01_preview.models.ClusterSku.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ETag for the application</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags for the application.</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.ApplicationProperties" title="azure.mgmt.hdinsight.models.ApplicationProperties"><em>ApplicationProperties</em></a>) – The properties of the application.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.LocalizedName">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">LocalizedName</code><span class="sig-paren">(</span><em>*</em>, <em>value: str = None</em>, <em>localized_value: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/localized_name_py3.html#LocalizedName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.LocalizedName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The details about the localizable name of a type of usage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the used resource.</p></li>
+<li><p><strong>localized_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized name of the used resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.Usage">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">Usage</code><span class="sig-paren">(</span><em>*</em>, <em>unit: str = None</em>, <em>current_value: int = None</em>, <em>limit: int = None</em>, <em>name=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/usage_py3.html#Usage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.Usage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The details about the usage of a particular limited resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>unit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of measurement for usage.</p></li>
+<li><p><strong>current_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The current usage.</p></li>
+<li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The maximum allowed usage.</p></li>
+<li><p><strong>name</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.LocalizedName" title="azure.mgmt.hdinsight.models.LocalizedName"><em>LocalizedName</em></a>) – The details about the localizable name of the used resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.UsagesListResult">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">UsagesListResult</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/usages_list_result_py3.html#UsagesListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.UsagesListResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The response for the operation to get regional usages for a subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.hdinsight.models.Usage" title="azure.mgmt.hdinsight.models.Usage"><em>Usage</em></a><em>]</em>) – The list of usages.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterConfigurations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterConfigurations</code><span class="sig-paren">(</span><em>*</em>, <em>configurations=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_configurations_py3.html#ClusterConfigurations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterConfigurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The configuration object for the specified cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>configurations</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em><em>]</em>) – The configuration object for the specified
+configuration for the specified cluster.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.Extension">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">Extension</code><span class="sig-paren">(</span><em>*</em>, <em>workspace_id: str = None</em>, <em>primary_key: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/extension_py3.html#Extension"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.Extension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cluster monitoring extensions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workspace_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The workspace ID for the cluster monitoring
+extension.</p></li>
+<li><p><strong>primary_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The certificate for the cluster monitoring extensions.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterMonitoringResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterMonitoringResponse</code><span class="sig-paren">(</span><em>*</em>, <em>cluster_monitoring_enabled: bool = None</em>, <em>workspace_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_monitoring_response_py3.html#ClusterMonitoringResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterMonitoringResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Operations Management Suite (OMS) status response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_monitoring_enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The status of the Operations Management
+Suite (OMS) on the HDInsight cluster.</p></li>
+<li><p><strong>workspace_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The workspace ID of the Operations Management Suite
+(OMS) on the HDInsight cluster.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterMonitoringRequest">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterMonitoringRequest</code><span class="sig-paren">(</span><em>*</em>, <em>workspace_id: str = None</em>, <em>primary_key: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_monitoring_request_py3.html#ClusterMonitoringRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterMonitoringRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Operations Management Suite (OMS) parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workspace_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Operations Management Suite (OMS) workspace ID.</p></li>
+<li><p><strong>primary_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Operations Management Suite (OMS) workspace key.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ScriptActionPersistedGetResponseSpec">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ScriptActionPersistedGetResponseSpec</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>uri: str = None</em>, <em>parameters: str = None</em>, <em>roles=None</em>, <em>application_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/script_action_persisted_get_response_spec_py3.html#ScriptActionPersistedGetResponseSpec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ScriptActionPersistedGetResponseSpec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The persisted script action for cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of script action.</p></li>
+<li><p><strong>uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URI to the script.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The parameters for the script provided.</p></li>
+<li><p><strong>roles</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of roles where script will be executed.</p></li>
+<li><p><strong>application_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The application name for the script action.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.OperationDisplay">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>*</em>, <em>provider: str = None</em>, <em>resource: str = None</em>, <em>operation: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The object that represents the operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The service provider: Microsoft.HDInsight</p></li>
+<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource on which the operation is performed:
+Cluster, Applications, etc.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The operation type: read, write, delete, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.Operation">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The HDInsight REST API operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The operation name: {provider}/{resource}/{operation}</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.hdinsight.models.OperationDisplay" title="azure.mgmt.hdinsight.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that represents the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ClusterPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ClusterPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/cluster_paged.html#ClusterPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ClusterPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.hdinsight.models.Cluster" title="azure.mgmt.hdinsight.models.Cluster"><code class="xref py py-class docutils literal notranslate"><span class="pre">Cluster</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ApplicationPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ApplicationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/application_paged.html#ApplicationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ApplicationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.hdinsight.models.Application" title="azure.mgmt.hdinsight.models.Application"><code class="xref py py-class docutils literal notranslate"><span class="pre">Application</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.RuntimeScriptActionDetailPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">RuntimeScriptActionDetailPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/runtime_script_action_detail_paged.html#RuntimeScriptActionDetailPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.RuntimeScriptActionDetailPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.hdinsight.models.RuntimeScriptActionDetail" title="azure.mgmt.hdinsight.models.RuntimeScriptActionDetail"><code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeScriptActionDetail</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.OperationPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">OperationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.hdinsight.models.Operation" title="azure.mgmt.hdinsight.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.DirectoryType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">DirectoryType</code><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/hd_insight_management_client_enums.html#DirectoryType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.DirectoryType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.DirectoryType.active_directory">
+<code class="descname">active_directory</code><em class="property"> = 'ActiveDirectory'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.DirectoryType.active_directory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.OSType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">OSType</code><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/hd_insight_management_client_enums.html#OSType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.OSType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.OSType.linux">
+<code class="descname">linux</code><em class="property"> = 'Linux'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.OSType.linux" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.OSType.windows">
+<code class="descname">windows</code><em class="property"> = 'Windows'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.OSType.windows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.Tier">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">Tier</code><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/hd_insight_management_client_enums.html#Tier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.Tier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.Tier.premium">
+<code class="descname">premium</code><em class="property"> = 'Premium'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.Tier.premium" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.Tier.standard">
+<code class="descname">standard</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.Tier.standard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.JsonWebKeyEncryptionAlgorithm">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">JsonWebKeyEncryptionAlgorithm</code><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/hd_insight_management_client_enums.html#JsonWebKeyEncryptionAlgorithm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.JsonWebKeyEncryptionAlgorithm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.JsonWebKeyEncryptionAlgorithm.rsa1_5">
+<code class="descname">rsa1_5</code><em class="property"> = 'RSA1_5'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.JsonWebKeyEncryptionAlgorithm.rsa1_5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.JsonWebKeyEncryptionAlgorithm.rsa_oaep">
+<code class="descname">rsa_oaep</code><em class="property"> = 'RSA-OAEP'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.JsonWebKeyEncryptionAlgorithm.rsa_oaep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.JsonWebKeyEncryptionAlgorithm.rsa_oaep_256">
+<code class="descname">rsa_oaep_256</code><em class="property"> = 'RSA-OAEP-256'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.JsonWebKeyEncryptionAlgorithm.rsa_oaep_256" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.ResourceIdentityType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">ResourceIdentityType</code><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/hd_insight_management_client_enums.html#ResourceIdentityType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.ResourceIdentityType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.ResourceIdentityType.none">
+<code class="descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.ResourceIdentityType.none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.ResourceIdentityType.system_assigned">
+<code class="descname">system_assigned</code><em class="property"> = 'SystemAssigned'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.ResourceIdentityType.system_assigned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.ResourceIdentityType.system_assigned_user_assigned">
+<code class="descname">system_assigned_user_assigned</code><em class="property"> = 'SystemAssigned, UserAssigned'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.ResourceIdentityType.system_assigned_user_assigned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.ResourceIdentityType.user_assigned">
+<code class="descname">user_assigned</code><em class="property"> = 'UserAssigned'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.ResourceIdentityType.user_assigned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">HDInsightClusterProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/hd_insight_management_client_enums.html#HDInsightClusterProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState.canceled">
+<code class="descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState.canceled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState.deleting">
+<code class="descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState.failed">
+<code class="descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState.in_progress">
+<code class="descname">in_progress</code><em class="property"> = 'InProgress'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState.in_progress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState.succeeded">
+<code class="descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.HDInsightClusterProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.hdinsight.models.AsyncOperationState">
+<em class="property">class </em><code class="descclassname">azure.mgmt.hdinsight.models.</code><code class="descname">AsyncOperationState</code><a class="reference internal" href="../_modules/azure/mgmt/hdinsight/models/hd_insight_management_client_enums.html#AsyncOperationState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.hdinsight.models.AsyncOperationState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.AsyncOperationState.failed">
+<code class="descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.AsyncOperationState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.AsyncOperationState.in_progress">
+<code class="descname">in_progress</code><em class="property"> = 'InProgress'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.AsyncOperationState.in_progress" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.hdinsight.models.AsyncOperationState.succeeded">
+<code class="descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.hdinsight.models.AsyncOperationState.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="azure.mgmt.hdinsight.operations.html" class="btn btn-neutral float-right" title="azure.mgmt.hdinsight.operations module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="azure.mgmt.hdinsight.html" class="btn btn-neutral float-left" title="azure.mgmt.hdinsight package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

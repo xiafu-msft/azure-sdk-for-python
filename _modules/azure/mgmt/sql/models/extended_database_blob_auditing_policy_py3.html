@@ -1,0 +1,484 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>azure.mgmt.sql.models.extended_database_blob_auditing_policy_py3 &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../../index.html" class="icon icon-home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../exceptions.html">Exception handling</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Management Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../resourcemanagement.html">Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../resourcemanagementapps.html">Apps Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../resourcemanagementbatch.html">Batch Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../resourcemanagementcdn.html">Content Delivery Network Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../resourcemanagementcomputenetwork.html">Compute and Network Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../resourcemanagementredis.html">Redis Cache Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../resourcemanagementscheduler.html">Scheduler Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../resourcemanagementstorage.html">Storage Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-authorization.html">Authorization Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-cognitiveservices.html">Cognitive Services Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-commerce.html">Commerce - Billing API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-datalake-analytics.html">Azure Data Lake Management Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-datalake-store.html">Azure Data Lake Management Store</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-devtestlabs.html">DevTestLabs Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-dns.html">DNS Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-iothub.html">IoTHub Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-keyvault.html">KeyVault Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-manageddisks.html">Managed Disks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-notificationhubs.html">Notification Hubs Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-powerbiembedded.html">PowerBI Embedded Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-servermanager.html">ServerManager Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-sql.html">SQL Database Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-mgmt-trafficmanager.html">Traffic Manager Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Runtime Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../batch.html">Batch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-monitor.html">Azure Monitor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sample_azure-keyvault.html">KeyVault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../graphrbac.html">Azure Active Directory Graph Rbac API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../servicebus.html">Service Bus</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.common.html">azure.common package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.applicationinsights.html">azure.applicationinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.batch.html">azure.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.spellcheck.html">azure.cognitiveservices.language.spellcheck package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.language.textanalytics.html">azure.cognitiveservices.language.textanalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.entitysearch.html">azure.cognitiveservices.search.entitysearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.imagesearch.html">azure.cognitiveservices.search.imagesearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.newssearch.html">azure.cognitiveservices.search.newssearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.videosearch.html">azure.cognitiveservices.search.videosearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.visualsearch.html">azure.cognitiveservices.search.visualsearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.search.websearch.html">azure.cognitiveservices.search.websearch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.computervision.html">azure.cognitiveservices.vision.computervision package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.contentmoderator.html">azure.cognitiveservices.vision.contentmoderator package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.prediction.html">azure.cognitiveservices.vision.customvision.prediction package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.customvision.training.html">azure.cognitiveservices.vision.customvision.training package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.cognitiveservices.vision.face.html">azure.cognitiveservices.vision.face package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.eventgrid.html">azure.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.graphrbac.html">azure.graphrbac package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.keyvault.html">azure.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.loganalytics.html">azure.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.advisor.html">azure.mgmt.advisor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.authorization.html">azure.mgmt.authorization package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batch.html">azure.mgmt.batch package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.batchai.html">azure.mgmt.batchai package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.billing.html">azure.mgmt.billing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cdn.html">azure.mgmt.cdn package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cognitiveservices.html">azure.mgmt.cognitiveservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.commerce.html">azure.mgmt.commerce package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.compute.html">azure.mgmt.compute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.consumption.html">azure.mgmt.consumption package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerinstance.html">azure.mgmt.containerinstance package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerregistry.html">azure.mgmt.containerregistry package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.containerservice.html">azure.mgmt.containerservice package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.cosmosdb.html">azure.mgmt.cosmosdb package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.account.html">azure.mgmt.datalake.analytics.account package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.catalog.html">azure.mgmt.datalake.analytics.catalog package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.analytics.job.html">azure.mgmt.datalake.analytics.job package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.datalake.store.html">azure.mgmt.datalake.store package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.devtestlabs.html">azure.mgmt.devtestlabs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.dns.html">azure.mgmt.dns package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventgrid.html">azure.mgmt.eventgrid package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.eventhub.html">azure.mgmt.eventhub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hanaonazure.html">azure.mgmt.hanaonazure package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.hdinsight.html">azure.mgmt.hdinsight package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothub.html">azure.mgmt.iothub package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.iothubprovisioningservices.html">azure.mgmt.iothubprovisioningservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.keyvault.html">azure.mgmt.keyvault package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.logic.html">azure.mgmt.logic package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.machinelearningcompute.html">azure.mgmt.machinelearningcompute package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.managementgroups.html">azure.mgmt.managementgroups package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.media.html">azure.mgmt.media package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.msi.html">azure.mgmt.msi package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.network.html">azure.mgmt.network package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.notificationhubs.html">azure.mgmt.notificationhubs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.policyinsights.html">azure.mgmt.policyinsights package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.powerbiembedded.html">azure.mgmt.powerbiembedded package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.mysql.html">azure.mgmt.rdbms.mysql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.rdbms.postgresql.html">azure.mgmt.rdbms.postgresql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservices.html">azure.mgmt.recoveryservices package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.html">azure.mgmt.recoveryservicesbackup package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.redis.html">azure.mgmt.redis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.relay.html">azure.mgmt.relay package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.features.html">azure.mgmt.resource.features package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.links.html">azure.mgmt.resource.links package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.locks.html">azure.mgmt.resource.locks package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.managedapplications.html">azure.mgmt.resource.managedapplications package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.policy.html">azure.mgmt.resource.policy package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.resources.html">azure.mgmt.resource.resources package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.resource.subscriptions.html">azure.mgmt.resource.subscriptions package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.scheduler.html">azure.mgmt.scheduler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.search.html">azure.mgmt.search package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicebus.html">azure.mgmt.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.servicefabric.html">azure.mgmt.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.sql.html">azure.mgmt.sql package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.subscription.html">azure.mgmt.subscription package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.trafficmanager.html">azure.mgmt.trafficmanager package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.mgmt.web.html">azure.mgmt.web package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicefabric.html">azure.servicefabric package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicebus.html">azure.servicebus package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../ref/azure.servicemanagement.html">azure.servicemanagement package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>azure.mgmt.sql.models.extended_database_blob_auditing_policy_py3</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for azure.mgmt.sql.models.extended_database_blob_auditing_policy_py3</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See License.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1">#</span>
+<span class="c1"># Code generated by Microsoft (R) AutoRest Code Generator.</span>
+<span class="c1"># Changes may cause incorrect behavior and will be lost if the code is</span>
+<span class="c1"># regenerated.</span>
+<span class="c1"># --------------------------------------------------------------------------</span>
+
+<span class="kn">from</span> <span class="nn">.proxy_resource_py3</span> <span class="k">import</span> <span class="n">ProxyResource</span>
+
+
+<div class="viewcode-block" id="ExtendedDatabaseBlobAuditingPolicy"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.sql.models.html#azure.mgmt.sql.models.ExtendedDatabaseBlobAuditingPolicy">[docs]</a><span class="k">class</span> <span class="nc">ExtendedDatabaseBlobAuditingPolicy</span><span class="p">(</span><span class="n">ProxyResource</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An extended database blob auditing policy.</span>
+
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    All required parameters must be populated in order to send to Azure.</span>
+
+<span class="sd">    :ivar id: Resource ID.</span>
+<span class="sd">    :vartype id: str</span>
+<span class="sd">    :ivar name: Resource name.</span>
+<span class="sd">    :vartype name: str</span>
+<span class="sd">    :ivar type: Resource type.</span>
+<span class="sd">    :vartype type: str</span>
+<span class="sd">    :param predicate_expression: Specifies condition of where clause when</span>
+<span class="sd">     creating an audit.</span>
+<span class="sd">    :type predicate_expression: str</span>
+<span class="sd">    :param state: Required. Specifies the state of the policy. If state is</span>
+<span class="sd">     Enabled, storageEndpoint or isAzureMonitorTargetEnabled are required.</span>
+<span class="sd">     Possible values include: &#39;Enabled&#39;, &#39;Disabled&#39;</span>
+<span class="sd">    :type state: str or ~azure.mgmt.sql.models.BlobAuditingPolicyState</span>
+<span class="sd">    :param storage_endpoint: Specifies the blob storage endpoint (e.g.</span>
+<span class="sd">     https://MyAccount.blob.core.windows.net). If state is Enabled,</span>
+<span class="sd">     storageEndpoint is required.</span>
+<span class="sd">    :type storage_endpoint: str</span>
+<span class="sd">    :param storage_account_access_key: Specifies the identifier key of the</span>
+<span class="sd">     auditing storage account. If state is Enabled and storageEndpoint is</span>
+<span class="sd">     specified, storageAccountAccessKey is required.</span>
+<span class="sd">    :type storage_account_access_key: str</span>
+<span class="sd">    :param retention_days: Specifies the number of days to keep in the audit</span>
+<span class="sd">     logs in the storage account.</span>
+<span class="sd">    :type retention_days: int</span>
+<span class="sd">    :param audit_actions_and_groups: Specifies the Actions-Groups and Actions</span>
+<span class="sd">     to audit.</span>
+<span class="sd">     The recommended set of action groups to use is the following combination -</span>
+<span class="sd">     this will audit all the queries and stored procedures executed against the</span>
+<span class="sd">     database, as well as successful and failed logins:</span>
+<span class="sd">     BATCH_COMPLETED_GROUP,</span>
+<span class="sd">     SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP,</span>
+<span class="sd">     FAILED_DATABASE_AUTHENTICATION_GROUP.</span>
+<span class="sd">     This above combination is also the set that is configured by default when</span>
+<span class="sd">     enabling auditing from the Azure portal.</span>
+<span class="sd">     The supported action groups to audit are (note: choose only specific</span>
+<span class="sd">     groups that cover your auditing needs. Using unnecessary groups could lead</span>
+<span class="sd">     to very large quantities of audit records):</span>
+<span class="sd">     APPLICATION_ROLE_CHANGE_PASSWORD_GROUP</span>
+<span class="sd">     BACKUP_RESTORE_GROUP</span>
+<span class="sd">     DATABASE_LOGOUT_GROUP</span>
+<span class="sd">     DATABASE_OBJECT_CHANGE_GROUP</span>
+<span class="sd">     DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP</span>
+<span class="sd">     DATABASE_OBJECT_PERMISSION_CHANGE_GROUP</span>
+<span class="sd">     DATABASE_OPERATION_GROUP</span>
+<span class="sd">     DATABASE_PERMISSION_CHANGE_GROUP</span>
+<span class="sd">     DATABASE_PRINCIPAL_CHANGE_GROUP</span>
+<span class="sd">     DATABASE_PRINCIPAL_IMPERSONATION_GROUP</span>
+<span class="sd">     DATABASE_ROLE_MEMBER_CHANGE_GROUP</span>
+<span class="sd">     FAILED_DATABASE_AUTHENTICATION_GROUP</span>
+<span class="sd">     SCHEMA_OBJECT_ACCESS_GROUP</span>
+<span class="sd">     SCHEMA_OBJECT_CHANGE_GROUP</span>
+<span class="sd">     SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP</span>
+<span class="sd">     SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP</span>
+<span class="sd">     SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP</span>
+<span class="sd">     USER_CHANGE_PASSWORD_GROUP</span>
+<span class="sd">     BATCH_STARTED_GROUP</span>
+<span class="sd">     BATCH_COMPLETED_GROUP</span>
+<span class="sd">     These are groups that cover all sql statements and stored procedures</span>
+<span class="sd">     executed against the database, and should not be used in combination with</span>
+<span class="sd">     other groups as this will result in duplicate audit logs.</span>
+<span class="sd">     For more information, see [Database-Level Audit Action</span>
+<span class="sd">     Groups](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups).</span>
+<span class="sd">     For Database auditing policy, specific Actions can also be specified (note</span>
+<span class="sd">     that Actions cannot be specified for Server auditing policy). The</span>
+<span class="sd">     supported actions to audit are:</span>
+<span class="sd">     SELECT</span>
+<span class="sd">     UPDATE</span>
+<span class="sd">     INSERT</span>
+<span class="sd">     DELETE</span>
+<span class="sd">     EXECUTE</span>
+<span class="sd">     RECEIVE</span>
+<span class="sd">     REFERENCES</span>
+<span class="sd">     The general form for defining an action to be audited is:</span>
+<span class="sd">     {action} ON {object} BY {principal}</span>
+<span class="sd">     Note that &lt;object&gt; in the above format can refer to an object like a</span>
+<span class="sd">     table, view, or stored procedure, or an entire database or schema. For the</span>
+<span class="sd">     latter cases, the forms DATABASE::{db_name} and SCHEMA::{schema_name} are</span>
+<span class="sd">     used, respectively.</span>
+<span class="sd">     For example:</span>
+<span class="sd">     SELECT on dbo.myTable by public</span>
+<span class="sd">     SELECT on DATABASE::myDatabase by public</span>
+<span class="sd">     SELECT on SCHEMA::mySchema by public</span>
+<span class="sd">     For more information, see [Database-Level Audit</span>
+<span class="sd">     Actions](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)</span>
+<span class="sd">    :type audit_actions_and_groups: list[str]</span>
+<span class="sd">    :param storage_account_subscription_id: Specifies the blob storage</span>
+<span class="sd">     subscription Id.</span>
+<span class="sd">    :type storage_account_subscription_id: str</span>
+<span class="sd">    :param is_storage_secondary_key_in_use: Specifies whether</span>
+<span class="sd">     storageAccountAccessKey value is the storage&#39;s secondary key.</span>
+<span class="sd">    :type is_storage_secondary_key_in_use: bool</span>
+<span class="sd">    :param is_azure_monitor_target_enabled: Specifies whether audit events are</span>
+<span class="sd">     sent to Azure Monitor.</span>
+<span class="sd">     In order to send the events to Azure Monitor, specify &#39;State&#39; as &#39;Enabled&#39;</span>
+<span class="sd">     and &#39;IsAzureMonitorTargetEnabled&#39; as true.</span>
+<span class="sd">     When using REST API to configure auditing, Diagnostic Settings with</span>
+<span class="sd">     &#39;SQLSecurityAuditEvents&#39; diagnostic logs category on the database should</span>
+<span class="sd">     be also created.</span>
+<span class="sd">     Note that for server level audit you should use the &#39;master&#39; database as</span>
+<span class="sd">     {databaseName}.</span>
+<span class="sd">     Diagnostic Settings URI format:</span>
+<span class="sd">     PUT</span>
+<span class="sd">     https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview</span>
+<span class="sd">     For more information, see [Diagnostic Settings REST</span>
+<span class="sd">     API](https://go.microsoft.com/fwlink/?linkid=2033207)</span>
+<span class="sd">     or [Diagnostic Settings</span>
+<span class="sd">     PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)</span>
+<span class="sd">    :type is_azure_monitor_target_enabled: bool</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+        <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;predicate_expression&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.predicateExpression&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.state&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;BlobAuditingPolicyState&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;storage_endpoint&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.storageEndpoint&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;storage_account_access_key&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.storageAccountAccessKey&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;retention_days&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.retentionDays&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;audit_actions_and_groups&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.auditActionsAndGroups&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[str]&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;storage_account_subscription_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.storageAccountSubscriptionId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;is_storage_secondary_key_in_use&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.isStorageSecondaryKeyInUse&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;is_azure_monitor_target_enabled&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties.isAzureMonitorTargetEnabled&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">predicate_expression</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">storage_endpoint</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">storage_account_access_key</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">retention_days</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">audit_actions_and_groups</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">storage_account_subscription_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">is_storage_secondary_key_in_use</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">is_azure_monitor_target_enabled</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ExtendedDatabaseBlobAuditingPolicy</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">predicate_expression</span> <span class="o">=</span> <span class="n">predicate_expression</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">state</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">storage_endpoint</span> <span class="o">=</span> <span class="n">storage_endpoint</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">storage_account_access_key</span> <span class="o">=</span> <span class="n">storage_account_access_key</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">retention_days</span> <span class="o">=</span> <span class="n">retention_days</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">audit_actions_and_groups</span> <span class="o">=</span> <span class="n">audit_actions_and_groups</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">storage_account_subscription_id</span> <span class="o">=</span> <span class="n">storage_account_subscription_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_storage_secondary_key_in_use</span> <span class="o">=</span> <span class="n">is_storage_secondary_key_in_use</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_azure_monitor_target_enabled</span> <span class="o">=</span> <span class="n">is_azure_monitor_target_enabled</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Microsoft
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
