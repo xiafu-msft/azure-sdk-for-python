@@ -232,7 +232,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.security.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.security.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.security.html#module-azure.mgmt.security">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.servermanager.html">azure.mgmt.servermanager package</a></li>
@@ -314,8 +314,2314 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="azure-mgmt-security-operations-module">
-<h1>azure.mgmt.security.operations module<a class="headerlink" href="#azure-mgmt-security-operations-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-azure.mgmt.security.operations">
+<span id="azure-mgmt-security-operations-module"></span><h1>azure.mgmt.security.operations module<a class="headerlink" href="#module-azure.mgmt.security.operations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.security.operations.PricingsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">PricingsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/pricings_operations.html#PricingsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.PricingsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>PricingsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2018-06-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.PricingsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>pricing_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/pricings_operations.html#PricingsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.PricingsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security pricing configuration in the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pricing_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – name of the pricing configuration</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pricing or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Pricing" title="azure.mgmt.security.models.Pricing">Pricing</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.PricingsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/pricings_operations.html#PricingsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.PricingsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security pricing configurations in the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>PricingList or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.PricingList" title="azure.mgmt.security.models.PricingList">PricingList</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.PricingsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.PricingsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.PricingsOperations.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>pricing_name</em>, <em>pricing_tier</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/pricings_operations.html#PricingsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.PricingsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security pricing configuration in the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pricing_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – name of the pricing configuration</p></li>
+<li><p><strong>pricing_tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.PricingTier" title="azure.mgmt.security.models.PricingTier"><em>PricingTier</em></a>) – The pricing tier value. Possible values include:
+‘Free’, ‘Standard’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pricing or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Pricing" title="azure.mgmt.security.models.Pricing">Pricing</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.AlertsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">AlertsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/alerts_operations.html#AlertsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AlertsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>AlertsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2019-01-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AlertsOperations.get_resource_group_level_alerts">
+<code class="descname">get_resource_group_level_alerts</code><span class="sig-paren">(</span><em>alert_name</em>, <em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/alerts_operations.html#AlertsOperations.get_resource_group_level_alerts"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AlertsOperations.get_resource_group_level_alerts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an alert that is associated a resource group or a resource in a
+resource group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alert_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the alert object</p></li>
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Alert or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Alert" title="azure.mgmt.security.models.Alert">Alert</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AlertsOperations.get_subscription_level_alert">
+<code class="descname">get_subscription_level_alert</code><span class="sig-paren">(</span><em>alert_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/alerts_operations.html#AlertsOperations.get_subscription_level_alert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AlertsOperations.get_subscription_level_alert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an alert that is associated with a subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alert_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the alert object</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Alert or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Alert" title="azure.mgmt.security.models.Alert">Alert</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AlertsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>filter=None</em>, <em>select=None</em>, <em>expand=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/alerts_operations.html#AlertsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AlertsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all the alerts that are associated with the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter. Optional.</p></li>
+<li><p><strong>select</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData select. Optional.</p></li>
+<li><p><strong>expand</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData expand. Optional.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Alert</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AlertPaged" title="azure.mgmt.security.models.AlertPaged">AlertPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Alert" title="azure.mgmt.security.models.Alert">Alert</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AlertsOperations.list_by_resource_group">
+<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>filter=None</em>, <em>select=None</em>, <em>expand=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/alerts_operations.html#AlertsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AlertsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all the alerts that are associated with the resource group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter. Optional.</p></li>
+<li><p><strong>select</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData select. Optional.</p></li>
+<li><p><strong>expand</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData expand. Optional.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Alert</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AlertPaged" title="azure.mgmt.security.models.AlertPaged">AlertPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Alert" title="azure.mgmt.security.models.Alert">Alert</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AlertsOperations.list_resource_group_level_alerts_by_region">
+<code class="descname">list_resource_group_level_alerts_by_region</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>filter=None</em>, <em>select=None</em>, <em>expand=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/alerts_operations.html#AlertsOperations.list_resource_group_level_alerts_by_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AlertsOperations.list_resource_group_level_alerts_by_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all the alerts that are associated with the resource group that
+are stored in a specific location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter. Optional.</p></li>
+<li><p><strong>select</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData select. Optional.</p></li>
+<li><p><strong>expand</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData expand. Optional.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Alert</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AlertPaged" title="azure.mgmt.security.models.AlertPaged">AlertPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Alert" title="azure.mgmt.security.models.Alert">Alert</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AlertsOperations.list_subscription_level_alerts_by_region">
+<code class="descname">list_subscription_level_alerts_by_region</code><span class="sig-paren">(</span><em>filter=None</em>, <em>select=None</em>, <em>expand=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/alerts_operations.html#AlertsOperations.list_subscription_level_alerts_by_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AlertsOperations.list_subscription_level_alerts_by_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>List all the alerts that are associated with the subscription that are
+stored in a specific location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter. Optional.</p></li>
+<li><p><strong>select</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData select. Optional.</p></li>
+<li><p><strong>expand</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData expand. Optional.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Alert</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AlertPaged" title="azure.mgmt.security.models.AlertPaged">AlertPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Alert" title="azure.mgmt.security.models.Alert">Alert</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.AlertsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.AlertsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AlertsOperations.update_resource_group_level_alert_state">
+<code class="descname">update_resource_group_level_alert_state</code><span class="sig-paren">(</span><em>alert_name</em>, <em>alert_update_action_type</em>, <em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/alerts_operations.html#AlertsOperations.update_resource_group_level_alert_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AlertsOperations.update_resource_group_level_alert_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the alert’s state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alert_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the alert object</p></li>
+<li><p><strong>alert_update_action_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the action to do on the
+alert. Possible values include: ‘Dismiss’, ‘Reactivate’</p></li>
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AlertsOperations.update_subscription_level_alert_state">
+<code class="descname">update_subscription_level_alert_state</code><span class="sig-paren">(</span><em>alert_name</em>, <em>alert_update_action_type</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/alerts_operations.html#AlertsOperations.update_subscription_level_alert_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AlertsOperations.update_subscription_level_alert_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the alert’s state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alert_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the alert object</p></li>
+<li><p><strong>alert_update_action_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the action to do on the
+alert. Possible values include: ‘Dismiss’, ‘Reactivate’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.SettingsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">SettingsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/settings_operations.html#SettingsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.SettingsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>SettingsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2019-01-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.SettingsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>setting_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/settings_operations.html#SettingsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.SettingsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings of different configurations in security center.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>setting_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of setting: (MCAS/WDATP). Possible values
+include: ‘MCAS’, ‘WDATP’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Setting or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Setting" title="azure.mgmt.security.models.Setting">Setting</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.SettingsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/settings_operations.html#SettingsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.SettingsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings about different configurations in security center.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Setting</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SettingPaged" title="azure.mgmt.security.models.SettingPaged">SettingPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Setting" title="azure.mgmt.security.models.Setting">Setting</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.SettingsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.SettingsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.SettingsOperations.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>setting_name</em>, <em>kind</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/settings_operations.html#SettingsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.SettingsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>updating settings about different configurations in security center.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>setting_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of setting: (MCAS/WDATP). Possible values
+include: ‘MCAS’, ‘WDATP’</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SettingKind" title="azure.mgmt.security.models.SettingKind"><em>SettingKind</em></a>) – the kind of the settings string (DataExportSetting).
+Possible values include: ‘DataExportSetting’,
+‘AlertSuppressionSetting’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Setting or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Setting" title="azure.mgmt.security.models.Setting">Setting</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.AllowedConnectionsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">AllowedConnectionsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/allowed_connections_operations.html#AllowedConnectionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AllowedConnectionsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>AllowedConnectionsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2015-06-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AllowedConnectionsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>connection_type</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/allowed_connections_operations.html#AllowedConnectionsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AllowedConnectionsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of all possible traffic between resources for the
+subscription and location, based on connection type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>connection_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.ConnectionType" title="azure.mgmt.security.models.ConnectionType"><em>ConnectionType</em></a>) – The type of allowed connections (Internal,
+External). Possible values include: ‘Internal’, ‘External’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>AllowedConnectionsResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AllowedConnectionsResource" title="azure.mgmt.security.models.AllowedConnectionsResource">AllowedConnectionsResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AllowedConnectionsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/allowed_connections_operations.html#AllowedConnectionsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AllowedConnectionsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of all possible traffic between resources for the
+subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of AllowedConnectionsResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AllowedConnectionsResourcePaged" title="azure.mgmt.security.models.AllowedConnectionsResourcePaged">AllowedConnectionsResourcePaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AllowedConnectionsResource" title="azure.mgmt.security.models.AllowedConnectionsResource">AllowedConnectionsResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AllowedConnectionsOperations.list_by_home_region">
+<code class="descname">list_by_home_region</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/allowed_connections_operations.html#AllowedConnectionsOperations.list_by_home_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AllowedConnectionsOperations.list_by_home_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the list of all possible traffic between resources for the
+subscription and location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of AllowedConnectionsResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AllowedConnectionsResourcePaged" title="azure.mgmt.security.models.AllowedConnectionsResourcePaged">AllowedConnectionsResourcePaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AllowedConnectionsResource" title="azure.mgmt.security.models.AllowedConnectionsResource">AllowedConnectionsResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.AllowedConnectionsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.AllowedConnectionsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">DiscoveredSecuritySolutionsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/discovered_security_solutions_operations.html#DiscoveredSecuritySolutionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>DiscoveredSecuritySolutionsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2015-06-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>discovered_security_solution_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/discovered_security_solutions_operations.html#DiscoveredSecuritySolutionsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a specific discovered Security Solution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>discovered_security_solution_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of a discovered
+security solution.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>DiscoveredSecuritySolution or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.DiscoveredSecuritySolution" title="azure.mgmt.security.models.DiscoveredSecuritySolution">DiscoveredSecuritySolution</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/discovered_security_solutions_operations.html#DiscoveredSecuritySolutionsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of discovered Security Solutions for the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of DiscoveredSecuritySolution</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.DiscoveredSecuritySolutionPaged" title="azure.mgmt.security.models.DiscoveredSecuritySolutionPaged">DiscoveredSecuritySolutionPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.DiscoveredSecuritySolution" title="azure.mgmt.security.models.DiscoveredSecuritySolution">DiscoveredSecuritySolution</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations.list_by_home_region">
+<code class="descname">list_by_home_region</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/discovered_security_solutions_operations.html#DiscoveredSecuritySolutionsOperations.list_by_home_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations.list_by_home_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of discovered Security Solutions for the subscription and
+location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of DiscoveredSecuritySolution</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.DiscoveredSecuritySolutionPaged" title="azure.mgmt.security.models.DiscoveredSecuritySolutionPaged">DiscoveredSecuritySolutionPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.DiscoveredSecuritySolution" title="azure.mgmt.security.models.DiscoveredSecuritySolution">DiscoveredSecuritySolution</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.DiscoveredSecuritySolutionsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.ExternalSecuritySolutionsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">ExternalSecuritySolutionsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/external_security_solutions_operations.html#ExternalSecuritySolutionsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.ExternalSecuritySolutionsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ExternalSecuritySolutionsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2015-06-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.ExternalSecuritySolutionsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>external_security_solutions_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/external_security_solutions_operations.html#ExternalSecuritySolutionsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.ExternalSecuritySolutionsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a specific external Security Solution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>external_security_solutions_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an external security
+solution.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ExternalSecuritySolution or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.ExternalSecuritySolution" title="azure.mgmt.security.models.ExternalSecuritySolution">ExternalSecuritySolution</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.ExternalSecuritySolutionsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/external_security_solutions_operations.html#ExternalSecuritySolutionsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.ExternalSecuritySolutionsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of external security solutions for the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of ExternalSecuritySolution</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.ExternalSecuritySolutionPaged" title="azure.mgmt.security.models.ExternalSecuritySolutionPaged">ExternalSecuritySolutionPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.ExternalSecuritySolution" title="azure.mgmt.security.models.ExternalSecuritySolution">ExternalSecuritySolution</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.ExternalSecuritySolutionsOperations.list_by_home_region">
+<code class="descname">list_by_home_region</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/external_security_solutions_operations.html#ExternalSecuritySolutionsOperations.list_by_home_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.ExternalSecuritySolutionsOperations.list_by_home_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list of external Security Solutions for the subscription and
+location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of ExternalSecuritySolution</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.ExternalSecuritySolutionPaged" title="azure.mgmt.security.models.ExternalSecuritySolutionPaged">ExternalSecuritySolutionPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.ExternalSecuritySolution" title="azure.mgmt.security.models.ExternalSecuritySolution">ExternalSecuritySolution</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.ExternalSecuritySolutionsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.ExternalSecuritySolutionsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">JitNetworkAccessPoliciesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/jit_network_access_policies_operations.html#JitNetworkAccessPoliciesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>JitNetworkAccessPoliciesOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>api_version</strong> – API version for the operation. Constant value: “2015-06-01-preview”.</p></li>
+<li><p><strong>jit_network_access_policy_initiate_type</strong> – Type of the action to do on the Just-in-Time access policy. Constant value: “initiate”.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.create_or_update">
+<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>jit_network_access_policy_name</em>, <em>body</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/jit_network_access_policies_operations.html#JitNetworkAccessPoliciesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a policy for protecting resources using Just-in-Time access
+control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>jit_network_access_policy_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of a Just-in-Time access
+configuration policy.</p></li>
+<li><p><strong>body</strong> (<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicy" title="azure.mgmt.security.models.JitNetworkAccessPolicy"><em>JitNetworkAccessPolicy</em></a>) – </p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>JitNetworkAccessPolicy or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicy" title="azure.mgmt.security.models.JitNetworkAccessPolicy">JitNetworkAccessPolicy</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>jit_network_access_policy_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/jit_network_access_policies_operations.html#JitNetworkAccessPoliciesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a Just-in-Time access control policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>jit_network_access_policy_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of a Just-in-Time access
+configuration policy.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>jit_network_access_policy_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/jit_network_access_policies_operations.html#JitNetworkAccessPoliciesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Policies for protecting resources using Just-in-Time access control for
+the subscription, location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>jit_network_access_policy_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of a Just-in-Time access
+configuration policy.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>JitNetworkAccessPolicy or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicy" title="azure.mgmt.security.models.JitNetworkAccessPolicy">JitNetworkAccessPolicy</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.initiate">
+<code class="descname">initiate</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>jit_network_access_policy_name</em>, <em>virtual_machines</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/jit_network_access_policies_operations.html#JitNetworkAccessPoliciesOperations.initiate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.initiate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initiate a JIT access from a specific Just-in-Time policy
+configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>jit_network_access_policy_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of a Just-in-Time access
+configuration policy.</p></li>
+<li><p><strong>virtual_machines</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicyInitiateVirtualMachine" title="azure.mgmt.security.models.JitNetworkAccessPolicyInitiateVirtualMachine"><em>JitNetworkAccessPolicyInitiateVirtualMachine</em></a><em>]</em>) – A list of virtual machines &amp; ports to open
+access for</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>JitNetworkAccessRequest or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessRequest" title="azure.mgmt.security.models.JitNetworkAccessRequest">JitNetworkAccessRequest</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/jit_network_access_policies_operations.html#JitNetworkAccessPoliciesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Policies for protecting resources using Just-in-Time access control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of JitNetworkAccessPolicy</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicyPaged" title="azure.mgmt.security.models.JitNetworkAccessPolicyPaged">JitNetworkAccessPolicyPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicy" title="azure.mgmt.security.models.JitNetworkAccessPolicy">JitNetworkAccessPolicy</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.list_by_region">
+<code class="descname">list_by_region</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/jit_network_access_policies_operations.html#JitNetworkAccessPoliciesOperations.list_by_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.list_by_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Policies for protecting resources using Just-in-Time access control for
+the subscription, location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of JitNetworkAccessPolicy</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicyPaged" title="azure.mgmt.security.models.JitNetworkAccessPolicyPaged">JitNetworkAccessPolicyPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicy" title="azure.mgmt.security.models.JitNetworkAccessPolicy">JitNetworkAccessPolicy</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.list_by_resource_group">
+<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/jit_network_access_policies_operations.html#JitNetworkAccessPoliciesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Policies for protecting resources using Just-in-Time access control for
+the subscription, location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of JitNetworkAccessPolicy</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicyPaged" title="azure.mgmt.security.models.JitNetworkAccessPolicyPaged">JitNetworkAccessPolicyPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicy" title="azure.mgmt.security.models.JitNetworkAccessPolicy">JitNetworkAccessPolicy</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.list_by_resource_group_and_region">
+<code class="descname">list_by_resource_group_and_region</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/jit_network_access_policies_operations.html#JitNetworkAccessPoliciesOperations.list_by_resource_group_and_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.list_by_resource_group_and_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Policies for protecting resources using Just-in-Time access control for
+the subscription, location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of JitNetworkAccessPolicy</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicyPaged" title="azure.mgmt.security.models.JitNetworkAccessPolicyPaged">JitNetworkAccessPolicyPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.JitNetworkAccessPolicy" title="azure.mgmt.security.models.JitNetworkAccessPolicy">JitNetworkAccessPolicy</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.JitNetworkAccessPoliciesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.LocationsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">LocationsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/locations_operations.html#LocationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.LocationsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>LocationsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2015-06-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.LocationsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/locations_operations.html#LocationsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.LocationsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Details of a specific location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>AscLocation or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AscLocation" title="azure.mgmt.security.models.AscLocation">AscLocation</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.LocationsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/locations_operations.html#LocationsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.LocationsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of the responsible ASC of the specific subscription (home
+region). For each subscription there is only one responsible location.
+The location in the response should be used to read or write other
+resources in ASC according to their ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of AscLocation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AscLocationPaged" title="azure.mgmt.security.models.AscLocationPaged">AscLocationPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AscLocation" title="azure.mgmt.security.models.AscLocation">AscLocation</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.LocationsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.LocationsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.Operations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Operations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2015-06-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.Operations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exposes all available operations for discovery purposes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Operation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.OperationPaged" title="azure.mgmt.security.models.OperationPaged">OperationPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Operation" title="azure.mgmt.security.models.Operation">Operation</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.Operations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.TasksOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">TasksOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/tasks_operations.html#TasksOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TasksOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>TasksOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2015-06-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.TasksOperations.get_resource_group_level_task">
+<code class="descname">get_resource_group_level_task</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>task_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/tasks_operations.html#TasksOperations.get_resource_group_level_task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TasksOperations.get_resource_group_level_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommended tasks that will help improve the security of the
+subscription proactively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>task_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the task object, will be a GUID</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SecurityTask or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityTask" title="azure.mgmt.security.models.SecurityTask">SecurityTask</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.TasksOperations.get_subscription_level_task">
+<code class="descname">get_subscription_level_task</code><span class="sig-paren">(</span><em>task_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/tasks_operations.html#TasksOperations.get_subscription_level_task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TasksOperations.get_subscription_level_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommended tasks that will help improve the security of the
+subscription proactively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the task object, will be a GUID</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SecurityTask or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityTask" title="azure.mgmt.security.models.SecurityTask">SecurityTask</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.TasksOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/tasks_operations.html#TasksOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TasksOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommended tasks that will help improve the security of the
+subscription proactively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter. Optional.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SecurityTask</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityTaskPaged" title="azure.mgmt.security.models.SecurityTaskPaged">SecurityTaskPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityTask" title="azure.mgmt.security.models.SecurityTask">SecurityTask</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.TasksOperations.list_by_home_region">
+<code class="descname">list_by_home_region</code><span class="sig-paren">(</span><em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/tasks_operations.html#TasksOperations.list_by_home_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TasksOperations.list_by_home_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommended tasks that will help improve the security of the
+subscription proactively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter. Optional.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SecurityTask</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityTaskPaged" title="azure.mgmt.security.models.SecurityTaskPaged">SecurityTaskPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityTask" title="azure.mgmt.security.models.SecurityTask">SecurityTask</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.TasksOperations.list_by_resource_group">
+<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/tasks_operations.html#TasksOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TasksOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommended tasks that will help improve the security of the
+subscription proactively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter. Optional.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SecurityTask</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityTaskPaged" title="azure.mgmt.security.models.SecurityTaskPaged">SecurityTaskPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityTask" title="azure.mgmt.security.models.SecurityTask">SecurityTask</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.TasksOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.TasksOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.TasksOperations.update_resource_group_level_task_state">
+<code class="descname">update_resource_group_level_task_state</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>task_name</em>, <em>task_update_action_type</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/tasks_operations.html#TasksOperations.update_resource_group_level_task_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TasksOperations.update_resource_group_level_task_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommended tasks that will help improve the security of the
+subscription proactively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>task_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the task object, will be a GUID</p></li>
+<li><p><strong>task_update_action_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the action to do on the task.
+Possible values include: ‘Activate’, ‘Dismiss’, ‘Start’, ‘Resolve’,
+‘Close’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.TasksOperations.update_subscription_level_task_state">
+<code class="descname">update_subscription_level_task_state</code><span class="sig-paren">(</span><em>task_name</em>, <em>task_update_action_type</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/tasks_operations.html#TasksOperations.update_subscription_level_task_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TasksOperations.update_subscription_level_task_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recommended tasks that will help improve the security of the
+subscription proactively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the task object, will be a GUID</p></li>
+<li><p><strong>task_update_action_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the action to do on the task.
+Possible values include: ‘Activate’, ‘Dismiss’, ‘Start’, ‘Resolve’,
+‘Close’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.TopologyOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">TopologyOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/topology_operations.html#TopologyOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TopologyOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>TopologyOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2015-06-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.TopologyOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>topology_resource_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/topology_operations.html#TopologyOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TopologyOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a specific topology component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group within the
+user’s subscription. The name is case insensitive.</p></li>
+<li><p><strong>topology_resource_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of a topology resources
+collection.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>TopologyResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.TopologyResource" title="azure.mgmt.security.models.TopologyResource">TopologyResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.TopologyOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/topology_operations.html#TopologyOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TopologyOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list that allows to build a topology view of a subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of TopologyResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.TopologyResourcePaged" title="azure.mgmt.security.models.TopologyResourcePaged">TopologyResourcePaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.TopologyResource" title="azure.mgmt.security.models.TopologyResource">TopologyResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.TopologyOperations.list_by_home_region">
+<code class="descname">list_by_home_region</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/topology_operations.html#TopologyOperations.list_by_home_region"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.TopologyOperations.list_by_home_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a list that allows to build a topology view of a subscription and
+location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of TopologyResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.TopologyResourcePaged" title="azure.mgmt.security.models.TopologyResourcePaged">TopologyResourcePaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.TopologyResource" title="azure.mgmt.security.models.TopologyResource">TopologyResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.TopologyOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.TopologyOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.AdvancedThreatProtectionOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">AdvancedThreatProtectionOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/advanced_threat_protection_operations.html#AdvancedThreatProtectionOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AdvancedThreatProtectionOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>AdvancedThreatProtectionOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>api_version</strong> – API version for the operation. Constant value: “2017-08-01-preview”.</p></li>
+<li><p><strong>setting_name</strong> – Advanced Threat Protection setting name. Constant value: “current”.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AdvancedThreatProtectionOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>resource_id</em>, <em>is_enabled=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/advanced_threat_protection_operations.html#AdvancedThreatProtectionOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AdvancedThreatProtectionOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates the Advanced Threat Protection settings on a
+specified resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><strong>is_enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates whether Advanced Threat Protection is
+enabled.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>AdvancedThreatProtectionSetting or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AdvancedThreatProtectionSetting" title="azure.mgmt.security.models.AdvancedThreatProtectionSetting">AdvancedThreatProtectionSetting</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AdvancedThreatProtectionOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/advanced_threat_protection_operations.html#AdvancedThreatProtectionOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AdvancedThreatProtectionOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Advanced Threat Protection settings for the specified
+resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>AdvancedThreatProtectionSetting or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AdvancedThreatProtectionSetting" title="azure.mgmt.security.models.AdvancedThreatProtectionSetting">AdvancedThreatProtectionSetting</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.AdvancedThreatProtectionOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.AdvancedThreatProtectionOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.AutoProvisioningSettingsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">AutoProvisioningSettingsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/auto_provisioning_settings_operations.html#AutoProvisioningSettingsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AutoProvisioningSettingsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>AutoProvisioningSettingsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2017-08-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AutoProvisioningSettingsOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>setting_name</em>, <em>auto_provision</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/auto_provisioning_settings_operations.html#AutoProvisioningSettingsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AutoProvisioningSettingsOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Details of a specific setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>setting_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Auto provisioning setting key</p></li>
+<li><p><strong>auto_provision</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AutoProvision" title="azure.mgmt.security.models.AutoProvision"><em>AutoProvision</em></a>) – Describes what kind of security agent
+provisioning action to take. Possible values include: ‘On’, ‘Off’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>AutoProvisioningSetting or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AutoProvisioningSetting" title="azure.mgmt.security.models.AutoProvisioningSetting">AutoProvisioningSetting</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AutoProvisioningSettingsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>setting_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/auto_provisioning_settings_operations.html#AutoProvisioningSettingsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AutoProvisioningSettingsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Details of a specific setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>setting_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Auto provisioning setting key</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>AutoProvisioningSetting or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AutoProvisioningSetting" title="azure.mgmt.security.models.AutoProvisioningSetting">AutoProvisioningSetting</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.AutoProvisioningSettingsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/auto_provisioning_settings_operations.html#AutoProvisioningSettingsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.AutoProvisioningSettingsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exposes the auto provisioning settings of the subscriptions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of AutoProvisioningSetting</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AutoProvisioningSettingPaged" title="azure.mgmt.security.models.AutoProvisioningSettingPaged">AutoProvisioningSettingPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.AutoProvisioningSetting" title="azure.mgmt.security.models.AutoProvisioningSetting">AutoProvisioningSetting</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.AutoProvisioningSettingsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.AutoProvisioningSettingsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.CompliancesOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">CompliancesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/compliances_operations.html#CompliancesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.CompliancesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>CompliancesOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2017-08-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.CompliancesOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>scope</em>, <em>compliance_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/compliances_operations.html#CompliancesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.CompliancesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Details of a specific Compliance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Scope of the query, can be subscription
+(/subscriptions/0b06d9ea-afe6-4779-bd59-30e5c2d9d13f) or management
+group (/providers/Microsoft.Management/managementGroups/mgName).</p></li>
+<li><p><strong>compliance_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – name of the Compliance</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Compliance or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Compliance" title="azure.mgmt.security.models.Compliance">Compliance</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.CompliancesOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>scope</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/compliances_operations.html#CompliancesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.CompliancesOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Compliance scores of the specific management group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Scope of the query, can be subscription
+(/subscriptions/0b06d9ea-afe6-4779-bd59-30e5c2d9d13f) or management
+group (/providers/Microsoft.Management/managementGroups/mgName).</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Compliance</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.CompliancePaged" title="azure.mgmt.security.models.CompliancePaged">CompliancePaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.Compliance" title="azure.mgmt.security.models.Compliance">Compliance</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.CompliancesOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.CompliancesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.InformationProtectionPoliciesOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">InformationProtectionPoliciesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/information_protection_policies_operations.html#InformationProtectionPoliciesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.InformationProtectionPoliciesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>InformationProtectionPoliciesOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2017-08-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.InformationProtectionPoliciesOperations.create_or_update">
+<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>scope</em>, <em>information_protection_policy_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/information_protection_policies_operations.html#InformationProtectionPoliciesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.InformationProtectionPoliciesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Details of the information protection policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Scope of the query, can be subscription
+(/subscriptions/0b06d9ea-afe6-4779-bd59-30e5c2d9d13f) or management
+group (/providers/Microsoft.Management/managementGroups/mgName).</p></li>
+<li><p><strong>information_protection_policy_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the information
+protection policy. Possible values include: ‘effective’, ‘custom’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>InformationProtectionPolicy or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.InformationProtectionPolicy" title="azure.mgmt.security.models.InformationProtectionPolicy">InformationProtectionPolicy</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.InformationProtectionPoliciesOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>scope</em>, <em>information_protection_policy_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/information_protection_policies_operations.html#InformationProtectionPoliciesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.InformationProtectionPoliciesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Details of the information protection policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Scope of the query, can be subscription
+(/subscriptions/0b06d9ea-afe6-4779-bd59-30e5c2d9d13f) or management
+group (/providers/Microsoft.Management/managementGroups/mgName).</p></li>
+<li><p><strong>information_protection_policy_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the information
+protection policy. Possible values include: ‘effective’, ‘custom’</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>InformationProtectionPolicy or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.InformationProtectionPolicy" title="azure.mgmt.security.models.InformationProtectionPolicy">InformationProtectionPolicy</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.InformationProtectionPoliciesOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>scope</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/information_protection_policies_operations.html#InformationProtectionPoliciesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.InformationProtectionPoliciesOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information protection policies of a specific management group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Scope of the query, can be subscription
+(/subscriptions/0b06d9ea-afe6-4779-bd59-30e5c2d9d13f) or management
+group (/providers/Microsoft.Management/managementGroups/mgName).</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of InformationProtectionPolicy</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.InformationProtectionPolicyPaged" title="azure.mgmt.security.models.InformationProtectionPolicyPaged">InformationProtectionPolicyPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.InformationProtectionPolicy" title="azure.mgmt.security.models.InformationProtectionPolicy">InformationProtectionPolicy</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.InformationProtectionPoliciesOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.InformationProtectionPoliciesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.SecurityContactsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">SecurityContactsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/security_contacts_operations.html#SecurityContactsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.SecurityContactsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>SecurityContactsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2017-08-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.SecurityContactsOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>security_contact_name</em>, <em>security_contact</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/security_contacts_operations.html#SecurityContactsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.SecurityContactsOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security contact configurations for the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>security_contact_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the security contact object</p></li>
+<li><p><strong>security_contact</strong> (<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityContact" title="azure.mgmt.security.models.SecurityContact"><em>SecurityContact</em></a>) – Security contact object</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SecurityContact or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityContact" title="azure.mgmt.security.models.SecurityContact">SecurityContact</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.SecurityContactsOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>security_contact_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/security_contacts_operations.html#SecurityContactsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.SecurityContactsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security contact configurations for the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>security_contact_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the security contact object</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.SecurityContactsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>security_contact_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/security_contacts_operations.html#SecurityContactsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.SecurityContactsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security contact configurations for the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>security_contact_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the security contact object</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SecurityContact or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityContact" title="azure.mgmt.security.models.SecurityContact">SecurityContact</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.SecurityContactsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/security_contacts_operations.html#SecurityContactsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.SecurityContactsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security contact configurations for the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SecurityContact</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityContactPaged" title="azure.mgmt.security.models.SecurityContactPaged">SecurityContactPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityContact" title="azure.mgmt.security.models.SecurityContact">SecurityContact</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.SecurityContactsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.SecurityContactsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.SecurityContactsOperations.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>security_contact_name</em>, <em>security_contact</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/security_contacts_operations.html#SecurityContactsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.SecurityContactsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Security contact configurations for the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>security_contact_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the security contact object</p></li>
+<li><p><strong>security_contact</strong> (<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityContact" title="azure.mgmt.security.models.SecurityContact"><em>SecurityContact</em></a>) – Security contact object</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SecurityContact or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.SecurityContact" title="azure.mgmt.security.models.SecurityContact">SecurityContact</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.security.operations.WorkspaceSettingsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.security.operations.</code><code class="descname">WorkspaceSettingsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/workspace_settings_operations.html#WorkspaceSettingsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.WorkspaceSettingsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>WorkspaceSettingsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version for the operation. Constant value: “2017-08-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.security.operations.WorkspaceSettingsOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>workspace_setting_name</em>, <em>workspace_id</em>, <em>scope</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/workspace_settings_operations.html#WorkspaceSettingsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.WorkspaceSettingsOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>creating settings about where we should store your security data and
+logs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workspace_setting_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the security setting</p></li>
+<li><p><strong>workspace_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full Azure ID of the workspace to save the
+data in</p></li>
+<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – All the VMs in this scope will send their security data
+to the mentioned workspace unless overridden by a setting with more
+specific scope</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>WorkspaceSetting or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.WorkspaceSetting" title="azure.mgmt.security.models.WorkspaceSetting">WorkspaceSetting</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.WorkspaceSettingsOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>workspace_setting_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/workspace_settings_operations.html#WorkspaceSettingsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.WorkspaceSettingsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the custom workspace settings for this subscription. new VMs
+will report to the default workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workspace_setting_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the security setting</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.WorkspaceSettingsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>workspace_setting_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/workspace_settings_operations.html#WorkspaceSettingsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.WorkspaceSettingsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings about where we should store your security data and logs. If
+the result is empty, it means that no custom-workspace configuration
+was set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workspace_setting_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the security setting</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>WorkspaceSetting or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.WorkspaceSetting" title="azure.mgmt.security.models.WorkspaceSetting">WorkspaceSetting</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.WorkspaceSettingsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/workspace_settings_operations.html#WorkspaceSettingsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.WorkspaceSettingsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings about where we should store your security data and logs. If
+the result is empty, it means that no custom-workspace configuration
+was set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of WorkspaceSetting</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.WorkspaceSettingPaged" title="azure.mgmt.security.models.WorkspaceSettingPaged">WorkspaceSettingPaged</a>[<a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.WorkspaceSetting" title="azure.mgmt.security.models.WorkspaceSetting">WorkspaceSetting</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.security.operations.WorkspaceSettingsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.security.models' from 'd:\\a\\1\\s\\azure-mgmt-security\\azure\\mgmt\\security\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.security.operations.WorkspaceSettingsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.security.operations.WorkspaceSettingsOperations.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>workspace_setting_name</em>, <em>workspace_id</em>, <em>scope</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/security/operations/workspace_settings_operations.html#WorkspaceSettingsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.security.operations.WorkspaceSettingsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings about where we should store your security data and logs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>workspace_setting_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the security setting</p></li>
+<li><p><strong>workspace_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full Azure ID of the workspace to save the
+data in</p></li>
+<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – All the VMs in this scope will send their security data
+to the mentioned workspace unless overridden by a setting with more
+specific scope</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>WorkspaceSetting or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.security.models.html#azure.mgmt.security.models.WorkspaceSetting" title="azure.mgmt.security.models.WorkspaceSetting">WorkspaceSetting</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 

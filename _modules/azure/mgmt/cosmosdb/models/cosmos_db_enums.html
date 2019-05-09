@@ -336,6 +336,42 @@
     <span class="n">consistent_prefix</span> <span class="o">=</span> <span class="s2">&quot;ConsistentPrefix&quot;</span></div>
 
 
+<div class="viewcode-block" id="IndexingMode"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.IndexingMode">[docs]</a><span class="k">class</span> <span class="nc">IndexingMode</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">consistent</span> <span class="o">=</span> <span class="s2">&quot;Consistent&quot;</span>
+    <span class="n">lazy</span> <span class="o">=</span> <span class="s2">&quot;Lazy&quot;</span>
+    <span class="n">none</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span></div>
+
+
+<div class="viewcode-block" id="DataType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.DataType">[docs]</a><span class="k">class</span> <span class="nc">DataType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;String&quot;</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="s2">&quot;Number&quot;</span>
+    <span class="n">point</span> <span class="o">=</span> <span class="s2">&quot;Point&quot;</span>
+    <span class="n">polygon</span> <span class="o">=</span> <span class="s2">&quot;Polygon&quot;</span>
+    <span class="n">line_string</span> <span class="o">=</span> <span class="s2">&quot;LineString&quot;</span>
+    <span class="n">multi_polygon</span> <span class="o">=</span> <span class="s2">&quot;MultiPolygon&quot;</span></div>
+
+
+<div class="viewcode-block" id="IndexKind"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.IndexKind">[docs]</a><span class="k">class</span> <span class="nc">IndexKind</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="nb">hash</span> <span class="o">=</span> <span class="s2">&quot;Hash&quot;</span>
+    <span class="nb">range</span> <span class="o">=</span> <span class="s2">&quot;Range&quot;</span>
+    <span class="n">spatial</span> <span class="o">=</span> <span class="s2">&quot;Spatial&quot;</span></div>
+
+
+<div class="viewcode-block" id="PartitionKind"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.PartitionKind">[docs]</a><span class="k">class</span> <span class="nc">PartitionKind</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="nb">hash</span> <span class="o">=</span> <span class="s2">&quot;Hash&quot;</span>
+    <span class="nb">range</span> <span class="o">=</span> <span class="s2">&quot;Range&quot;</span></div>
+
+
+<div class="viewcode-block" id="ConflictResolutionMode"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.ConflictResolutionMode">[docs]</a><span class="k">class</span> <span class="nc">ConflictResolutionMode</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">last_writer_wins</span> <span class="o">=</span> <span class="s2">&quot;LastWriterWins&quot;</span>
+    <span class="n">custom</span> <span class="o">=</span> <span class="s2">&quot;Custom&quot;</span></div>
+
+
 <div class="viewcode-block" id="KeyKind"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.KeyKind">[docs]</a><span class="k">class</span> <span class="nc">KeyKind</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">primary</span> <span class="o">=</span> <span class="s2">&quot;primary&quot;</span>

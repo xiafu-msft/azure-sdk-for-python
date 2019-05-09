@@ -210,7 +210,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.mgmt.netapp.operations.html">azure.mgmt.netapp.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-azure.mgmt.netapp">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
@@ -323,8 +323,96 @@
 </ul>
 </div>
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-azure.mgmt.netapp">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.netapp" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.mgmt.netapp.AzureNetAppFilesManagementClient">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.</code><code class="descname">AzureNetAppFilesManagementClient</code><span class="sig-paren">(</span><em>credentials</em>, <em>subscription_id</em>, <em>base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/azure_net_app_files_management_client.html#AzureNetAppFilesManagementClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.AzureNetAppFilesManagementClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
+<p>Microsoft NetApp Azure Resource Provider specification</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>AzureNetAppFilesManagementClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.applicationinsights.operations.html#module-azure.applicationinsights.operations" title="azure.applicationinsights.operations"><strong>operations</strong></a> (<a class="reference internal" href="azure.mgmt.netapp.operations.html#azure.mgmt.netapp.operations.Operations" title="azure.mgmt.netapp.operations.Operations"><em>azure.mgmt.netapp.operations.Operations</em></a>) – Operations operations</p></li>
+<li><p><strong>accounts</strong> (<a class="reference internal" href="azure.mgmt.netapp.operations.html#azure.mgmt.netapp.operations.AccountsOperations" title="azure.mgmt.netapp.operations.AccountsOperations"><em>azure.mgmt.netapp.operations.AccountsOperations</em></a>) – Accounts operations</p></li>
+<li><p><strong>pools</strong> (<a class="reference internal" href="azure.mgmt.netapp.operations.html#azure.mgmt.netapp.operations.PoolsOperations" title="azure.mgmt.netapp.operations.PoolsOperations"><em>azure.mgmt.netapp.operations.PoolsOperations</em></a>) – Pools operations</p></li>
+<li><p><strong>volumes</strong> (<a class="reference internal" href="azure.mgmt.netapp.operations.html#azure.mgmt.netapp.operations.VolumesOperations" title="azure.mgmt.netapp.operations.VolumesOperations"><em>azure.mgmt.netapp.operations.VolumesOperations</em></a>) – Volumes operations</p></li>
+<li><p><strong>mount_targets</strong> (<a class="reference internal" href="azure.mgmt.netapp.operations.html#azure.mgmt.netapp.operations.MountTargetsOperations" title="azure.mgmt.netapp.operations.MountTargetsOperations"><em>azure.mgmt.netapp.operations.MountTargetsOperations</em></a>) – MountTargets operations</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.compute.html#azure.mgmt.compute.ComputeManagementClient.snapshots" title="azure.mgmt.compute.ComputeManagementClient.snapshots"><strong>snapshots</strong></a> (<a class="reference internal" href="azure.mgmt.netapp.operations.html#azure.mgmt.netapp.operations.SnapshotsOperations" title="azure.mgmt.netapp.operations.SnapshotsOperations"><em>azure.mgmt.netapp.operations.SnapshotsOperations</em></a>) – Snapshots operations</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subscription credentials which uniquely identify
+Microsoft Azure subscription. The subscription ID forms part of the URI
+for every service call.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.netapp.AzureNetAppFilesManagementClient.check_file_path_availability">
+<code class="descname">check_file_path_availability</code><span class="sig-paren">(</span><em>location</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/azure_net_app_files_management_client.html#AzureNetAppFilesManagementClient.check_file_path_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.AzureNetAppFilesManagementClient.check_file_path_availability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check file path availability.</p>
+<p>Check if a file path is available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ResourceNameAvailability or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.netapp.models.html#azure.mgmt.netapp.models.ResourceNameAvailability" title="azure.mgmt.netapp.models.ResourceNameAvailability">ResourceNameAvailability</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.netapp.AzureNetAppFilesManagementClient.check_name_availability">
+<code class="descname">check_name_availability</code><span class="sig-paren">(</span><em>location</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/azure_net_app_files_management_client.html#AzureNetAppFilesManagementClient.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.AzureNetAppFilesManagementClient.check_name_availability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check resource name availability.</p>
+<p>Check if a resource name is available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ResourceNameAvailability or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.netapp.models.html#azure.mgmt.netapp.models.ResourceNameAvailability" title="azure.mgmt.netapp.models.ResourceNameAvailability">ResourceNameAvailability</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 

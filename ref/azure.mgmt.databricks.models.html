@@ -178,7 +178,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.mgmt.databricks.operations.html">azure.mgmt.databricks.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.databricks.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.databricks.html#module-azure.mgmt.databricks">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.datafactory.html">azure.mgmt.datafactory package</a></li>
@@ -314,8 +314,314 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="azure-mgmt-databricks-models-module">
-<h1>azure.mgmt.databricks.models module<a class="headerlink" href="#azure-mgmt-databricks-models-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-azure.mgmt.databricks.models">
+<span id="azure-mgmt-databricks-models-module"></span><h1>azure.mgmt.databricks.models module<a class="headerlink" href="#module-azure.mgmt.databricks.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.WorkspaceProviderAuthorization">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">WorkspaceProviderAuthorization</code><span class="sig-paren">(</span><em>*</em>, <em>principal_id: str</em>, <em>role_definition_id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/workspace_provider_authorization_py3.html#WorkspaceProviderAuthorization"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.WorkspaceProviderAuthorization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The workspace provider authorization.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The provider’s principal identifier. This
+is the identity that the provider will use to call ARM to manage the
+workspace resources.</p></li>
+<li><p><strong>role_definition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The provider’s role definition
+identifier. This role will define all the permissions that the provider
+must have on the workspace’s container resource group. This role
+definition cannot have permission to delete the resource group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.Sku">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">Sku</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>tier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.Sku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>SKU for the resource.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The SKU name.</p></li>
+<li><p><strong>tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU tier.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.Workspace">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">Workspace</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>managed_resource_group_id: str</em>, <em>tags=None</em>, <em>parameters=None</em>, <em>ui_definition_uri: str = None</em>, <em>authorizations=None</em>, <em>sku=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/workspace_py3.html#Workspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.Workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.databricks.models.tracked_resource_py3.TrackedResource</span></code></p>
+<p>Information about workspace.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified resource Id for the resource. Ex -
+/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource. Ex-
+Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.databricks.models.ProvisioningState" title="azure.mgmt.databricks.models.ProvisioningState"><em>ProvisioningState</em></a>) – The workspace provisioning state. Possible
+values include: ‘Accepted’, ‘Running’, ‘Ready’, ‘Creating’, ‘Created’,
+‘Deleting’, ‘Deleted’, ‘Canceled’, ‘Failed’, ‘Succeeded’, ‘Updating’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The geo-location where the resource lives</p></li>
+<li><p><strong>managed_resource_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The managed resource group Id.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Name and value pairs that define the workspace
+parameters.</p></li>
+<li><p><strong>ui_definition_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The blob URI where the UI definition file is
+located.</p></li>
+<li><p><strong>authorizations</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.databricks.models.WorkspaceProviderAuthorization" title="azure.mgmt.databricks.models.WorkspaceProviderAuthorization"><em>WorkspaceProviderAuthorization</em></a><em>]</em>) – The workspace provider authorizations.</p></li>
+<li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.databricks.models.Sku" title="azure.mgmt.databricks.models.Sku"><em>Sku</em></a>) – The SKU of the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.TrackedResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">TrackedResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.databricks.models.resource_py3.Resource</span></code></p>
+<p>The resource model definition for a ARM tracked top level resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified resource Id for the resource. Ex -
+/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource. Ex-
+Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The geo-location where the resource lives</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.Resource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The core properties of ARM resources.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified resource Id for the resource. Ex -
+/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource. Ex-
+Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.WorkspaceUpdate">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">WorkspaceUpdate</code><span class="sig-paren">(</span><em>*</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/workspace_update_py3.html#WorkspaceUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.WorkspaceUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An update to a workspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.ErrorDetail">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">ErrorDetail</code><span class="sig-paren">(</span><em>*</em>, <em>code: str</em>, <em>message: str</em>, <em>target: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/error_detail_py3.html#ErrorDetail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.ErrorDetail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error details.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The error’s code.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. A human readable error message.</p></li>
+<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Indicates which property in the request is responsible for
+the error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.ErrorInfo">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">ErrorInfo</code><span class="sig-paren">(</span><em>*</em>, <em>code: str</em>, <em>message: str</em>, <em>details=None</em>, <em>innererror: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/error_info_py3.html#ErrorInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.ErrorInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The code and message for an error.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. A machine readable error code.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. A human readable error message.</p></li>
+<li><p><strong>details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.databricks.models.ErrorDetail" title="azure.mgmt.databricks.models.ErrorDetail"><em>ErrorDetail</em></a><em>]</em>) – error details.</p></li>
+<li><p><strong>innererror</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Inner error details if they exist.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.ErrorResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>*</em>, <em>error</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error response.</p>
+<p>Contains details when the response code indicates an error.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>error</strong> (<a class="reference internal" href="#azure.mgmt.databricks.models.ErrorInfo" title="azure.mgmt.databricks.models.ErrorInfo"><em>ErrorInfo</em></a>) – Required. The error details.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.mgmt.databricks.models.ErrorResponseException">
+<em class="property">exception </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘ErrorResponse’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.OperationDisplay">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>*</em>, <em>provider: str = None</em>, <em>resource: str = None</em>, <em>operation: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The object that represents the operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service provider: Microsoft.ResourceProvider</p></li>
+<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource on which the operation is performed.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation type: Read, write, delete, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.Operation">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>REST API operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.databricks.models.OperationDisplay" title="azure.mgmt.databricks.models.OperationDisplay"><em>OperationDisplay</em></a>) – The object that represents the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.WorkspacePaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">WorkspacePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/workspace_paged.html#WorkspacePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.WorkspacePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.databricks.models.Workspace" title="azure.mgmt.databricks.models.Workspace"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workspace</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.OperationPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">OperationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.databricks.models.Operation" title="azure.mgmt.databricks.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.databricks.models.ProvisioningState">
+<em class="property">class </em><code class="descclassname">azure.mgmt.databricks.models.</code><code class="descname">ProvisioningState</code><a class="reference internal" href="../_modules/azure/mgmt/databricks/models/databricks_client_enums.html#ProvisioningState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.accepted">
+<code class="descname">accepted</code><em class="property"> = 'Accepted'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.accepted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.canceled">
+<code class="descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.canceled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.created">
+<code class="descname">created</code><em class="property"> = 'Created'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.creating">
+<code class="descname">creating</code><em class="property"> = 'Creating'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.creating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.deleted">
+<code class="descname">deleted</code><em class="property"> = 'Deleted'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.deleted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.deleting">
+<code class="descname">deleting</code><em class="property"> = 'Deleting'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.deleting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.failed">
+<code class="descname">failed</code><em class="property"> = 'Failed'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.ready">
+<code class="descname">ready</code><em class="property"> = 'Ready'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.ready" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.running">
+<code class="descname">running</code><em class="property"> = 'Running'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.running" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.succeeded">
+<code class="descname">succeeded</code><em class="property"> = 'Succeeded'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.succeeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.databricks.models.ProvisioningState.updating">
+<code class="descname">updating</code><em class="property"> = 'Updating'</em><a class="headerlink" href="#azure.mgmt.databricks.models.ProvisioningState.updating" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 
 

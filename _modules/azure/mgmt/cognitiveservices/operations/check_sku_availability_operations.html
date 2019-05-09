@@ -347,15 +347,9 @@
 <span class="sd">        :param location: Resource location.</span>
 <span class="sd">        :type location: str</span>
 <span class="sd">        :param skus: The SKU of the resource.</span>
-<span class="sd">        :type skus: list[str or ~azure.mgmt.cognitiveservices.models.SkuName]</span>
-<span class="sd">        :param kind: The Kind of the resource. Possible values include:</span>
-<span class="sd">         &#39;Bing.Autosuggest.v7&#39;, &#39;Bing.CustomSearch&#39;, &#39;Bing.Search.v7&#39;,</span>
-<span class="sd">         &#39;Bing.Speech&#39;, &#39;Bing.SpellCheck.v7&#39;, &#39;ComputerVision&#39;,</span>
-<span class="sd">         &#39;ContentModerator&#39;, &#39;CustomSpeech&#39;, &#39;CustomVision.Prediction&#39;,</span>
-<span class="sd">         &#39;CustomVision.Training&#39;, &#39;Emotion&#39;, &#39;Face&#39;, &#39;LUIS&#39;, &#39;QnAMaker&#39;,</span>
-<span class="sd">         &#39;SpeakerRecognition&#39;, &#39;SpeechTranslation&#39;, &#39;TextAnalytics&#39;,</span>
-<span class="sd">         &#39;TextTranslation&#39;, &#39;WebLM&#39;</span>
-<span class="sd">        :type kind: str or ~azure.mgmt.cognitiveservices.models.Kind</span>
+<span class="sd">        :type skus: list[str]</span>
+<span class="sd">        :param kind: The Kind of the resource.</span>
+<span class="sd">        :type kind: str</span>
 <span class="sd">        :param type: The Type of the resource.</span>
 <span class="sd">        :type type: str</span>
 <span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
@@ -386,6 +380,7 @@
 
         <span class="c1"># Construct headers</span>
         <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
         <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
@@ -398,9 +393,8 @@
         <span class="n">body_content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="s1">&#39;CheckSkuAvailabilityParameter&#39;</span><span class="p">)</span>
 
         <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
-            <span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
             <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>

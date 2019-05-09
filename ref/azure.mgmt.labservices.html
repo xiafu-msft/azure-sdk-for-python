@@ -198,7 +198,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.mgmt.labservices.operations.html">azure.mgmt.labservices.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-azure.mgmt.labservices">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
@@ -323,8 +323,39 @@
 </ul>
 </div>
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-azure.mgmt.labservices">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.labservices" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.mgmt.labservices.ManagedLabsClient">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.</code><code class="descname">ManagedLabsClient</code><span class="sig-paren">(</span><em>credentials</em>, <em>subscription_id</em>, <em>base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/managed_labs_client.html#ManagedLabsClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.ManagedLabsClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
+<p>The Managed Labs Client.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>ManagedLabsClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><strong>provider_operations</strong> (<a class="reference internal" href="azure.mgmt.labservices.operations.html#azure.mgmt.labservices.operations.ProviderOperations" title="azure.mgmt.labservices.operations.ProviderOperations"><em>azure.mgmt.labservices.operations.ProviderOperations</em></a>) – ProviderOperations operations</p></li>
+<li><p><strong>global_users</strong> (<a class="reference internal" href="azure.mgmt.labservices.operations.html#azure.mgmt.labservices.operations.GlobalUsersOperations" title="azure.mgmt.labservices.operations.GlobalUsersOperations"><em>azure.mgmt.labservices.operations.GlobalUsersOperations</em></a>) – GlobalUsers operations</p></li>
+<li><p><strong>lab_accounts</strong> (<a class="reference internal" href="azure.mgmt.labservices.operations.html#azure.mgmt.labservices.operations.LabAccountsOperations" title="azure.mgmt.labservices.operations.LabAccountsOperations"><em>azure.mgmt.labservices.operations.LabAccountsOperations</em></a>) – LabAccounts operations</p></li>
+<li><p><a class="reference internal" href="azure.applicationinsights.operations.html#module-azure.applicationinsights.operations" title="azure.applicationinsights.operations"><strong>operations</strong></a> (<a class="reference internal" href="azure.mgmt.labservices.operations.html#azure.mgmt.labservices.operations.Operations" title="azure.mgmt.labservices.operations.Operations"><em>azure.mgmt.labservices.operations.Operations</em></a>) – Operations operations</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.compute.html#azure.mgmt.compute.ComputeManagementClient.gallery_images" title="azure.mgmt.compute.ComputeManagementClient.gallery_images"><strong>gallery_images</strong></a> (<a class="reference internal" href="azure.mgmt.labservices.operations.html#azure.mgmt.labservices.operations.GalleryImagesOperations" title="azure.mgmt.labservices.operations.GalleryImagesOperations"><em>azure.mgmt.labservices.operations.GalleryImagesOperations</em></a>) – GalleryImages operations</p></li>
+<li><p><strong>labs</strong> (<a class="reference internal" href="azure.mgmt.labservices.operations.html#azure.mgmt.labservices.operations.LabsOperations" title="azure.mgmt.labservices.operations.LabsOperations"><em>azure.mgmt.labservices.operations.LabsOperations</em></a>) – Labs operations</p></li>
+<li><p><strong>environment_settings</strong> (<a class="reference internal" href="azure.mgmt.labservices.operations.html#azure.mgmt.labservices.operations.EnvironmentSettingsOperations" title="azure.mgmt.labservices.operations.EnvironmentSettingsOperations"><em>azure.mgmt.labservices.operations.EnvironmentSettingsOperations</em></a>) – EnvironmentSettings operations</p></li>
+<li><p><strong>environments</strong> (<a class="reference internal" href="azure.mgmt.labservices.operations.html#azure.mgmt.labservices.operations.EnvironmentsOperations" title="azure.mgmt.labservices.operations.EnvironmentsOperations"><em>azure.mgmt.labservices.operations.EnvironmentsOperations</em></a>) – Environments operations</p></li>
+<li><p><strong>users</strong> (<a class="reference internal" href="azure.mgmt.labservices.operations.html#azure.mgmt.labservices.operations.UsersOperations" title="azure.mgmt.labservices.operations.UsersOperations"><em>azure.mgmt.labservices.operations.UsersOperations</em></a>) – Users operations</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription ID.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 

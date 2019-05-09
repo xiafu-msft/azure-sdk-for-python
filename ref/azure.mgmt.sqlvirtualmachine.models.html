@@ -238,7 +238,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.operations.html">azure.mgmt.sqlvirtualmachine.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html#module-azure.mgmt.sqlvirtualmachine">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
@@ -314,8 +314,820 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="azure-mgmt-sqlvirtualmachine-models-module">
-<h1>azure.mgmt.sqlvirtualmachine.models module<a class="headerlink" href="#azure-mgmt-sqlvirtualmachine-models-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-azure.mgmt.sqlvirtualmachine.models">
+<span id="azure-mgmt-sqlvirtualmachine-models-module"></span><h1>azure.mgmt.sqlvirtualmachine.models module<a class="headerlink" href="#module-azure.mgmt.sqlvirtualmachine.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.PrivateIPAddress">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">PrivateIPAddress</code><span class="sig-paren">(</span><em>*</em>, <em>ip_address: str = None</em>, <em>subnet_resource_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/private_ip_address_py3.html#PrivateIPAddress"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.PrivateIPAddress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A private IP address bound to the availability group listener.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Private IP address bound to the availability group
+listener.</p></li>
+<li><p><strong>subnet_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subnet used to include private IP.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.LoadBalancerConfiguration">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">LoadBalancerConfiguration</code><span class="sig-paren">(</span><em>*</em>, <em>private_ip_address=None</em>, <em>public_ip_address_resource_id: str = None</em>, <em>load_balancer_resource_id: str = None</em>, <em>probe_port: int = None</em>, <em>sql_virtual_machine_instances=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/load_balancer_configuration_py3.html#LoadBalancerConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.LoadBalancerConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A load balancer configuration for an availability group listener.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>private_ip_address</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.PrivateIPAddress" title="azure.mgmt.sqlvirtualmachine.models.PrivateIPAddress"><em>PrivateIPAddress</em></a>) – Private IP address.</p></li>
+<li><p><strong>public_ip_address_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource id of the public IP.</p></li>
+<li><p><strong>load_balancer_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource id of the load balancer.</p></li>
+<li><p><strong>probe_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Probe port.</p></li>
+<li><p><strong>sql_virtual_machine_instances</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of the SQL virtual machine
+instance resource id’s that are enrolled into the availability group
+listener.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.Resource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ARM resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ProxyResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">ProxyResource</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/proxy_resource_py3.html#ProxyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ProxyResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.sqlvirtualmachine.models.resource_py3.Resource</span></code></p>
+<p>ARM proxy resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">AvailabilityGroupListener</code><span class="sig-paren">(</span><em>*</em>, <em>availability_group_name: str = None</em>, <em>load_balancer_configurations=None</em>, <em>create_default_availability_group_if_not_exist: bool = None</em>, <em>port: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/availability_group_listener_py3.html#AvailabilityGroupListener"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.sqlvirtualmachine.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>A SQL Server availability group listener.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Provisioning state to track the aysnc operation
+status.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>availability_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the availability group.</p></li>
+<li><p><strong>load_balancer_configurations</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.LoadBalancerConfiguration" title="azure.mgmt.sqlvirtualmachine.models.LoadBalancerConfiguration"><em>LoadBalancerConfiguration</em></a><em>]</em>) – List of load balancer configurations
+for an availability group listener.</p></li>
+<li><p><strong>create_default_availability_group_if_not_exist</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Create a default
+availability group if it does not exist.</p></li>
+<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Listener port.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.OperationDisplay">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Display metadata associated with the operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly form of the resource provider name.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datalake.analytics.catalog.models.html#azure.mgmt.datalake.analytics.catalog.models.FileType.resource" title="azure.mgmt.datalake.analytics.catalog.models.FileType.resource"><strong>resource</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly form of the resource type related
+to this action/operation.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.monitor.models.html#azure.mgmt.monitor.models.AutoscaleNotification.operation" title="azure.mgmt.monitor.models.AutoscaleNotification.operation"><strong>operation</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly name for the operation.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The localized friendly description for the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.Operation">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>SQL REST API operation definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the operation being performed on this particular
+object.</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.OperationDisplay" title="azure.mgmt.sqlvirtualmachine.models.OperationDisplay"><em>OperationDisplay</em></a>) – The localized display information for this particular
+operation / action.</p></li>
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.OperationOrigin" title="azure.mgmt.sqlvirtualmachine.models.OperationOrigin"><em>OperationOrigin</em></a>) – The intended executor of the operation. Possible values
+include: ‘user’, ‘system’</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a><em>]</em>) – Additional descriptions for the operation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.WsfcDomainProfile">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">WsfcDomainProfile</code><span class="sig-paren">(</span><em>*</em>, <em>domain_fqdn: str = None</em>, <em>ou_path: str = None</em>, <em>cluster_bootstrap_account: str = None</em>, <em>cluster_operator_account: str = None</em>, <em>sql_service_account: str = None</em>, <em>file_share_witness_path: str = None</em>, <em>storage_account_url: str = None</em>, <em>storage_account_primary_key: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/wsfc_domain_profile_py3.html#WsfcDomainProfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.WsfcDomainProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Active Directory account details to operate Windows Server Failover
+Cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain_fqdn</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified name of the domain.</p></li>
+<li><p><strong>ou_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Organizational Unit path in which the nodes and cluster
+will be present.</p></li>
+<li><p><strong>cluster_bootstrap_account</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Account name used for creating cluster
+(at minimum needs permissions to ‘Create Computer Objects’ in domain).</p></li>
+<li><p><strong>cluster_operator_account</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Account name used for operating cluster
+i.e. will be part of administrators group on all the participating virtual
+machines in the cluster.</p></li>
+<li><p><strong>sql_service_account</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Account name under which SQL service will run
+on all participating SQL virtual machines in the cluster.</p></li>
+<li><p><strong>file_share_witness_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional path for fileshare witness.</p></li>
+<li><p><strong>storage_account_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified ARM resource id of the witness
+storage account.</p></li>
+<li><p><strong>storage_account_primary_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Primary key of the witness storage
+account.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.TrackedResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">TrackedResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.sqlvirtualmachine.models.resource_py3.Resource</span></code></p>
+<p>ARM tracked top level resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlVirtualMachineGroup</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>sql_image_offer: str = None</em>, <em>sql_image_sku=None</em>, <em>wsfc_domain_profile=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_group_py3.html#SqlVirtualMachineGroup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.sqlvirtualmachine.models.tracked_resource_py3.TrackedResource</span></code></p>
+<p>A SQL virtual machine group.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Provisioning state to track the aysnc operation
+status.</p></li>
+<li><p><strong>scale_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.ScaleType" title="azure.mgmt.sqlvirtualmachine.models.ScaleType"><em>ScaleType</em></a>) – Scale type. Possible values include: ‘HA’</p></li>
+<li><p><strong>cluster_manager_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.ClusterManagerType" title="azure.mgmt.sqlvirtualmachine.models.ClusterManagerType"><em>ClusterManagerType</em></a>) – Type of cluster manager: Windows Server
+Failover Cluster (WSFC), implied by the scale type of the group and the OS
+type. Possible values include: ‘WSFC’</p></li>
+<li><p><strong>cluster_configuration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.ClusterConfiguration" title="azure.mgmt.sqlvirtualmachine.models.ClusterConfiguration"><em>ClusterConfiguration</em></a>) – Cluster type. Possible values include:
+‘Domainful’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>sql_image_offer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – SQL image offer. Examples may include
+SQL2016-WS2016, SQL2017-WS2016.</p></li>
+<li><p><strong>sql_image_sku</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.SqlVmGroupImageSku" title="azure.mgmt.sqlvirtualmachine.models.SqlVmGroupImageSku"><em>SqlVmGroupImageSku</em></a>) – SQL image sku. Possible values include: ‘Developer’,
+‘Enterprise’</p></li>
+<li><p><strong>wsfc_domain_profile</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.WsfcDomainProfile" title="azure.mgmt.sqlvirtualmachine.models.WsfcDomainProfile"><em>WsfcDomainProfile</em></a>) – Cluster Active Directory domain profile.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroupUpdate">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlVirtualMachineGroupUpdate</code><span class="sig-paren">(</span><em>*</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_group_update_py3.html#SqlVirtualMachineGroupUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroupUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An update to a SQL virtual machine group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ResourceIdentity">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">ResourceIdentity</code><span class="sig-paren">(</span><em>*</em>, <em>type=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/resource_identity_py3.html#ResourceIdentity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ResourceIdentity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Azure Active Directory identity configuration for a resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Active Directory principal id.</p></li>
+<li><p><strong>tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Active Directory tenant id.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.IdentityType" title="azure.mgmt.sqlvirtualmachine.models.IdentityType"><em>IdentityType</em></a>) – The identity type. Set this to ‘SystemAssigned’ in order to
+automatically create and assign an Azure Active Directory principal for
+the resource. Possible values include: ‘SystemAssigned’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.WsfcDomainCredentials">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">WsfcDomainCredentials</code><span class="sig-paren">(</span><em>*</em>, <em>cluster_bootstrap_account_password: str = None</em>, <em>cluster_operator_account_password: str = None</em>, <em>sql_service_account_password: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/wsfc_domain_credentials_py3.html#WsfcDomainCredentials"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.WsfcDomainCredentials" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Domain credentials for setting up Windows Server Failover Cluster for SQL
+availability group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_bootstrap_account_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cluster bootstrap account
+password.</p></li>
+<li><p><strong>cluster_operator_account_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cluster operator account
+password.</p></li>
+<li><p><strong>sql_service_account_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – SQL service account password.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.AutoPatchingSettings">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">AutoPatchingSettings</code><span class="sig-paren">(</span><em>*</em>, <em>enable: bool = None</em>, <em>day_of_week=None</em>, <em>maintenance_window_starting_hour: int = None</em>, <em>maintenance_window_duration: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/auto_patching_settings_py3.html#AutoPatchingSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.AutoPatchingSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Set a patching window during which Windows and SQL patches will be applied.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Enable or disable autopatching on SQL virtual machine.</p></li>
+<li><p><strong>day_of_week</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.DayOfWeek" title="azure.mgmt.sqlvirtualmachine.models.DayOfWeek"><em>DayOfWeek</em></a>) – Day of week to apply the patch on. Possible values
+include: ‘Monday’, ‘Tuesday’, ‘Wednesday’, ‘Thursday’, ‘Friday’,
+‘Saturday’, ‘Sunday’</p></li>
+<li><p><strong>maintenance_window_starting_hour</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Hour of the day when patching is
+initiated. Local VM time.</p></li>
+<li><p><strong>maintenance_window_duration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Duration of patching.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.AutoBackupSettings">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">AutoBackupSettings</code><span class="sig-paren">(</span><em>*</em>, <em>enable: bool = None</em>, <em>enable_encryption: bool = None</em>, <em>retention_period: int = None</em>, <em>storage_account_url: str = None</em>, <em>storage_access_key: str = None</em>, <em>password: str = None</em>, <em>backup_system_dbs: bool = None</em>, <em>backup_schedule_type=None</em>, <em>full_backup_frequency=None</em>, <em>full_backup_start_time: int = None</em>, <em>full_backup_window_hours: int = None</em>, <em>log_backup_frequency: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/auto_backup_settings_py3.html#AutoBackupSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.AutoBackupSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Configure backups for databases in your SQL virtual machine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Enable or disable autobackup on SQL virtual machine.</p></li>
+<li><p><strong>enable_encryption</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Enable or disable encryption for backup on SQL
+virtual machine.</p></li>
+<li><p><strong>retention_period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Retention period of backup: 1-30 days.</p></li>
+<li><p><strong>storage_account_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Storage account url where backup will be taken
+to.</p></li>
+<li><p><strong>storage_access_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Storage account key where backup will be taken
+to.</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Password for encryption on backup.</p></li>
+<li><p><strong>backup_system_dbs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Include or exclude system databases from auto
+backup.</p></li>
+<li><p><strong>backup_schedule_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.BackupScheduleType" title="azure.mgmt.sqlvirtualmachine.models.BackupScheduleType"><em>BackupScheduleType</em></a>) – Backup schedule type. Possible values
+include: ‘Manual’, ‘Automated’</p></li>
+<li><p><strong>full_backup_frequency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.FullBackupFrequencyType" title="azure.mgmt.sqlvirtualmachine.models.FullBackupFrequencyType"><em>FullBackupFrequencyType</em></a>) – Frequency of full backups. In both cases,
+full backups begin during the next scheduled time window. Possible values
+include: ‘Daily’, ‘Weekly’</p></li>
+<li><p><strong>full_backup_start_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Start time of a given day during which full
+backups can take place. 0-23 hours.</p></li>
+<li><p><strong>full_backup_window_hours</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Duration of the time window of a given
+day during which full backups can take place. 1-23 hours.</p></li>
+<li><p><strong>log_backup_frequency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Frequency of log backups. 5-60 minutes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.KeyVaultCredentialSettings">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">KeyVaultCredentialSettings</code><span class="sig-paren">(</span><em>*</em>, <em>enable: bool = None</em>, <em>credential_name: str = None</em>, <em>azure_key_vault_url: str = None</em>, <em>service_principal_name: str = None</em>, <em>service_principal_secret: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/key_vault_credential_settings_py3.html#KeyVaultCredentialSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.KeyVaultCredentialSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Configure your SQL virtual machine to be able to connect to the Azure Key
+Vault service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enable</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Enable or disable key vault credential setting.</p></li>
+<li><p><strong>credential_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Credential name.</p></li>
+<li><p><strong>azure_key_vault_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Key Vault url.</p></li>
+<li><p><strong>service_principal_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service principal name to access key vault.</p></li>
+<li><p><strong>service_principal_secret</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service principal name secret to access
+key vault.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlConnectivityUpdateSettings">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlConnectivityUpdateSettings</code><span class="sig-paren">(</span><em>*</em>, <em>connectivity_type=None</em>, <em>port: int = None</em>, <em>sql_auth_update_user_name: str = None</em>, <em>sql_auth_update_password: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_connectivity_update_settings_py3.html#SqlConnectivityUpdateSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlConnectivityUpdateSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Set the access level and network port settings for SQL Server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>connectivity_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.ConnectivityType" title="azure.mgmt.sqlvirtualmachine.models.ConnectivityType"><em>ConnectivityType</em></a>) – SQL Server connectivity option. Possible values
+include: ‘LOCAL’, ‘PRIVATE’, ‘PUBLIC’</p></li>
+<li><p><strong>port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – SQL Server port.</p></li>
+<li><p><strong>sql_auth_update_user_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – SQL Server sysadmin login to create.</p></li>
+<li><p><strong>sql_auth_update_password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – SQL Server sysadmin login password.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlWorkloadTypeUpdateSettings">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlWorkloadTypeUpdateSettings</code><span class="sig-paren">(</span><em>*</em>, <em>sql_workload_type=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_workload_type_update_settings_py3.html#SqlWorkloadTypeUpdateSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlWorkloadTypeUpdateSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Set workload type to optimize storage for SQL Server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sql_workload_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.SqlWorkloadType" title="azure.mgmt.sqlvirtualmachine.models.SqlWorkloadType"><em>SqlWorkloadType</em></a>) – SQL Server workload type. Possible values
+include: ‘GENERAL’, ‘OLTP’, ‘DW’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlStorageUpdateSettings">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlStorageUpdateSettings</code><span class="sig-paren">(</span><em>*</em>, <em>disk_count: int = None</em>, <em>disk_configuration_type=None</em>, <em>starting_device_id: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_storage_update_settings_py3.html#SqlStorageUpdateSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlStorageUpdateSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Set disk storage settings for SQL Server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>disk_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Virtual machine disk count.</p></li>
+<li><p><strong>disk_configuration_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType" title="azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType"><em>DiskConfigurationType</em></a>) – Disk configuration to apply to SQL Server.
+Possible values include: ‘NEW’, ‘EXTEND’, ‘ADD’</p></li>
+<li><p><strong>starting_device_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Device id of the first disk to be updated.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.AdditionalFeaturesServerConfigurations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">AdditionalFeaturesServerConfigurations</code><span class="sig-paren">(</span><em>*</em>, <em>is_rservices_enabled: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/additional_features_server_configurations_py3.html#AdditionalFeaturesServerConfigurations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.AdditionalFeaturesServerConfigurations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Additional SQL Server feature settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>is_rservices_enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Enable or disable R services (SQL 2016
+onwards).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ServerConfigurationsManagementSettings">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">ServerConfigurationsManagementSettings</code><span class="sig-paren">(</span><em>*</em>, <em>sql_connectivity_update_settings=None</em>, <em>sql_workload_type_update_settings=None</em>, <em>sql_storage_update_settings=None</em>, <em>additional_features_server_configurations=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/server_configurations_management_settings_py3.html#ServerConfigurationsManagementSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ServerConfigurationsManagementSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Set the connectivity, storage and workload settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sql_connectivity_update_settings</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.SqlConnectivityUpdateSettings" title="azure.mgmt.sqlvirtualmachine.models.SqlConnectivityUpdateSettings"><em>SqlConnectivityUpdateSettings</em></a>) – SQL connectivity type settings.</p></li>
+<li><p><strong>sql_workload_type_update_settings</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.SqlWorkloadTypeUpdateSettings" title="azure.mgmt.sqlvirtualmachine.models.SqlWorkloadTypeUpdateSettings"><em>SqlWorkloadTypeUpdateSettings</em></a>) – SQL workload type settings.</p></li>
+<li><p><strong>sql_storage_update_settings</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.SqlStorageUpdateSettings" title="azure.mgmt.sqlvirtualmachine.models.SqlStorageUpdateSettings"><em>SqlStorageUpdateSettings</em></a>) – SQL storage update settings.</p></li>
+<li><p><strong>additional_features_server_configurations</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.AdditionalFeaturesServerConfigurations" title="azure.mgmt.sqlvirtualmachine.models.AdditionalFeaturesServerConfigurations"><em>AdditionalFeaturesServerConfigurations</em></a>) – Additional SQL feature
+settings.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlVirtualMachine</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>identity=None</em>, <em>virtual_machine_resource_id: str = None</em>, <em>sql_server_license_type=None</em>, <em>sql_virtual_machine_group_resource_id: str = None</em>, <em>wsfc_domain_credentials=None</em>, <em>auto_patching_settings=None</em>, <em>auto_backup_settings=None</em>, <em>key_vault_credential_settings=None</em>, <em>server_configurations_management_settings=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_py3.html#SqlVirtualMachine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.sqlvirtualmachine.models.tracked_resource_py3.TrackedResource</span></code></p>
+<p>A SQL virtual machine.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource ID.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Provisioning state to track the aysnc operation
+status.</p></li>
+<li><p><strong>sql_image_offer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – SQL image offer. Examples include SQL2016-WS2016,
+SQL2017-WS2016.</p></li>
+<li><p><strong>sql_image_sku</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.SqlImageSku" title="azure.mgmt.sqlvirtualmachine.models.SqlImageSku"><em>SqlImageSku</em></a>) – SQL image sku. Possible values include: ‘Developer’,
+‘Express’, ‘Standard’, ‘Enterprise’, ‘Web’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>identity</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.ResourceIdentity" title="azure.mgmt.sqlvirtualmachine.models.ResourceIdentity"><em>ResourceIdentity</em></a>) – Azure Active Directory identity of the server.</p></li>
+<li><p><strong>virtual_machine_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ARM Resource id of underlying virtual
+machine created from SQL marketplace image.</p></li>
+<li><p><strong>sql_server_license_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.SqlServerLicenseType" title="azure.mgmt.sqlvirtualmachine.models.SqlServerLicenseType"><em>SqlServerLicenseType</em></a>) – SQL Server license type. Possible values
+include: ‘PAYG’, ‘AHUB’</p></li>
+<li><p><strong>sql_virtual_machine_group_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ARM resource id of the SQL
+virtual machine group this SQL virtual machine is or will be part of.</p></li>
+<li><p><strong>wsfc_domain_credentials</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.WsfcDomainCredentials" title="azure.mgmt.sqlvirtualmachine.models.WsfcDomainCredentials"><em>WsfcDomainCredentials</em></a>) – Domain credentials for setting up Windows
+Server Failover Cluster for SQL availability group.</p></li>
+<li><p><strong>auto_patching_settings</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.AutoPatchingSettings" title="azure.mgmt.sqlvirtualmachine.models.AutoPatchingSettings"><em>AutoPatchingSettings</em></a>) – Auto patching settings for applying
+critical security updates to SQL virtual machine.</p></li>
+<li><p><strong>auto_backup_settings</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.AutoBackupSettings" title="azure.mgmt.sqlvirtualmachine.models.AutoBackupSettings"><em>AutoBackupSettings</em></a>) – Auto backup settings for SQL Server.</p></li>
+<li><p><strong>key_vault_credential_settings</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.KeyVaultCredentialSettings" title="azure.mgmt.sqlvirtualmachine.models.KeyVaultCredentialSettings"><em>KeyVaultCredentialSettings</em></a>) – Key vault credential settings.</p></li>
+<li><p><strong>server_configurations_management_settings</strong> (<a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.ServerConfigurationsManagementSettings" title="azure.mgmt.sqlvirtualmachine.models.ServerConfigurationsManagementSettings"><em>ServerConfigurationsManagementSettings</em></a>) – SQL Server configuration
+management settings.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineUpdate">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlVirtualMachineUpdate</code><span class="sig-paren">(</span><em>*</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_update_py3.html#SqlVirtualMachineUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An update to a SQL virtual machine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListenerPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">AvailabilityGroupListenerPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/availability_group_listener_paged.html#AvailabilityGroupListenerPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListenerPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener" title="azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">AvailabilityGroupListener</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.OperationPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">OperationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.Operation" title="azure.mgmt.sqlvirtualmachine.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroupPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlVirtualMachineGroupPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_group_paged.html#SqlVirtualMachineGroupPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroupPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">SqlVirtualMachineGroup</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachinePaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlVirtualMachinePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_paged.html#SqlVirtualMachinePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachinePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine"><code class="xref py py-class docutils literal notranslate"><span class="pre">SqlVirtualMachine</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.OperationOrigin">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">OperationOrigin</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#OperationOrigin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.OperationOrigin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.OperationOrigin.system">
+<code class="descname">system</code><em class="property"> = 'system'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.OperationOrigin.system" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.OperationOrigin.user">
+<code class="descname">user</code><em class="property"> = 'user'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.OperationOrigin.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlVmGroupImageSku">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlVmGroupImageSku</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#SqlVmGroupImageSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlVmGroupImageSku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlVmGroupImageSku.developer">
+<code class="descname">developer</code><em class="property"> = 'Developer'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlVmGroupImageSku.developer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlVmGroupImageSku.enterprise">
+<code class="descname">enterprise</code><em class="property"> = 'Enterprise'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlVmGroupImageSku.enterprise" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ScaleType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">ScaleType</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#ScaleType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ScaleType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ScaleType.ha">
+<code class="descname">ha</code><em class="property"> = 'HA'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ScaleType.ha" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ClusterManagerType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">ClusterManagerType</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#ClusterManagerType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ClusterManagerType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ClusterManagerType.wsfc">
+<code class="descname">wsfc</code><em class="property"> = 'WSFC'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ClusterManagerType.wsfc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ClusterConfiguration">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">ClusterConfiguration</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#ClusterConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ClusterConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ClusterConfiguration.domainful">
+<code class="descname">domainful</code><em class="property"> = 'Domainful'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ClusterConfiguration.domainful" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.IdentityType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">IdentityType</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#IdentityType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.IdentityType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.IdentityType.system_assigned">
+<code class="descname">system_assigned</code><em class="property"> = 'SystemAssigned'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.IdentityType.system_assigned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlServerLicenseType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlServerLicenseType</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#SqlServerLicenseType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlServerLicenseType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlServerLicenseType.ahub">
+<code class="descname">ahub</code><em class="property"> = 'AHUB'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlServerLicenseType.ahub" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlServerLicenseType.payg">
+<code class="descname">payg</code><em class="property"> = 'PAYG'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlServerLicenseType.payg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlImageSku">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlImageSku</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#SqlImageSku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlImageSku" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlImageSku.developer">
+<code class="descname">developer</code><em class="property"> = 'Developer'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlImageSku.developer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlImageSku.enterprise">
+<code class="descname">enterprise</code><em class="property"> = 'Enterprise'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlImageSku.enterprise" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlImageSku.express">
+<code class="descname">express</code><em class="property"> = 'Express'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlImageSku.express" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlImageSku.standard">
+<code class="descname">standard</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlImageSku.standard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlImageSku.web">
+<code class="descname">web</code><em class="property"> = 'Web'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlImageSku.web" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DayOfWeek">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">DayOfWeek</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#DayOfWeek"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DayOfWeek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DayOfWeek.friday">
+<code class="descname">friday</code><em class="property"> = 'Friday'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DayOfWeek.friday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DayOfWeek.monday">
+<code class="descname">monday</code><em class="property"> = 'Monday'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DayOfWeek.monday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DayOfWeek.saturday">
+<code class="descname">saturday</code><em class="property"> = 'Saturday'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DayOfWeek.saturday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DayOfWeek.sunday">
+<code class="descname">sunday</code><em class="property"> = 'Sunday'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DayOfWeek.sunday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DayOfWeek.thursday">
+<code class="descname">thursday</code><em class="property"> = 'Thursday'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DayOfWeek.thursday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DayOfWeek.tuesday">
+<code class="descname">tuesday</code><em class="property"> = 'Tuesday'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DayOfWeek.tuesday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DayOfWeek.wednesday">
+<code class="descname">wednesday</code><em class="property"> = 'Wednesday'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DayOfWeek.wednesday" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.BackupScheduleType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">BackupScheduleType</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#BackupScheduleType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.BackupScheduleType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.BackupScheduleType.automated">
+<code class="descname">automated</code><em class="property"> = 'Automated'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.BackupScheduleType.automated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.BackupScheduleType.manual">
+<code class="descname">manual</code><em class="property"> = 'Manual'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.BackupScheduleType.manual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.FullBackupFrequencyType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">FullBackupFrequencyType</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#FullBackupFrequencyType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.FullBackupFrequencyType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.FullBackupFrequencyType.daily">
+<code class="descname">daily</code><em class="property"> = 'Daily'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.FullBackupFrequencyType.daily" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.FullBackupFrequencyType.weekly">
+<code class="descname">weekly</code><em class="property"> = 'Weekly'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.FullBackupFrequencyType.weekly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ConnectivityType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">ConnectivityType</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#ConnectivityType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ConnectivityType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ConnectivityType.local">
+<code class="descname">local</code><em class="property"> = 'LOCAL'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ConnectivityType.local" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ConnectivityType.private">
+<code class="descname">private</code><em class="property"> = 'PRIVATE'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ConnectivityType.private" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.ConnectivityType.public">
+<code class="descname">public</code><em class="property"> = 'PUBLIC'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.ConnectivityType.public" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlWorkloadType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">SqlWorkloadType</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#SqlWorkloadType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlWorkloadType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlWorkloadType.dw">
+<code class="descname">dw</code><em class="property"> = 'DW'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlWorkloadType.dw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlWorkloadType.general">
+<code class="descname">general</code><em class="property"> = 'GENERAL'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlWorkloadType.general" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.SqlWorkloadType.oltp">
+<code class="descname">oltp</code><em class="property"> = 'OLTP'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.SqlWorkloadType.oltp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.models.</code><code class="descname">DiskConfigurationType</code><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/models/sql_virtual_machine_management_client_enums.html#DiskConfigurationType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType.add">
+<code class="descname">add</code><em class="property"> = 'ADD'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType.add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType.extend">
+<code class="descname">extend</code><em class="property"> = 'EXTEND'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType.extend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType.new">
+<code class="descname">new</code><em class="property"> = 'NEW'</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.models.DiskConfigurationType.new" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 
 

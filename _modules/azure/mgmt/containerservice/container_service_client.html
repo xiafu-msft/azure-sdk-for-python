@@ -375,7 +375,7 @@
 <span class="sd">    :type profile: dict[str, str]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">DEFAULT_API_VERSION</span> <span class="o">=</span> <span class="s1">&#39;2019-02-01&#39;</span>
+    <span class="n">DEFAULT_API_VERSION</span> <span class="o">=</span> <span class="s1">&#39;2019-04-01&#39;</span>
     <span class="n">_PROFILE_TAG</span> <span class="o">=</span> <span class="s2">&quot;azure.mgmt.containerservice.ContainerServiceClient&quot;</span>
     <span class="n">LATEST_PROFILE</span> <span class="o">=</span> <span class="n">ProfileDefinition</span><span class="p">({</span>
         <span class="n">_PROFILE_TAG</span><span class="p">:</span> <span class="p">{</span>
@@ -410,6 +410,7 @@
 <span class="sd">           * 2018-08-01-preview: :mod:`v2018_08_01_preview.models&lt;azure.mgmt.containerservice.v2018_08_01_preview.models&gt;`</span>
 <span class="sd">           * 2018-09-30-preview: :mod:`v2018_09_30_preview.models&lt;azure.mgmt.containerservice.v2018_09_30_preview.models&gt;`</span>
 <span class="sd">           * 2019-02-01: :mod:`v2019_02_01.models&lt;azure.mgmt.containerservice.v2019_02_01.models&gt;`</span>
+<span class="sd">           * 2019-04-01: :mod:`v2019_04_01.models&lt;azure.mgmt.containerservice.v2019_04_01.models&gt;`</span>
 <span class="sd">           * 2019-04-30: :mod:`v2019_04_30.models&lt;azure.mgmt.containerservice.v2019_04_30.models&gt;`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2017-07-01&#39;</span><span class="p">:</span>
@@ -427,6 +428,9 @@
         <span class="k">elif</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2019-02-01&#39;</span><span class="p">:</span>
             <span class="kn">from</span> <span class="nn">.v2019_02_01</span> <span class="k">import</span> <span class="n">models</span>
             <span class="k">return</span> <span class="n">models</span>
+        <span class="k">elif</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2019-04-01&#39;</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">.v2019_04_01</span> <span class="k">import</span> <span class="n">models</span>
+            <span class="k">return</span> <span class="n">models</span>
         <span class="k">elif</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2019-04-30&#39;</span><span class="p">:</span>
             <span class="kn">from</span> <span class="nn">.v2019_04_30</span> <span class="k">import</span> <span class="n">models</span>
             <span class="k">return</span> <span class="n">models</span>
@@ -437,10 +441,13 @@
         <span class="sd">&quot;&quot;&quot;Instance depends on the API version:</span>
 
 <span class="sd">           * 2019-02-01: :class:`AgentPoolsOperations&lt;azure.mgmt.containerservice.v2019_02_01.operations.AgentPoolsOperations&gt;`</span>
+<span class="sd">           * 2019-04-01: :class:`AgentPoolsOperations&lt;azure.mgmt.containerservice.v2019_04_01.operations.AgentPoolsOperations&gt;`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">api_version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_api_version</span><span class="p">(</span><span class="s1">&#39;agent_pools&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2019-02-01&#39;</span><span class="p">:</span>
             <span class="kn">from</span> <span class="nn">.v2019_02_01.operations</span> <span class="k">import</span> <span class="n">AgentPoolsOperations</span> <span class="k">as</span> <span class="n">OperationClass</span>
+        <span class="k">elif</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2019-04-01&#39;</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">.v2019_04_01.operations</span> <span class="k">import</span> <span class="n">AgentPoolsOperations</span> <span class="k">as</span> <span class="n">OperationClass</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;APIVersion </span><span class="si">{}</span><span class="s2"> is not available&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">api_version</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">OperationClass</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="n">Serializer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_models_dict</span><span class="p">(</span><span class="n">api_version</span><span class="p">)),</span> <span class="n">Deserializer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_models_dict</span><span class="p">(</span><span class="n">api_version</span><span class="p">)))</span>
@@ -465,6 +472,7 @@
 <span class="sd">           * 2018-03-31: :class:`ManagedClustersOperations&lt;azure.mgmt.containerservice.v2018_03_31.operations.ManagedClustersOperations&gt;`</span>
 <span class="sd">           * 2018-08-01-preview: :class:`ManagedClustersOperations&lt;azure.mgmt.containerservice.v2018_08_01_preview.operations.ManagedClustersOperations&gt;`</span>
 <span class="sd">           * 2019-02-01: :class:`ManagedClustersOperations&lt;azure.mgmt.containerservice.v2019_02_01.operations.ManagedClustersOperations&gt;`</span>
+<span class="sd">           * 2019-04-01: :class:`ManagedClustersOperations&lt;azure.mgmt.containerservice.v2019_04_01.operations.ManagedClustersOperations&gt;`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">api_version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_api_version</span><span class="p">(</span><span class="s1">&#39;managed_clusters&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2018-03-31&#39;</span><span class="p">:</span>
@@ -473,6 +481,8 @@
             <span class="kn">from</span> <span class="nn">.v2018_08_01_preview.operations</span> <span class="k">import</span> <span class="n">ManagedClustersOperations</span> <span class="k">as</span> <span class="n">OperationClass</span>
         <span class="k">elif</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2019-02-01&#39;</span><span class="p">:</span>
             <span class="kn">from</span> <span class="nn">.v2019_02_01.operations</span> <span class="k">import</span> <span class="n">ManagedClustersOperations</span> <span class="k">as</span> <span class="n">OperationClass</span>
+        <span class="k">elif</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2019-04-01&#39;</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">.v2019_04_01.operations</span> <span class="k">import</span> <span class="n">ManagedClustersOperations</span> <span class="k">as</span> <span class="n">OperationClass</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;APIVersion </span><span class="si">{}</span><span class="s2"> is not available&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">api_version</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">OperationClass</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="n">Serializer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_models_dict</span><span class="p">(</span><span class="n">api_version</span><span class="p">)),</span> <span class="n">Deserializer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_models_dict</span><span class="p">(</span><span class="n">api_version</span><span class="p">)))</span>
@@ -500,6 +510,7 @@
 <span class="sd">           * 2018-03-31: :class:`Operations&lt;azure.mgmt.containerservice.v2018_03_31.operations.Operations&gt;`</span>
 <span class="sd">           * 2018-08-01-preview: :class:`Operations&lt;azure.mgmt.containerservice.v2018_08_01_preview.operations.Operations&gt;`</span>
 <span class="sd">           * 2019-02-01: :class:`Operations&lt;azure.mgmt.containerservice.v2019_02_01.operations.Operations&gt;`</span>
+<span class="sd">           * 2019-04-01: :class:`Operations&lt;azure.mgmt.containerservice.v2019_04_01.operations.Operations&gt;`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">api_version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_api_version</span><span class="p">(</span><span class="s1">&#39;operations&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2018-03-31&#39;</span><span class="p">:</span>
@@ -508,6 +519,8 @@
             <span class="kn">from</span> <span class="nn">.v2018_08_01_preview.operations</span> <span class="k">import</span> <span class="n">Operations</span> <span class="k">as</span> <span class="n">OperationClass</span>
         <span class="k">elif</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2019-02-01&#39;</span><span class="p">:</span>
             <span class="kn">from</span> <span class="nn">.v2019_02_01.operations</span> <span class="k">import</span> <span class="n">Operations</span> <span class="k">as</span> <span class="n">OperationClass</span>
+        <span class="k">elif</span> <span class="n">api_version</span> <span class="o">==</span> <span class="s1">&#39;2019-04-01&#39;</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">.v2019_04_01.operations</span> <span class="k">import</span> <span class="n">Operations</span> <span class="k">as</span> <span class="n">OperationClass</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;APIVersion </span><span class="si">{}</span><span class="s2"> is not available&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">api_version</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">OperationClass</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="n">Serializer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_models_dict</span><span class="p">(</span><span class="n">api_version</span><span class="p">)),</span> <span class="n">Deserializer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_models_dict</span><span class="p">(</span><span class="n">api_version</span><span class="p">)))</span></div>

@@ -207,7 +207,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.mgmt.mixedreality.operations.html">azure.mgmt.mixedreality.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-azure.mgmt.mixedreality">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
@@ -323,8 +323,64 @@
 </ul>
 </div>
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-azure.mgmt.mixedreality">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.mgmt.mixedreality" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.mgmt.mixedreality.MixedRealityClient">
+<em class="property">class </em><code class="descclassname">azure.mgmt.mixedreality.</code><code class="descname">MixedRealityClient</code><span class="sig-paren">(</span><em>credentials</em>, <em>subscription_id</em>, <em>base_url=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/mixed_reality_client.html#MixedRealityClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.MixedRealityClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
+<p>Mixed Reality Client</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>MixedRealityClientConfiguration</em>) – Configuration for client.</p></li>
+<li><p><a class="reference internal" href="azure.applicationinsights.operations.html#module-azure.applicationinsights.operations" title="azure.applicationinsights.operations"><strong>operations</strong></a> (<a class="reference internal" href="azure.mgmt.mixedreality.operations.html#azure.mgmt.mixedreality.operations.Operations" title="azure.mgmt.mixedreality.operations.Operations"><em>azure.mgmt.mixedreality.operations.Operations</em></a>) – Operations operations</p></li>
+<li><p><strong>spatial_anchors_accounts</strong> (<a class="reference internal" href="azure.mgmt.mixedreality.operations.html#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations" title="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations"><em>azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations</em></a>) – SpatialAnchorsAccounts operations</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>credentials</strong> (<code class="xref py py-mod docutils literal notranslate"><span class="pre">A</span> <span class="pre">msrestazure</span> <span class="pre">Credentials</span>
+<span class="pre">object</span></code>) – Credentials needed for the client to connect to Azure.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure subscription ID.</p></li>
+<li><p><strong>base_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service URL</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.mixedreality.MixedRealityClient.check_name_availability_local">
+<code class="descname">check_name_availability_local</code><span class="sig-paren">(</span><em>location</em>, <em>name</em>, <em>type</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/mixed_reality_client.html#MixedRealityClient.check_name_availability_local"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.MixedRealityClient.check_name_availability_local" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check Name Availability for global uniqueness.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location in which uniqueness will be verified.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Name To Verify</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fully qualified resource type which includes provider
+namespace</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CheckNameAvailabilityResponse or ClientRawResponse if
+raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.CheckNameAvailabilityResponse" title="azure.mgmt.mixedreality.models.CheckNameAvailabilityResponse">CheckNameAvailabilityResponse</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.ErrorResponseException" title="azure.mgmt.mixedreality.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 

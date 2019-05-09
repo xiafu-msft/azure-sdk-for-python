@@ -144,7 +144,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.operations.html">azure.cognitiveservices.search.customimagesearch.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.cognitiveservices.search.customimagesearch.html#module-azure.cognitiveservices.search.customimagesearch">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.search.customsearch.html">azure.cognitiveservices.search.customsearch package</a></li>
@@ -314,8 +314,828 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="azure-cognitiveservices-search-customimagesearch-models-module">
-<h1>azure.cognitiveservices.search.customimagesearch.models module<a class="headerlink" href="#azure-cognitiveservices-search-customimagesearch-models-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-azure.cognitiveservices.search.customimagesearch.models">
+<span id="azure-cognitiveservices-search-customimagesearch-models-module"></span><h1>azure.cognitiveservices.search.customimagesearch.models module<a class="headerlink" href="#module-azure.cognitiveservices.search.customimagesearch.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageObject">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ImageObject</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/image_object_py3.html#ImageObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.media_object.MediaObject</span></code></p>
+<p>Defines an image.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p></li>
+<li><p><strong>read_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that returns this resource.</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL To Bing’s search result for this item.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the thing represented by this object.</p></li>
+<li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to get more information about the thing represented by
+this object.</p></li>
+<li><p><strong>image</strong> (<a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.ImageObject" title="azure.cognitiveservices.search.customimagesearch.models.ImageObject"><em>ImageObject</em></a>) – An image of the item.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A short description of the item.</p></li>
+<li><p><strong>alternate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An alias for the item</p></li>
+<li><p><strong>bing_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An ID that uniquely identifies this item.</p></li>
+<li><p><strong>thumbnail_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to a thumbnail of the item.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.Thing" title="azure.cognitiveservices.search.customimagesearch.models.Thing"><em>Thing</em></a><em>]</em>) – The source of the creative work.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.sql.models.html#azure.mgmt.sql.models.DataMaskingFunction.text" title="azure.mgmt.sql.models.DataMaskingFunction.text"><strong>text</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Text content of this creative work</p></li>
+<li><p><strong>content_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Original URL to retrieve the source (file) for the
+media object (e.g the source URL for the image).</p></li>
+<li><p><strong>host_page_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – URL of the page that hosts the media object.</p></li>
+<li><p><strong>content_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Size of the media object content (use format “value
+unit” e.g “1024 B”).</p></li>
+<li><p><strong>encoding_format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Encoding format (e.g mp3, mp4, jpeg, etc).</p></li>
+<li><p><strong>host_page_display_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Display URL of the page that hosts the media
+object.</p></li>
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The width of the media object, in pixels.</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The height of the media object, in pixels.</p></li>
+<li><p><strong>thumbnail</strong> (<a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.ImageObject" title="azure.cognitiveservices.search.customimagesearch.models.ImageObject"><em>ImageObject</em></a>) – The URL to a thumbnail of the image</p></li>
+<li><p><strong>image_insights_token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The token that you use in a subsequent call to
+the Image Search API to get additional information about the image. For
+information about using this token, see the insightsToken query parameter.</p></li>
+<li><p><strong>image_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unique Id for the image</p></li>
+<li><p><strong>accent_color</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A three-byte hexadecimal number that represents the
+color that dominates the image. Use the color as the temporary background
+in your client until the image is loaded.</p></li>
+<li><p><strong>visual_words</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Visual representation of the image. Used for getting
+more sizes</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Images">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">Images</code><span class="sig-paren">(</span><em>*</em>, <em>value</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/images_py3.html#Images"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.search_results_answer.SearchResultsAnswer</span></code></p>
+<p>Defines an image answer.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.ImageObject" title="azure.cognitiveservices.search.customimagesearch.models.ImageObject"><em>ImageObject</em></a><em>]</em>) – Required. A list of image objects that are relevant to the
+query. If there are no results, the List is empty.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p></li>
+<li><p><strong>read_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that returns this resource.</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL To Bing’s search result for this item.</p></li>
+<li><p><strong>total_estimated_matches</strong> (<em>long</em>) – The estimated number of webpages that are
+relevant to the query. Use this number along with the count and offset
+query parameters to page the results.</p></li>
+<li><p><strong>next_offset</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Used as part of deduping. Tells client the next offset
+that client should use in the next pagination request</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.SearchResultsAnswer">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">SearchResultsAnswer</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/search_results_answer_py3.html#SearchResultsAnswer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.SearchResultsAnswer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.answer.Answer</span></code></p>
+<p>Defines a search result answer.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: Images</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p></li>
+<li><p><strong>read_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that returns this resource.</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL To Bing’s search result for this item.</p></li>
+<li><p><strong>total_estimated_matches</strong> (<em>long</em>) – The estimated number of webpages that are
+relevant to the query. Use this number along with the count and offset
+query parameters to page the results.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Query">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">Query</code><span class="sig-paren">(</span><em>*</em>, <em>text: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/query_py3.html#Query"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Defines a search query.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The query string. Use this string as the query term
+in a new search request.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>display_text</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The display version of the query term. This version of
+the query term may contain special characters that highlight the search
+term found in the query string. The string contains the highlighting
+characters only if the query enabled hit highlighting</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that takes the user to the Bing search
+results page for the query.Only related search results include this field.</p></li>
+<li><p><strong>search_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that you use to get the results of the related
+search. Before using the URL, you must append query parameters as
+appropriate and include the Ocp-Apim-Subscription-Key header. Use this URL
+if you’re displaying the results in your own user interface. Otherwise,
+use the webSearchUrl URL.</p></li>
+<li><p><strong>thumbnail</strong> (<a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.ImageObject" title="azure.cognitiveservices.search.customimagesearch.models.ImageObject"><em>ImageObject</em></a>) – The URL to a thumbnail of a related image.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Answer">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">Answer</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/answer_py3.html#Answer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Answer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.response.Response</span></code></p>
+<p>Defines an answer.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: SearchResultsAnswer</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p></li>
+<li><p><strong>read_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that returns this resource.</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL To Bing’s search result for this item.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.MediaObject">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">MediaObject</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/media_object_py3.html#MediaObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.MediaObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.creative_work.CreativeWork</span></code></p>
+<p>Defines a media object.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: ImageObject</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p></li>
+<li><p><strong>read_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that returns this resource.</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL To Bing’s search result for this item.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the thing represented by this object.</p></li>
+<li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to get more information about the thing represented by
+this object.</p></li>
+<li><p><strong>image</strong> (<a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.ImageObject" title="azure.cognitiveservices.search.customimagesearch.models.ImageObject"><em>ImageObject</em></a>) – An image of the item.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A short description of the item.</p></li>
+<li><p><strong>alternate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An alias for the item</p></li>
+<li><p><strong>bing_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An ID that uniquely identifies this item.</p></li>
+<li><p><strong>thumbnail_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to a thumbnail of the item.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.Thing" title="azure.cognitiveservices.search.customimagesearch.models.Thing"><em>Thing</em></a><em>]</em>) – The source of the creative work.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.sql.models.html#azure.mgmt.sql.models.DataMaskingFunction.text" title="azure.mgmt.sql.models.DataMaskingFunction.text"><strong>text</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Text content of this creative work</p></li>
+<li><p><strong>content_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Original URL to retrieve the source (file) for the
+media object (e.g the source URL for the image).</p></li>
+<li><p><strong>host_page_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – URL of the page that hosts the media object.</p></li>
+<li><p><strong>content_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Size of the media object content (use format “value
+unit” e.g “1024 B”).</p></li>
+<li><p><strong>encoding_format</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Encoding format (e.g mp3, mp4, jpeg, etc).</p></li>
+<li><p><strong>host_page_display_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Display URL of the page that hosts the media
+object.</p></li>
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The width of the media object, in pixels.</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The height of the media object, in pixels.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Response">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">Response</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/response_py3.html#Response"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.identifiable.Identifiable</span></code></p>
+<p>Defines a response. All schemas that could be returned at the root of a
+response should inherit from this.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: Answer, Thing, ErrorResponse</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p></li>
+<li><p><strong>read_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that returns this resource.</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL To Bing’s search result for this item.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Thing">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">Thing</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/thing_py3.html#Thing"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Thing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.response.Response</span></code></p>
+<p>Defines a thing.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: CreativeWork</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p></li>
+<li><p><strong>read_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that returns this resource.</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL To Bing’s search result for this item.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the thing represented by this object.</p></li>
+<li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to get more information about the thing represented by
+this object.</p></li>
+<li><p><strong>image</strong> (<a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.ImageObject" title="azure.cognitiveservices.search.customimagesearch.models.ImageObject"><em>ImageObject</em></a>) – An image of the item.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A short description of the item.</p></li>
+<li><p><strong>alternate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An alias for the item</p></li>
+<li><p><strong>bing_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An ID that uniquely identifies this item.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.CreativeWork">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">CreativeWork</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/creative_work_py3.html#CreativeWork"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.CreativeWork" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.thing.Thing</span></code></p>
+<p>The most generic kind of creative work, including books, movies,
+photographs, software programs, etc.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: MediaObject, WebPage</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p></li>
+<li><p><strong>read_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that returns this resource.</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL To Bing’s search result for this item.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the thing represented by this object.</p></li>
+<li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to get more information about the thing represented by
+this object.</p></li>
+<li><p><strong>image</strong> (<a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.ImageObject" title="azure.cognitiveservices.search.customimagesearch.models.ImageObject"><em>ImageObject</em></a>) – An image of the item.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A short description of the item.</p></li>
+<li><p><strong>alternate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An alias for the item</p></li>
+<li><p><strong>bing_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An ID that uniquely identifies this item.</p></li>
+<li><p><strong>thumbnail_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to a thumbnail of the item.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.Thing" title="azure.cognitiveservices.search.customimagesearch.models.Thing"><em>Thing</em></a><em>]</em>) – The source of the creative work.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.sql.models.html#azure.mgmt.sql.models.DataMaskingFunction.text" title="azure.mgmt.sql.models.DataMaskingFunction.text"><strong>text</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Text content of this creative work</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Identifiable">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">Identifiable</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/identifiable_py3.html#Identifiable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Identifiable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.response_base.ResponseBase</span></code></p>
+<p>Defines the identity of a resource.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: Response</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Error">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">Error</code><span class="sig-paren">(</span><em>*</em>, <em>message: str</em>, <em>code='None'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/error_py3.html#Error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Defines the error that occurred.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorCode" title="azure.cognitiveservices.search.customimagesearch.models.ErrorCode"><em>ErrorCode</em></a>) – Required. The error code that identifies the category of
+error. Possible values include: ‘None’, ‘ServerError’, ‘InvalidRequest’,
+‘RateLimitExceeded’, ‘InvalidAuthorization’, ‘InsufficientAuthorization’.
+Default value: “None” .</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. A description of the error.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>sub_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode" title="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode"><em>ErrorSubCode</em></a>) – The error code that further helps to identify the error.
+Possible values include: ‘UnexpectedError’, ‘ResourceError’,
+‘NotImplemented’, ‘ParameterMissing’, ‘ParameterInvalidValue’,
+‘HttpNotAllowed’, ‘Blocked’, ‘AuthorizationMissing’,
+‘AuthorizationRedundancy’, ‘AuthorizationDisabled’, ‘AuthorizationExpired’</p></li>
+<li><p><strong>more_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A description that provides additional information
+about the error.</p></li>
+<li><p><strong>parameter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The parameter in the request that caused the error.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The parameter’s value in the request that was not valid.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorResponse">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>*</em>, <em>errors</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.response.Response</span></code></p>
+<p>The top-level response that represents a failed request.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.Error" title="azure.cognitiveservices.search.customimagesearch.models.Error"><em>Error</em></a><em>]</em>) – Required. A list of errors that describe the reasons why
+the request failed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p></li>
+<li><p><strong>read_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that returns this resource.</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL To Bing’s search result for this item.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorResponseException">
+<em class="property">exception </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘ErrorResponse’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.WebPage">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">WebPage</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/web_page_py3.html#WebPage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.WebPage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.cognitiveservices.search.customimagesearch.models.creative_work.CreativeWork</span></code></p>
+<p>Defines a webpage that is relevant to the query.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A String identifier.</p></li>
+<li><p><strong>read_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL that returns this resource.</p></li>
+<li><p><strong>web_search_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL To Bing’s search result for this item.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the thing represented by this object.</p></li>
+<li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to get more information about the thing represented by
+this object.</p></li>
+<li><p><strong>image</strong> (<a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.ImageObject" title="azure.cognitiveservices.search.customimagesearch.models.ImageObject"><em>ImageObject</em></a>) – An image of the item.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A short description of the item.</p></li>
+<li><p><strong>alternate_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An alias for the item</p></li>
+<li><p><strong>bing_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – An ID that uniquely identifies this item.</p></li>
+<li><p><strong>thumbnail_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to a thumbnail of the item.</p></li>
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.VolumeResourceDescription.provider" title="azure.servicefabric.models.VolumeResourceDescription.provider"><strong>provider</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.search.customimagesearch.models.Thing" title="azure.cognitiveservices.search.customimagesearch.models.Thing"><em>Thing</em></a><em>]</em>) – The source of the creative work.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.sql.models.html#azure.mgmt.sql.models.DataMaskingFunction.text" title="azure.mgmt.sql.models.DataMaskingFunction.text"><strong>text</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Text content of this creative work</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ResponseBase">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ResponseBase</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/response_base_py3.html#ResponseBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ResponseBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Response base.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: Identifiable</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorCode">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ErrorCode</code><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/custom_image_search_api_enums.html#ErrorCode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorCode.insufficient_authorization">
+<code class="descname">insufficient_authorization</code><em class="property"> = 'InsufficientAuthorization'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorCode.insufficient_authorization" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorCode.invalid_authorization">
+<code class="descname">invalid_authorization</code><em class="property"> = 'InvalidAuthorization'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorCode.invalid_authorization" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorCode.invalid_request">
+<code class="descname">invalid_request</code><em class="property"> = 'InvalidRequest'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorCode.invalid_request" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorCode.none">
+<code class="descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorCode.none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorCode.rate_limit_exceeded">
+<code class="descname">rate_limit_exceeded</code><em class="property"> = 'RateLimitExceeded'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorCode.rate_limit_exceeded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorCode.server_error">
+<code class="descname">server_error</code><em class="property"> = 'ServerError'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorCode.server_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ErrorSubCode</code><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/custom_image_search_api_enums.html#ErrorSubCode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.authorization_disabled">
+<code class="descname">authorization_disabled</code><em class="property"> = 'AuthorizationDisabled'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.authorization_disabled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.authorization_expired">
+<code class="descname">authorization_expired</code><em class="property"> = 'AuthorizationExpired'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.authorization_expired" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.authorization_missing">
+<code class="descname">authorization_missing</code><em class="property"> = 'AuthorizationMissing'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.authorization_missing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.authorization_redundancy">
+<code class="descname">authorization_redundancy</code><em class="property"> = 'AuthorizationRedundancy'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.authorization_redundancy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.blocked">
+<code class="descname">blocked</code><em class="property"> = 'Blocked'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.blocked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.http_not_allowed">
+<code class="descname">http_not_allowed</code><em class="property"> = 'HttpNotAllowed'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.http_not_allowed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.not_implemented">
+<code class="descname">not_implemented</code><em class="property"> = 'NotImplemented'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.not_implemented" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.parameter_invalid_value">
+<code class="descname">parameter_invalid_value</code><em class="property"> = 'ParameterInvalidValue'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.parameter_invalid_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.parameter_missing">
+<code class="descname">parameter_missing</code><em class="property"> = 'ParameterMissing'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.parameter_missing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.resource_error">
+<code class="descname">resource_error</code><em class="property"> = 'ResourceError'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.resource_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.unexpected_error">
+<code class="descname">unexpected_error</code><em class="property"> = 'UnexpectedError'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ErrorSubCode.unexpected_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageAspect">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ImageAspect</code><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/custom_image_search_api_enums.html#ImageAspect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageAspect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageAspect.all">
+<code class="descname">all</code><em class="property"> = 'All'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageAspect.all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageAspect.square">
+<code class="descname">square</code><em class="property"> = 'Square'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageAspect.square" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageAspect.tall">
+<code class="descname">tall</code><em class="property"> = 'Tall'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageAspect.tall" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageAspect.wide">
+<code class="descname">wide</code><em class="property"> = 'Wide'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageAspect.wide" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ImageColor</code><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/custom_image_search_api_enums.html#ImageColor"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.black">
+<code class="descname">black</code><em class="property"> = 'Black'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.black" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.blue">
+<code class="descname">blue</code><em class="property"> = 'Blue'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.blue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.brown">
+<code class="descname">brown</code><em class="property"> = 'Brown'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.brown" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.color_only">
+<code class="descname">color_only</code><em class="property"> = 'ColorOnly'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.color_only" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.gray">
+<code class="descname">gray</code><em class="property"> = 'Gray'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.gray" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.green">
+<code class="descname">green</code><em class="property"> = 'Green'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.green" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.monochrome">
+<code class="descname">monochrome</code><em class="property"> = 'Monochrome'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.monochrome" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.orange">
+<code class="descname">orange</code><em class="property"> = 'Orange'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.orange" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.pink">
+<code class="descname">pink</code><em class="property"> = 'Pink'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.pink" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.purple">
+<code class="descname">purple</code><em class="property"> = 'Purple'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.purple" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.red">
+<code class="descname">red</code><em class="property"> = 'Red'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.red" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.teal">
+<code class="descname">teal</code><em class="property"> = 'Teal'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.teal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.white">
+<code class="descname">white</code><em class="property"> = 'White'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.white" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageColor.yellow">
+<code class="descname">yellow</code><em class="property"> = 'Yellow'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageColor.yellow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Freshness">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">Freshness</code><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/custom_image_search_api_enums.html#Freshness"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Freshness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Freshness.day">
+<code class="descname">day</code><em class="property"> = 'Day'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Freshness.day" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Freshness.month">
+<code class="descname">month</code><em class="property"> = 'Month'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Freshness.month" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.Freshness.week">
+<code class="descname">week</code><em class="property"> = 'Week'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.Freshness.week" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageContent">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ImageContent</code><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/custom_image_search_api_enums.html#ImageContent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageContent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageContent.face">
+<code class="descname">face</code><em class="property"> = 'Face'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageContent.face" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageContent.portrait">
+<code class="descname">portrait</code><em class="property"> = 'Portrait'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageContent.portrait" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageType">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ImageType</code><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/custom_image_search_api_enums.html#ImageType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageType.animated_gif">
+<code class="descname">animated_gif</code><em class="property"> = 'AnimatedGif'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageType.animated_gif" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageType.clipart">
+<code class="descname">clipart</code><em class="property"> = 'Clipart'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageType.clipart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageType.line">
+<code class="descname">line</code><em class="property"> = 'Line'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageType.line" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageType.photo">
+<code class="descname">photo</code><em class="property"> = 'Photo'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageType.photo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageType.shopping">
+<code class="descname">shopping</code><em class="property"> = 'Shopping'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageType.shopping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageType.transparent">
+<code class="descname">transparent</code><em class="property"> = 'Transparent'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageType.transparent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageLicense">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ImageLicense</code><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/custom_image_search_api_enums.html#ImageLicense"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageLicense" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageLicense.all">
+<code class="descname">all</code><em class="property"> = 'All'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageLicense.all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageLicense.any">
+<code class="descname">any</code><em class="property"> = 'Any'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageLicense.any" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageLicense.modify">
+<code class="descname">modify</code><em class="property"> = 'Modify'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageLicense.modify" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageLicense.modify_commercially">
+<code class="descname">modify_commercially</code><em class="property"> = 'ModifyCommercially'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageLicense.modify_commercially" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageLicense.public">
+<code class="descname">public</code><em class="property"> = 'Public'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageLicense.public" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageLicense.share">
+<code class="descname">share</code><em class="property"> = 'Share'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageLicense.share" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageLicense.share_commercially">
+<code class="descname">share_commercially</code><em class="property"> = 'ShareCommercially'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageLicense.share_commercially" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.SafeSearch">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">SafeSearch</code><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/custom_image_search_api_enums.html#SafeSearch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.SafeSearch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.SafeSearch.moderate">
+<code class="descname">moderate</code><em class="property"> = 'Moderate'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.SafeSearch.moderate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.SafeSearch.off">
+<code class="descname">off</code><em class="property"> = 'Off'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.SafeSearch.off" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.SafeSearch.strict">
+<code class="descname">strict</code><em class="property"> = 'Strict'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.SafeSearch.strict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageSize">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.search.customimagesearch.models.</code><code class="descname">ImageSize</code><a class="reference internal" href="../_modules/azure/cognitiveservices/search/customimagesearch/models/custom_image_search_api_enums.html#ImageSize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageSize.all">
+<code class="descname">all</code><em class="property"> = 'All'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageSize.all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageSize.large">
+<code class="descname">large</code><em class="property"> = 'Large'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageSize.large" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageSize.medium">
+<code class="descname">medium</code><em class="property"> = 'Medium'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageSize.medium" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageSize.small">
+<code class="descname">small</code><em class="property"> = 'Small'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageSize.small" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.search.customimagesearch.models.ImageSize.wallpaper">
+<code class="descname">wallpaper</code><em class="property"> = 'Wallpaper'</em><a class="headerlink" href="#azure.cognitiveservices.search.customimagesearch.models.ImageSize.wallpaper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 
 

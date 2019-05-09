@@ -245,7 +245,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.servicebus.servicebusservice.html">azure.servicebus.servicebusservice module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-azure.servicebus">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.servicemanagement.html">azure.servicemanagement package</a></li>
@@ -325,8 +325,903 @@
 </ul>
 </div>
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-azure.servicebus">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.servicebus" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.servicebus.Message">
+<em class="property">class </em><code class="descclassname">azure.servicebus.</code><code class="descname">Message</code><span class="sig-paren">(</span><em>body</em>, <em>encoding='UTF-8'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#Message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.Message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A Service Bus Message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)"><em>bytes</em></a>) – The data to send in a single message. The maximum size per message is 256 kB.</p></li>
+<li><p><strong>encoding</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The encoding for string data. Default is UTF-8.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+<dl class="method">
+<dt id="azure.servicebus.Message.abandon">
+<code class="descname">abandon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#Message.abandon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.Message.abandon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abandon the message.</p>
+<p>This message will be returned to the queue to be reprocessed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.annotations">
+<code class="descname">annotations</code><a class="headerlink" href="#azure.servicebus.Message.annotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>The annotations of the message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.body">
+<code class="descname">body</code><a class="headerlink" href="#azure.servicebus.Message.body" title="Permalink to this definition">¶</a></dt>
+<dd><p>The body of the Message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)">bytes</a> or generator[<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bytes" title="(in Python v3.5)">bytes</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.Message.complete">
+<code class="descname">complete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#Message.complete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.Message.complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Complete the message.</p>
+<p>This removes the message from the queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.Message.dead_letter">
+<code class="descname">dead_letter</code><span class="sig-paren">(</span><em>description=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#Message.dead_letter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.Message.dead_letter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the message to the Dead Letter queue.</p>
+<p>The Dead Letter queue is a sub-queue that can be
+used to store messages that failed to process correctly, or otherwise require further inspection
+or processing. The queue can also be configured to send expired messages to the Dead Letter queue.
+To receive dead-lettered messages, use <cite>QueueClient.get_deadletter_receiver()</cite> or
+<cite>SubscriptionClient.get_deadletter_receiver()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The reason for dead-lettering the message.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.Message.defer">
+<code class="descname">defer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#Message.defer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.Message.defer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defer the message.</p>
+<p>This message will remain in the queue but must be received
+specifically by its sequence number in order to be processed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.enqueue_sequence_number">
+<code class="descname">enqueue_sequence_number</code><a class="headerlink" href="#azure.servicebus.Message.enqueue_sequence_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.enqueued_time">
+<code class="descname">enqueued_time</code><a class="headerlink" href="#azure.servicebus.Message.enqueued_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.expired">
+<code class="descname">expired</code><a class="headerlink" href="#azure.servicebus.Message.expired" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.lock_token">
+<code class="descname">lock_token</code><a class="headerlink" href="#azure.servicebus.Message.lock_token" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.locked_until">
+<code class="descname">locked_until</code><a class="headerlink" href="#azure.servicebus.Message.locked_until" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.partition_id">
+<code class="descname">partition_id</code><a class="headerlink" href="#azure.servicebus.Message.partition_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.partition_key">
+<code class="descname">partition_key</code><a class="headerlink" href="#azure.servicebus.Message.partition_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.Message.renew_lock">
+<code class="descname">renew_lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#Message.renew_lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.Message.renew_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renew the message lock.</p>
+<p>This will maintain the lock on the message to ensure
+it is not returned to the queue to be reprocessed. In order to complete (or otherwise settle)
+the message, the lock must be maintained. Messages received via ReceiveAndDelete mode are not
+locked, and therefore cannot be renewed. This operation can also be performed as a threaded
+background task by registering the message with an <cite>azure.servicebus.AutoLockRenew</cite> instance.
+This operation is only available for non-sessionful messages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>TypeError if the message is sessionful.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageLockExpired is message lock has already expired.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.MessageAlreadySettled is message has already been settled.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.Message.schedule">
+<code class="descname">schedule</code><span class="sig-paren">(</span><em>schedule_time</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#Message.schedule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.Message.schedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a specific enqueue time to the message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>schedule_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/datetime.html#datetime.datetime" title="(in Python v3.5)"><em>datetime</em></a>) – The scheduled time to enqueue the message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.scheduled_enqueue_time">
+<code class="descname">scheduled_enqueue_time</code><a class="headerlink" href="#azure.servicebus.Message.scheduled_enqueue_time" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.sequence_number">
+<code class="descname">sequence_number</code><a class="headerlink" href="#azure.servicebus.Message.sequence_number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.session_id">
+<code class="descname">session_id</code><a class="headerlink" href="#azure.servicebus.Message.session_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.settled">
+<code class="descname">settled</code><a class="headerlink" href="#azure.servicebus.Message.settled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the message has been settled.</p>
+<p>This will aways be <cite>True</cite> for a message received using ReceiveAndDelete mode,
+otherwise it will be <cite>False</cite> until the message is completed or otherwise settled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.time_to_live">
+<code class="descname">time_to_live</code><a class="headerlink" href="#azure.servicebus.Message.time_to_live" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.user_properties">
+<code class="descname">user_properties</code><a class="headerlink" href="#azure.servicebus.Message.user_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>User defined properties on the message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.Message.via_partition_key">
+<code class="descname">via_partition_key</code><a class="headerlink" href="#azure.servicebus.Message.via_partition_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.BatchMessage">
+<em class="property">class </em><code class="descclassname">azure.servicebus.</code><code class="descname">BatchMessage</code><span class="sig-paren">(</span><em>body</em>, <em>encoding='UTF-8'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#BatchMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.BatchMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.message.Message</span></code></p>
+<p>A batch of messages combined into a single message body.</p>
+<p>The body of the messages in the batch should be supplied by an iterable,
+such as a generator.
+If the contents of the iterable exceeds the maximum size of a single message (256 kB),
+the data will be broken up across multiple messages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> (<em>Iterable</em>) – The data to send in each message in the batch. The maximum size per message is 256 kB.
+If data is supplied in excess of this limit, multiple messages will be sent.</p></li>
+<li><p><strong>encoding</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The encoding for string data. Default is UTF-8.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.PeekMessage">
+<em class="property">class </em><code class="descclassname">azure.servicebus.</code><code class="descname">PeekMessage</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#PeekMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.PeekMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.message.Message</span></code></p>
+<p>A preview message.</p>
+<p>This message is still on the queue, and unlocked.
+A peeked message cannot be completed, abandoned, dead-lettered or deferred.
+It has no lock token or expiry.</p>
+<dl class="method">
+<dt id="azure.servicebus.PeekMessage.abandon">
+<code class="descname">abandon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#PeekMessage.abandon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.PeekMessage.abandon" title="Permalink to this definition">¶</a></dt>
+<dd><p>A PeekMessage cannot be abandoned. Raises <cite>TypeError</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.PeekMessage.complete">
+<code class="descname">complete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#PeekMessage.complete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.PeekMessage.complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>A PeekMessage cannot be completed Raises <cite>TypeError</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.PeekMessage.dead_letter">
+<code class="descname">dead_letter</code><span class="sig-paren">(</span><em>description=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#PeekMessage.dead_letter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.PeekMessage.dead_letter" title="Permalink to this definition">¶</a></dt>
+<dd><p>A PeekMessage cannot be dead-lettered. Raises <cite>TypeError</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.PeekMessage.defer">
+<code class="descname">defer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#PeekMessage.defer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.PeekMessage.defer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A PeekMessage cannot be deferred. Raises <cite>TypeError</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.PeekMessage.lock_token">
+<code class="descname">lock_token</code><a class="headerlink" href="#azure.servicebus.PeekMessage.lock_token" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.PeekMessage.locked_until">
+<code class="descname">locked_until</code><a class="headerlink" href="#azure.servicebus.PeekMessage.locked_until" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.PeekMessage.renew_lock">
+<code class="descname">renew_lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#PeekMessage.renew_lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.PeekMessage.renew_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>A PeekMessage cannot be renewed. Raises <cite>TypeError</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.AutoLockRenew">
+<em class="property">class </em><code class="descclassname">azure.servicebus.</code><code class="descname">AutoLockRenew</code><span class="sig-paren">(</span><em>executor=None</em>, <em>max_workers=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/utils.html#AutoLockRenew"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.AutoLockRenew" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Auto renew locks for messages and sessions using a background thread pool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>executor</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/concurrent.futures.html#concurrent.futures.ThreadPoolExecutor" title="(in Python v3.5)"><em>ThreadPoolExecutor</em></a>) – A user-specified thread pool. This cannot be combined with
+setting <cite>max_workers</cite>.</p></li>
+<li><p><strong>max_workers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Specifiy the maximum workers in the thread pool. If not
+specified the number used will be derived from the core count of the environment.
+This cannot be combined with <cite>executor</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+<dl class="method">
+<dt id="azure.servicebus.AutoLockRenew.register">
+<code class="descname">register</code><span class="sig-paren">(</span><em>renewable</em>, <em>timeout=300</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/utils.html#AutoLockRenew.register"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.AutoLockRenew.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a renewable entity for automatic lock renewal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>renewable</strong> (<em>Message</em><em> or
+</em><em>SessionReceiver</em>) – A locked entity that needs to be renewed.</p></li>
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – A time in seconds that the lock should be maintained for.
+Default value is 300 (5 minutes).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.AutoLockRenew.shutdown">
+<code class="descname">shutdown</code><span class="sig-paren">(</span><em>wait=True</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/utils.html#AutoLockRenew.shutdown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.AutoLockRenew.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shutdown the thread pool to clean up any remaining lock renewal threads.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wait</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to block until thread pool has shutdown. Default is <cite>True</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.DeferredMessage">
+<em class="property">class </em><code class="descclassname">azure.servicebus.</code><code class="descname">DeferredMessage</code><span class="sig-paren">(</span><em>message</em>, <em>mode</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#DeferredMessage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.DeferredMessage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.message.Message</span></code></p>
+<p>A message that has been deferred.</p>
+<p>A deferred message can be completed,
+abandoned, or dead-lettered, however it cannot be deferred again.</p>
+<dl class="method">
+<dt id="azure.servicebus.DeferredMessage.abandon">
+<code class="descname">abandon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#DeferredMessage.abandon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.DeferredMessage.abandon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abandon the message.</p>
+<p>This message will be returned to the queue to be reprocessed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.DeferredMessage.complete">
+<code class="descname">complete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#DeferredMessage.complete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.DeferredMessage.complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Complete the message.</p>
+<p>This removes the message from the queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.DeferredMessage.dead_letter">
+<code class="descname">dead_letter</code><span class="sig-paren">(</span><em>description=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#DeferredMessage.dead_letter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.DeferredMessage.dead_letter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the message to the Dead Letter queue.</p>
+<p>The Dead Letter queue is a sub-queue that can be
+used to store messages that failed to process correctly, or otherwise require further inspection
+or processing. The queue can also be configured to send expired messages to the Dead Letter queue.
+To receive dead-lettered messages, use <cite>QueueClient.get_deadletter_receiver()</cite> or
+<cite>SubscriptionClient.get_deadletter_receiver()</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The reason for dead-lettering the message.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.MessageAlreadySettled if the message has been settled.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.MessageLockExpired if message lock has already expired.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.SessionLockExpired if session lock has already expired.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.MessageSettleFailed if message settle operation fails.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.DeferredMessage.defer">
+<code class="descname">defer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/message.html#DeferredMessage.defer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.DeferredMessage.defer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A DeferredMessage cannot be deferred. Raises <cite>ValueError</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.DeferredMessage.lock_token">
+<code class="descname">lock_token</code><a class="headerlink" href="#azure.servicebus.DeferredMessage.lock_token" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.DeferredMessage.settled">
+<code class="descname">settled</code><a class="headerlink" href="#azure.servicebus.DeferredMessage.settled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the message has been settled.</p>
+<p>This will aways be <cite>True</cite> for a message received using ReceiveAndDelete mode,
+otherwise it will be <cite>False</cite> until the message is completed or otherwise settled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.ServiceBusClient">
+<em class="property">class </em><code class="descclassname">azure.servicebus.</code><code class="descname">ServiceBusClient</code><span class="sig-paren">(</span><em>service_namespace=None</em>, <em>host_base='.servicebus.windows.net'</em>, <em>shared_access_key_name=None</em>, <em>shared_access_key_value=None</em>, <em>http_request_timeout=65</em>, <em>http_request_session=None</em>, <em>debug=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#ServiceBusClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.mixins.ServiceBusMixin</span></code></p>
+<p>A Service Bus client for a namespace with the specified SAS authentication settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>service_namespace</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service Bus namespace, required for all operations.</p></li>
+<li><p><strong>host_base</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional. Live host base URL. Defaults to Public Azure.</p></li>
+<li><p><strong>shared_access_key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – SAS authentication key name.</p></li>
+<li><p><strong>shared_access_key_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – SAS authentication key value.</p></li>
+<li><p><strong>http_request_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Optional. Timeout for the HTTP request, in seconds.
+Default value is 65 seconds.</p></li>
+<li><p><strong>http_request_session</strong> (<em>Session</em>) – Optional. Session object to use for HTTP requests.</p></li>
+<li><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to output AMQP network trace to the logger.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+<dl class="classmethod">
+<dt id="azure.servicebus.ServiceBusClient.from_connection_string">
+<em class="property">classmethod </em><code class="descname">from_connection_string</code><span class="sig-paren">(</span><em>conn_str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#ServiceBusClient.from_connection_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusClient.from_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Service Bus client from a connection string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>conn_str</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The connection string.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.ServiceBusClient.get_queue">
+<code class="descname">get_queue</code><span class="sig-paren">(</span><em>queue_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#ServiceBusClient.get_queue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusClient.get_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a client for a queue entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>queue_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the queue.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>QueueClient</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.ServiceBusResourceNotFound if the queue is not found.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.ServiceBusClient.get_subscription">
+<code class="descname">get_subscription</code><span class="sig-paren">(</span><em>topic_name</em>, <em>subscription_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#ServiceBusClient.get_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusClient.get_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a client for a subscription entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>topic_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the topic.</p></li>
+<li><p><strong>subscription_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the subscription.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>SubscriptionClient</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.ServiceBusResourceNotFound if the subscription is not found.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.ServiceBusClient.get_topic">
+<code class="descname">get_topic</code><span class="sig-paren">(</span><em>topic_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#ServiceBusClient.get_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusClient.get_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a client for a topic entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>topic_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the topic.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>TopicClient</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.ServiceBusResourceNotFound if the topic is not found.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.ServiceBusClient.list_queues">
+<code class="descname">list_queues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#ServiceBusClient.list_queues"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusClient.list_queues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get clients for all queue entities in the namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[QueueClient]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.ServiceBusClient.list_subscriptions">
+<code class="descname">list_subscriptions</code><span class="sig-paren">(</span><em>topic_name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#ServiceBusClient.list_subscriptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusClient.list_subscriptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a client for all subscription entities in the topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>topic_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The topic to list subscriptions for.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[SubscriptionClient]</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p>~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.ServiceBusResourceNotFound if the topic is not found.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.servicebus.ServiceBusClient.list_topics">
+<code class="descname">list_topics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#ServiceBusClient.list_topics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusClient.list_topics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a client for all topic entities in the namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)">list</a>[TopicClient]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p>~azure.servicebus.common.errors.ServiceBusConnectionError if the namespace is not found.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.QueueClient">
+<em class="property">class </em><code class="descclassname">azure.servicebus.</code><code class="descname">QueueClient</code><span class="sig-paren">(</span><em>address</em>, <em>name</em>, <em>shared_access_key_name=None</em>, <em>shared_access_key_value=None</em>, <em>debug=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#QueueClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.QueueClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.servicebus_client.SendClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.servicebus_client.ReceiveClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.mixins.BaseClient</span></code></p>
+<p>A queue client.</p>
+<p>The QueueClient class defines a high level interface for sending
+messages to and receiving messages from an Azure Service Bus queue.
+If you do not wish to perform management operations, a QueueClient can be
+instantiated directly to perform send and receive operations to a Queue.
+However if a QueueClient is created directly, a <cite>get_properties</cite> operation will
+need to be completed in order to retrieve the properties of this queue (for example,
+whether it is sessionful).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full URI of the Service Bus namespace. This can optionally
+include URL-encoded access name and key.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the queue to which the Client will connect.</p></li>
+<li><p><strong>shared_access_key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the shared access policy. This must be supplied
+if not encoded into the address.</p></li>
+<li><p><strong>shared_access_key_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The shared access key. This must be supplied if not encoded
+into the address.</p></li>
+<li><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to output network trace logs to the logger. Default is <cite>False</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+<p>Construct a new Client to interact with the named Service Bus entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full URI of the Service Bus namespace. This can optionally
+include URL-encoded access name and key.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the entity to which the Client will connect.</p></li>
+<li><p><strong>shared_access_key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the shared access policy. This must be supplied
+if not encoded into the address.</p></li>
+<li><p><strong>shared_access_key_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The shared access key. This must be supplied if not encoded
+into the address.</p></li>
+<li><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to output network trace logs to the logger. Default is <cite>False</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.TopicClient">
+<em class="property">class </em><code class="descclassname">azure.servicebus.</code><code class="descname">TopicClient</code><span class="sig-paren">(</span><em>address</em>, <em>name</em>, <em>shared_access_key_name=None</em>, <em>shared_access_key_value=None</em>, <em>debug=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#TopicClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.TopicClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.servicebus_client.SendClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.mixins.BaseClient</span></code></p>
+<p>A topic client.</p>
+<p>The TopicClient class defines a high level interface for sending
+messages to an Azure Service Bus Topic.
+If you do not wish to perform management operations, a TopicClient can be
+instantiated directly to perform send operations to a Topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full URI of the Service Bus namespace. This can optionally
+include URL-encoded access name and key.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the topic to which the Client will connect.</p></li>
+<li><p><strong>shared_access_key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the shared access policy. This must be supplied
+if not encoded into the address.</p></li>
+<li><p><strong>shared_access_key_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The shared access key. This must be supplied if not encoded
+into the address.</p></li>
+<li><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to output network trace logs to the logger. Default is <cite>False</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+<p>Construct a new Client to interact with the named Service Bus entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full URI of the Service Bus namespace. This can optionally
+include URL-encoded access name and key.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the entity to which the Client will connect.</p></li>
+<li><p><strong>shared_access_key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the shared access policy. This must be supplied
+if not encoded into the address.</p></li>
+<li><p><strong>shared_access_key_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The shared access key. This must be supplied if not encoded
+into the address.</p></li>
+<li><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to output network trace logs to the logger. Default is <cite>False</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.SubscriptionClient">
+<em class="property">class </em><code class="descclassname">azure.servicebus.</code><code class="descname">SubscriptionClient</code><span class="sig-paren">(</span><em>address</em>, <em>name</em>, <em>shared_access_key_name=None</em>, <em>shared_access_key_value=None</em>, <em>debug=False</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#SubscriptionClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.SubscriptionClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.servicebus_client.ReceiveClientMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.mixins.BaseClient</span></code></p>
+<p>A subscription client.</p>
+<p>The SubscriptionClient class defines a high level interface for receiving
+messages to an Azure Service Bus Subscription.
+If you do not wish to perform management operations, a SubscriptionClient can be
+instantiated directly to perform receive operations from a Subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The full URI of the Service Bus namespace. This can optionally
+include URL-encoded access name and key.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the topic to which the Client will connect.</p></li>
+<li><p><strong>shared_access_key_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the shared access policy. This must be supplied
+if not encoded into the address.</p></li>
+<li><p><strong>shared_access_key_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The shared access key. This must be supplied if not encoded
+into the address.</p></li>
+<li><p><strong>debug</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to output network trace logs to the logger. Default is <cite>False</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Example:</dt><dd></dd>
+</dl>
+<dl class="classmethod">
+<dt id="azure.servicebus.SubscriptionClient.from_connection_string">
+<em class="property">classmethod </em><code class="descname">from_connection_string</code><span class="sig-paren">(</span><em>conn_str</em>, <em>name</em>, <em>topic=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#SubscriptionClient.from_connection_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.SubscriptionClient.from_connection_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a SubscriptionClient from a connection string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>conn_str</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The connection string.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Subscription.</p></li>
+<li><p><strong>topic</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the Topic, if the EntityName is
+not included in the connection string.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="azure.servicebus.SubscriptionClient.from_entity">
+<em class="property">classmethod </em><code class="descname">from_entity</code><span class="sig-paren">(</span><em>address</em>, <em>topic</em>, <em>entity</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/servicebus_client.html#SubscriptionClient.from_entity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.SubscriptionClient.from_entity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.servicebus.ReceiveSettleMode">
+<em class="property">class </em><code class="descclassname">azure.servicebus.</code><code class="descname">ReceiveSettleMode</code><a class="reference internal" href="../_modules/azure/servicebus/common/constants.html#ReceiveSettleMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ReceiveSettleMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.servicebus.ReceiveSettleMode.PeekLock">
+<code class="descname">PeekLock</code><em class="property"> = &lt;ReceiverSettleMode.PeekLock: 1&gt;</em><a class="headerlink" href="#azure.servicebus.ReceiveSettleMode.PeekLock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.servicebus.ReceiveSettleMode.ReceiveAndDelete">
+<code class="descname">ReceiveAndDelete</code><em class="property"> = &lt;ReceiverSettleMode.ReceiveAndDelete: 0&gt;</em><a class="headerlink" href="#azure.servicebus.ReceiveSettleMode.ReceiveAndDelete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.ServiceBusError">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">ServiceBusError</code><span class="sig-paren">(</span><em>message</em>, <em>inner_exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#ServiceBusError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/exceptions.html#Exception" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<p>An error occured.</p>
+<p>This is the parent of all Service Bus errors and can
+be used for default error handling.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.ServiceBusResourceNotFound">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">ServiceBusResourceNotFound</code><span class="sig-paren">(</span><em>message</em>, <em>inner_exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#ServiceBusResourceNotFound"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusResourceNotFound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>The Service Bus entity could not be reached.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.ServiceBusConnectionError">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">ServiceBusConnectionError</code><span class="sig-paren">(</span><em>message</em>, <em>inner_exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#ServiceBusConnectionError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusConnectionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>An error occured in the connection.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.ServiceBusAuthorizationError">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">ServiceBusAuthorizationError</code><span class="sig-paren">(</span><em>message</em>, <em>inner_exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#ServiceBusAuthorizationError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.ServiceBusAuthorizationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>An error occured when authorizing the connection.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.InvalidHandlerState">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">InvalidHandlerState</code><span class="sig-paren">(</span><em>message</em>, <em>inner_exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#InvalidHandlerState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.InvalidHandlerState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>An attempt to run a handler operation that the handler is not in the right state to perform.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.NoActiveSession">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">NoActiveSession</code><span class="sig-paren">(</span><em>message</em>, <em>inner_exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#NoActiveSession"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.NoActiveSession" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>No active Sessions are available to receive from.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.MessageAlreadySettled">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">MessageAlreadySettled</code><span class="sig-paren">(</span><em>action</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#MessageAlreadySettled"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.MessageAlreadySettled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>Failed to settle the message.</p>
+<p>An attempt was made to complete an operation on a message that has already
+been settled (completed, abandoned, dead-lettered or deferred).
+This error will also be raised if an attempt is made to settle a message
+received via ReceiveAndDelete mode.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.MessageSettleFailed">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">MessageSettleFailed</code><span class="sig-paren">(</span><em>action</em>, <em>inner_exception</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#MessageSettleFailed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.MessageSettleFailed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>Attempt to settle a message failed.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.MessageSendFailed">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">MessageSendFailed</code><span class="sig-paren">(</span><em>inner_exception</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#MessageSendFailed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.MessageSendFailed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>A message failed to send to the Service Bus entity.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.MessageLockExpired">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">MessageLockExpired</code><span class="sig-paren">(</span><em>message=None</em>, <em>inner_exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#MessageLockExpired"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.MessageLockExpired" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>The lock on the message has expired and it has been released back to the queue.</p>
+<p>It will need to be received again in order to settle it.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.SessionLockExpired">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">SessionLockExpired</code><span class="sig-paren">(</span><em>message=None</em>, <em>inner_exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#SessionLockExpired"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.SessionLockExpired" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>The lock on the session has expired.</p>
+<p>All unsettled messages that have been received can no longer be settled.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.AutoLockRenewFailed">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">AutoLockRenewFailed</code><span class="sig-paren">(</span><em>message</em>, <em>inner_exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#AutoLockRenewFailed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.AutoLockRenewFailed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>An attempt to renew a lock on a message or session in the background has failed.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.servicebus.AutoLockRenewTimeout">
+<em class="property">exception </em><code class="descclassname">azure.servicebus.</code><code class="descname">AutoLockRenewTimeout</code><span class="sig-paren">(</span><em>message</em>, <em>inner_exception=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/servicebus/common/errors.html#AutoLockRenewTimeout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.servicebus.AutoLockRenewTimeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.servicebus.common.errors.ServiceBusError</span></code></p>
+<p>The time allocated to renew the message or session lock has elapsed.</p>
+</dd></dl>
+
 </div>
 </div>
 

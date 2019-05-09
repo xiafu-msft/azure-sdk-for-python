@@ -397,6 +397,325 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dd></dl>
 
 <dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_cassandra_keyspace">
+<code class="descname">create_update_cassandra_keyspace</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_cassandra_keyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_cassandra_keyspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update an Azure Cosmos DB Cassandra keyspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraKeyspaceResource" title="azure.mgmt.cosmosdb.models.CassandraKeyspaceResource"><em>CassandraKeyspaceResource</em></a>) – The standard JSON format of a Cassandra keyspace</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of options to be applied for the
+request. This corresponds to the headers sent with the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns CassandraKeyspace or
+ClientRawResponse&lt;CassandraKeyspace&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraKeyspace" title="azure.mgmt.cosmosdb.models.CassandraKeyspace">CassandraKeyspace</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraKeyspace" title="azure.mgmt.cosmosdb.models.CassandraKeyspace">CassandraKeyspace</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_cassandra_table">
+<code class="descname">create_update_cassandra_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>table_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_cassandra_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_cassandra_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update an Azure Cosmos DB Cassandra Table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB table name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraTableResource" title="azure.mgmt.cosmosdb.models.CassandraTableResource"><em>CassandraTableResource</em></a>) – The standard JSON format of a Cassandra table</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of options to be applied for the
+request. This corresponds to the headers sent with the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns CassandraTable or
+ClientRawResponse&lt;CassandraTable&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraTable" title="azure.mgmt.cosmosdb.models.CassandraTable">CassandraTable</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraTable" title="azure.mgmt.cosmosdb.models.CassandraTable">CassandraTable</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_gremlin_database">
+<code class="descname">create_update_gremlin_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_gremlin_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_gremlin_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update an Azure Cosmos DB Gremlin database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinDatabaseResource" title="azure.mgmt.cosmosdb.models.GremlinDatabaseResource"><em>GremlinDatabaseResource</em></a>) – The standard JSON format of a Gremlin database</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of options to be applied for the
+request. This corresponds to the headers sent with the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns GremlinDatabase or
+ClientRawResponse&lt;GremlinDatabase&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinDatabase" title="azure.mgmt.cosmosdb.models.GremlinDatabase">GremlinDatabase</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinDatabase" title="azure.mgmt.cosmosdb.models.GremlinDatabase">GremlinDatabase</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_gremlin_graph">
+<code class="descname">create_update_gremlin_graph</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>graph_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_gremlin_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_gremlin_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update an Azure Cosmos DB Gremlin graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>graph_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB graph name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinGraphResource" title="azure.mgmt.cosmosdb.models.GremlinGraphResource"><em>GremlinGraphResource</em></a>) – The standard JSON format of a Gremlin graph</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of options to be applied for the
+request. This corresponds to the headers sent with the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns GremlinGraph or
+ClientRawResponse&lt;GremlinGraph&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinGraph" title="azure.mgmt.cosmosdb.models.GremlinGraph">GremlinGraph</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinGraph" title="azure.mgmt.cosmosdb.models.GremlinGraph">GremlinGraph</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_mongo_db_collection">
+<code class="descname">create_update_mongo_db_collection</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>collection_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_mongo_db_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_mongo_db_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update an Azure Cosmos DB MongoDB Collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>collection_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB collection name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBCollectionResource" title="azure.mgmt.cosmosdb.models.MongoDBCollectionResource"><em>MongoDBCollectionResource</em></a>) – The standard JSON format of a MongoDB collection</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of options to be applied for the
+request. This corresponds to the headers sent with the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns MongoDBCollection or
+ClientRawResponse&lt;MongoDBCollection&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBCollection" title="azure.mgmt.cosmosdb.models.MongoDBCollection">MongoDBCollection</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBCollection" title="azure.mgmt.cosmosdb.models.MongoDBCollection">MongoDBCollection</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_mongo_db_database">
+<code class="descname">create_update_mongo_db_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_mongo_db_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_mongo_db_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or updates Azure Cosmos DB MongoDB database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBDatabaseResource" title="azure.mgmt.cosmosdb.models.MongoDBDatabaseResource"><em>MongoDBDatabaseResource</em></a>) – The standard JSON format of a MongoDB database</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of options to be applied for the
+request. This corresponds to the headers sent with the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns MongoDBDatabase or
+ClientRawResponse&lt;MongoDBDatabase&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBDatabase" title="azure.mgmt.cosmosdb.models.MongoDBDatabase">MongoDBDatabase</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBDatabase" title="azure.mgmt.cosmosdb.models.MongoDBDatabase">MongoDBDatabase</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_sql_container">
+<code class="descname">create_update_sql_container</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>container_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_sql_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_sql_container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update an Azure Cosmos DB SQL container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB container name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlContainerResource" title="azure.mgmt.cosmosdb.models.SqlContainerResource"><em>SqlContainerResource</em></a>) – The standard JSON format of a container</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of options to be applied for the
+request. This corresponds to the headers sent with the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns SqlContainer or
+ClientRawResponse&lt;SqlContainer&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlContainer" title="azure.mgmt.cosmosdb.models.SqlContainer">SqlContainer</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlContainer" title="azure.mgmt.cosmosdb.models.SqlContainer">SqlContainer</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_sql_database">
+<code class="descname">create_update_sql_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_sql_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_sql_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update an Azure Cosmos DB SQL database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlDatabaseResource" title="azure.mgmt.cosmosdb.models.SqlDatabaseResource"><em>SqlDatabaseResource</em></a>) – The standard JSON format of a SQL database</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of options to be applied for the
+request. This corresponds to the headers sent with the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns SqlDatabase or
+ClientRawResponse&lt;SqlDatabase&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlDatabase" title="azure.mgmt.cosmosdb.models.SqlDatabase">SqlDatabase</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlDatabase" title="azure.mgmt.cosmosdb.models.SqlDatabase">SqlDatabase</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_table">
+<code class="descname">create_update_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>table_name</em>, <em>resource</em>, <em>options</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.create_update_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.create_update_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or update an Azure Cosmos DB Table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB table name.</p></li>
+<li><p><strong>resource</strong> (<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.TableResource" title="azure.mgmt.cosmosdb.models.TableResource"><em>TableResource</em></a>) – The standard JSON format of a Table</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of options to be applied for the
+request. This corresponds to the headers sent with the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns Table or
+ClientRawResponse&lt;Table&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Table" title="azure.mgmt.cosmosdb.models.Table">Table</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Table" title="azure.mgmt.cosmosdb.models.Table">Table</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete">
 <code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing Azure Cosmos DB database account.</p>
@@ -405,6 +724,289 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
 <li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_cassandra_keyspace">
+<code class="descname">delete_cassandra_keyspace</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_cassandra_keyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_cassandra_keyspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing Azure Cosmos DB Cassandra keyspace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_cassandra_table">
+<code class="descname">delete_cassandra_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>table_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_cassandra_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_cassandra_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing Azure Cosmos DB Cassandra table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB table name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_gremlin_database">
+<code class="descname">delete_gremlin_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_gremlin_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_gremlin_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing Azure Cosmos DB Gremlin database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_gremlin_graph">
+<code class="descname">delete_gremlin_graph</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>graph_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_gremlin_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_gremlin_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing Azure Cosmos DB Gremlin graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>graph_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB graph name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_mongo_db_collection">
+<code class="descname">delete_mongo_db_collection</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>collection_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_mongo_db_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_mongo_db_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing Azure Cosmos DB MongoDB Collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>collection_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB collection name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_mongo_db_database">
+<code class="descname">delete_mongo_db_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_mongo_db_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_mongo_db_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing Azure Cosmos DB MongoDB database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_sql_container">
+<code class="descname">delete_sql_container</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>container_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_sql_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_sql_container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing Azure Cosmos DB SQL container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB container name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_sql_database">
+<code class="descname">delete_sql_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_sql_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_sql_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing Azure Cosmos DB SQL database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_table">
+<code class="descname">delete_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>table_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.delete_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.delete_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an existing Azure Cosmos DB Table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB table name.</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
 direct response alongside the deserialized response</p></li>
@@ -492,6 +1094,195 @@ ClientRawResponse</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_keyspace">
+<code class="descname">get_cassandra_keyspace</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_cassandra_keyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_keyspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Cassandra keyspaces under an existing Azure Cosmos DB database
+account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CassandraKeyspace or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraKeyspace" title="azure.mgmt.cosmosdb.models.CassandraKeyspace">CassandraKeyspace</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_table">
+<code class="descname">get_cassandra_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>table_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_cassandra_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_cassandra_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Cassandra table under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB table name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CassandraTable or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraTable" title="azure.mgmt.cosmosdb.models.CassandraTable">CassandraTable</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_database">
+<code class="descname">get_gremlin_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_gremlin_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Gremlin databases under an existing Azure Cosmos DB database
+account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>GremlinDatabase or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinDatabase" title="azure.mgmt.cosmosdb.models.GremlinDatabase">GremlinDatabase</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_graph">
+<code class="descname">get_gremlin_graph</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>graph_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_gremlin_graph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_gremlin_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Gremlin graph under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>graph_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB graph name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>GremlinGraph or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinGraph" title="azure.mgmt.cosmosdb.models.GremlinGraph">GremlinGraph</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_collection">
+<code class="descname">get_mongo_db_collection</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>collection_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_mongo_db_collection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the MongoDB collection under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>collection_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB collection name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MongoDBCollection or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBCollection" title="azure.mgmt.cosmosdb.models.MongoDBCollection">MongoDBCollection</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_database">
+<code class="descname">get_mongo_db_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_mongo_db_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_mongo_db_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the MongoDB databases under an existing Azure Cosmos DB database
+account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MongoDBDatabase or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBDatabase" title="azure.mgmt.cosmosdb.models.MongoDBDatabase">MongoDBDatabase</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_read_only_keys">
 <code class="descname">get_read_only_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_read_only_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_read_only_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the read-only access keys for the specified Azure Cosmos DB
@@ -514,6 +1305,100 @@ raw=true</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.DatabaseAccountListReadOnlyKeysResult" title="azure.mgmt.cosmosdb.models.DatabaseAccountListReadOnlyKeysResult">DatabaseAccountListReadOnlyKeysResult</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_container">
+<code class="descname">get_sql_container</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>container_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_sql_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the SQL container under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB container name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SqlContainer or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlContainer" title="azure.mgmt.cosmosdb.models.SqlContainer">SqlContainer</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_database">
+<code class="descname">get_sql_database</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_sql_database"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_sql_database" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the SQL databases under an existing Azure Cosmos DB database
+account with the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SqlDatabase or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlDatabase" title="azure.mgmt.cosmosdb.models.SqlDatabase">SqlDatabase</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_table">
+<code class="descname">get_table</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>table_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.get_table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.get_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the Tables under an existing Azure Cosmos DB database account with
+the provided name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>table_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB table name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Table or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Table" title="azure.mgmt.cosmosdb.models.Table">Table</a> or
 ClientRawResponse</p>
 </dd>
 <dt class="field-even">Raises</dt>
@@ -578,6 +1463,65 @@ overrides</span>.</p></li>
 </dd></dl>
 
 <dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_cassandra_keyspaces">
+<code class="descname">list_cassandra_keyspaces</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_cassandra_keyspaces"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_cassandra_keyspaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the Cassandra keyspaces under an existing Azure Cosmos DB
+database account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of CassandraKeyspace</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraKeyspacePaged" title="azure.mgmt.cosmosdb.models.CassandraKeyspacePaged">CassandraKeyspacePaged</a>[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraKeyspace" title="azure.mgmt.cosmosdb.models.CassandraKeyspace">CassandraKeyspace</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_cassandra_tables">
+<code class="descname">list_cassandra_tables</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>keyspace_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_cassandra_tables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_cassandra_tables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the Cassandra table under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>keyspace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB keyspace name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of CassandraTable</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraTablePaged" title="azure.mgmt.cosmosdb.models.CassandraTablePaged">CassandraTablePaged</a>[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.CassandraTable" title="azure.mgmt.cosmosdb.models.CassandraTable">CassandraTable</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_connection_strings">
 <code class="descname">list_connection_strings</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_connection_strings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_connection_strings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the connection strings for the specified Azure Cosmos DB database
@@ -601,6 +1545,65 @@ ClientRawResponse if raw=true</p>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.DatabaseAccountListConnectionStringsResult" title="azure.mgmt.cosmosdb.models.DatabaseAccountListConnectionStringsResult">DatabaseAccountListConnectionStringsResult</a>
 or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_gremlin_databases">
+<code class="descname">list_gremlin_databases</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_gremlin_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_gremlin_databases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the Gremlin databases under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of GremlinDatabase</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinDatabasePaged" title="azure.mgmt.cosmosdb.models.GremlinDatabasePaged">GremlinDatabasePaged</a>[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinDatabase" title="azure.mgmt.cosmosdb.models.GremlinDatabase">GremlinDatabase</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_gremlin_graphs">
+<code class="descname">list_gremlin_graphs</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_gremlin_graphs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_gremlin_graphs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the Gremlin graph under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of GremlinGraph</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinGraphPaged" title="azure.mgmt.cosmosdb.models.GremlinGraphPaged">GremlinGraphPaged</a>[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.GremlinGraph" title="azure.mgmt.cosmosdb.models.GremlinGraph">GremlinGraph</a>]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
@@ -642,7 +1645,7 @@ ClientRawResponse</p>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_metric_definitions">
 <code class="descname">list_metric_definitions</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_metric_definitions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieves metric defintions for the given database account.</p>
+<dd><p>Retrieves metric definitions for the given database account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -701,6 +1704,65 @@ overrides</span>.</p></li>
 </dd></dl>
 
 <dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_mongo_db_collections">
+<code class="descname">list_mongo_db_collections</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_mongo_db_collections"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_mongo_db_collections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the MongoDB collection under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of MongoDBCollection</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBCollectionPaged" title="azure.mgmt.cosmosdb.models.MongoDBCollectionPaged">MongoDBCollectionPaged</a>[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBCollection" title="azure.mgmt.cosmosdb.models.MongoDBCollection">MongoDBCollection</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_mongo_db_databases">
+<code class="descname">list_mongo_db_databases</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_mongo_db_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_mongo_db_databases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the MongoDB databases under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of MongoDBDatabase</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBDatabasePaged" title="azure.mgmt.cosmosdb.models.MongoDBDatabasePaged">MongoDBDatabasePaged</a>[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.MongoDBDatabase" title="azure.mgmt.cosmosdb.models.MongoDBDatabase">MongoDBDatabase</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_read_only_keys">
 <code class="descname">list_read_only_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_read_only_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_read_only_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists the read-only access keys for the specified Azure Cosmos DB
@@ -724,6 +1786,93 @@ raw=true</p>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.DatabaseAccountListReadOnlyKeysResult" title="azure.mgmt.cosmosdb.models.DatabaseAccountListReadOnlyKeysResult">DatabaseAccountListReadOnlyKeysResult</a> or
 ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_sql_containers">
+<code class="descname">list_sql_containers</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_sql_containers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_sql_containers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the SQL container under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SqlContainer</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlContainerPaged" title="azure.mgmt.cosmosdb.models.SqlContainerPaged">SqlContainerPaged</a>[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlContainer" title="azure.mgmt.cosmosdb.models.SqlContainer">SqlContainer</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_sql_databases">
+<code class="descname">list_sql_databases</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_sql_databases"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_sql_databases" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the SQL databases under an existing Azure Cosmos DB database
+account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SqlDatabase</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlDatabasePaged" title="azure.mgmt.cosmosdb.models.SqlDatabasePaged">SqlDatabasePaged</a>[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.SqlDatabase" title="azure.mgmt.cosmosdb.models.SqlDatabase">SqlDatabase</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_tables">
+<code class="descname">list_tables</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_accounts_operations.html#DatabaseAccountsOperations.list_tables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.list_tables" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the Tables under an existing Azure Cosmos DB database account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Cosmos DB database account name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Table</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.TablePaged" title="azure.mgmt.cosmosdb.models.TablePaged">TablePaged</a>[<a class="reference internal" href="azure.mgmt.cosmosdb.models.html#azure.mgmt.cosmosdb.models.Table" title="azure.mgmt.cosmosdb.models.Table">Table</a>]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
@@ -764,7 +1913,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -948,7 +2097,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -974,7 +2123,7 @@ overrides</span>.</p></li>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseOperations.list_metric_definitions">
 <code class="descname">list_metric_definitions</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/database_operations.html#DatabaseOperations.list_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.list_metric_definitions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieves metric defintions for the given database.</p>
+<dd><p>Retrieves metric definitions for the given database.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1068,7 +2217,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1094,7 +2243,7 @@ overrides</span>.</p></li>
 <dl class="method">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionOperations.list_metric_definitions">
 <code class="descname">list_metric_definitions</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>database_rid</em>, <em>collection_rid</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/operations/collection_operations.html#CollectionOperations.list_metric_definitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.list_metric_definitions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Retrieves metric defintions for the given collection.</p>
+<dd><p>Retrieves metric definitions for the given collection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1192,7 +2341,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1254,7 +2403,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionRegionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionRegionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionRegionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1314,7 +2463,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.DatabaseAccountRegionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1377,7 +2526,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileSourceTargetOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1438,7 +2587,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileTargetOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileTargetOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileTargetOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1497,7 +2646,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.PercentileOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PercentileOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1559,7 +2708,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionRegionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1653,7 +2802,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.CollectionPartitionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1715,7 +2864,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1779,7 +2928,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cosmosdb.models' from 'd:\\a\\1\\s\\azure-mgmt-cosmosdb\\azure\\mgmt\\cosmosdb\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cosmosdb.operations.PartitionKeyRangeIdRegionOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

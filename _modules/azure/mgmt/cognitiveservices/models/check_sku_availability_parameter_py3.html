@@ -321,14 +321,9 @@
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
 <span class="sd">    :param skus: Required. The SKU of the resource.</span>
-<span class="sd">    :type skus: list[str or ~azure.mgmt.cognitiveservices.models.SkuName]</span>
-<span class="sd">    :param kind: Required. The Kind of the resource. Possible values include:</span>
-<span class="sd">     &#39;Bing.Autosuggest.v7&#39;, &#39;Bing.CustomSearch&#39;, &#39;Bing.Search.v7&#39;,</span>
-<span class="sd">     &#39;Bing.Speech&#39;, &#39;Bing.SpellCheck.v7&#39;, &#39;ComputerVision&#39;, &#39;ContentModerator&#39;,</span>
-<span class="sd">     &#39;CustomSpeech&#39;, &#39;CustomVision.Prediction&#39;, &#39;CustomVision.Training&#39;,</span>
-<span class="sd">     &#39;Emotion&#39;, &#39;Face&#39;, &#39;LUIS&#39;, &#39;QnAMaker&#39;, &#39;SpeakerRecognition&#39;,</span>
-<span class="sd">     &#39;SpeechTranslation&#39;, &#39;TextAnalytics&#39;, &#39;TextTranslation&#39;, &#39;WebLM&#39;</span>
-<span class="sd">    :type kind: str or ~azure.mgmt.cognitiveservices.models.Kind</span>
+<span class="sd">    :type skus: list[str]</span>
+<span class="sd">    :param kind: Required. The Kind of the resource.</span>
+<span class="sd">    :type kind: str</span>
 <span class="sd">    :param type: Required. The Type of the resource.</span>
 <span class="sd">    :type type: str</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -345,7 +340,7 @@
         <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">skus</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">skus</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">CheckSkuAvailabilityParameter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">skus</span> <span class="o">=</span> <span class="n">skus</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>

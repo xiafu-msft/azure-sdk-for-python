@@ -762,8 +762,9 @@
         <span class="sd">&quot;&quot;&quot;Gets a list of supported orchestrators in the specified subscription.</span>
 
 <span class="sd">        Gets a list of supported orchestrators in the specified subscription.</span>
-<span class="sd">        The operation returns properties of each orchestrator including version</span>
-<span class="sd">        and available upgrades.</span>
+<span class="sd">        The operation returns properties of each orchestrator including</span>
+<span class="sd">        version, available upgrades and whether that version or upgrades are in</span>
+<span class="sd">        preview.</span>
 
 <span class="sd">        :param location: The name of a supported Azure region.</span>
 <span class="sd">        :type location: str</span>
@@ -782,7 +783,7 @@
 <span class="sd">         or ~msrest.pipeline.ClientRawResponse</span>
 <span class="sd">        :raises: :class:`CloudError&lt;msrestazure.azure_exceptions.CloudError&gt;`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">api_version</span> <span class="o">=</span> <span class="s2">&quot;2017-09-30&quot;</span>
+        <span class="n">api_version</span> <span class="o">=</span> <span class="s2">&quot;2019-04-01&quot;</span>
 
         <span class="c1"># Construct URL</span>
         <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list_orchestrators</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>

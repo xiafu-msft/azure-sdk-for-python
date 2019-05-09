@@ -210,7 +210,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.mgmt.netapp.operations.html">azure.mgmt.netapp.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.netapp.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.netapp.html#module-azure.mgmt.netapp">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.network.html">azure.mgmt.network package</a></li>
@@ -314,8 +314,597 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="azure-mgmt-netapp-models-module">
-<h1>azure.mgmt.netapp.models module<a class="headerlink" href="#azure-mgmt-netapp-models-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-azure.mgmt.netapp.models">
+<span id="azure-mgmt-netapp-models-module"></span><h1>azure.mgmt.netapp.models module<a class="headerlink" href="#module-azure.mgmt.netapp.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.OperationDisplay">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>*</em>, <em>provider: str = None</em>, <em>resource: str = None</em>, <em>operation: str = None</em>, <em>description: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Display metadata associated with the operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service provider: Microsoft NetApp.</p></li>
+<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource on which the operation is performed etc.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of operation: get, read, delete, etc.</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation description.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.Dimension">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">Dimension</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/dimension_py3.html#Dimension"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.Dimension" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Dimension of blobs, possibly be blob type or access tier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Display name of dimension.</p></li>
+<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Display name of dimension.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.MetricSpecification">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">MetricSpecification</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display_name: str = None</em>, <em>display_description: str = None</em>, <em>unit: str = None</em>, <em>dimensions=None</em>, <em>aggregation_type: str = None</em>, <em>fill_gap_with_zero: bool = None</em>, <em>category: str = None</em>, <em>resource_id_dimension_name_override: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/metric_specification_py3.html#MetricSpecification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.MetricSpecification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Metric specification of operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of metric specification.</p></li>
+<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Display name of metric specification.</p></li>
+<li><p><strong>display_description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Display description of metric specification.</p></li>
+<li><p><strong>unit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unit could be Bytes or Count.</p></li>
+<li><p><strong>dimensions</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.netapp.models.Dimension" title="azure.mgmt.netapp.models.Dimension"><em>Dimension</em></a><em>]</em>) – Dimensions of blobs, including blob type and access
+tier.</p></li>
+<li><p><strong>aggregation_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Aggregation type could be Average.</p></li>
+<li><p><strong>fill_gap_with_zero</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The property to decide fill gap with zero or
+not.</p></li>
+<li><p><strong>category</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The category this metric specification belong to, could
+be Capacity.</p></li>
+<li><p><strong>resource_id_dimension_name_override</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Account Resource Id.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.ServiceSpecification">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">ServiceSpecification</code><span class="sig-paren">(</span><em>*</em>, <em>metric_specifications=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/service_specification_py3.html#ServiceSpecification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.ServiceSpecification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>One property of operation, include metric specifications.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>metric_specifications</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.netapp.models.MetricSpecification" title="azure.mgmt.netapp.models.MetricSpecification"><em>MetricSpecification</em></a><em>]</em>) – Metric specifications of operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.Operation">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display=None</em>, <em>origin: str = None</em>, <em>service_specification=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.Operation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Microsoft.NetApp REST API operation definition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.netapp.models.OperationDisplay" title="azure.mgmt.netapp.models.OperationDisplay"><em>OperationDisplay</em></a>) – Display metadata associated with the operation.</p></li>
+<li><p><strong>origin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The origin of operations.</p></li>
+<li><p><strong>service_specification</strong> (<a class="reference internal" href="#azure.mgmt.netapp.models.ServiceSpecification" title="azure.mgmt.netapp.models.ServiceSpecification"><em>ServiceSpecification</em></a>) – One property of operation, include metric
+specifications.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.ResourceNameAvailability">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">ResourceNameAvailability</code><span class="sig-paren">(</span><em>*</em>, <em>is_available: bool = None</em>, <em>reason=None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/resource_name_availability_py3.html#ResourceNameAvailability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.ResourceNameAvailability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Information regarding availability of a resource name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>is_available</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – &lt;code&gt;true&lt;/code&gt; indicates name is valid and
+available. &lt;code&gt;false&lt;/code&gt; indicates the name is invalid, unavailable,
+or both.</p></li>
+<li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.InAvailabilityReasonType" title="azure.mgmt.netapp.models.InAvailabilityReasonType"><em>InAvailabilityReasonType</em></a>) – &lt;code&gt;Invalid&lt;/code&gt; indicates the name provided does not
+match Azure App Service naming requirements. &lt;code&gt;AlreadyExists&lt;/code&gt;
+indicates that the name is already in use and is therefore unavailable.
+Possible values include: ‘Invalid’, ‘AlreadyExists’</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – If reason == invalid, provide the user with the reason why
+the given name is invalid, and provide the resource naming requirements so
+that the user can select a valid name. If reason == AlreadyExists, explain
+that resource name is already in use, and direct them to select a
+different name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.ResourceNameAvailabilityRequest">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">ResourceNameAvailabilityRequest</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>type</em>, <em>resource_group: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/resource_name_availability_request_py3.html#ResourceNameAvailabilityRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.ResourceNameAvailabilityRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Resource name availability request content.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource name to verify.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.CheckNameResourceTypes" title="azure.mgmt.netapp.models.CheckNameResourceTypes"><em>CheckNameResourceTypes</em></a>) – Required. Resource type used for verification. Possible
+values include: ‘Microsoft.NetApp/netAppAccount’,
+‘Microsoft.NetApp/netAppAccount/capacityPools’,
+‘Microsoft.NetApp/netAppAccount/capacityPools/volumes’,
+‘Microsoft.NetApp/netAppAccount/capacityPools/volumes/snapshots’</p></li>
+<li><p><strong>resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource group name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.ActiveDirectory">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">ActiveDirectory</code><span class="sig-paren">(</span><em>*</em>, <em>active_directory_id: str = None</em>, <em>username: str = None</em>, <em>password: str = None</em>, <em>domain: str = None</em>, <em>dns: str = None</em>, <em>status: str = None</em>, <em>smb_server_name: str = None</em>, <em>organizational_unit: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/active_directory_py3.html#ActiveDirectory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.ActiveDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Active Directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>active_directory_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the Active Directory</p></li>
+<li><p><strong>username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Username of Active Directory domain administrator</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Plain text password of Active Directory domain
+administrator</p></li>
+<li><p><strong>domain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Active Directory domain</p></li>
+<li><p><strong>dns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Comma separated list of DNS server IP addresses for the Active
+Directory domain</p></li>
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Status of the Active Directory</p></li>
+<li><p><strong>smb_server_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – NetBIOS name of the SMB server. This name will be
+registered as a computer account in the AD and used to mount volumes</p></li>
+<li><p><strong>organizational_unit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Organizational Unit (OU) within the
+Windows Active Directory</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.NetAppAccount">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">NetAppAccount</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>active_directories=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/net_app_account_py3.html#NetAppAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.NetAppAccount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>NetApp account resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p></li>
+<li><p><strong>active_directories</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.netapp.models.ActiveDirectory" title="azure.mgmt.netapp.models.ActiveDirectory"><em>ActiveDirectory</em></a><em>]</em>) – Active Directories</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure lifecycle management</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.NetAppAccountPatch">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">NetAppAccountPatch</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>active_directories=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/net_app_account_patch_py3.html#NetAppAccountPatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.NetAppAccountPatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>NetApp account patch resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p></li>
+<li><p><strong>active_directories</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.netapp.models.ActiveDirectory" title="azure.mgmt.netapp.models.ActiveDirectory"><em>ActiveDirectory</em></a><em>]</em>) – Active Directories</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure lifecycle management</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.CapacityPool">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">CapacityPool</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>size: int = 4398046511104</em>, <em>service_level='Premium'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/capacity_pool_py3.html#CapacityPool"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.CapacityPool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Capacity pool resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p></li>
+<li><p><strong>size</strong> (<em>long</em>) – size. Provisioned size of the pool (in bytes). Allowed values
+are in 4TiB chunks (value must be multiply of 4398046511104). Default
+value: 4398046511104 .</p></li>
+<li><p><strong>service_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.ServiceLevel" title="azure.mgmt.netapp.models.ServiceLevel"><em>ServiceLevel</em></a>) – serviceLevel. The service level of the file system.
+Possible values include: ‘Standard’, ‘Premium’, ‘Ultra’. Default value:
+“Premium” .</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>pool_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – poolId. UUID v4 used to identify the Pool</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure lifecycle management</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.CapacityPoolPatch">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">CapacityPoolPatch</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>size: int = 4398046511104</em>, <em>service_level='Premium'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/capacity_pool_patch_py3.html#CapacityPoolPatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.CapacityPoolPatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Capacity pool patch resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p></li>
+<li><p><strong>size</strong> (<em>long</em>) – size. Provisioned size of the pool (in bytes). Allowed values
+are in 4TiB chunks (value must be multiply of 4398046511104). Default
+value: 4398046511104 .</p></li>
+<li><p><strong>service_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.ServiceLevel" title="azure.mgmt.netapp.models.ServiceLevel"><em>ServiceLevel</em></a>) – serviceLevel. The service level of the file system.
+Possible values include: ‘Standard’, ‘Premium’, ‘Ultra’. Default value:
+“Premium” .</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.ExportPolicyRule">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">ExportPolicyRule</code><span class="sig-paren">(</span><em>*</em>, <em>rule_index: int = None</em>, <em>unix_read_only: bool = None</em>, <em>unix_read_write: bool = None</em>, <em>cifs: bool = None</em>, <em>nfsv3: bool = None</em>, <em>nfsv4: bool = None</em>, <em>allowed_clients: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/export_policy_rule_py3.html#ExportPolicyRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.ExportPolicyRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Volume Export Policy Rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rule_index</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Order index</p></li>
+<li><p><strong>unix_read_only</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Read only access</p></li>
+<li><p><strong>unix_read_write</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Read and write access</p></li>
+<li><p><strong>cifs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Allows CIFS protocol</p></li>
+<li><p><strong>nfsv3</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Allows NFSv3 protocol</p></li>
+<li><p><strong>nfsv4</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Allows NFSv4 protocol</p></li>
+<li><p><strong>allowed_clients</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Client ingress specification as comma separated
+string with IPv4 CIDRs, IPv4 host addresses and host names</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.VolumePropertiesExportPolicy">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">VolumePropertiesExportPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>rules=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/volume_properties_export_policy_py3.html#VolumePropertiesExportPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.VolumePropertiesExportPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>exportPolicy.</p>
+<p>Set of export policy rules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rules</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.netapp.models.ExportPolicyRule" title="azure.mgmt.netapp.models.ExportPolicyRule"><em>ExportPolicyRule</em></a><em>]</em>) – Export policy rule. Export policy rule</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.Volume">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>creation_token: str</em>, <em>tags=None</em>, <em>service_level='Premium'</em>, <em>usage_threshold: int = 107374182400</em>, <em>export_policy=None</em>, <em>snapshot_id: str = None</em>, <em>subnet_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/volume_py3.html#Volume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.Volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Volume resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p></li>
+<li><p><strong>creation_token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Creation Token or File Path. A unique
+file path for the volume. Used when creating mount targets</p></li>
+<li><p><strong>service_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.ServiceLevel" title="azure.mgmt.netapp.models.ServiceLevel"><em>ServiceLevel</em></a>) – Required. serviceLevel. The service level of the
+file system. Possible values include: ‘Standard’, ‘Premium’, ‘Ultra’.
+Default value: “Premium” .</p></li>
+<li><p><strong>usage_threshold</strong> (<em>long</em>) – usageThreshold. Maximum storage quota allowed for
+a file system in bytes. This is a soft quota used for alerting only.
+Minimum size is 100 GiB. Upper limit is 100TiB. Default value:
+107374182400 .</p></li>
+<li><p><strong>export_policy</strong> (<a class="reference internal" href="#azure.mgmt.netapp.models.VolumePropertiesExportPolicy" title="azure.mgmt.netapp.models.VolumePropertiesExportPolicy"><em>VolumePropertiesExportPolicy</em></a>) – exportPolicy. Set of export policy rules</p></li>
+<li><p><strong>snapshot_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Snapshot ID. UUID v4 used to identify the Snapshot</p></li>
+<li><p><strong>subnet_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Azure Resource URI for a delegated subnet. Must have
+the delegation Microsoft.NetApp/volumes</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>file_system_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – FileSystem ID. Unique FileSystem Identifier.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure lifecycle management</p></li>
+<li><p><strong>baremetal_tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Baremetal Tenant ID. Unique Baremetal Tenant
+Identifier.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.VolumePatchPropertiesExportPolicy">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">VolumePatchPropertiesExportPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>rules=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/volume_patch_properties_export_policy_py3.html#VolumePatchPropertiesExportPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.VolumePatchPropertiesExportPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>exportPolicy.</p>
+<p>Set of export policy rules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rules</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.netapp.models.ExportPolicyRule" title="azure.mgmt.netapp.models.ExportPolicyRule"><em>ExportPolicyRule</em></a><em>]</em>) – Export policy rule. Export policy rule</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.VolumePatch">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">VolumePatch</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>service_level='Premium'</em>, <em>usage_threshold: int = 107374182400</em>, <em>export_policy=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/volume_patch_py3.html#VolumePatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.VolumePatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Volume patch resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p></li>
+<li><p><strong>service_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.netapp.models.ServiceLevel" title="azure.mgmt.netapp.models.ServiceLevel"><em>ServiceLevel</em></a>) – serviceLevel. The service level of the file system.
+Possible values include: ‘Standard’, ‘Premium’, ‘Ultra’. Default value:
+“Premium” .</p></li>
+<li><p><strong>usage_threshold</strong> (<em>long</em>) – usageThreshold. Maximum storage quota allowed for
+a file system in bytes. This is a soft quota used for alerting only.
+Minimum size is 100 GiB. Upper limit is 100TiB. Default value:
+107374182400 .</p></li>
+<li><p><strong>export_policy</strong> (<a class="reference internal" href="#azure.mgmt.netapp.models.VolumePatchPropertiesExportPolicy" title="azure.mgmt.netapp.models.VolumePatchPropertiesExportPolicy"><em>VolumePatchPropertiesExportPolicy</em></a>) – exportPolicy. Set of export policy rules</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.MountTarget">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">MountTarget</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>file_system_id: str</em>, <em>tags=None</em>, <em>subnet: str = None</em>, <em>start_ip: str = None</em>, <em>end_ip: str = None</em>, <em>gateway: str = None</em>, <em>netmask: str = None</em>, <em>smb_server_fqdn: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/mount_target_py3.html#MountTarget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.MountTarget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Mount Target.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p></li>
+<li><p><strong>file_system_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. fileSystemId. UUID v4 used to identify
+the MountTarget</p></li>
+<li><p><strong>subnet</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – subnet. The subnet</p></li>
+<li><p><strong>start_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – startIp. The start of IPv4 address range to use when
+creating a new mount target</p></li>
+<li><p><strong>end_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – endIp. The end of IPv4 address range to use when creating a
+new mount target</p></li>
+<li><p><strong>gateway</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – gateway. The gateway of the IPv4 address range to use when
+creating a new mount target</p></li>
+<li><p><strong>netmask</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – netmask. The netmask of the IPv4 address range to use when
+creating a new mount target</p></li>
+<li><p><strong>smb_server_fqdn</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – smbServerFQDN. The SMB server’s Fully Qualified
+Domain Name, FQDN</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><strong>mount_target_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – mountTargetId. UUID v4 used to identify the
+MountTarget</p></li>
+<li><p><strong>ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ipAddress. The mount target’s IPv4 address</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure lifecycle management</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.Snapshot">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">Snapshot</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>file_system_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/snapshot_py3.html#Snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.Snapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Snapshot of a Volume.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p></li>
+<li><p><strong>file_system_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – fileSystemId. UUID v4 used to identify the
+FileSystem</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type</p></li>
+<li><p><strong>snapshot_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – snapshotId. UUID v4 used to identify the Snapshot</p></li>
+<li><p><strong>creation_date</strong> (<em>datetime</em>) – name. The creation date of the snapshot</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure lifecycle management</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.SnapshotPatch">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">SnapshotPatch</code><span class="sig-paren">(</span><em>*</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/snapshot_patch_py3.html#SnapshotPatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.SnapshotPatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Snapshot patch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Resource tags</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.OperationPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">OperationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.netapp.models.Operation" title="azure.mgmt.netapp.models.Operation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Operation</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.NetAppAccountPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">NetAppAccountPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/net_app_account_paged.html#NetAppAccountPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.NetAppAccountPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.netapp.models.NetAppAccount" title="azure.mgmt.netapp.models.NetAppAccount"><code class="xref py py-class docutils literal notranslate"><span class="pre">NetAppAccount</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.CapacityPoolPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">CapacityPoolPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/capacity_pool_paged.html#CapacityPoolPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.CapacityPoolPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.netapp.models.CapacityPool" title="azure.mgmt.netapp.models.CapacityPool"><code class="xref py py-class docutils literal notranslate"><span class="pre">CapacityPool</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.VolumePaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">VolumePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/volume_paged.html#VolumePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.VolumePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.netapp.models.Volume" title="azure.mgmt.netapp.models.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.MountTargetPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">MountTargetPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/mount_target_paged.html#MountTargetPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.MountTargetPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.netapp.models.MountTarget" title="azure.mgmt.netapp.models.MountTarget"><code class="xref py py-class docutils literal notranslate"><span class="pre">MountTarget</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.SnapshotPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">SnapshotPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/snapshot_paged.html#SnapshotPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.SnapshotPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.netapp.models.Snapshot" title="azure.mgmt.netapp.models.Snapshot"><code class="xref py py-class docutils literal notranslate"><span class="pre">Snapshot</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.InAvailabilityReasonType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">InAvailabilityReasonType</code><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/azure_net_app_files_management_client_enums.html#InAvailabilityReasonType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.InAvailabilityReasonType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.netapp.models.InAvailabilityReasonType.already_exists">
+<code class="descname">already_exists</code><em class="property"> = 'AlreadyExists'</em><a class="headerlink" href="#azure.mgmt.netapp.models.InAvailabilityReasonType.already_exists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.netapp.models.InAvailabilityReasonType.invalid">
+<code class="descname">invalid</code><em class="property"> = 'Invalid'</em><a class="headerlink" href="#azure.mgmt.netapp.models.InAvailabilityReasonType.invalid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">CheckNameResourceTypes</code><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/azure_net_app_files_management_client_enums.html#CheckNameResourceTypes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_account">
+<code class="descname">microsoft_net_appnet_app_account</code><em class="property"> = 'Microsoft.NetApp/netAppAccount'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_account" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_pools">
+<code class="descname">microsoft_net_appnet_app_accountcapacity_pools</code><em class="property"> = 'Microsoft.NetApp/netAppAccount/capacityPools'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_pools" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_poolsvolumes">
+<code class="descname">microsoft_net_appnet_app_accountcapacity_poolsvolumes</code><em class="property"> = 'Microsoft.NetApp/netAppAccount/capacityPools/volumes'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_poolsvolumes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_poolsvolumessnapshots">
+<code class="descname">microsoft_net_appnet_app_accountcapacity_poolsvolumessnapshots</code><em class="property"> = 'Microsoft.NetApp/netAppAccount/capacityPools/volumes/snapshots'</em><a class="headerlink" href="#azure.mgmt.netapp.models.CheckNameResourceTypes.microsoft_net_appnet_app_accountcapacity_poolsvolumessnapshots" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.netapp.models.ServiceLevel">
+<em class="property">class </em><code class="descclassname">azure.mgmt.netapp.models.</code><code class="descname">ServiceLevel</code><a class="reference internal" href="../_modules/azure/mgmt/netapp/models/azure_net_app_files_management_client_enums.html#ServiceLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.netapp.models.ServiceLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.netapp.models.ServiceLevel.premium">
+<code class="descname">premium</code><em class="property"> = 'Premium'</em><a class="headerlink" href="#azure.mgmt.netapp.models.ServiceLevel.premium" title="Permalink to this definition">¶</a></dt>
+<dd><p>Premium service level</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.netapp.models.ServiceLevel.standard">
+<code class="descname">standard</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.netapp.models.ServiceLevel.standard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Standard service level</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.netapp.models.ServiceLevel.ultra">
+<code class="descname">ultra</code><em class="property"> = 'Ultra'</em><a class="headerlink" href="#azure.mgmt.netapp.models.ServiceLevel.ultra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ultra service level</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 

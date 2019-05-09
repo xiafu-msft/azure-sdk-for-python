@@ -578,7 +578,7 @@ or ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cognitiveservices.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cognitiveservices\\azure\\mgmt\\cognitiveservices\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cognitiveservices.models' from 'd:\\a\\1\\s\\azure-mgmt-cognitiveservices\\azure\\mgmt\\cognitiveservices\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -616,7 +616,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.cognitiveservices.operations.AccountsOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>sku=None</em>, <em>tags=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.update" title="Permalink to this definition">¶</a></dt>
+<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>account_name</em>, <em>sku=None</em>, <em>tags=None</em>, <em>properties=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/operations/accounts_operations.html#AccountsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.AccountsOperations.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates a Cognitive Services account.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -630,6 +630,8 @@ resource. These tags can be used in viewing and grouping this resource
 (across resource groups). A maximum of 15 tags can be provided for a
 resource. Each tag must have a key no greater than 128 characters and
 value no greater than 256 characters.</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Additional properties for Account. Only provided
+fields will be updated.</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
 deserialized response</p></li>
@@ -699,7 +701,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cognitiveservices.operations.ResourceSkusOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cognitiveservices.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cognitiveservices\\azure\\mgmt\\cognitiveservices\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.ResourceSkusOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cognitiveservices.models' from 'd:\\a\\1\\s\\azure-mgmt-cognitiveservices\\azure\\mgmt\\cognitiveservices\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.ResourceSkusOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -750,7 +752,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cognitiveservices.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cognitiveservices.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cognitiveservices\\azure\\mgmt\\cognitiveservices\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cognitiveservices.models' from 'd:\\a\\1\\s\\azure-mgmt-cognitiveservices\\azure\\mgmt\\cognitiveservices\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -781,14 +783,8 @@ overrides</span>.</p></li>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location.</p></li>
-<li><p><strong>skus</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="azure.mgmt.cognitiveservices.models.html#azure.mgmt.cognitiveservices.models.SkuName" title="azure.mgmt.cognitiveservices.models.SkuName"><em>SkuName</em></a><em>]</em>) – The SKU of the resource.</p></li>
-<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="azure.mgmt.cognitiveservices.models.html#azure.mgmt.cognitiveservices.models.Kind" title="azure.mgmt.cognitiveservices.models.Kind"><em>Kind</em></a>) – The Kind of the resource. Possible values include:
-‘Bing.Autosuggest.v7’, ‘Bing.CustomSearch’, ‘Bing.Search.v7’,
-‘Bing.Speech’, ‘Bing.SpellCheck.v7’, ‘ComputerVision’,
-‘ContentModerator’, ‘CustomSpeech’, ‘CustomVision.Prediction’,
-‘CustomVision.Training’, ‘Emotion’, ‘Face’, ‘LUIS’, ‘QnAMaker’,
-‘SpeakerRecognition’, ‘SpeechTranslation’, ‘TextAnalytics’,
-‘TextTranslation’, ‘WebLM’</p></li>
+<li><p><strong>skus</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The SKU of the resource.</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Kind of the resource.</p></li>
 <li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Type of the resource.</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
@@ -813,7 +809,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cognitiveservices.models' from 'c:\\users\\lmazuel\\git\\azure-sdk-for-python\\azure-mgmt-cognitiveservices\\azure\\mgmt\\cognitiveservices\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.cognitiveservices.models' from 'd:\\a\\1\\s\\azure-mgmt-cognitiveservices\\azure\\mgmt\\cognitiveservices\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.operations.CheckSkuAvailabilityOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

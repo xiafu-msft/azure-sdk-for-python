@@ -324,9 +324,8 @@
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
 <span class="sd">    :param name: Required. Gets or sets the sku name. Required for account</span>
-<span class="sd">     creation, optional for update. Possible values include: &#39;F0&#39;, &#39;P0&#39;, &#39;P1&#39;,</span>
-<span class="sd">     &#39;P2&#39;, &#39;S0&#39;, &#39;S1&#39;, &#39;S2&#39;, &#39;S3&#39;, &#39;S4&#39;, &#39;S5&#39;, &#39;S6&#39;</span>
-<span class="sd">    :type name: str or ~azure.mgmt.cognitiveservices.models.SkuName</span>
+<span class="sd">     creation, optional for update.</span>
+<span class="sd">    :type name: str</span>
 <span class="sd">    :ivar tier: Gets the sku tier. This is based on the SKU name. Possible</span>
 <span class="sd">     values include: &#39;Free&#39;, &#39;Standard&#39;, &#39;Premium&#39;</span>
 <span class="sd">    :vartype tier: str or ~azure.mgmt.cognitiveservices.models.SkuTier</span>
@@ -342,7 +341,7 @@
         <span class="s1">&#39;tier&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;tier&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;SkuTier&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Sku</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">tier</span> <span class="o">=</span> <span class="kc">None</span></div>

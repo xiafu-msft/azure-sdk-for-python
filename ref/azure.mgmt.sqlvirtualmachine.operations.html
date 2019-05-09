@@ -238,7 +238,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.sqlvirtualmachine.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.html#module-azure.mgmt.sqlvirtualmachine">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.storage.html">azure.mgmt.storage package</a></li>
@@ -314,8 +314,649 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="azure-mgmt-sqlvirtualmachine-operations-module">
-<h1>azure.mgmt.sqlvirtualmachine.operations module<a class="headerlink" href="#azure-mgmt-sqlvirtualmachine-operations-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-azure.mgmt.sqlvirtualmachine.operations">
+<span id="azure-mgmt-sqlvirtualmachine-operations-module"></span><h1>azure.mgmt.sqlvirtualmachine.operations module<a class="headerlink" href="#module-azure.mgmt.sqlvirtualmachine.operations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.operations.</code><code class="descname">AvailabilityGroupListenersOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/availability_group_listeners_operations.html#AvailabilityGroupListenersOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>AvailabilityGroupListenersOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version to use for the request. Constant value: “2017-03-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations.create_or_update">
+<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_group_name</em>, <em>availability_group_listener_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/availability_group_listeners_operations.html#AvailabilityGroupListenersOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates an availability group listener.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine
+group.</p></li>
+<li><p><strong>availability_group_listener_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the availability
+group listener.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener" title="azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener"><em>AvailabilityGroupListener</em></a>) – The availability group listener.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns
+AvailabilityGroupListener or
+ClientRawResponse&lt;AvailabilityGroupListener&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener" title="azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener">AvailabilityGroupListener</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener" title="azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener">AvailabilityGroupListener</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_group_name</em>, <em>availability_group_listener_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/availability_group_listeners_operations.html#AvailabilityGroupListenersOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes an availability group listener.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine
+group.</p></li>
+<li><p><strong>availability_group_listener_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the availability
+group listener.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_group_name</em>, <em>availability_group_listener_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/availability_group_listeners_operations.html#AvailabilityGroupListenersOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets an availability group listener.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine
+group.</p></li>
+<li><p><strong>availability_group_listener_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the availability
+group listener.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>AvailabilityGroupListener or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener" title="azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener">AvailabilityGroupListener</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations.list_by_group">
+<code class="descname">list_by_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/availability_group_listeners_operations.html#AvailabilityGroupListenersOperations.list_by_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations.list_by_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all availability group listeners in a SQL virtual machine group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine
+group.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of AvailabilityGroupListener</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListenerPaged" title="azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListenerPaged">AvailabilityGroupListenerPaged</a>[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener" title="azure.mgmt.sqlvirtualmachine.models.AvailabilityGroupListener">AvailabilityGroupListener</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.sqlvirtualmachine.models' from 'd:\\a\\1\\s\\azure-mgmt-sqlvirtualmachine\\azure\\mgmt\\sqlvirtualmachine\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.AvailabilityGroupListenersOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.Operations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Operations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version to use for the request. Constant value: “2017-03-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.Operations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the available SQL Rest API operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Operation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.OperationPaged" title="azure.mgmt.sqlvirtualmachine.models.OperationPaged">OperationPaged</a>[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.Operation" title="azure.mgmt.sqlvirtualmachine.models.Operation">Operation</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.Operations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.sqlvirtualmachine.models' from 'd:\\a\\1\\s\\azure-mgmt-sqlvirtualmachine\\azure\\mgmt\\sqlvirtualmachine\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.operations.</code><code class="descname">SqlVirtualMachineGroupsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machine_groups_operations.html#SqlVirtualMachineGroupsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>SqlVirtualMachineGroupsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version to use for the request. Constant value: “2017-03-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.create_or_update">
+<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_group_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machine_groups_operations.html#SqlVirtualMachineGroupsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a SQL virtual machine group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine
+group.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup"><em>SqlVirtualMachineGroup</em></a>) – The SQL virtual machine group.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns SqlVirtualMachineGroup
+or ClientRawResponse&lt;SqlVirtualMachineGroup&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup">SqlVirtualMachineGroup</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup">SqlVirtualMachineGroup</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machine_groups_operations.html#SqlVirtualMachineGroupsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a SQL virtual machine group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine
+group.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machine_groups_operations.html#SqlVirtualMachineGroupsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a SQL virtual machine group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine
+group.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SqlVirtualMachineGroup or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup">SqlVirtualMachineGroup</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machine_groups_operations.html#SqlVirtualMachineGroupsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all SQL virtual machine groups in a subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SqlVirtualMachineGroup</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroupPaged" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroupPaged">SqlVirtualMachineGroupPaged</a>[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup">SqlVirtualMachineGroup</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.list_by_resource_group">
+<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machine_groups_operations.html#SqlVirtualMachineGroupsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all SQL virtual machine groups in a resource group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SqlVirtualMachineGroup</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroupPaged" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroupPaged">SqlVirtualMachineGroupPaged</a>[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup">SqlVirtualMachineGroup</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.sqlvirtualmachine.models' from 'd:\\a\\1\\s\\azure-mgmt-sqlvirtualmachine\\azure\\mgmt\\sqlvirtualmachine\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_group_name</em>, <em>tags=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machine_groups_operations.html#SqlVirtualMachineGroupsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachineGroupsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates SQL virtual machine group tags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine
+group.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns SqlVirtualMachineGroup
+or ClientRawResponse&lt;SqlVirtualMachineGroup&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup">SqlVirtualMachineGroup</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachineGroup">SqlVirtualMachineGroup</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.sqlvirtualmachine.operations.</code><code class="descname">SqlVirtualMachinesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machines_operations.html#SqlVirtualMachinesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>SqlVirtualMachinesOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – API version to use for the request. Constant value: “2017-03-01-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.create_or_update">
+<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machines_operations.html#SqlVirtualMachinesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates or updates a SQL virtual machine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine"><em>SqlVirtualMachine</em></a>) – The SQL virtual machine.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns SqlVirtualMachine or
+ClientRawResponse&lt;SqlVirtualMachine&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine">SqlVirtualMachine</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine">SqlVirtualMachine</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machines_operations.html#SqlVirtualMachinesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a SQL virtual machine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_name</em>, <em>expand=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machines_operations.html#SqlVirtualMachinesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a SQL virtual machine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine.</p></li>
+<li><p><strong>expand</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The child resources to include in the response.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SqlVirtualMachine or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine">SqlVirtualMachine</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machines_operations.html#SqlVirtualMachinesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all SQL virtual machines in a subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SqlVirtualMachine</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachinePaged" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachinePaged">SqlVirtualMachinePaged</a>[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine">SqlVirtualMachine</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.list_by_resource_group">
+<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machines_operations.html#SqlVirtualMachinesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all SQL virtual machines in a resource group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SqlVirtualMachine</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachinePaged" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachinePaged">SqlVirtualMachinePaged</a>[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine">SqlVirtualMachine</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.sqlvirtualmachine.models' from 'd:\\a\\1\\s\\azure-mgmt-sqlvirtualmachine\\azure\\mgmt\\sqlvirtualmachine\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>sql_virtual_machine_name</em>, <em>tags=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/sqlvirtualmachine/operations/sql_virtual_machines_operations.html#SqlVirtualMachinesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.sqlvirtualmachine.operations.SqlVirtualMachinesOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates a SQL virtual machine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the resource group that contains
+the resource. You can obtain this value from the Azure Resource
+Manager API or the portal.</p></li>
+<li><p><strong>sql_virtual_machine_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the SQL virtual machine.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns SqlVirtualMachine or
+ClientRawResponse&lt;SqlVirtualMachine&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine">SqlVirtualMachine</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.sqlvirtualmachine.models.html#azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine" title="azure.mgmt.sqlvirtualmachine.models.SqlVirtualMachine">SqlVirtualMachine</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 

@@ -431,17 +431,16 @@ the virtual network has vnet service endpoint enabled.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccount">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccount</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>kind='GlobalDocumentDB'</em>, <em>provisioning_state: str = None</em>, <em>ip_range_filter: str = None</em>, <em>is_virtual_network_filter_enabled: bool = None</em>, <em>enable_automatic_failover: bool = None</em>, <em>consistency_policy=None</em>, <em>capabilities=None</em>, <em>virtual_network_rules=None</em>, <em>enable_multiple_write_locations: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_py3.html#DatabaseAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccount" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccount</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>kind='GlobalDocumentDB'</em>, <em>provisioning_state: str = None</em>, <em>ip_range_filter: str = None</em>, <em>is_virtual_network_filter_enabled: bool = None</em>, <em>enable_automatic_failover: bool = None</em>, <em>consistency_policy=None</em>, <em>capabilities=None</em>, <em>virtual_network_rules=None</em>, <em>enable_multiple_write_locations: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_py3.html#DatabaseAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>An Azure Cosmos DB database account.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
 <li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
 <li><p><strong>document_endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The connection endpoint for the Cosmos DB
 database account.</p></li>
@@ -459,8 +458,8 @@ their failover priorities.</p></li>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The location of the resource group to which the
-resource belongs.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
 <li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
 <li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.DatabaseAccountKind" title="azure.mgmt.cosmosdb.models.DatabaseAccountKind"><em>DatabaseAccountKind</em></a>) – Indicates the type of database account. This can only be set
 at database account creation. Possible values include: ‘GlobalDocumentDB’,
@@ -483,6 +482,434 @@ database account.</p></li>
 for the Cosmos DB account.</p></li>
 <li><p><strong>enable_multiple_write_locations</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Enables the account to write in
 multiple locations</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.SqlDatabase">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlDatabase</code><span class="sig-paren">(</span><em>*</em>, <em>sql_database_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>_rid: str = None</em>, <em>_ts=None</em>, <em>_etag: str = None</em>, <em>_colls: str = None</em>, <em>_users: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_py3.html#SqlDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
+<p>An Azure Cosmos DB SQL database.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+<li><p><strong>sql_database_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB SQL database</p></li>
+<li><p><strong>_rid</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property. A unique identifier.</p></li>
+<li><p><strong>_ts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – A system generated property that denotes the last updated
+timestamp of the resource.</p></li>
+<li><p><strong>_etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property representing the resource etag
+required for optimistic concurrency control.</p></li>
+<li><p><strong>_colls</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property that specified the addressable
+path of the collections resource.</p></li>
+<li><p><strong>_users</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property that specifies the addressable
+path of the users resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.Indexes">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Indexes</code><span class="sig-paren">(</span><em>*</em>, <em>data_type='String'</em>, <em>precision: int = None</em>, <em>kind='Hash'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/indexes_py3.html#Indexes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Indexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The indexes for the path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.DataType" title="azure.mgmt.cosmosdb.models.DataType"><em>DataType</em></a>) – The datatype for which the indexing behavior is applied
+to. Possible values include: ‘String’, ‘Number’, ‘Point’, ‘Polygon’,
+‘LineString’, ‘MultiPolygon’. Default value: “String” .</p></li>
+<li><p><strong>precision</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The precision of the index. -1 is maximum precision.</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.IndexKind" title="azure.mgmt.cosmosdb.models.IndexKind"><em>IndexKind</em></a>) – Indicates the type of index. Possible values include: ‘Hash’,
+‘Range’, ‘Spatial’. Default value: “Hash” .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.IncludedPath">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">IncludedPath</code><span class="sig-paren">(</span><em>*</em>, <em>path: str = None</em>, <em>indexes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/included_path_py3.html#IncludedPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IncludedPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The paths that are included in indexing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path for which the indexing behavior applies to. Index
+paths typically start with root and end with wildcard (/path/<a href="#id1"><span class="problematic" id="id2">*</span></a>)</p></li>
+<li><p><strong>indexes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.Indexes" title="azure.mgmt.cosmosdb.models.Indexes"><em>Indexes</em></a><em>]</em>) – List of indexes for this path</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.ExcludedPath">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ExcludedPath</code><span class="sig-paren">(</span><em>*</em>, <em>path: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/excluded_path_py3.html#ExcludedPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ExcludedPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ExcludedPath.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path for which the indexing behavior applies to. Index
+paths typically start with root and end with wildcard (/path/<a href="#id3"><span class="problematic" id="id4">*</span></a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.IndexingPolicy">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">IndexingPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>automatic: bool = None</em>, <em>indexing_mode='Consistent'</em>, <em>included_paths=None</em>, <em>excluded_paths=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/indexing_policy_py3.html#IndexingPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB indexing policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>automatic</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates if the indexing policy is automatic</p></li>
+<li><p><strong>indexing_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.IndexingMode" title="azure.mgmt.cosmosdb.models.IndexingMode"><em>IndexingMode</em></a>) – Indicates the indexing mode. Possible values
+include: ‘Consistent’, ‘Lazy’, ‘None’. Default value: “Consistent” .</p></li>
+<li><p><strong>included_paths</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.IncludedPath" title="azure.mgmt.cosmosdb.models.IncludedPath"><em>IncludedPath</em></a><em>]</em>) – List of paths to include in the indexing</p></li>
+<li><p><strong>excluded_paths</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.ExcludedPath" title="azure.mgmt.cosmosdb.models.ExcludedPath"><em>ExcludedPath</em></a><em>]</em>) – List of paths to exclude from indexing</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.ContainerPartitionKey">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ContainerPartitionKey</code><span class="sig-paren">(</span><em>*</em>, <em>paths=None</em>, <em>kind='Hash'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/container_partition_key_py3.html#ContainerPartitionKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ContainerPartitionKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The configuration of the partition key to be used for partitioning data
+into multiple partitions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>paths</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of paths using which data within the container can be
+partitioned</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.PartitionKind" title="azure.mgmt.cosmosdb.models.PartitionKind"><em>PartitionKind</em></a>) – Indicates the kind of algorithm used for partitioning.
+Possible values include: ‘Hash’, ‘Range’. Default value: “Hash” .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.UniqueKey">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">UniqueKey</code><span class="sig-paren">(</span><em>*</em>, <em>paths=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/unique_key_py3.html#UniqueKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UniqueKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The unique key on that enforces uniqueness constraint on documents in the
+collection in the Azure Cosmos DB service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>paths</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of paths must be unique for each document in the Azure
+Cosmos DB service</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.UniqueKeyPolicy">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">UniqueKeyPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>unique_keys=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/unique_key_policy_py3.html#UniqueKeyPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UniqueKeyPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The unique key policy configuration for specifying uniqueness constraints
+on documents in the collection in the Azure Cosmos DB service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>unique_keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.UniqueKey" title="azure.mgmt.cosmosdb.models.UniqueKey"><em>UniqueKey</em></a><em>]</em>) – List of unique keys on that enforces uniqueness
+constraint on documents in the collection in the Azure Cosmos DB service.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.ConflictResolutionPolicy">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ConflictResolutionPolicy</code><span class="sig-paren">(</span><em>*</em>, <em>mode='LastWriterWins'</em>, <em>conflict_resolution_path: str = None</em>, <em>conflict_resolution_procedure: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/conflict_resolution_policy_py3.html#ConflictResolutionPolicy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionPolicy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The conflict resolution policy for the container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.ConflictResolutionMode" title="azure.mgmt.cosmosdb.models.ConflictResolutionMode"><em>ConflictResolutionMode</em></a>) – Indicates the conflict resolution mode. Possible values
+include: ‘LastWriterWins’, ‘Custom’. Default value: “LastWriterWins” .</p></li>
+<li><p><strong>conflict_resolution_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The conflict resolution path in the case
+of LastWriterWins mode.</p></li>
+<li><p><strong>conflict_resolution_procedure</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The procedure to resolve conflicts
+in the case of custom mode.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.SqlContainer">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlContainer</code><span class="sig-paren">(</span><em>*</em>, <em>sql_container_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>indexing_policy=None</em>, <em>partition_key=None</em>, <em>default_ttl: int = None</em>, <em>unique_key_policy=None</em>, <em>conflict_resolution_policy=None</em>, <em>_rid: str = None</em>, <em>_ts=None</em>, <em>_etag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_py3.html#SqlContainer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
+<p>An Azure Cosmos DB container.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+<li><p><strong>sql_container_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB SQL container</p></li>
+<li><p><strong>indexing_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.IndexingPolicy" title="azure.mgmt.cosmosdb.models.IndexingPolicy"><em>IndexingPolicy</em></a>) – The configuration of the indexing policy. By
+default, the indexing is automatic for all document paths within the
+container</p></li>
+<li><p><strong>partition_key</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.ContainerPartitionKey" title="azure.mgmt.cosmosdb.models.ContainerPartitionKey"><em>ContainerPartitionKey</em></a>) – The configuration of the partition key to be used
+for partitioning data into multiple partitions</p></li>
+<li><p><strong>default_ttl</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Default time to live</p></li>
+<li><p><strong>unique_key_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.UniqueKeyPolicy" title="azure.mgmt.cosmosdb.models.UniqueKeyPolicy"><em>UniqueKeyPolicy</em></a>) – The unique key policy configuration for
+specifying uniqueness constraints on documents in the collection in the
+Azure Cosmos DB service.</p></li>
+<li><p><strong>conflict_resolution_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.ConflictResolutionPolicy" title="azure.mgmt.cosmosdb.models.ConflictResolutionPolicy"><em>ConflictResolutionPolicy</em></a>) – The conflict resolution policy for the
+container.</p></li>
+<li><p><strong>_rid</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property. A unique identifier.</p></li>
+<li><p><strong>_ts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – A system generated property that denotes the last updated
+timestamp of the resource.</p></li>
+<li><p><strong>_etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property representing the resource etag
+required for optimistic concurrency control.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoDBDatabase">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBDatabase</code><span class="sig-paren">(</span><em>*</em>, <em>mongo_db_database_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_py3.html#MongoDBDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
+<p>An Azure Cosmos DB MongoDB database.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+<li><p><strong>mongo_db_database_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB MongoDB
+database</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoDBCollection">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBCollection</code><span class="sig-paren">(</span><em>*</em>, <em>mongo_db_collection_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>shard_key=None</em>, <em>indexes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_py3.html#MongoDBCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
+<p>An Azure Cosmos DB MongoDB collection.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+<li><p><strong>mongo_db_collection_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB MongoDB
+collection</p></li>
+<li><p><strong>shard_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of shard keys to be applied for the
+request.</p></li>
+<li><p><strong>indexes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.MongoIndex" title="azure.mgmt.cosmosdb.models.MongoIndex"><em>MongoIndex</em></a><em>]</em>) – List of index keys</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.Table">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Table</code><span class="sig-paren">(</span><em>*</em>, <em>table_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_py3.html#Table"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
+<p>An Azure Cosmos DB Table.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+<li><p><strong>table_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB table</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.CassandraKeyspace">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraKeyspace</code><span class="sig-paren">(</span><em>*</em>, <em>cassandra_keyspace_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_py3.html#CassandraKeyspace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
+<p>An Azure Cosmos DB Cassandra keyspace.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+<li><p><strong>cassandra_keyspace_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB Cassandra
+keyspace</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.CassandraTable">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraTable</code><span class="sig-paren">(</span><em>*</em>, <em>cassandra_table_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>default_ttl: int = None</em>, <em>schema=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_py3.html#CassandraTable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
+<p>An Azure Cosmos DB Cassandra table.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+<li><p><strong>cassandra_table_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB Cassandra table</p></li>
+<li><p><strong>default_ttl</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Time to live of the Cosmos DB Cassandra table</p></li>
+<li><p><strong>schema</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.CassandraSchema" title="azure.mgmt.cosmosdb.models.CassandraSchema"><em>CassandraSchema</em></a>) – Schema of the Cosmos DB Cassandra table</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.GremlinDatabase">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinDatabase</code><span class="sig-paren">(</span><em>*</em>, <em>gremlin_database_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>_rid: str = None</em>, <em>_ts=None</em>, <em>_etag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_py3.html#GremlinDatabase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
+<p>An Azure Cosmos DB Gremlin database.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+<li><p><strong>gremlin_database_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB Gremlin
+database</p></li>
+<li><p><strong>_rid</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property. A unique identifier.</p></li>
+<li><p><strong>_ts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – A system generated property that denotes the last updated
+timestamp of the resource.</p></li>
+<li><p><strong>_etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property representing the resource etag
+required for optimistic concurrency control.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.GremlinGraph">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinGraph</code><span class="sig-paren">(</span><em>*</em>, <em>gremlin_graph_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>indexing_policy=None</em>, <em>partition_key=None</em>, <em>default_ttl: int = None</em>, <em>unique_key_policy=None</em>, <em>conflict_resolution_policy=None</em>, <em>_rid: str = None</em>, <em>_ts=None</em>, <em>_etag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_py3.html#GremlinGraph"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
+<p>An Azure Cosmos DB Gremlin graph.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
+<li><p><strong>gremlin_graph_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB Gremlin graph</p></li>
+<li><p><strong>indexing_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.IndexingPolicy" title="azure.mgmt.cosmosdb.models.IndexingPolicy"><em>IndexingPolicy</em></a>) – The configuration of the indexing policy. By
+default, the indexing is automatic for all document paths within the graph</p></li>
+<li><p><strong>partition_key</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.ContainerPartitionKey" title="azure.mgmt.cosmosdb.models.ContainerPartitionKey"><em>ContainerPartitionKey</em></a>) – The configuration of the partition key to be used
+for partitioning data into multiple partitions</p></li>
+<li><p><strong>default_ttl</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Default time to live</p></li>
+<li><p><strong>unique_key_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.UniqueKeyPolicy" title="azure.mgmt.cosmosdb.models.UniqueKeyPolicy"><em>UniqueKeyPolicy</em></a>) – The unique key policy configuration for
+specifying uniqueness constraints on documents in the collection in the
+Azure Cosmos DB service.</p></li>
+<li><p><strong>conflict_resolution_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.ConflictResolutionPolicy" title="azure.mgmt.cosmosdb.models.ConflictResolutionPolicy"><em>ConflictResolutionPolicy</em></a>) – The conflict resolution policy for the
+graph.</p></li>
+<li><p><strong>_rid</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property. A unique identifier.</p></li>
+<li><p><strong>_ts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – A system generated property that denotes the last updated
+timestamp of the resource.</p></li>
+<li><p><strong>_etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property representing the resource etag
+required for optimistic concurrency control.</p></li>
 </ul>
 </dd>
 </dl>
@@ -547,24 +974,23 @@ each word capitalized.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.Resource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Resource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A database account resource.</p>
+<p>The core properties of ARM resources.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
 <li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The location of the resource group to which the
-resource belongs.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
 <li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
 </ul>
 </dd>
@@ -572,8 +998,27 @@ resource belongs.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.ExtendedResourceProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ExtendedResourceProperties</code><span class="sig-paren">(</span><em>*</em>, <em>_rid: str = None</em>, <em>_ts=None</em>, <em>_etag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/extended_resource_properties_py3.html#ExtendedResourceProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ExtendedResourceProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The system generated resource properties associated with SQL databases and
+SQL containers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_rid</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property. A unique identifier.</p></li>
+<li><p><strong>_ts</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – A system generated property that denotes the last updated
+timestamp of the resource.</p></li>
+<li><p><strong>_etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A system generated property representing the resource etag
+required for optimistic concurrency control.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>locations</em>, <em>tags=None</em>, <em>kind='GlobalDocumentDB'</em>, <em>consistency_policy=None</em>, <em>ip_range_filter: str = None</em>, <em>is_virtual_network_filter_enabled: bool = None</em>, <em>enable_automatic_failover: bool = None</em>, <em>capabilities=None</em>, <em>virtual_network_rules=None</em>, <em>enable_multiple_write_locations: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_create_update_parameters_py3.html#DatabaseAccountCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DatabaseAccountCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>locations</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>kind='GlobalDocumentDB'</em>, <em>consistency_policy=None</em>, <em>ip_range_filter: str = None</em>, <em>is_virtual_network_filter_enabled: bool = None</em>, <em>enable_automatic_failover: bool = None</em>, <em>capabilities=None</em>, <em>virtual_network_rules=None</em>, <em>enable_multiple_write_locations: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/database_account_create_update_parameters_py3.html#DatabaseAccountCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.cosmosdb.models.resource_py3.Resource</span></code></p>
 <p>Parameters to create and update Cosmos DB database accounts.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -583,15 +1028,16 @@ sending a request.</p>
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique resource identifier of the database account.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the database account.</p></li>
 <li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of Azure resource.</p></li>
-<li><p><a class="reference internal" href="#azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters.database_account_offer_type" title="azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters.database_account_offer_type"><strong>database_account_offer_type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required.  Default value: “Standard” .</p></li>
+<li><p><a class="reference internal" href="#azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters.database_account_offer_type" title="azure.mgmt.cosmosdb.models.DatabaseAccountCreateUpdateParameters.database_account_offer_type"><strong>database_account_offer_type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The offer type for the
+database. Default value: “Standard” .</p></li>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The location of the resource group to which the
-resource belongs.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource group to which the resource
+belongs.</p></li>
 <li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – </p></li>
 <li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.DatabaseAccountKind" title="azure.mgmt.cosmosdb.models.DatabaseAccountKind"><em>DatabaseAccountKind</em></a>) – Indicates the type of database account. This can only be set
 at database account creation. Possible values include: ‘GlobalDocumentDB’,
@@ -727,6 +1173,414 @@ include: ‘primary’, ‘secondary’, ‘primaryReadonly’, ‘secondaryRead
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.SqlDatabaseResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlDatabaseResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_resource_py3.html#SqlDatabaseResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabaseResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB SQL database id object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB SQL database</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.SqlDatabaseCreateUpdateParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlDatabaseCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_create_update_parameters_py3.html#SqlDatabaseCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabaseCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters to create and update Cosmos DB SQL database.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.SqlDatabaseResource" title="azure.mgmt.cosmosdb.models.SqlDatabaseResource"><em>SqlDatabaseResource</em></a>) – Required. The standard JSON format of a SQL database</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. A key-value pair of options to be applied for
+the request. This corresponds to the headers sent with the request.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.SqlContainerResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlContainerResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>indexing_policy=None</em>, <em>partition_key=None</em>, <em>default_ttl: int = None</em>, <em>unique_key_policy=None</em>, <em>conflict_resolution_policy=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_resource_py3.html#SqlContainerResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainerResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB SQL container resource object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB SQL container</p></li>
+<li><p><strong>indexing_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.IndexingPolicy" title="azure.mgmt.cosmosdb.models.IndexingPolicy"><em>IndexingPolicy</em></a>) – The configuration of the indexing policy. By
+default, the indexing is automatic for all document paths within the
+container</p></li>
+<li><p><strong>partition_key</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.ContainerPartitionKey" title="azure.mgmt.cosmosdb.models.ContainerPartitionKey"><em>ContainerPartitionKey</em></a>) – The configuration of the partition key to be used
+for partitioning data into multiple partitions</p></li>
+<li><p><strong>default_ttl</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Default time to live</p></li>
+<li><p><strong>unique_key_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.UniqueKeyPolicy" title="azure.mgmt.cosmosdb.models.UniqueKeyPolicy"><em>UniqueKeyPolicy</em></a>) – The unique key policy configuration for
+specifying uniqueness constraints on documents in the collection in the
+Azure Cosmos DB service.</p></li>
+<li><p><strong>conflict_resolution_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.ConflictResolutionPolicy" title="azure.mgmt.cosmosdb.models.ConflictResolutionPolicy"><em>ConflictResolutionPolicy</em></a>) – The conflict resolution policy for the
+container.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.SqlContainerCreateUpdateParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlContainerCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_create_update_parameters_py3.html#SqlContainerCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainerCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters to create and update Cosmos DB container.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.SqlContainerResource" title="azure.mgmt.cosmosdb.models.SqlContainerResource"><em>SqlContainerResource</em></a>) – Required. The standard JSON format of a container</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. A key-value pair of options to be applied for
+the request. This corresponds to the headers sent with the request.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoDBDatabaseResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBDatabaseResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_resource_py3.html#MongoDBDatabaseResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabaseResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB MongoDB database id object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB MongoDB database</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoDBDatabaseCreateUpdateParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBDatabaseCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_create_update_parameters_py3.html#MongoDBDatabaseCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabaseCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters to create and update Cosmos DB MongoDB database.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MongoDBDatabaseResource" title="azure.mgmt.cosmosdb.models.MongoDBDatabaseResource"><em>MongoDBDatabaseResource</em></a>) – Required. The standard JSON format of a MongoDB database</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. A key-value pair of options to be applied for
+the request. This corresponds to the headers sent with the request.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoIndexKeys">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoIndexKeys</code><span class="sig-paren">(</span><em>*</em>, <em>keys=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_index_keys_py3.html#MongoIndexKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoIndexKeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB MongoDB collection resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of keys for each MongoDB collection in the Azure Cosmos
+DB service</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoIndexOptions">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoIndexOptions</code><span class="sig-paren">(</span><em>*</em>, <em>expire_after_seconds: int = None</em>, <em>unique: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_index_options_py3.html#MongoIndexOptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoIndexOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB MongoDB collection index options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>expire_after_seconds</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Expire after seconds</p></li>
+<li><p><strong>unique</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Is unique or not</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoIndex">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoIndex</code><span class="sig-paren">(</span><em>*</em>, <em>key=None</em>, <em>options=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_index_py3.html#MongoIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB MongoDB collection index key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MongoIndexKeys" title="azure.mgmt.cosmosdb.models.MongoIndexKeys"><em>MongoIndexKeys</em></a>) – Cosmos DB MongoDB collection index keys</p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MongoIndexOptions" title="azure.mgmt.cosmosdb.models.MongoIndexOptions"><em>MongoIndexOptions</em></a>) – Cosmos DB MongoDB collection index key options</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoDBCollectionResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBCollectionResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>shard_key=None</em>, <em>indexes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_resource_py3.html#MongoDBCollectionResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollectionResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB MongoDB collection resource object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB MongoDB collection</p></li>
+<li><p><strong>shard_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A key-value pair of shard keys to be applied for the
+request.</p></li>
+<li><p><strong>indexes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.MongoIndex" title="azure.mgmt.cosmosdb.models.MongoIndex"><em>MongoIndex</em></a><em>]</em>) – List of index keys</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoDBCollectionCreateUpdateParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBCollectionCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_create_update_parameters_py3.html#MongoDBCollectionCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollectionCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters to create and update Cosmos DB MongoDB collection.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MongoDBCollectionResource" title="azure.mgmt.cosmosdb.models.MongoDBCollectionResource"><em>MongoDBCollectionResource</em></a>) – Required. The standard JSON format of a MongoDB
+collection</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. A key-value pair of options to be applied for
+the request. This corresponds to the headers sent with the request.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.TableResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">TableResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_resource_py3.html#TableResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.TableResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB table id object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB table</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.TableCreateUpdateParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">TableCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_create_update_parameters_py3.html#TableCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.TableCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters to create and update Cosmos DB Table.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.TableResource" title="azure.mgmt.cosmosdb.models.TableResource"><em>TableResource</em></a>) – Required. The standard JSON format of a Table</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. A key-value pair of options to be applied for
+the request. This corresponds to the headers sent with the request.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.CassandraKeyspaceResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraKeyspaceResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_resource_py3.html#CassandraKeyspaceResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspaceResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB Cassandra keyspace id object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB Cassandra keyspace</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.CassandraKeyspaceCreateUpdateParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraKeyspaceCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_create_update_parameters_py3.html#CassandraKeyspaceCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspaceCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters to create and update Cosmos DB Cassandra keyspace.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.CassandraKeyspaceResource" title="azure.mgmt.cosmosdb.models.CassandraKeyspaceResource"><em>CassandraKeyspaceResource</em></a>) – Required. The standard JSON format of a Cassandra
+keyspace</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. A key-value pair of options to be applied for
+the request. This corresponds to the headers sent with the request.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.Column">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">Column</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>type: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/column_py3.html#Column"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.Column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB Cassandra table column.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Cosmos DB Cassandra table column</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Type of the Cosmos DB Cassandra table column</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.CassandraPartitionKey">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraPartitionKey</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_partition_key_py3.html#CassandraPartitionKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraPartitionKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB Cassandra table partition key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Cosmos DB Cassandra table partition key</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.ClusterKey">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ClusterKey</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>order_by: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cluster_key_py3.html#ClusterKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ClusterKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB Cassandra table cluster key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Cosmos DB Cassandra table cluster key</p></li>
+<li><p><strong>order_by</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Order of the Cosmos DB Cassandra table cluster key, only
+support “Asc” and “Desc”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.CassandraSchema">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraSchema</code><span class="sig-paren">(</span><em>*</em>, <em>columns=None</em>, <em>partition_keys=None</em>, <em>cluster_keys=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_schema_py3.html#CassandraSchema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB Cassandra table schema.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>columns</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.Column" title="azure.mgmt.cosmosdb.models.Column"><em>Column</em></a><em>]</em>) – List of Cassandra table columns.</p></li>
+<li><p><strong>partition_keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.CassandraPartitionKey" title="azure.mgmt.cosmosdb.models.CassandraPartitionKey"><em>CassandraPartitionKey</em></a><em>]</em>) – List of partition key.</p></li>
+<li><p><strong>cluster_keys</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.ClusterKey" title="azure.mgmt.cosmosdb.models.ClusterKey"><em>ClusterKey</em></a><em>]</em>) – List of cluster key.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.CassandraTableResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraTableResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>default_ttl: int = None</em>, <em>schema=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_resource_py3.html#CassandraTableResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTableResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB Cassandra table id object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB Cassandra table</p></li>
+<li><p><strong>default_ttl</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Time to live of the Cosmos DB Cassandra table</p></li>
+<li><p><strong>schema</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.CassandraSchema" title="azure.mgmt.cosmosdb.models.CassandraSchema"><em>CassandraSchema</em></a>) – Schema of the Cosmos DB Cassandra table</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.CassandraTableCreateUpdateParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraTableCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_create_update_parameters_py3.html#CassandraTableCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTableCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters to create and update Cosmos DB Cassandra table.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.CassandraTableResource" title="azure.mgmt.cosmosdb.models.CassandraTableResource"><em>CassandraTableResource</em></a>) – Required. The standard JSON format of a Cassandra table</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. A key-value pair of options to be applied for
+the request. This corresponds to the headers sent with the request.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.GremlinDatabaseResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinDatabaseResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_resource_py3.html#GremlinDatabaseResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabaseResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB Gremlin database id object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB Gremlin database</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.GremlinDatabaseCreateUpdateParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinDatabaseCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_create_update_parameters_py3.html#GremlinDatabaseCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabaseCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters to create and update Cosmos DB Gremlin database.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.GremlinDatabaseResource" title="azure.mgmt.cosmosdb.models.GremlinDatabaseResource"><em>GremlinDatabaseResource</em></a>) – Required. The standard JSON format of a Gremlin database</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. A key-value pair of options to be applied for
+the request. This corresponds to the headers sent with the request.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.GremlinGraphResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinGraphResource</code><span class="sig-paren">(</span><em>*</em>, <em>id: str</em>, <em>indexing_policy=None</em>, <em>partition_key=None</em>, <em>default_ttl: int = None</em>, <em>unique_key_policy=None</em>, <em>conflict_resolution_policy=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_resource_py3.html#GremlinGraphResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraphResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Cosmos DB Gremlin graph resource object.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the Cosmos DB Gremlin graph</p></li>
+<li><p><strong>indexing_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.IndexingPolicy" title="azure.mgmt.cosmosdb.models.IndexingPolicy"><em>IndexingPolicy</em></a>) – The configuration of the indexing policy. By
+default, the indexing is automatic for all document paths within the graph</p></li>
+<li><p><strong>partition_key</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.ContainerPartitionKey" title="azure.mgmt.cosmosdb.models.ContainerPartitionKey"><em>ContainerPartitionKey</em></a>) – The configuration of the partition key to be used
+for partitioning data into multiple partitions</p></li>
+<li><p><strong>default_ttl</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Default time to live</p></li>
+<li><p><strong>unique_key_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.UniqueKeyPolicy" title="azure.mgmt.cosmosdb.models.UniqueKeyPolicy"><em>UniqueKeyPolicy</em></a>) – The unique key policy configuration for
+specifying uniqueness constraints on documents in the collection in the
+Azure Cosmos DB service.</p></li>
+<li><p><strong>conflict_resolution_policy</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.ConflictResolutionPolicy" title="azure.mgmt.cosmosdb.models.ConflictResolutionPolicy"><em>ConflictResolutionPolicy</em></a>) – The conflict resolution policy for the
+graph.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.GremlinGraphCreateUpdateParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinGraphCreateUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource</em>, <em>options</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_create_update_parameters_py3.html#GremlinGraphCreateUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraphCreateUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Parameters to create and update Cosmos DB Gremlin graph.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource</strong> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.GremlinGraphResource" title="azure.mgmt.cosmosdb.models.GremlinGraphResource"><em>GremlinGraphResource</em></a>) – Required. The standard JSON format of a Gremlin graph</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. A key-value pair of options to be applied for
+the request. This corresponds to the headers sent with the request.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.OperationDisplay">
 <em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>*</em>, <em>provider: str = None</em>, <em>resource: str = None</em>, <em>operation: str = None</em>, <em>description: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
@@ -791,7 +1645,7 @@ sending a request.</p>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
 <li><p><strong>quota_period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The quota period used to summarize the usage values.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum value for this metric</p></li>
 <li><p><strong>current_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Current value for this metric</p></li>
@@ -815,11 +1669,11 @@ sending a request.</p>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
 <li><p><strong>quota_period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The quota period used to summarize the usage values.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum value for this metric</p></li>
 <li><p><strong>current_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Current value for this metric</p></li>
-<li><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The parition id (GUID identifier) of the usages.</p></li>
+<li><p><a class="reference internal" href="azure.servicebus.html#azure.servicebus.Message.partition_id" title="azure.servicebus.Message.partition_id"><strong>partition_id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition id (GUID identifier) of the usages.</p></li>
 <li><p><strong>partition_key_range_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition key range id (integer
 identifier) of the usages.</p></li>
 </ul>
@@ -862,7 +1716,7 @@ account.</p></li>
 metric. Possible values include: ‘None’, ‘Average’, ‘Total’, ‘Minimimum’,
 ‘Maximum’, ‘Last’</p></li>
 <li><p><strong>resource_uri</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource uri of the database.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
@@ -908,7 +1762,7 @@ sending a request.</p>
 <li><p><strong>end_time</strong> (<em>datetime</em>) – The end time for the metric (ISO-8601 format).</p></li>
 <li><p><strong>time_grain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The time grain to be used to summarize the metric
 values.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
 <li><p><strong>metric_values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricValue" title="azure.mgmt.cosmosdb.models.MetricValue"><em>MetricValue</em></a><em>]</em>) – The metric values for the specified time window and
 timestep.</p></li>
 </ul>
@@ -963,7 +1817,7 @@ sending a request.</p>
 <li><p><strong>end_time</strong> (<em>datetime</em>) – The end time for the metric (ISO-8601 format).</p></li>
 <li><p><strong>time_grain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The time grain to be used to summarize the metric
 values.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
 <li><p><strong>metric_values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.PercentileMetricValue" title="azure.mgmt.cosmosdb.models.PercentileMetricValue"><em>PercentileMetricValue</em></a><em>]</em>) – The percentile metric values for the specified time
 window and timestep.</p></li>
 </ul>
@@ -990,10 +1844,10 @@ sending a request.</p>
 <li><p><strong>end_time</strong> (<em>datetime</em>) – The end time for the metric (ISO-8601 format).</p></li>
 <li><p><strong>time_grain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The time grain to be used to summarize the metric
 values.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricName" title="azure.mgmt.cosmosdb.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
 <li><p><strong>metric_values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricValue" title="azure.mgmt.cosmosdb.models.MetricValue"><em>MetricValue</em></a><em>]</em>) – The metric values for the specified time window and
 timestep.</p></li>
-<li><p><strong>partition_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The parition id (GUID identifier) of the metric
+<li><p><a class="reference internal" href="azure.servicebus.html#azure.servicebus.Message.partition_id" title="azure.servicebus.Message.partition_id"><strong>partition_id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition id (GUID identifier) of the metric
 values.</p></li>
 <li><p><strong>partition_key_range_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The partition key range id (integer
 identifier) of the metric values.</p></li>
@@ -1033,6 +1887,69 @@ identifier) of the metric values.</p></li>
 <em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MetricDefinitionPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/metric_definition_paged.html#MetricDefinitionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MetricDefinitionPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.MetricDefinition" title="azure.mgmt.cosmosdb.models.MetricDefinition"><code class="xref py py-class docutils literal notranslate"><span class="pre">MetricDefinition</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.SqlDatabasePaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlDatabasePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_database_paged.html#SqlDatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlDatabasePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.SqlDatabase" title="azure.mgmt.cosmosdb.models.SqlDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SqlDatabase</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.SqlContainerPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">SqlContainerPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/sql_container_paged.html#SqlContainerPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.SqlContainerPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.SqlContainer" title="azure.mgmt.cosmosdb.models.SqlContainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">SqlContainer</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoDBDatabasePaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBDatabasePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_database_paged.html#MongoDBDatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBDatabasePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.MongoDBDatabase" title="azure.mgmt.cosmosdb.models.MongoDBDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">MongoDBDatabase</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.MongoDBCollectionPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">MongoDBCollectionPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/mongo_db_collection_paged.html#MongoDBCollectionPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.MongoDBCollectionPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.MongoDBCollection" title="azure.mgmt.cosmosdb.models.MongoDBCollection"><code class="xref py py-class docutils literal notranslate"><span class="pre">MongoDBCollection</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.TablePaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">TablePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/table_paged.html#TablePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.TablePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.Table" title="azure.mgmt.cosmosdb.models.Table"><code class="xref py py-class docutils literal notranslate"><span class="pre">Table</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.CassandraKeyspacePaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraKeyspacePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_keyspace_paged.html#CassandraKeyspacePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraKeyspacePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.CassandraKeyspace" title="azure.mgmt.cosmosdb.models.CassandraKeyspace"><code class="xref py py-class docutils literal notranslate"><span class="pre">CassandraKeyspace</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.CassandraTablePaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">CassandraTablePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cassandra_table_paged.html#CassandraTablePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.CassandraTablePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.CassandraTable" title="azure.mgmt.cosmosdb.models.CassandraTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CassandraTable</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.GremlinDatabasePaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinDatabasePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_database_paged.html#GremlinDatabasePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinDatabasePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.GremlinDatabase" title="azure.mgmt.cosmosdb.models.GremlinDatabase"><code class="xref py py-class docutils literal notranslate"><span class="pre">GremlinDatabase</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.GremlinGraphPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">GremlinGraphPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/gremlin_graph_paged.html#GremlinGraphPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.GremlinGraphPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.cosmosdb.models.GremlinGraph" title="azure.mgmt.cosmosdb.models.GremlinGraph"><code class="xref py py-class docutils literal notranslate"><span class="pre">GremlinGraph</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
@@ -1130,6 +2047,121 @@ identifier) of the metric values.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.IndexingMode">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">IndexingMode</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#IndexingMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.IndexingMode.consistent">
+<code class="descname">consistent</code><em class="property"> = 'Consistent'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode.consistent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.IndexingMode.lazy">
+<code class="descname">lazy</code><em class="property"> = 'Lazy'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode.lazy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.IndexingMode.none">
+<code class="descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexingMode.none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.DataType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">DataType</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#DataType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.DataType.line_string">
+<code class="descname">line_string</code><em class="property"> = 'LineString'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.line_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.DataType.multi_polygon">
+<code class="descname">multi_polygon</code><em class="property"> = 'MultiPolygon'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.multi_polygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.DataType.number">
+<code class="descname">number</code><em class="property"> = 'Number'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.number" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.DataType.point">
+<code class="descname">point</code><em class="property"> = 'Point'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.DataType.polygon">
+<code class="descname">polygon</code><em class="property"> = 'Polygon'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.polygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.DataType.string">
+<code class="descname">string</code><em class="property"> = 'String'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.DataType.string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.IndexKind">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">IndexKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#IndexKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.IndexKind.hash">
+<code class="descname">hash</code><em class="property"> = 'Hash'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind.hash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.IndexKind.range">
+<code class="descname">range</code><em class="property"> = 'Range'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind.range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.IndexKind.spatial">
+<code class="descname">spatial</code><em class="property"> = 'Spatial'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.IndexKind.spatial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.PartitionKind">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">PartitionKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#PartitionKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.PartitionKind.hash">
+<code class="descname">hash</code><em class="property"> = 'Hash'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionKind.hash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.PartitionKind.range">
+<code class="descname">range</code><em class="property"> = 'Range'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.PartitionKind.range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.cosmosdb.models.ConflictResolutionMode">
+<em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">ConflictResolutionMode</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#ConflictResolutionMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.ConflictResolutionMode.custom">
+<code class="descname">custom</code><em class="property"> = 'Custom'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionMode.custom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.cosmosdb.models.ConflictResolutionMode.last_writer_wins">
+<code class="descname">last_writer_wins</code><em class="property"> = 'LastWriterWins'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.ConflictResolutionMode.last_writer_wins" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.cosmosdb.models.KeyKind">
 <em class="property">class </em><code class="descclassname">azure.mgmt.cosmosdb.models.</code><code class="descname">KeyKind</code><a class="reference internal" href="../_modules/azure/mgmt/cosmosdb/models/cosmos_db_enums.html#KeyKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cosmosdb.models.KeyKind" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
@@ -1173,11 +2205,8 @@ identifier) of the metric values.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.UnitType.count">
-<code class="descname">count</code><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the number of non-overlapping occurrences of substring sub in
-string S[start:end].  Optional arguments start and end are
-interpreted as in slice notation.</p>
-</dd></dl>
+<code class="descname">count</code><em class="property"> = 'Count'</em><a class="headerlink" href="#azure.mgmt.cosmosdb.models.UnitType.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cosmosdb.models.UnitType.count_per_second">

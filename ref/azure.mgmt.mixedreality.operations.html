@@ -207,7 +207,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">azure.mgmt.mixedreality.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.mixedreality.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.mixedreality.html#module-azure.mgmt.mixedreality">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.monitor.html">azure.mgmt.monitor package</a></li>
@@ -314,8 +314,321 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="azure-mgmt-mixedreality-operations-module">
-<h1>azure.mgmt.mixedreality.operations module<a class="headerlink" href="#azure-mgmt-mixedreality-operations-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-azure.mgmt.mixedreality.operations">
+<span id="azure-mgmt-mixedreality-operations-module"></span><h1>azure.mgmt.mixedreality.operations module<a class="headerlink" href="#module-azure.mgmt.mixedreality.operations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.mixedreality.operations.Operations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.mixedreality.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Operations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. Constant value: “2019-02-28-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.mixedreality.operations.Operations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exposing Available Operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Operation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.OperationPaged" title="azure.mgmt.mixedreality.models.OperationPaged">OperationPaged</a>[<a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.Operation" title="azure.mgmt.mixedreality.models.Operation">Operation</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.ErrorResponseException" title="azure.mgmt.mixedreality.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.mixedreality.operations.Operations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.mixedreality.models' from 'd:\\a\\1\\s\\azure-mgmt-mixedreality\\azure\\mgmt\\mixedreality\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.mixedreality.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.mixedreality.operations.</code><code class="descname">SpatialAnchorsAccountsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/spatial_anchors_accounts_operations.html#SpatialAnchorsAccountsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>SpatialAnchorsAccountsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. Constant value: “2019-02-28-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>spatial_anchors_account_name</em>, <em>location</em>, <em>tags=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/spatial_anchors_accounts_operations.html#SpatialAnchorsAccountsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creating or Updating a Spatial Anchors Account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>spatial_anchors_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Mixed Reality Spatial
+Anchors Account.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The geo-location where the resource lives</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SpatialAnchorsAccount or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.SpatialAnchorsAccount" title="azure.mgmt.mixedreality.models.SpatialAnchorsAccount">SpatialAnchorsAccount</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.ErrorResponseException" title="azure.mgmt.mixedreality.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>spatial_anchors_account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/spatial_anchors_accounts_operations.html#SpatialAnchorsAccountsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a Spatial Anchors Account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>spatial_anchors_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Mixed Reality Spatial
+Anchors Account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.ErrorResponseException" title="azure.mgmt.mixedreality.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>spatial_anchors_account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/spatial_anchors_accounts_operations.html#SpatialAnchorsAccountsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a Spatial Anchors Account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>spatial_anchors_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Mixed Reality Spatial
+Anchors Account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SpatialAnchorsAccount or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.SpatialAnchorsAccount" title="azure.mgmt.mixedreality.models.SpatialAnchorsAccount">SpatialAnchorsAccount</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.ErrorResponseException" title="azure.mgmt.mixedreality.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.get_keys">
+<code class="descname">get_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>spatial_anchors_account_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/spatial_anchors_accounts_operations.html#SpatialAnchorsAccountsOperations.get_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.get_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Both of the 2 Keys of a Spatial Anchors Account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>spatial_anchors_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Mixed Reality Spatial
+Anchors Account.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SpatialAnchorsAccountKeys or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.SpatialAnchorsAccountKeys" title="azure.mgmt.mixedreality.models.SpatialAnchorsAccountKeys">SpatialAnchorsAccountKeys</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.ErrorResponseException" title="azure.mgmt.mixedreality.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.list_by_resource_group">
+<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/spatial_anchors_accounts_operations.html#SpatialAnchorsAccountsOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>List Resources by Resource Group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SpatialAnchorsAccount</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.SpatialAnchorsAccountPaged" title="azure.mgmt.mixedreality.models.SpatialAnchorsAccountPaged">SpatialAnchorsAccountPaged</a>[<a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.SpatialAnchorsAccount" title="azure.mgmt.mixedreality.models.SpatialAnchorsAccount">SpatialAnchorsAccount</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.ErrorResponseException" title="azure.mgmt.mixedreality.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.list_by_subscription">
+<code class="descname">list_by_subscription</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/spatial_anchors_accounts_operations.html#SpatialAnchorsAccountsOperations.list_by_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.list_by_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>List Spatial Anchors Accounts by Subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SpatialAnchorsAccount</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.SpatialAnchorsAccountPaged" title="azure.mgmt.mixedreality.models.SpatialAnchorsAccountPaged">SpatialAnchorsAccountPaged</a>[<a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.SpatialAnchorsAccount" title="azure.mgmt.mixedreality.models.SpatialAnchorsAccount">SpatialAnchorsAccount</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.ErrorResponseException" title="azure.mgmt.mixedreality.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.mixedreality.models' from 'd:\\a\\1\\s\\azure-mgmt-mixedreality\\azure\\mgmt\\mixedreality\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.regenerate_keys">
+<code class="descname">regenerate_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>spatial_anchors_account_name</em>, <em>serial=1</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/spatial_anchors_accounts_operations.html#SpatialAnchorsAccountsOperations.regenerate_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.regenerate_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regenerate 1 Key of a Spatial Anchors Account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>spatial_anchors_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Mixed Reality Spatial
+Anchors Account.</p></li>
+<li><p><strong>serial</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – serial of key to be regenerated</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SpatialAnchorsAccountKeys or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.SpatialAnchorsAccountKeys" title="azure.mgmt.mixedreality.models.SpatialAnchorsAccountKeys">SpatialAnchorsAccountKeys</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.ErrorResponseException" title="azure.mgmt.mixedreality.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>spatial_anchors_account_name</em>, <em>location</em>, <em>tags=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/mixedreality/operations/spatial_anchors_accounts_operations.html#SpatialAnchorsAccountsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.mixedreality.operations.SpatialAnchorsAccountsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updating a Spatial Anchors Account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Azure resource group.</p></li>
+<li><p><strong>spatial_anchors_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of an Mixed Reality Spatial
+Anchors Account.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The geo-location where the resource lives</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SpatialAnchorsAccount or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.SpatialAnchorsAccount" title="azure.mgmt.mixedreality.models.SpatialAnchorsAccount">SpatialAnchorsAccount</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.mixedreality.models.html#azure.mgmt.mixedreality.models.ErrorResponseException" title="azure.mgmt.mixedreality.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 

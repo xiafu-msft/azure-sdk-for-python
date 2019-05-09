@@ -318,18 +318,12 @@
 <div class="viewcode-block" id="CheckSkuAvailabilityResult"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.cognitiveservices.models.html#azure.mgmt.cognitiveservices.models.CheckSkuAvailabilityResult">[docs]</a><span class="k">class</span> <span class="nc">CheckSkuAvailabilityResult</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Check SKU availability result.</span>
 
-<span class="sd">    :param kind: The Kind of the resource. Possible values include:</span>
-<span class="sd">     &#39;Bing.Autosuggest.v7&#39;, &#39;Bing.CustomSearch&#39;, &#39;Bing.Search.v7&#39;,</span>
-<span class="sd">     &#39;Bing.Speech&#39;, &#39;Bing.SpellCheck.v7&#39;, &#39;ComputerVision&#39;, &#39;ContentModerator&#39;,</span>
-<span class="sd">     &#39;CustomSpeech&#39;, &#39;CustomVision.Prediction&#39;, &#39;CustomVision.Training&#39;,</span>
-<span class="sd">     &#39;Emotion&#39;, &#39;Face&#39;, &#39;LUIS&#39;, &#39;QnAMaker&#39;, &#39;SpeakerRecognition&#39;,</span>
-<span class="sd">     &#39;SpeechTranslation&#39;, &#39;TextAnalytics&#39;, &#39;TextTranslation&#39;, &#39;WebLM&#39;</span>
-<span class="sd">    :type kind: str or ~azure.mgmt.cognitiveservices.models.Kind</span>
+<span class="sd">    :param kind: The Kind of the resource.</span>
+<span class="sd">    :type kind: str</span>
 <span class="sd">    :param type: The Type of the resource.</span>
 <span class="sd">    :type type: str</span>
-<span class="sd">    :param sku_name: The SKU of Cognitive Services account. Possible values</span>
-<span class="sd">     include: &#39;F0&#39;, &#39;P0&#39;, &#39;P1&#39;, &#39;P2&#39;, &#39;S0&#39;, &#39;S1&#39;, &#39;S2&#39;, &#39;S3&#39;, &#39;S4&#39;, &#39;S5&#39;, &#39;S6&#39;</span>
-<span class="sd">    :type sku_name: str or ~azure.mgmt.cognitiveservices.models.SkuName</span>
+<span class="sd">    :param sku_name: The SKU of Cognitive Services account.</span>
+<span class="sd">    :type sku_name: str</span>
 <span class="sd">    :param sku_available: Indicates the given SKU is available or not.</span>
 <span class="sd">    :type sku_available: bool</span>
 <span class="sd">    :param reason: Reason why the SKU is not available.</span>
@@ -347,7 +341,7 @@
         <span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sku_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sku_available</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reason</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sku_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sku_available</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reason</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">CheckSkuAvailabilityResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="nb">type</span>

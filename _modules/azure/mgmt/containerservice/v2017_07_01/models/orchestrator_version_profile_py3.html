@@ -325,10 +325,11 @@
 <span class="sd">    :param orchestrator_version: Required. Orchestrator version (major, minor,</span>
 <span class="sd">     patch).</span>
 <span class="sd">    :type orchestrator_version: str</span>
-<span class="sd">    :param default: Required. Installed by default if version is not</span>
-<span class="sd">     specified.</span>
+<span class="sd">    :param default: Installed by default if version is not specified.</span>
 <span class="sd">    :type default: bool</span>
-<span class="sd">    :param upgrades: Required. The list of available upgrade versions.</span>
+<span class="sd">    :param is_preview: Whether Kubernetes version is currently in preview.</span>
+<span class="sd">    :type is_preview: bool</span>
+<span class="sd">    :param upgrades: The list of available upgrade versions.</span>
 <span class="sd">    :type upgrades:</span>
 <span class="sd">     list[~azure.mgmt.containerservice.v2017_07_01.models.OrchestratorProfile]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -336,22 +337,22 @@
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;orchestrator_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
         <span class="s1">&#39;orchestrator_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
-        <span class="s1">&#39;upgrades&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;required&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
     <span class="p">}</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;orchestrator_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;orchestratorType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;orchestrator_version&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;orchestratorVersion&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;is_preview&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;isPreview&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
         <span class="s1">&#39;upgrades&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;upgrades&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[OrchestratorProfile]&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">orchestrator_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orchestrator_version</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="n">upgrades</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">orchestrator_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orchestrator_version</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">default</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">is_preview</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upgrades</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">OrchestratorVersionProfile</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">orchestrator_type</span> <span class="o">=</span> <span class="n">orchestrator_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">orchestrator_version</span> <span class="o">=</span> <span class="n">orchestrator_version</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="n">default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_preview</span> <span class="o">=</span> <span class="n">is_preview</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">upgrades</span> <span class="o">=</span> <span class="n">upgrades</span></div>
 </pre></div>
 

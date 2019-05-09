@@ -137,7 +137,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.operations.html">azure.cognitiveservices.anomalydetector.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-azure.cognitiveservices.anomalydetector">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
@@ -323,8 +323,94 @@
 </ul>
 </div>
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-azure.cognitiveservices.anomalydetector">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-azure.cognitiveservices.anomalydetector" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="azure.cognitiveservices.anomalydetector.AnomalyDetectorClient">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.anomalydetector.</code><code class="descname">AnomalyDetectorClient</code><span class="sig-paren">(</span><em>endpoint</em>, <em>credentials</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/anomaly_detector_client.html#AnomalyDetectorClient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.AnomalyDetectorClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.service_client.SDKClient</span></code></p>
+<p>The Anomaly Detector API detects anomalies automatically in time series data. It supports two functionalities, one is for detecting the whole series with model trained by the timeseries, another is detecting last point with model trained by points before. By using this service, business customers can discover incidents and establish a logic flow for root cause analysis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.config" title="azure.servicefabric.models.PackageSharingPolicyScope.config"><strong>config</strong></a> (<em>AnomalyDetectorClientConfiguration</em>) – Configuration for client.</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Supported Cognitive Services endpoints (protocol and
+hostname, for example: <a class="reference external" href="https://westus2.api.cognitive.microsoft.com">https://westus2.api.cognitive.microsoft.com</a>).</p></li>
+<li><p><strong>credentials</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)"><em>None</em></a>) – Subscription credentials which uniquely identify
+client subscription.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.cognitiveservices.anomalydetector.AnomalyDetectorClient.entire_detect">
+<code class="descname">entire_detect</code><span class="sig-paren">(</span><em>body</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/anomaly_detector_client.html#AnomalyDetectorClient.entire_detect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.AnomalyDetectorClient.entire_detect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect anomalies for the entire series in batch.</p>
+<p>This operation generates a model using an entire series, each point is
+detected with the same model. With this method, points before and after
+a certain point are used to determine whether it is an anomaly. The
+entire detection can give user an overall status of the time series.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> (<a class="reference internal" href="azure.cognitiveservices.anomalydetector.models.html#azure.cognitiveservices.anomalydetector.models.Request" title="azure.cognitiveservices.anomalydetector.models.Request"><em>Request</em></a>) – Time series points and period if needed. Advanced model
+parameters can also be set in the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>EntireDetectResponse or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.cognitiveservices.anomalydetector.models.html#azure.cognitiveservices.anomalydetector.models.EntireDetectResponse" title="azure.cognitiveservices.anomalydetector.models.EntireDetectResponse">EntireDetectResponse</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.cognitiveservices.anomalydetector.models.html#azure.cognitiveservices.anomalydetector.models.APIErrorException" title="azure.cognitiveservices.anomalydetector.models.APIErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">APIErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.cognitiveservices.anomalydetector.AnomalyDetectorClient.last_detect">
+<code class="descname">last_detect</code><span class="sig-paren">(</span><em>body</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/anomaly_detector_client.html#AnomalyDetectorClient.last_detect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.AnomalyDetectorClient.last_detect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Detect anomaly status of the latest point in time series.</p>
+<p>This operation generates a model using points before the latest one.
+With this method, only historical points are used to determine whether
+the target point is an anomaly. The latest point detecting operation
+matches the scenario of real-time monitoring of business metrics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> (<a class="reference internal" href="azure.cognitiveservices.anomalydetector.models.html#azure.cognitiveservices.anomalydetector.models.Request" title="azure.cognitiveservices.anomalydetector.models.Request"><em>Request</em></a>) – Time series points and period if needed. Advanced model
+parameters can also be set in the request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>LastDetectResponse or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.cognitiveservices.anomalydetector.models.html#azure.cognitiveservices.anomalydetector.models.LastDetectResponse" title="azure.cognitiveservices.anomalydetector.models.LastDetectResponse">LastDetectResponse</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.cognitiveservices.anomalydetector.models.html#azure.cognitiveservices.anomalydetector.models.APIErrorException" title="azure.cognitiveservices.anomalydetector.models.APIErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">APIErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 

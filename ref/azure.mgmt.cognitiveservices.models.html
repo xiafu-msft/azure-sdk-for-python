@@ -318,7 +318,7 @@
 <span id="azure-mgmt-cognitiveservices-models-module"></span><h1>azure.mgmt.cognitiveservices.models module<a class="headerlink" href="#module-azure.mgmt.cognitiveservices.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.models.Sku">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">Sku</code><span class="sig-paren">(</span><em>*</em>, <em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Sku" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">Sku</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The SKU of the cognitive services account.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -326,9 +326,8 @@ sending a request.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cognitiveservices.models.SkuName" title="azure.mgmt.cognitiveservices.models.SkuName"><em>SkuName</em></a>) – Required. Gets or sets the sku name. Required for account
-creation, optional for update. Possible values include: ‘F0’, ‘P0’, ‘P1’,
-‘P2’, ‘S0’, ‘S1’, ‘S2’, ‘S3’, ‘S4’, ‘S5’, ‘S6’</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Gets or sets the sku name. Required for account
+creation, optional for update.</p>
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><p><a class="reference internal" href="azure.mgmt.kusto.models.html#azure.mgmt.kusto.models.AzureSku.tier" title="azure.mgmt.kusto.models.AzureSku.tier"><strong>tier</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cognitiveservices.models.SkuTier" title="azure.mgmt.cognitiveservices.models.SkuTier"><em>SkuTier</em></a>) – Gets the sku tier. This is based on the SKU name. Possible
@@ -339,7 +338,7 @@ values include: ‘Free’, ‘Standard’, ‘Premium’</p>
 
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.models.CognitiveServicesAccountCreateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">CognitiveServicesAccountCreateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>sku</em>, <em>kind</em>, <em>location: str</em>, <em>properties</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/cognitive_services_account_create_parameters_py3.html#CognitiveServicesAccountCreateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.CognitiveServicesAccountCreateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">CognitiveServicesAccountCreateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>sku</em>, <em>kind: str</em>, <em>location: str</em>, <em>properties</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/cognitive_services_account_create_parameters_py3.html#CognitiveServicesAccountCreateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.CognitiveServicesAccountCreateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The parameters to provide for the account.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -347,13 +346,7 @@ values include: ‘Free’, ‘Standard’, ‘Premium’</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.cognitiveservices.models.Sku" title="azure.mgmt.cognitiveservices.models.Sku"><em>Sku</em></a>) – Required. Required. Gets or sets the SKU of the resource.</p></li>
-<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cognitiveservices.models.Kind" title="azure.mgmt.cognitiveservices.models.Kind"><em>Kind</em></a>) – Required. Required. Gets or sets the Kind of the resource.
-Possible values include: ‘Bing.Autosuggest.v7’, ‘Bing.CustomSearch’,
-‘Bing.Search.v7’, ‘Bing.Speech’, ‘Bing.SpellCheck.v7’, ‘ComputerVision’,
-‘ContentModerator’, ‘CustomSpeech’, ‘CustomVision.Prediction’,
-‘CustomVision.Training’, ‘Emotion’, ‘Face’, ‘LUIS’, ‘QnAMaker’,
-‘SpeakerRecognition’, ‘SpeechTranslation’, ‘TextAnalytics’,
-‘TextTranslation’, ‘WebLM’</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Required. Gets or sets the Kind of the resource.</p></li>
 <li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Required. Gets or sets the location of the
 resource. This will be one of the supported and registered Azure Geo
 Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a
@@ -373,7 +366,7 @@ object. Must not be null.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.models.CognitiveServicesAccountUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">CognitiveServicesAccountUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>sku=None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/cognitive_services_account_update_parameters_py3.html#CognitiveServicesAccountUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.CognitiveServicesAccountUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">CognitiveServicesAccountUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>sku=None</em>, <em>tags=None</em>, <em>properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/cognitive_services_account_update_parameters_py3.html#CognitiveServicesAccountUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.CognitiveServicesAccountUpdateParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The parameters to provide for the account.</p>
 <dl class="field-list simple">
@@ -385,6 +378,8 @@ resource. These tags can be used in viewing and grouping this resource
 (across resource groups). A maximum of 15 tags can be provided for a
 resource. Each tag must have a key no greater than 128 characters and
 value no greater than 256 characters.</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – Additional properties for Account. Only provided fields
+will be updated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -392,7 +387,7 @@ value no greater than 256 characters.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.models.CognitiveServicesAccount">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">CognitiveServicesAccount</code><span class="sig-paren">(</span><em>*</em>, <em>etag: str = None</em>, <em>kind: str = None</em>, <em>location: str = None</em>, <em>endpoint: str = None</em>, <em>internal_id: str = None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/cognitive_services_account_py3.html#CognitiveServicesAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.CognitiveServicesAccount" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">CognitiveServicesAccount</code><span class="sig-paren">(</span><em>*</em>, <em>etag: str = None</em>, <em>kind: str = None</em>, <em>location: str = None</em>, <em>endpoint: str = None</em>, <em>internal_id: str = None</em>, <em>custom_sub_domain_name: str = None</em>, <em>sku=None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/cognitive_services_account_py3.html#CognitiveServicesAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.CognitiveServicesAccount" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Cognitive Services Account is an Azure resource representing the
 provisioned account, its type, location and SKU.</p>
@@ -406,6 +401,8 @@ sending a request.</p>
 <li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource</p></li>
 <li><p><strong>endpoint</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Endpoint of the created account.</p></li>
 <li><p><strong>internal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The internal identifier.</p></li>
+<li><p><strong>custom_sub_domain_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional subdomain name used for
+token-based authentication.</p></li>
 <li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.cognitiveservices.models.Sku" title="azure.mgmt.cognitiveservices.models.Sku"><em>Sku</em></a>) – The SKU of Cognitive Services account.</p></li>
 <li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets or sets a list of key value pairs that describe the
 resource. These tags can be used in viewing and grouping this resource
@@ -417,7 +414,7 @@ value no greater than 256 characters.</p></li>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the created account</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the created account</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the created account</p></li>
 <li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
 </em><a class="reference internal" href="#azure.mgmt.cognitiveservices.models.ProvisioningState" title="azure.mgmt.cognitiveservices.models.ProvisioningState"><em>ProvisioningState</em></a>) – Gets the status of the cognitive services
 account at the time the operation was called. Possible values include:
@@ -523,7 +520,7 @@ values include: ‘Included’, ‘Blocked’, ‘InOverage’, ‘Unknown’</p
 </dd>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cognitiveservices.models.MetricName" title="azure.mgmt.cognitiveservices.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference internal" href="#azure.mgmt.cognitiveservices.models.MetricName" title="azure.mgmt.cognitiveservices.models.MetricName"><em>MetricName</em></a>) – The name information for the metric.</p></li>
 <li><p><strong>quota_period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The quota period used to summarize the usage values.</p></li>
 <li><p><strong>limit</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Maximum value for this metric.</p></li>
 <li><p><strong>current_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Current value for this metric.</p></li>
@@ -627,20 +624,15 @@ permission level.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.models.CheckSkuAvailabilityParameter">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">CheckSkuAvailabilityParameter</code><span class="sig-paren">(</span><em>*</em>, <em>skus</em>, <em>kind</em>, <em>type: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/check_sku_availability_parameter_py3.html#CheckSkuAvailabilityParameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.CheckSkuAvailabilityParameter" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">CheckSkuAvailabilityParameter</code><span class="sig-paren">(</span><em>*</em>, <em>skus</em>, <em>kind: str</em>, <em>type: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/check_sku_availability_parameter_py3.html#CheckSkuAvailabilityParameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.CheckSkuAvailabilityParameter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Check SKU availability parameter.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>skus</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cognitiveservices.models.SkuName" title="azure.mgmt.cognitiveservices.models.SkuName"><em>SkuName</em></a><em>]</em>) – Required. The SKU of the resource.</p></li>
-<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cognitiveservices.models.Kind" title="azure.mgmt.cognitiveservices.models.Kind"><em>Kind</em></a>) – Required. The Kind of the resource. Possible values include:
-‘Bing.Autosuggest.v7’, ‘Bing.CustomSearch’, ‘Bing.Search.v7’,
-‘Bing.Speech’, ‘Bing.SpellCheck.v7’, ‘ComputerVision’, ‘ContentModerator’,
-‘CustomSpeech’, ‘CustomVision.Prediction’, ‘CustomVision.Training’,
-‘Emotion’, ‘Face’, ‘LUIS’, ‘QnAMaker’, ‘SpeakerRecognition’,
-‘SpeechTranslation’, ‘TextAnalytics’, ‘TextTranslation’, ‘WebLM’</p></li>
+<li><p><strong>skus</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. The SKU of the resource.</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The Kind of the resource.</p></li>
 <li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The Type of the resource.</p></li>
 </ul>
 </dd>
@@ -649,21 +641,15 @@ permission level.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.cognitiveservices.models.CheckSkuAvailabilityResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">CheckSkuAvailabilityResult</code><span class="sig-paren">(</span><em>*</em>, <em>kind=None</em>, <em>type: str = None</em>, <em>sku_name=None</em>, <em>sku_available: bool = None</em>, <em>reason: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/check_sku_availability_result_py3.html#CheckSkuAvailabilityResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.CheckSkuAvailabilityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">CheckSkuAvailabilityResult</code><span class="sig-paren">(</span><em>*</em>, <em>kind: str = None</em>, <em>type: str = None</em>, <em>sku_name: str = None</em>, <em>sku_available: bool = None</em>, <em>reason: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/check_sku_availability_result_py3.html#CheckSkuAvailabilityResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.CheckSkuAvailabilityResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Check SKU availability result.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cognitiveservices.models.Kind" title="azure.mgmt.cognitiveservices.models.Kind"><em>Kind</em></a>) – The Kind of the resource. Possible values include:
-‘Bing.Autosuggest.v7’, ‘Bing.CustomSearch’, ‘Bing.Search.v7’,
-‘Bing.Speech’, ‘Bing.SpellCheck.v7’, ‘ComputerVision’, ‘ContentModerator’,
-‘CustomSpeech’, ‘CustomVision.Prediction’, ‘CustomVision.Training’,
-‘Emotion’, ‘Face’, ‘LUIS’, ‘QnAMaker’, ‘SpeakerRecognition’,
-‘SpeechTranslation’, ‘TextAnalytics’, ‘TextTranslation’, ‘WebLM’</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Kind of the resource.</p></li>
 <li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Type of the resource.</p></li>
-<li><p><strong>sku_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.cognitiveservices.models.SkuName" title="azure.mgmt.cognitiveservices.models.SkuName"><em>SkuName</em></a>) – The SKU of Cognitive Services account. Possible values
-include: ‘F0’, ‘P0’, ‘P1’, ‘P2’, ‘S0’, ‘S1’, ‘S2’, ‘S3’, ‘S4’, ‘S5’, ‘S6’</p></li>
+<li><p><strong>sku_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU of Cognitive Services account.</p></li>
 <li><p><strong>sku_available</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates the given SKU is available or not.</p></li>
 <li><p><strong>reason</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Reason why the SKU is not available.</p></li>
 <li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Additional error message.</p></li>
@@ -737,7 +723,7 @@ sending a request.</p>
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of resource the SKU applies to.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.devspaces.models.html#azure.mgmt.devspaces.models.Sku.name" title="azure.mgmt.devspaces.models.Sku.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of SKU.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of SKU.</p></li>
 <li><p><a class="reference internal" href="azure.mgmt.kusto.models.html#azure.mgmt.kusto.models.AzureSku.tier" title="azure.mgmt.kusto.models.AzureSku.tier"><strong>tier</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Specifies the tier of Cognitive Services account.</p></li>
 <li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Kind of resources that are supported in this SKU.</p></li>
 <li><p><strong>locations</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The set of locations that the SKU is available.</p></li>
@@ -770,68 +756,6 @@ This is empty if there are no restrictions.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">SkuName</code><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/cognitive_services_management_client_enums.html#SkuName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
-<p>An enumeration.</p>
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.f0">
-<code class="descname">f0</code><em class="property"> = 'F0'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.f0" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.p0">
-<code class="descname">p0</code><em class="property"> = 'P0'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.p0" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.p1">
-<code class="descname">p1</code><em class="property"> = 'P1'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.p1" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.p2">
-<code class="descname">p2</code><em class="property"> = 'P2'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.p2" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.s0">
-<code class="descname">s0</code><em class="property"> = 'S0'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.s0" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.s1">
-<code class="descname">s1</code><em class="property"> = 'S1'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.s1" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.s2">
-<code class="descname">s2</code><em class="property"> = 'S2'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.s2" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.s3">
-<code class="descname">s3</code><em class="property"> = 'S3'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.s3" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.s4">
-<code class="descname">s4</code><em class="property"> = 'S4'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.s4" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.s5">
-<code class="descname">s5</code><em class="property"> = 'S5'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.s5" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.SkuName.s6">
-<code class="descname">s6</code><em class="property"> = 'S6'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuName.s6" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.cognitiveservices.models.SkuTier">
 <em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">SkuTier</code><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/cognitive_services_management_client_enums.html#SkuTier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuTier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
@@ -849,108 +773,6 @@ This is empty if there are no restrictions.</p></li>
 <dl class="attribute">
 <dt id="azure.mgmt.cognitiveservices.models.SkuTier.standard">
 <code class="descname">standard</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.SkuTier.standard" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.cognitiveservices.models.Kind">
-<em class="property">class </em><code class="descclassname">azure.mgmt.cognitiveservices.models.</code><code class="descname">Kind</code><a class="reference internal" href="../_modules/azure/mgmt/cognitiveservices/models/cognitive_services_management_client_enums.html#Kind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
-<p>An enumeration.</p>
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.bing_autosuggestv7">
-<code class="descname">bing_autosuggestv7</code><em class="property"> = 'Bing.Autosuggest.v7'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.bing_autosuggestv7" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.bing_custom_search">
-<code class="descname">bing_custom_search</code><em class="property"> = 'Bing.CustomSearch'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.bing_custom_search" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.bing_searchv7">
-<code class="descname">bing_searchv7</code><em class="property"> = 'Bing.Search.v7'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.bing_searchv7" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.bing_speech">
-<code class="descname">bing_speech</code><em class="property"> = 'Bing.Speech'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.bing_speech" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.bing_spell_checkv7">
-<code class="descname">bing_spell_checkv7</code><em class="property"> = 'Bing.SpellCheck.v7'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.bing_spell_checkv7" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.computer_vision">
-<code class="descname">computer_vision</code><em class="property"> = 'ComputerVision'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.computer_vision" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.content_moderator">
-<code class="descname">content_moderator</code><em class="property"> = 'ContentModerator'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.content_moderator" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.custom_speech">
-<code class="descname">custom_speech</code><em class="property"> = 'CustomSpeech'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.custom_speech" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.custom_vision_prediction">
-<code class="descname">custom_vision_prediction</code><em class="property"> = 'CustomVision.Prediction'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.custom_vision_prediction" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.custom_vision_training">
-<code class="descname">custom_vision_training</code><em class="property"> = 'CustomVision.Training'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.custom_vision_training" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.emotion">
-<code class="descname">emotion</code><em class="property"> = 'Emotion'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.emotion" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.face">
-<code class="descname">face</code><em class="property"> = 'Face'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.face" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.luis">
-<code class="descname">luis</code><em class="property"> = 'LUIS'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.luis" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.qn_amaker">
-<code class="descname">qn_amaker</code><em class="property"> = 'QnAMaker'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.qn_amaker" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.speaker_recognition">
-<code class="descname">speaker_recognition</code><em class="property"> = 'SpeakerRecognition'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.speaker_recognition" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.speech_translation">
-<code class="descname">speech_translation</code><em class="property"> = 'SpeechTranslation'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.speech_translation" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.text_analytics">
-<code class="descname">text_analytics</code><em class="property"> = 'TextAnalytics'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.text_analytics" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.text_translation">
-<code class="descname">text_translation</code><em class="property"> = 'TextTranslation'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.text_translation" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.cognitiveservices.models.Kind.web_lm">
-<code class="descname">web_lm</code><em class="property"> = 'WebLM'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.Kind.web_lm" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1026,11 +848,8 @@ This is empty if there are no restrictions.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cognitiveservices.models.UnitType.count">
-<code class="descname">count</code><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.UnitType.count" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the number of non-overlapping occurrences of substring sub in
-string S[start:end].  Optional arguments start and end are
-interpreted as in slice notation.</p>
-</dd></dl>
+<code class="descname">count</code><em class="property"> = 'Count'</em><a class="headerlink" href="#azure.mgmt.cognitiveservices.models.UnitType.count" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.cognitiveservices.models.UnitType.count_per_second">

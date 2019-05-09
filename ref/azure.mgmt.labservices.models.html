@@ -198,7 +198,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.mgmt.labservices.operations.html">azure.mgmt.labservices.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.labservices.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.mgmt.labservices.html#module-azure.mgmt.labservices">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.mgmt.loganalytics.html">azure.mgmt.loganalytics package</a></li>
@@ -314,8 +314,1453 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="azure-mgmt-labservices-models-module">
-<h1>azure.mgmt.labservices.models module<a class="headerlink" href="#azure-mgmt-labservices-models-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-azure.mgmt.labservices.models">
+<span id="azure-mgmt-labservices-models-module"></span><h1>azure.mgmt.labservices.models module<a class="headerlink" href="#module-azure.mgmt.labservices.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.AddUsersPayload">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">AddUsersPayload</code><span class="sig-paren">(</span><em>*</em>, <em>email_addresses</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/add_users_payload_py3.html#AddUsersPayload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.AddUsersPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Payload for Add Users operation on a Lab.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>email_addresses</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. List of user emails addresses to add to
+the lab.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ReferenceVmCreationParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ReferenceVmCreationParameters</code><span class="sig-paren">(</span><em>*</em>, <em>user_name: str</em>, <em>password: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/reference_vm_creation_parameters_py3.html#ReferenceVmCreationParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ReferenceVmCreationParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Creation parameters for Reference Vm.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The username of the virtual machine</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The password of the virtual machine.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ResourceSettingCreationParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ResourceSettingCreationParameters</code><span class="sig-paren">(</span><em>*</em>, <em>gallery_image_resource_id: str</em>, <em>reference_vm_creation_parameters</em>, <em>location: str = None</em>, <em>name: str = None</em>, <em>size=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/resource_setting_creation_parameters_py3.html#ResourceSettingCreationParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ResourceSettingCreationParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents resource specific settings.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location where the virtual machine will live</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource setting</p></li>
+<li><p><strong>gallery_image_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The resource id of the gallery
+image used for creating the virtual machine</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.labservices.models.ManagedLabVmSize" title="azure.mgmt.labservices.models.ManagedLabVmSize"><em>ManagedLabVmSize</em></a>) – The size of the virtual machine. Possible values include:
+‘Basic’, ‘Standard’, ‘Performance’</p></li>
+<li><p><strong>reference_vm_creation_parameters</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.ReferenceVmCreationParameters" title="azure.mgmt.labservices.models.ReferenceVmCreationParameters"><em>ReferenceVmCreationParameters</em></a>) – Required. Creation parameters for
+Reference Vm</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.EnvironmentSettingCreationParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">EnvironmentSettingCreationParameters</code><span class="sig-paren">(</span><em>*</em>, <em>resource_setting_creation_parameters</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_setting_creation_parameters_py3.html#EnvironmentSettingCreationParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.EnvironmentSettingCreationParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Settings related to creating an environment setting.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>resource_setting_creation_parameters</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.ResourceSettingCreationParameters" title="azure.mgmt.labservices.models.ResourceSettingCreationParameters"><em>ResourceSettingCreationParameters</em></a>) – Required. The resource
+specific settings</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.LabCreationParameters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">LabCreationParameters</code><span class="sig-paren">(</span><em>*</em>, <em>max_users_in_lab: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/lab_creation_parameters_py3.html#LabCreationParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.LabCreationParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Settings related to creating a lab.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>max_users_in_lab</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum number of users allowed in the lab.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.CreateLabProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">CreateLabProperties</code><span class="sig-paren">(</span><em>*</em>, <em>lab_creation_parameters</em>, <em>name: str</em>, <em>environment_setting_creation_parameters=None</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/create_lab_properties_py3.html#CreateLabProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.CreateLabProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties for creating a managed lab and a default environment setting.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>environment_setting_creation_parameters</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.EnvironmentSettingCreationParameters" title="azure.mgmt.labservices.models.EnvironmentSettingCreationParameters"><em>EnvironmentSettingCreationParameters</em></a>) – Settings related to
+creating an environment setting</p></li>
+<li><p><strong>lab_creation_parameters</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.LabCreationParameters" title="azure.mgmt.labservices.models.LabCreationParameters"><em>LabCreationParameters</em></a>) – Required. Settings related to creating a
+lab</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name of the resource</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ResourceSet">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ResourceSet</code><span class="sig-paren">(</span><em>*</em>, <em>vm_resource_id: str = None</em>, <em>resource_setting_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/resource_set_py3.html#ResourceSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ResourceSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents a VM and the setting Id it was created for.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vm_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – VM resource Id for the environment</p></li>
+<li><p><strong>resource_setting_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – resourceSettingId for the environment</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.NetworkInterface">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">NetworkInterface</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/network_interface_py3.html#NetworkInterface"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.NetworkInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Network details of the environment.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>private_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – PrivateIp address of the Compute VM</p></li>
+<li><p><strong>ssh_authority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Connection information for Linux</p></li>
+<li><p><strong>rdp_authority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Connection information for Windows</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.SparkAuthenticationType.username" title="azure.mgmt.datafactory.models.SparkAuthenticationType.username"><strong>username</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Username of the VM</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.LatestOperationResult">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">LatestOperationResult</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/latest_operation_result_py3.html#LatestOperationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.LatestOperationResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Details of the status of an operation.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The current status of the operation.</p></li>
+<li><p><strong>error_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error code on failure.</p></li>
+<li><p><strong>error_message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error message.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.network.v2018_12_01.models.html#azure.mgmt.network.v2018_12_01.models.WebApplicationFirewallMatchVariable.request_uri" title="azure.mgmt.network.v2018_12_01.models.WebApplicationFirewallMatchVariable.request_uri"><strong>request_uri</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Request URI of the operation.</p></li>
+<li><p><strong>http_method</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The HttpMethod - PUT/POST/DELETE for the operation.</p></li>
+<li><p><strong>operation_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to use to check long-running operation status</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.Environment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">Environment</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>resource_sets=None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_py3.html#Environment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.Environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>Represents an environment instance.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+<li><p><strong>claimed_by_user_object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The AAD object Id of the user who has
+claimed the environment</p></li>
+<li><p><strong>claimed_by_user_principal_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user principal Id of the user who
+has claimed the environment</p></li>
+<li><p><strong>claimed_by_user_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name or email address of the user who has
+claimed the environment</p></li>
+<li><p><strong>is_claimed</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Is the environment claimed or not</p></li>
+<li><p><strong>last_known_power_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Last known power state of the environment</p></li>
+<li><p><strong>network_interface</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.NetworkInterface" title="azure.mgmt.labservices.models.NetworkInterface"><em>NetworkInterface</em></a>) – Network details of the environment</p></li>
+<li><p><strong>total_usage</strong> (<em>timedelta</em>) – How long the environment has been used by a lab user</p></li>
+<li><p><strong>password_last_reset</strong> (<em>datetime</em>) – When the password was last reset on the
+environment.</p></li>
+<li><p><strong>latest_operation_result</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.LatestOperationResult" title="azure.mgmt.labservices.models.LatestOperationResult"><em>LatestOperationResult</em></a>) – The details of the latest operation. ex:
+status, error</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>resource_sets</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.ResourceSet" title="azure.mgmt.labservices.models.ResourceSet"><em>ResourceSet</em></a>) – The set of a VM and the setting id it was created
+for</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.VirtualMachineDetails">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">VirtualMachineDetails</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/virtual_machine_details_py3.html#VirtualMachineDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.VirtualMachineDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Details of the backing virtual machine.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Provisioning state of the Dtl VM</p></li>
+<li><p><strong>rdp_authority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Connection information for Windows</p></li>
+<li><p><strong>ssh_authority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Connection information for Linux</p></li>
+<li><p><strong>private_ip_address</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – PrivateIp address of the compute VM</p></li>
+<li><p><strong>user_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Compute VM login user name</p></li>
+<li><p><strong>last_known_power_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Last known compute power state captured in
+DTL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.EnvironmentDetails">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">EnvironmentDetails</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_details_py3.html#EnvironmentDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.EnvironmentDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>This represents the details about a User’s environment and its state.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the Environment</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Description of the Environment</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id of the environment</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning state of the environment. This
+also includes LabIsFull and NotYetProvisioned status.</p></li>
+<li><p><strong>virtual_machine_details</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.VirtualMachineDetails" title="azure.mgmt.labservices.models.VirtualMachineDetails"><em>VirtualMachineDetails</em></a>) – Details of backing DTL virtual machine with
+compute and network details.</p></li>
+<li><p><strong>latest_operation_result</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.LatestOperationResult" title="azure.mgmt.labservices.models.LatestOperationResult"><em>LatestOperationResult</em></a>) – The details of the latest operation. ex:
+status, error</p></li>
+<li><p><strong>environment_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Publishing state of the environment setting
+Possible values are Creating, Created, Failed</p></li>
+<li><p><strong>total_usage</strong> (<em>timedelta</em>) – How long the environment has been used by a lab user</p></li>
+<li><p><strong>password_last_reset</strong> (<em>datetime</em>) – When the password was last reset on the
+environment.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ResourceSetFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ResourceSetFragment</code><span class="sig-paren">(</span><em>*</em>, <em>vm_resource_id: str = None</em>, <em>resource_setting_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/resource_set_fragment_py3.html#ResourceSetFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ResourceSetFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents a VM and the setting Id it was created for.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vm_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – VM resource Id for the environment</p></li>
+<li><p><strong>resource_setting_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – resourceSettingId for the environment</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.EnvironmentFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">EnvironmentFragment</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>resource_sets=None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_fragment_py3.html#EnvironmentFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.EnvironmentFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>Represents an environment instance.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>resource_sets</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.ResourceSetFragment" title="azure.mgmt.labservices.models.ResourceSetFragment"><em>ResourceSetFragment</em></a>) – The set of a VM and the setting id it was created
+for</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.EnvironmentOperationsPayload">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">EnvironmentOperationsPayload</code><span class="sig-paren">(</span><em>*</em>, <em>environment_id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_operations_payload_py3.html#EnvironmentOperationsPayload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.EnvironmentOperationsPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents payload for any Environment operations like get, start, stop,
+connect.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>environment_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The resourceId of the environment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.VmStateDetails">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">VmStateDetails</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/vm_state_details_py3.html#VmStateDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.VmStateDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Details about the state of the reference virtual machine.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rdp_authority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The RdpAuthority property is a server DNS host name
+or IP address followed by the service port number for RDP (Remote Desktop
+Protocol).</p></li>
+<li><p><strong>ssh_authority</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SshAuthority property is a server DNS host name
+or IP address followed by the service port number for SSH.</p></li>
+<li><p><strong>power_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The power state of the reference virtual machine.</p></li>
+<li><p><strong>last_known_power_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Last known compute power state captured in
+DTL</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ReferenceVm">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ReferenceVm</code><span class="sig-paren">(</span><em>*</em>, <em>user_name: str</em>, <em>password: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/reference_vm_py3.html#ReferenceVm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ReferenceVm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Details of a Reference Vm.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The username of the virtual machine</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The password of the virtual machine. This will be set to
+null in GET resource API</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>vm_state_details</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.VmStateDetails" title="azure.mgmt.labservices.models.VmStateDetails"><em>VmStateDetails</em></a>) – The state details for the reference virtual
+machine.</p></li>
+<li><p><strong>vm_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – VM resource Id for the environment</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ResourceSettings">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ResourceSettings</code><span class="sig-paren">(</span><em>*</em>, <em>reference_vm</em>, <em>gallery_image_resource_id: str = None</em>, <em>size=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/resource_settings_py3.html#ResourceSettings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ResourceSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents resource specific settings.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique id of the resource setting</p></li>
+<li><p><strong>image_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the image used to created the environment
+setting</p></li>
+<li><p><strong>cores</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The translated compute cores of the virtual machine</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>gallery_image_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource id of the gallery image
+used for creating the virtual machine</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.labservices.models.ManagedLabVmSize" title="azure.mgmt.labservices.models.ManagedLabVmSize"><em>ManagedLabVmSize</em></a>) – The size of the virtual machine. Possible values include:
+‘Basic’, ‘Standard’, ‘Performance’</p></li>
+<li><p><strong>reference_vm</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.ReferenceVm" title="azure.mgmt.labservices.models.ReferenceVm"><em>ReferenceVm</em></a>) – Required. Details specific to Reference Vm</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.EnvironmentSetting">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">EnvironmentSetting</code><span class="sig-paren">(</span><em>*</em>, <em>resource_settings</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>configuration_state=None</em>, <em>description: str = None</em>, <em>title: str = None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_setting_py3.html#EnvironmentSetting"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.EnvironmentSetting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>Represents settings of an environment, from which environment instances
+would be created.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+<li><p><strong>publishing_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.labservices.models.PublishingState" title="azure.mgmt.labservices.models.PublishingState"><em>PublishingState</em></a>) – Describes the readiness of this environment
+setting. Possible values include: ‘Draft’, ‘Publishing’, ‘Published’,
+‘PublishFailed’, ‘Scaling’</p></li>
+<li><p><strong>last_changed</strong> (<em>datetime</em>) – Time when the template VM was last changed.</p></li>
+<li><p><strong>last_published</strong> (<em>datetime</em>) – Time when the template VM was last sent for
+publishing.</p></li>
+<li><p><strong>latest_operation_result</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.LatestOperationResult" title="azure.mgmt.labservices.models.LatestOperationResult"><em>LatestOperationResult</em></a>) – The details of the latest operation. ex:
+status, error</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>configuration_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.labservices.models.ConfigurationState" title="azure.mgmt.labservices.models.ConfigurationState"><em>ConfigurationState</em></a>) – Describes the user’s progress in configuring
+their environment setting. Possible values include: ‘NotApplicable’,
+‘Completed’</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Describes the environment and its resource settings</p></li>
+<li><p><strong>title</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Brief title describing the environment and its resource
+settings</p></li>
+<li><p><strong>resource_settings</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.ResourceSettings" title="azure.mgmt.labservices.models.ResourceSettings"><em>ResourceSettings</em></a>) – Required. The resource specific settings</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ReferenceVmFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ReferenceVmFragment</code><span class="sig-paren">(</span><em>*</em>, <em>user_name: str = None</em>, <em>password: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/reference_vm_fragment_py3.html#ReferenceVmFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ReferenceVmFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Details of a Reference Vm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The username of the virtual machine</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The password of the virtual machine. This will be set to
+null in GET resource API</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ResourceSettingsFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ResourceSettingsFragment</code><span class="sig-paren">(</span><em>*</em>, <em>gallery_image_resource_id: str = None</em>, <em>size=None</em>, <em>reference_vm=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/resource_settings_fragment_py3.html#ResourceSettingsFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ResourceSettingsFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents resource specific settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gallery_image_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource id of the gallery image
+used for creating the virtual machine</p></li>
+<li><p><strong>size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.labservices.models.ManagedLabVmSize" title="azure.mgmt.labservices.models.ManagedLabVmSize"><em>ManagedLabVmSize</em></a>) – The size of the virtual machine. Possible values include:
+‘Basic’, ‘Standard’, ‘Performance’</p></li>
+<li><p><strong>reference_vm</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.ReferenceVmFragment" title="azure.mgmt.labservices.models.ReferenceVmFragment"><em>ReferenceVmFragment</em></a>) – Details specific to Reference Vm</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.EnvironmentSettingFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">EnvironmentSettingFragment</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>configuration_state=None</em>, <em>description: str = None</em>, <em>title: str = None</em>, <em>resource_settings=None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_setting_fragment_py3.html#EnvironmentSettingFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.EnvironmentSettingFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>Represents settings of an environment, from which environment instances
+would be created.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>configuration_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.labservices.models.ConfigurationState" title="azure.mgmt.labservices.models.ConfigurationState"><em>ConfigurationState</em></a>) – Describes the user’s progress in configuring
+their environment setting. Possible values include: ‘NotApplicable’,
+‘Completed’</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Describes the environment and its resource settings</p></li>
+<li><p><strong>title</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Brief title describing the environment and its resource
+settings</p></li>
+<li><p><strong>resource_settings</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.ResourceSettingsFragment" title="azure.mgmt.labservices.models.ResourceSettingsFragment"><em>ResourceSettingsFragment</em></a>) – The resource specific settings</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.SizeInfo">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">SizeInfo</code><span class="sig-paren">(</span><em>*</em>, <em>compute_size: str = None</em>, <em>price=None</em>, <em>number_of_cores: int = None</em>, <em>memory: float = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/size_info_py3.html#SizeInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.SizeInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Contains detailed information about a size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Represents the actual compute size, e.g.
+Standard_A2_v2.</p></li>
+<li><p><strong>price</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The pay-as-you-go price per hour this size will cost. It
+does not include discounts and may not reflect the actual price the size
+will cost.</p></li>
+<li><p><strong>number_of_cores</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of cores a VM of this size has.</p></li>
+<li><p><strong>memory</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The amount of memory available (in GB).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.EnvironmentSize">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">EnvironmentSize</code><span class="sig-paren">(</span><em>*</em>, <em>name=None</em>, <em>vm_sizes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_size_py3.html#EnvironmentSize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.EnvironmentSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents a size category supported by this Lab Account (small, medium or
+large).</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.labservices.models.ManagedLabVmSize" title="azure.mgmt.labservices.models.ManagedLabVmSize"><em>ManagedLabVmSize</em></a>) – The size category. Possible values include: ‘Basic’,
+‘Standard’, ‘Performance’</p></li>
+<li><p><strong>vm_sizes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.labservices.models.SizeInfo" title="azure.mgmt.labservices.models.SizeInfo"><em>SizeInfo</em></a><em>]</em>) – Represents a set of compute sizes that can serve this
+given size type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>max_price</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The pay-as-you-go dollar price per hour this size will
+cost. It does not include discounts and may not reflect the actual price
+the size will cost. This is the maximum price of all prices within this
+tier.</p></li>
+<li><p><strong>min_number_of_cores</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of cores a VM of this size has. This
+is the minimum number of cores within this tier.</p></li>
+<li><p><strong>min_memory</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The amount of memory available (in GB). This is the
+minimum amount of memory within this tier.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.SizeInfoFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">SizeInfoFragment</code><span class="sig-paren">(</span><em>*</em>, <em>compute_size: str = None</em>, <em>price=None</em>, <em>number_of_cores: int = None</em>, <em>memory: float = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/size_info_fragment_py3.html#SizeInfoFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.SizeInfoFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Contains detailed information about a size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>compute_size</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Represents the actual compute size, e.g.
+Standard_A2_v2.</p></li>
+<li><p><strong>price</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The pay-as-you-go price per hour this size will cost. It
+does not include discounts and may not reflect the actual price the size
+will cost.</p></li>
+<li><p><strong>number_of_cores</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The number of cores a VM of this size has.</p></li>
+<li><p><strong>memory</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – The amount of memory available (in GB).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.EnvironmentSizeFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">EnvironmentSizeFragment</code><span class="sig-paren">(</span><em>*</em>, <em>name=None</em>, <em>vm_sizes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_size_fragment_py3.html#EnvironmentSizeFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.EnvironmentSizeFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents a size category supported by this Lab Account (small, medium or
+large).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.labservices.models.ManagedLabVmSize" title="azure.mgmt.labservices.models.ManagedLabVmSize"><em>ManagedLabVmSize</em></a>) – The size category. Possible values include: ‘Basic’,
+‘Standard’, ‘Performance’</p></li>
+<li><p><strong>vm_sizes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.labservices.models.SizeInfoFragment" title="azure.mgmt.labservices.models.SizeInfoFragment"><em>SizeInfoFragment</em></a><em>]</em>) – Represents a set of compute sizes that can serve this
+given size type</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.GalleryImageReference">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">GalleryImageReference</code><span class="sig-paren">(</span><em>*</em>, <em>offer: str = None</em>, <em>publisher: str = None</em>, <em>sku: str = None</em>, <em>os_type: str = None</em>, <em>version: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/gallery_image_reference_py3.html#GalleryImageReference"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.GalleryImageReference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The reference information for an Azure Marketplace image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>offer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The offer of the gallery image.</p></li>
+<li><p><strong>publisher</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The publisher of the gallery image.</p></li>
+<li><p><strong>sku</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU of the gallery image.</p></li>
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The OS type of the gallery image.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The version of the gallery image.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.GalleryImage">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">GalleryImage</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>is_enabled: bool = None</em>, <em>is_override: bool = None</em>, <em>is_plan_authorized: bool = None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/gallery_image_py3.html#GalleryImage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.GalleryImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>Represents an image from the Azure Marketplace.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+<li><p><strong>author</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The author of the gallery image.</p></li>
+<li><p><strong>created_date</strong> (<em>datetime</em>) – The creation date of the gallery image.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The description of the gallery image.</p></li>
+<li><p><strong>image_reference</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.GalleryImageReference" title="azure.mgmt.labservices.models.GalleryImageReference"><em>GalleryImageReference</em></a>) – The image reference of the gallery image.</p></li>
+<li><p><strong>icon</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The icon of the gallery image.</p></li>
+<li><p><strong>plan_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The third party plan that applies to this image</p></li>
+<li><p><strong>latest_operation_result</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.LatestOperationResult" title="azure.mgmt.labservices.models.LatestOperationResult"><em>LatestOperationResult</em></a>) – The details of the latest operation. ex:
+status, error</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>is_enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates whether this gallery image is enabled.</p></li>
+<li><p><strong>is_override</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates whether this gallery has been overridden for
+this lab account</p></li>
+<li><p><strong>is_plan_authorized</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates if the plan has been authorized for
+programmatic deployment.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.GalleryImageFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">GalleryImageFragment</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>is_enabled: bool = None</em>, <em>is_override: bool = None</em>, <em>is_plan_authorized: bool = None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/gallery_image_fragment_py3.html#GalleryImageFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.GalleryImageFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>Represents an image from the Azure Marketplace.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>is_enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates whether this gallery image is enabled.</p></li>
+<li><p><strong>is_override</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates whether this gallery has been overridden for
+this lab account</p></li>
+<li><p><strong>is_plan_authorized</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Indicates if the plan has been authorized for
+programmatic deployment.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.GalleryImageReferenceFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">GalleryImageReferenceFragment</code><span class="sig-paren">(</span><em>*</em>, <em>offer: str = None</em>, <em>publisher: str = None</em>, <em>sku: str = None</em>, <em>os_type: str = None</em>, <em>version: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/gallery_image_reference_fragment_py3.html#GalleryImageReferenceFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.GalleryImageReferenceFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The reference information for an Azure Marketplace image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>offer</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The offer of the gallery image.</p></li>
+<li><p><strong>publisher</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The publisher of the gallery image.</p></li>
+<li><p><strong>sku</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The SKU of the gallery image.</p></li>
+<li><p><strong>os_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The OS type of the gallery image.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The version of the gallery image.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.GetEnvironmentResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">GetEnvironmentResponse</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/get_environment_response_py3.html#GetEnvironmentResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.GetEnvironmentResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the environments details.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.applicationinsights.models.html#azure.applicationinsights.models.MetricsSegment.environment" title="azure.applicationinsights.models.MetricsSegment.environment"><strong>environment</strong></a> (<a class="reference internal" href="#azure.mgmt.labservices.models.EnvironmentDetails" title="azure.mgmt.labservices.models.EnvironmentDetails"><em>EnvironmentDetails</em></a>) – Details of the environment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.GetPersonalPreferencesResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">GetPersonalPreferencesResponse</code><span class="sig-paren">(</span><em>*</em>, <em>id: str = None</em>, <em>favorite_lab_resource_ids=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/get_personal_preferences_response_py3.html#GetPersonalPreferencesResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.GetPersonalPreferencesResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the PersonalPreferences for the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id to be used by the cache orchestrator</p></li>
+<li><p><strong>favorite_lab_resource_ids</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Array of favorite lab resource ids</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.SizeAvailability">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">SizeAvailability</code><span class="sig-paren">(</span><em>*</em>, <em>size_category=None</em>, <em>is_available: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/size_availability_py3.html#SizeAvailability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.SizeAvailability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the size information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size_category</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.labservices.models.ManagedLabVmSize" title="azure.mgmt.labservices.models.ManagedLabVmSize"><em>ManagedLabVmSize</em></a>) – The category of the size (Basic, Standard,
+Performance). Possible values include: ‘Basic’, ‘Standard’, ‘Performance’</p></li>
+<li><p><strong>is_available</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether or not this size category is available</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.RegionalAvailability">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">RegionalAvailability</code><span class="sig-paren">(</span><em>*</em>, <em>region: str = None</em>, <em>size_availabilities=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/regional_availability_py3.html#RegionalAvailability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.RegionalAvailability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The availability information of sizes across regions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Corresponding region</p></li>
+<li><p><strong>size_availabilities</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.labservices.models.SizeAvailability" title="azure.mgmt.labservices.models.SizeAvailability"><em>SizeAvailability</em></a><em>]</em>) – List of all the size information for the
+region</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.GetRegionalAvailabilityResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">GetRegionalAvailabilityResponse</code><span class="sig-paren">(</span><em>*</em>, <em>regional_availability=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/get_regional_availability_response_py3.html#GetRegionalAvailabilityResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.GetRegionalAvailabilityResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The response model from the GetRegionalAvailability action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>regional_availability</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.labservices.models.RegionalAvailability" title="azure.mgmt.labservices.models.RegionalAvailability"><em>RegionalAvailability</em></a><em>]</em>) – Availability information for different size
+categories per region</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.Lab">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">Lab</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>max_users_in_lab: int = None</em>, <em>usage_quota=None</em>, <em>user_access_mode=None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/lab_py3.html#Lab"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.Lab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>Represents a lab.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+<li><p><strong>user_quota</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum value MaxUsersInLab can be set to, as specified
+by the service</p></li>
+<li><p><strong>invitation_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Invitation code that users can use to join a lab.</p></li>
+<li><p><strong>created_by_object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Object id of the user that created the lab.</p></li>
+<li><p><strong>created_by_user_principal_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Lab creator name</p></li>
+<li><p><strong>created_date</strong> (<em>datetime</em>) – Creation date for the lab</p></li>
+<li><p><strong>latest_operation_result</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.LatestOperationResult" title="azure.mgmt.labservices.models.LatestOperationResult"><em>LatestOperationResult</em></a>) – The details of the latest operation. ex:
+status, error</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>max_users_in_lab</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum number of users allowed in the lab.</p></li>
+<li><p><strong>usage_quota</strong> (<em>timedelta</em>) – Maximum duration a user can use an environment for in
+the lab.</p></li>
+<li><p><strong>user_access_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.labservices.models.LabUserAccessMode" title="azure.mgmt.labservices.models.LabUserAccessMode"><em>LabUserAccessMode</em></a>) – Lab user access mode (open to all vs. restricted
+to those listed on the lab). Possible values include: ‘Restricted’, ‘Open’</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.SizeConfigurationProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">SizeConfigurationProperties</code><span class="sig-paren">(</span><em>*</em>, <em>environment_sizes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/size_configuration_properties_py3.html#SizeConfigurationProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.SizeConfigurationProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the size configuration under the lab account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>environment_sizes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.labservices.models.EnvironmentSize" title="azure.mgmt.labservices.models.EnvironmentSize"><em>EnvironmentSize</em></a><em>]</em>) – Represents a list of size categories supported
+by this Lab Account (Small, Medium, Large)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.LabAccount">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">LabAccount</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>enabled_region_selection: bool = None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/lab_account_py3.html#LabAccount"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.LabAccount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>Represents a lab account.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+<li><p><strong>size_configuration</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.SizeConfigurationProperties" title="azure.mgmt.labservices.models.SizeConfigurationProperties"><em>SizeConfigurationProperties</em></a>) – Represents the size configuration under the lab
+account</p></li>
+<li><p><strong>latest_operation_result</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.LatestOperationResult" title="azure.mgmt.labservices.models.LatestOperationResult"><em>LatestOperationResult</em></a>) – The details of the latest operation. ex:
+status, error</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>enabled_region_selection</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Represents if region selection is enabled</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.LabAccountFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">LabAccountFragment</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>enabled_region_selection: bool = None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/lab_account_fragment_py3.html#LabAccountFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.LabAccountFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>Represents a lab account.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>enabled_region_selection</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Represents if region selection is enabled</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.LabDetails">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">LabDetails</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>provisioning_state: str = None</em>, <em>id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/lab_details_py3.html#LabDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.LabDetails" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>This represents the details about a lab that the User is in, and its state.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the lab</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning state of the lab.</p></li>
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The Id of the lab.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>usage_quota</strong> (<em>timedelta</em>) – The maximum duration a user can use a VM in this lab.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.LabFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">LabFragment</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>max_users_in_lab: int = None</em>, <em>usage_quota=None</em>, <em>user_access_mode=None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/lab_fragment_py3.html#LabFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.LabFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>Represents a lab.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>max_users_in_lab</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum number of users allowed in the lab.</p></li>
+<li><p><strong>usage_quota</strong> (<em>timedelta</em>) – Maximum duration a user can use an environment for in
+the lab.</p></li>
+<li><p><strong>user_access_mode</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.labservices.models.LabUserAccessMode" title="azure.mgmt.labservices.models.LabUserAccessMode"><em>LabUserAccessMode</em></a>) – Lab user access mode (open to all vs. restricted
+to those listed on the lab). Possible values include: ‘Restricted’, ‘Open’</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ListEnvironmentsPayload">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ListEnvironmentsPayload</code><span class="sig-paren">(</span><em>*</em>, <em>lab_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/list_environments_payload_py3.html#ListEnvironmentsPayload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ListEnvironmentsPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the payload to list environments owned by a user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lab_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The resource Id of the lab</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ListEnvironmentsResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ListEnvironmentsResponse</code><span class="sig-paren">(</span><em>*</em>, <em>environments=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/list_environments_response_py3.html#ListEnvironmentsResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ListEnvironmentsResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the list of environments owned by a user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>environments</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.labservices.models.EnvironmentDetails" title="azure.mgmt.labservices.models.EnvironmentDetails"><em>EnvironmentDetails</em></a><em>]</em>) – List of all the environments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ListLabsResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ListLabsResponse</code><span class="sig-paren">(</span><em>*</em>, <em>labs=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/list_labs_response_py3.html#ListLabsResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ListLabsResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Lists the labs owned by a user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>labs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.labservices.models.LabDetails" title="azure.mgmt.labservices.models.LabDetails"><em>LabDetails</em></a><em>]</em>) – List of all the labs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.OperationBatchStatusPayload">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">OperationBatchStatusPayload</code><span class="sig-paren">(</span><em>*</em>, <em>urls</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/operation_batch_status_payload_py3.html#OperationBatchStatusPayload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.OperationBatchStatusPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Payload to get the status of an operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>urls</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. The operation url of long running operation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.OperationBatchStatusResponseItem">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">OperationBatchStatusResponseItem</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/operation_batch_status_response_item_py3.html#OperationBatchStatusResponseItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.OperationBatchStatusResponseItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the status of an operation that used the batch API.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>operation_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – status of the long running operation for an
+environment</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – status of the long running operation for an environment</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.OperationBatchStatusResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">OperationBatchStatusResponse</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/operation_batch_status_response_py3.html#OperationBatchStatusResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.OperationBatchStatusResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Status Details of the long running operation for an environment.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>items</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.labservices.models.OperationBatchStatusResponseItem" title="azure.mgmt.labservices.models.OperationBatchStatusResponseItem"><em>OperationBatchStatusResponseItem</em></a><em>]</em>) – Gets a collection of items that contain the operation url and
+status.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.OperationError">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">OperationError</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/operation_error_py3.html#OperationError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.OperationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error details for the operation in case of a failure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error code of the operation error.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The error message of the operation error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.OperationMetadataDisplay">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">OperationMetadataDisplay</code><span class="sig-paren">(</span><em>*</em>, <em>provider: str = None</em>, <em>resource: str = None</em>, <em>operation: str = None</em>, <em>description: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/operation_metadata_display_py3.html#OperationMetadataDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.OperationMetadataDisplay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The object that describes the operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>provider</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Friendly name of the resource provider</p></li>
+<li><p><strong>resource</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type on which the operation is performed.</p></li>
+<li><p><strong>operation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation type: read, write, delete, listKeys/action,
+etc.</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Friendly name of the operation</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.OperationMetadata">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">OperationMetadata</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/operation_metadata_py3.html#OperationMetadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.OperationMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The REST API operation supported by ManagedLab ResourceProvider.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Operation name: {provider}/{resource}/{operation}</p></li>
+<li><p><strong>display</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.OperationMetadataDisplay" title="azure.mgmt.labservices.models.OperationMetadataDisplay"><em>OperationMetadataDisplay</em></a>) – The object that describes the operations</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.OperationResult">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">OperationResult</code><span class="sig-paren">(</span><em>*</em>, <em>status: str = None</em>, <em>error=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/operation_result_py3.html#OperationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.OperationResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An Operation Result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The operation status.</p></li>
+<li><p><strong>error</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.OperationError" title="azure.mgmt.labservices.models.OperationError"><em>OperationError</em></a>) – Error details for the operation in case of a failure.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.OperationStatusPayload">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">OperationStatusPayload</code><span class="sig-paren">(</span><em>*</em>, <em>operation_url: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/operation_status_payload_py3.html#OperationStatusPayload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.OperationStatusPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Payload to get the status of an operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>operation_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The operation url of long running
+operation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.OperationStatusResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">OperationStatusResponse</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/operation_status_response_py3.html#OperationStatusResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.OperationStatusResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Status Details of the long running operation for an environment.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.CountType.status" title="azure.mgmt.automation.models.CountType.status"><strong>status</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – status of the long running operation for an environment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.PersonalPreferencesOperationsPayload">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">PersonalPreferencesOperationsPayload</code><span class="sig-paren">(</span><em>*</em>, <em>lab_account_resource_id: str = None</em>, <em>add_remove=None</em>, <em>lab_resource_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/personal_preferences_operations_payload_py3.html#PersonalPreferencesOperationsPayload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.PersonalPreferencesOperationsPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents payload for any Environment operations like get, start, stop,
+connect.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lab_account_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id of the lab account</p></li>
+<li><p><strong>add_remove</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.labservices.models.AddRemove" title="azure.mgmt.labservices.models.AddRemove"><em>AddRemove</em></a>) – Enum indicating if user is adding or removing a
+favorite lab. Possible values include: ‘Add’, ‘Remove’</p></li>
+<li><p><strong>lab_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id of the lab to add/remove from the
+favorites list</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.PublishPayload">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">PublishPayload</code><span class="sig-paren">(</span><em>*</em>, <em>use_existing_image: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/publish_payload_py3.html#PublishPayload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.PublishPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Payload for Publish operation on EnvironmentSetting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>use_existing_image</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether to use existing VM custom image when
+publishing.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.RegisterPayload">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">RegisterPayload</code><span class="sig-paren">(</span><em>*</em>, <em>registration_code: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/register_payload_py3.html#RegisterPayload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.RegisterPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents payload for Register action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>registration_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The registration code of the lab.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ResetPasswordPayload">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ResetPasswordPayload</code><span class="sig-paren">(</span><em>*</em>, <em>environment_id: str</em>, <em>username: str = None</em>, <em>password: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/reset_password_payload_py3.html#ResetPasswordPayload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ResetPasswordPayload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the payload for resetting passwords.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>environment_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The resourceId of the environment</p></li>
+<li><p><strong>username</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The username for which the password will be reset.</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The password to assign to the user specified in</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.Resource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An Azure resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.SizeConfigurationPropertiesFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">SizeConfigurationPropertiesFragment</code><span class="sig-paren">(</span><em>*</em>, <em>environment_sizes=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/size_configuration_properties_fragment_py3.html#SizeConfigurationPropertiesFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.SizeConfigurationPropertiesFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Represents the size configuration under the lab account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>environment_sizes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.labservices.models.EnvironmentSizeFragment" title="azure.mgmt.labservices.models.EnvironmentSizeFragment"><em>EnvironmentSizeFragment</em></a><em>]</em>) – Represents a list of size categories supported
+by this Lab Account (Small, Medium, Large)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.User">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">User</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/user_py3.html#User"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>The User registered to a lab.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.sql.models.html#azure.mgmt.sql.models.DataMaskingFunction.email" title="azure.mgmt.sql.models.DataMaskingFunction.email"><strong>email</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user email address, as it was specified during
+registration.</p></li>
+<li><p><strong>family_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user family name, as it was specified during
+registration.</p></li>
+<li><p><strong>given_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user given name, as it was specified during
+registration.</p></li>
+<li><p><strong>tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user tenant ID, as it was specified during
+registration.</p></li>
+<li><p><strong>total_usage</strong> (<em>timedelta</em>) – How long the user has used his VMs in this lab</p></li>
+<li><p><strong>latest_operation_result</strong> (<a class="reference internal" href="#azure.mgmt.labservices.models.LatestOperationResult" title="azure.mgmt.labservices.models.LatestOperationResult"><em>LatestOperationResult</em></a>) – The details of the latest operation. ex:
+status, error</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.UserFragment">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">UserFragment</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>provisioning_state: str = None</em>, <em>unique_identifier: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/user_fragment_py3.html#UserFragment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.UserFragment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.labservices.models.resource_py3.Resource</span></code></p>
+<p>The User registered to a lab.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The identifier of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of the resource.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The tags of the resource.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning status of the resource.</p></li>
+<li><p><strong>unique_identifier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique immutable identifier of a resource
+(Guid).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.OperationMetadataPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">OperationMetadataPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/operation_metadata_paged.html#OperationMetadataPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.OperationMetadataPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.labservices.models.OperationMetadata" title="azure.mgmt.labservices.models.OperationMetadata"><code class="xref py py-class docutils literal notranslate"><span class="pre">OperationMetadata</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.LabAccountPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">LabAccountPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/lab_account_paged.html#LabAccountPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.LabAccountPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.labservices.models.LabAccount" title="azure.mgmt.labservices.models.LabAccount"><code class="xref py py-class docutils literal notranslate"><span class="pre">LabAccount</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.GalleryImagePaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">GalleryImagePaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/gallery_image_paged.html#GalleryImagePaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.GalleryImagePaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.labservices.models.GalleryImage" title="azure.mgmt.labservices.models.GalleryImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">GalleryImage</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.LabPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">LabPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/lab_paged.html#LabPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.LabPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.labservices.models.Lab" title="azure.mgmt.labservices.models.Lab"><code class="xref py py-class docutils literal notranslate"><span class="pre">Lab</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.EnvironmentSettingPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">EnvironmentSettingPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_setting_paged.html#EnvironmentSettingPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.EnvironmentSettingPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.labservices.models.EnvironmentSetting" title="azure.mgmt.labservices.models.EnvironmentSetting"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnvironmentSetting</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.EnvironmentPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">EnvironmentPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/environment_paged.html#EnvironmentPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.EnvironmentPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.labservices.models.Environment" title="azure.mgmt.labservices.models.Environment"><code class="xref py py-class docutils literal notranslate"><span class="pre">Environment</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.UserPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">UserPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/user_paged.html#UserPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.UserPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.labservices.models.User" title="azure.mgmt.labservices.models.User"><code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ManagedLabVmSize">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ManagedLabVmSize</code><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/managed_labs_client_enums.html#ManagedLabVmSize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ManagedLabVmSize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.ManagedLabVmSize.basic">
+<code class="descname">basic</code><em class="property"> = 'Basic'</em><a class="headerlink" href="#azure.mgmt.labservices.models.ManagedLabVmSize.basic" title="Permalink to this definition">¶</a></dt>
+<dd><p>The base VM size</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.ManagedLabVmSize.performance">
+<code class="descname">performance</code><em class="property"> = 'Performance'</em><a class="headerlink" href="#azure.mgmt.labservices.models.ManagedLabVmSize.performance" title="Permalink to this definition">¶</a></dt>
+<dd><p>The most performant VM size</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.ManagedLabVmSize.standard">
+<code class="descname">standard</code><em class="property"> = 'Standard'</em><a class="headerlink" href="#azure.mgmt.labservices.models.ManagedLabVmSize.standard" title="Permalink to this definition">¶</a></dt>
+<dd><p>The standard or default VM size</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.PublishingState">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">PublishingState</code><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/managed_labs_client_enums.html#PublishingState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.PublishingState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.PublishingState.draft">
+<code class="descname">draft</code><em class="property"> = 'Draft'</em><a class="headerlink" href="#azure.mgmt.labservices.models.PublishingState.draft" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initial state of an environment setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.PublishingState.publish_failed">
+<code class="descname">publish_failed</code><em class="property"> = 'PublishFailed'</em><a class="headerlink" href="#azure.mgmt.labservices.models.PublishingState.publish_failed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Failed to provision all the necessary resources.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.PublishingState.published">
+<code class="descname">published</code><em class="property"> = 'Published'</em><a class="headerlink" href="#azure.mgmt.labservices.models.PublishingState.published" title="Permalink to this definition">¶</a></dt>
+<dd><p>All resources are currently provisioned.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.PublishingState.publishing">
+<code class="descname">publishing</code><em class="property"> = 'Publishing'</em><a class="headerlink" href="#azure.mgmt.labservices.models.PublishingState.publishing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Currently provisioning resources.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.PublishingState.scaling">
+<code class="descname">scaling</code><em class="property"> = 'Scaling'</em><a class="headerlink" href="#azure.mgmt.labservices.models.PublishingState.scaling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Currently provisioning resources without recreating VM image.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.ConfigurationState">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">ConfigurationState</code><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/managed_labs_client_enums.html#ConfigurationState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.ConfigurationState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.ConfigurationState.completed">
+<code class="descname">completed</code><em class="property"> = 'Completed'</em><a class="headerlink" href="#azure.mgmt.labservices.models.ConfigurationState.completed" title="Permalink to this definition">¶</a></dt>
+<dd><p>User is finished modifying the template.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.ConfigurationState.not_applicable">
+<code class="descname">not_applicable</code><em class="property"> = 'NotApplicable'</em><a class="headerlink" href="#azure.mgmt.labservices.models.ConfigurationState.not_applicable" title="Permalink to this definition">¶</a></dt>
+<dd><p>User either hasn’t started configuring their template or they haven’t started the configuration process.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.LabUserAccessMode">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">LabUserAccessMode</code><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/managed_labs_client_enums.html#LabUserAccessMode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.LabUserAccessMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.LabUserAccessMode.open">
+<code class="descname">open</code><em class="property"> = 'Open'</em><a class="headerlink" href="#azure.mgmt.labservices.models.LabUserAccessMode.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Any user can register with the lab and access its VMs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.LabUserAccessMode.restricted">
+<code class="descname">restricted</code><em class="property"> = 'Restricted'</em><a class="headerlink" href="#azure.mgmt.labservices.models.LabUserAccessMode.restricted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only users registered with the lab can access VMs.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.labservices.models.AddRemove">
+<em class="property">class </em><code class="descclassname">azure.mgmt.labservices.models.</code><code class="descname">AddRemove</code><a class="reference internal" href="../_modules/azure/mgmt/labservices/models/managed_labs_client_enums.html#AddRemove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.labservices.models.AddRemove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.AddRemove.add">
+<code class="descname">add</code><em class="property"> = 'Add'</em><a class="headerlink" href="#azure.mgmt.labservices.models.AddRemove.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates that a user is adding a favorite lab</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.labservices.models.AddRemove.remove">
+<code class="descname">remove</code><em class="property"> = 'Remove'</em><a class="headerlink" href="#azure.mgmt.labservices.models.AddRemove.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicates that a user is removing a favorite lab</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 

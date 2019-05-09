@@ -302,8 +302,1315 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="azure-mgmt-storagesync-operations-module">
-<h1>azure.mgmt.storagesync.operations module<a class="headerlink" href="#azure-mgmt-storagesync-operations-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-azure.mgmt.storagesync.operations">
+<span id="azure-mgmt-storagesync-operations-module"></span><h1>azure.mgmt.storagesync.operations module<a class="headerlink" href="#module-azure.mgmt.storagesync.operations" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.mgmt.storagesync.operations.Operations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.storagesync.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Operations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to use for this operation. Constant value: “2019-02-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.Operations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the available Storage Sync Rest API operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of OperationEntity</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.OperationEntityPaged" title="azure.mgmt.storagesync.models.OperationEntityPaged">OperationEntityPaged</a>[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.OperationEntity" title="azure.mgmt.storagesync.models.OperationEntity">OperationEntity</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.storagesync.operations.Operations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.storagesync.models' from 'd:\\a\\1\\s\\azure-mgmt-storagesync\\azure\\mgmt\\storagesync\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.storagesync.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.storagesync.operations.StorageSyncServicesOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.storagesync.operations.</code><code class="descname">StorageSyncServicesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/storage_sync_services_operations.html#StorageSyncServicesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.StorageSyncServicesOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>StorageSyncServicesOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to use for this operation. Constant value: “2019-02-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.StorageSyncServicesOperations.check_name_availability">
+<code class="descname">check_name_availability</code><span class="sig-paren">(</span><em>location_name</em>, <em>name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/storage_sync_services_operations.html#StorageSyncServicesOperations.check_name_availability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.StorageSyncServicesOperations.check_name_availability" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check the give namespace name availability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The desired region for the name check.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name to check for availability</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CheckNameAvailabilityResult or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.CheckNameAvailabilityResult" title="azure.mgmt.storagesync.models.CheckNameAvailabilityResult">CheckNameAvailabilityResult</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.StorageSyncServicesOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/storage_sync_services_operations.html#StorageSyncServicesOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.StorageSyncServicesOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new StorageSyncService.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncServiceCreateParameters" title="azure.mgmt.storagesync.models.StorageSyncServiceCreateParameters"><em>StorageSyncServiceCreateParameters</em></a>) – Storage Sync Service resource name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>StorageSyncService or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncService" title="azure.mgmt.storagesync.models.StorageSyncService">StorageSyncService</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.StorageSyncServicesOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/storage_sync_services_operations.html#StorageSyncServicesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.StorageSyncServicesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a given StorageSyncService.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.StorageSyncServicesOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/storage_sync_services_operations.html#StorageSyncServicesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.StorageSyncServicesOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a given StorageSyncService.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>StorageSyncService or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncService" title="azure.mgmt.storagesync.models.StorageSyncService">StorageSyncService</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.StorageSyncServicesOperations.list_by_resource_group">
+<code class="descname">list_by_resource_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/storage_sync_services_operations.html#StorageSyncServicesOperations.list_by_resource_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.StorageSyncServicesOperations.list_by_resource_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a StorageSyncService list by Resource group name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of StorageSyncService</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncServicePaged" title="azure.mgmt.storagesync.models.StorageSyncServicePaged">StorageSyncServicePaged</a>[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncService" title="azure.mgmt.storagesync.models.StorageSyncService">StorageSyncService</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.StorageSyncServicesOperations.list_by_subscription">
+<code class="descname">list_by_subscription</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/storage_sync_services_operations.html#StorageSyncServicesOperations.list_by_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.StorageSyncServicesOperations.list_by_subscription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a StorageSyncService list by subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of StorageSyncService</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncServicePaged" title="azure.mgmt.storagesync.models.StorageSyncServicePaged">StorageSyncServicePaged</a>[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncService" title="azure.mgmt.storagesync.models.StorageSyncService">StorageSyncService</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.storagesync.operations.StorageSyncServicesOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.storagesync.models' from 'd:\\a\\1\\s\\azure-mgmt-storagesync\\azure\\mgmt\\storagesync\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.storagesync.operations.StorageSyncServicesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.StorageSyncServicesOperations.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>tags=None</em>, <em>properties=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/storage_sync_services_operations.html#StorageSyncServicesOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.StorageSyncServicesOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Patch a given StorageSyncService.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The user-specified tags associated with the storage sync
+service.</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – The properties of the storage sync service.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>StorageSyncService or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncService" title="azure.mgmt.storagesync.models.StorageSyncService">StorageSyncService</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.storagesync.operations.SyncGroupsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.storagesync.operations.</code><code class="descname">SyncGroupsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/sync_groups_operations.html#SyncGroupsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.SyncGroupsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>SyncGroupsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to use for this operation. Constant value: “2019-02-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.SyncGroupsOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>properties=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/sync_groups_operations.html#SyncGroupsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.SyncGroupsOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new SyncGroup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – The parameters used to create the sync group</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SyncGroup or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.SyncGroup" title="azure.mgmt.storagesync.models.SyncGroup">SyncGroup</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.SyncGroupsOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/sync_groups_operations.html#SyncGroupsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.SyncGroupsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a given SyncGroup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.SyncGroupsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/sync_groups_operations.html#SyncGroupsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.SyncGroupsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a given SyncGroup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>SyncGroup or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.SyncGroup" title="azure.mgmt.storagesync.models.SyncGroup">SyncGroup</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.SyncGroupsOperations.list_by_storage_sync_service">
+<code class="descname">list_by_storage_sync_service</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/sync_groups_operations.html#SyncGroupsOperations.list_by_storage_sync_service"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.SyncGroupsOperations.list_by_storage_sync_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a SyncGroup List.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of SyncGroup</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.SyncGroupPaged" title="azure.mgmt.storagesync.models.SyncGroupPaged">SyncGroupPaged</a>[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.SyncGroup" title="azure.mgmt.storagesync.models.SyncGroup">SyncGroup</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.storagesync.operations.SyncGroupsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.storagesync.models' from 'd:\\a\\1\\s\\azure-mgmt-storagesync\\azure\\mgmt\\storagesync\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.storagesync.operations.SyncGroupsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.storagesync.operations.</code><code class="descname">CloudEndpointsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/cloud_endpoints_operations.html#CloudEndpointsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>CloudEndpointsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to use for this operation. Constant value: “2019-02-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>cloud_endpoint_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/cloud_endpoints_operations.html#CloudEndpointsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new CloudEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>cloud_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Cloud Endpoint object.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.CloudEndpointCreateParameters" title="azure.mgmt.storagesync.models.CloudEndpointCreateParameters"><em>CloudEndpointCreateParameters</em></a>) – Body of Cloud Endpoint resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns CloudEndpoint or
+ClientRawResponse&lt;CloudEndpoint&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.CloudEndpoint" title="azure.mgmt.storagesync.models.CloudEndpoint">CloudEndpoint</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.CloudEndpoint" title="azure.mgmt.storagesync.models.CloudEndpoint">CloudEndpoint</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>cloud_endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/cloud_endpoints_operations.html#CloudEndpointsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a given CloudEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>cloud_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Cloud Endpoint object.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>cloud_endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/cloud_endpoints_operations.html#CloudEndpointsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a given CloudEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>cloud_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Cloud Endpoint object.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CloudEndpoint or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.CloudEndpoint" title="azure.mgmt.storagesync.models.CloudEndpoint">CloudEndpoint</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations.list_by_sync_group">
+<code class="descname">list_by_sync_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/cloud_endpoints_operations.html#CloudEndpointsOperations.list_by_sync_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations.list_by_sync_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a CloudEndpoint List.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of CloudEndpoint</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.CloudEndpointPaged" title="azure.mgmt.storagesync.models.CloudEndpointPaged">CloudEndpointPaged</a>[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.CloudEndpoint" title="azure.mgmt.storagesync.models.CloudEndpoint">CloudEndpoint</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.storagesync.models' from 'd:\\a\\1\\s\\azure-mgmt-storagesync\\azure\\mgmt\\storagesync\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations.post_backup">
+<code class="descname">post_backup</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>cloud_endpoint_name</em>, <em>azure_file_share=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/cloud_endpoints_operations.html#CloudEndpointsOperations.post_backup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations.post_backup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post Backup a given CloudEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>cloud_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Cloud Endpoint object.</p></li>
+<li><p><strong>azure_file_share</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure File Share.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns PostBackupResponse or
+ClientRawResponse&lt;PostBackupResponse&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.PostBackupResponse" title="azure.mgmt.storagesync.models.PostBackupResponse">PostBackupResponse</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.PostBackupResponse" title="azure.mgmt.storagesync.models.PostBackupResponse">PostBackupResponse</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations.post_restore">
+<code class="descname">post_restore</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>cloud_endpoint_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/cloud_endpoints_operations.html#CloudEndpointsOperations.post_restore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations.post_restore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Post Restore a given CloudEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>cloud_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Cloud Endpoint object.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.PostRestoreRequest" title="azure.mgmt.storagesync.models.PostRestoreRequest"><em>PostRestoreRequest</em></a>) – Body of Cloud Endpoint object.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations.pre_backup">
+<code class="descname">pre_backup</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>cloud_endpoint_name</em>, <em>azure_file_share=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/cloud_endpoints_operations.html#CloudEndpointsOperations.pre_backup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations.pre_backup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pre Backup a given CloudEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>cloud_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Cloud Endpoint object.</p></li>
+<li><p><strong>azure_file_share</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure File Share.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations.pre_restore">
+<code class="descname">pre_restore</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>cloud_endpoint_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/cloud_endpoints_operations.html#CloudEndpointsOperations.pre_restore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations.pre_restore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pre Restore a given CloudEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>cloud_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Cloud Endpoint object.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.PreRestoreRequest" title="azure.mgmt.storagesync.models.PreRestoreRequest"><em>PreRestoreRequest</em></a>) – Body of Cloud Endpoint object.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.CloudEndpointsOperations.restoreheartbeat">
+<code class="descname">restoreheartbeat</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>cloud_endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/cloud_endpoints_operations.html#CloudEndpointsOperations.restoreheartbeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.CloudEndpointsOperations.restoreheartbeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restore Heartbeat a given CloudEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>cloud_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Cloud Endpoint object.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.storagesync.operations.ServerEndpointsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.storagesync.operations.</code><code class="descname">ServerEndpointsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/server_endpoints_operations.html#ServerEndpointsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.ServerEndpointsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>ServerEndpointsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to use for this operation. Constant value: “2019-02-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.ServerEndpointsOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>server_endpoint_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/server_endpoints_operations.html#ServerEndpointsOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.ServerEndpointsOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new ServerEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>server_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Server Endpoint object.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.ServerEndpointCreateParameters" title="azure.mgmt.storagesync.models.ServerEndpointCreateParameters"><em>ServerEndpointCreateParameters</em></a>) – Body of Server Endpoint object.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns ServerEndpoint or
+ClientRawResponse&lt;ServerEndpoint&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.ServerEndpoint" title="azure.mgmt.storagesync.models.ServerEndpoint">ServerEndpoint</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.ServerEndpoint" title="azure.mgmt.storagesync.models.ServerEndpoint">ServerEndpoint</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.ServerEndpointsOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>server_endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/server_endpoints_operations.html#ServerEndpointsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.ServerEndpointsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a given ServerEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>server_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Server Endpoint object.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.ServerEndpointsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>server_endpoint_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/server_endpoints_operations.html#ServerEndpointsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.ServerEndpointsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a ServerEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>server_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Server Endpoint object.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ServerEndpoint or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.ServerEndpoint" title="azure.mgmt.storagesync.models.ServerEndpoint">ServerEndpoint</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.ServerEndpointsOperations.list_by_sync_group">
+<code class="descname">list_by_sync_group</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/server_endpoints_operations.html#ServerEndpointsOperations.list_by_sync_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.ServerEndpointsOperations.list_by_sync_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a ServerEndpoint list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of ServerEndpoint</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.ServerEndpointPaged" title="azure.mgmt.storagesync.models.ServerEndpointPaged">ServerEndpointPaged</a>[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.ServerEndpoint" title="azure.mgmt.storagesync.models.ServerEndpoint">ServerEndpoint</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.storagesync.operations.ServerEndpointsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.storagesync.models' from 'd:\\a\\1\\s\\azure-mgmt-storagesync\\azure\\mgmt\\storagesync\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.storagesync.operations.ServerEndpointsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.ServerEndpointsOperations.recall_action">
+<code class="descname">recall_action</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>server_endpoint_name</em>, <em>pattern=None</em>, <em>recall_path=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/server_endpoints_operations.html#ServerEndpointsOperations.recall_action"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.ServerEndpointsOperations.recall_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recall a server endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>server_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Server Endpoint object.</p></li>
+<li><p><strong>pattern</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Pattern of the files.</p></li>
+<li><p><strong>recall_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Recall path.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.ServerEndpointsOperations.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>sync_group_name</em>, <em>server_endpoint_name</em>, <em>parameters=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/server_endpoints_operations.html#ServerEndpointsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.ServerEndpointsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Patch a given ServerEndpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>sync_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Sync Group resource.</p></li>
+<li><p><strong>server_endpoint_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Server Endpoint object.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.ServerEndpointUpdateParameters" title="azure.mgmt.storagesync.models.ServerEndpointUpdateParameters"><em>ServerEndpointUpdateParameters</em></a>) – Any of the properties applicable in PUT request.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns ServerEndpoint or
+ClientRawResponse&lt;ServerEndpoint&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.ServerEndpoint" title="azure.mgmt.storagesync.models.ServerEndpoint">ServerEndpoint</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.ServerEndpoint" title="azure.mgmt.storagesync.models.ServerEndpoint">ServerEndpoint</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.storagesync.operations.RegisteredServersOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.storagesync.operations.</code><code class="descname">RegisteredServersOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/registered_servers_operations.html#RegisteredServersOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.RegisteredServersOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>RegisteredServersOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to use for this operation. Constant value: “2019-02-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.RegisteredServersOperations.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>server_id</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/registered_servers_operations.html#RegisteredServersOperations.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.RegisteredServersOperations.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a new registered server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>server_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – GUID identifying the on-premises server.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.RegisteredServerCreateParameters" title="azure.mgmt.storagesync.models.RegisteredServerCreateParameters"><em>RegisteredServerCreateParameters</em></a>) – Body of Registered Server object.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns RegisteredServer or
+ClientRawResponse&lt;RegisteredServer&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.RegisteredServer" title="azure.mgmt.storagesync.models.RegisteredServer">RegisteredServer</a>]
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.RegisteredServer" title="azure.mgmt.storagesync.models.RegisteredServer">RegisteredServer</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.RegisteredServersOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>server_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/registered_servers_operations.html#RegisteredServersOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.RegisteredServersOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the given registered server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>server_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – GUID identifying the on-premises server.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.RegisteredServersOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>server_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/registered_servers_operations.html#RegisteredServersOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.RegisteredServersOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a given registered server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>server_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – GUID identifying the on-premises server.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>RegisteredServer or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.RegisteredServer" title="azure.mgmt.storagesync.models.RegisteredServer">RegisteredServer</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.RegisteredServersOperations.list_by_storage_sync_service">
+<code class="descname">list_by_storage_sync_service</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/registered_servers_operations.html#RegisteredServersOperations.list_by_storage_sync_service"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.RegisteredServersOperations.list_by_storage_sync_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a given registered server list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of RegisteredServer</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.RegisteredServerPaged" title="azure.mgmt.storagesync.models.RegisteredServerPaged">RegisteredServerPaged</a>[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.RegisteredServer" title="azure.mgmt.storagesync.models.RegisteredServer">RegisteredServer</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.storagesync.operations.RegisteredServersOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.storagesync.models' from 'd:\\a\\1\\s\\azure-mgmt-storagesync\\azure\\mgmt\\storagesync\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.storagesync.operations.RegisteredServersOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.RegisteredServersOperations.trigger_rollover">
+<code class="descname">trigger_rollover</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>server_id</em>, <em>server_certificate=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/registered_servers_operations.html#RegisteredServersOperations.trigger_rollover"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.RegisteredServersOperations.trigger_rollover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triggers Server certificate rollover.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>server_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Server Id</p></li>
+<li><p><strong>server_certificate</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Certificate Data</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.storagesync.operations.WorkflowsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.storagesync.operations.</code><code class="descname">WorkflowsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/workflows_operations.html#WorkflowsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.WorkflowsOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>WorkflowsOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The API version to use for this operation. Constant value: “2019-02-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.WorkflowsOperations.abort">
+<code class="descname">abort</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>workflow_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/workflows_operations.html#WorkflowsOperations.abort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.WorkflowsOperations.abort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abort the given workflow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>workflow_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – workflow Id</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.WorkflowsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>workflow_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/workflows_operations.html#WorkflowsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.WorkflowsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Workflows resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>workflow_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – workflow Id</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Workflow or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.Workflow" title="azure.mgmt.storagesync.models.Workflow">Workflow</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.storagesync.operations.WorkflowsOperations.list_by_storage_sync_service">
+<code class="descname">list_by_storage_sync_service</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>storage_sync_service_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/storagesync/operations/workflows_operations.html#WorkflowsOperations.list_by_storage_sync_service"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.storagesync.operations.WorkflowsOperations.list_by_storage_sync_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a Workflow List.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group. The name
+is case insensitive.</p></li>
+<li><p><strong>storage_sync_service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of Storage Sync Service
+resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Workflow</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.WorkflowPaged" title="azure.mgmt.storagesync.models.WorkflowPaged">WorkflowPaged</a>[<a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.Workflow" title="azure.mgmt.storagesync.models.Workflow">Workflow</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.storagesync.models.html#azure.mgmt.storagesync.models.StorageSyncErrorException" title="azure.mgmt.storagesync.models.StorageSyncErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">StorageSyncErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.storagesync.operations.WorkflowsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.storagesync.models' from 'd:\\a\\1\\s\\azure-mgmt-storagesync\\azure\\mgmt\\storagesync\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.storagesync.operations.WorkflowsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 
 

@@ -137,7 +137,7 @@
 <li class="toctree-l3"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.operations.html">azure.cognitiveservices.anomalydetector.operations module</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html#module-contents">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="azure.cognitiveservices.anomalydetector.html#module-azure.cognitiveservices.anomalydetector">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure.cognitiveservices.knowledge.qnamaker.html">azure.cognitiveservices.knowledge.qnamaker package</a></li>
@@ -314,8 +314,205 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="azure-cognitiveservices-anomalydetector-models-module">
-<h1>azure.cognitiveservices.anomalydetector.models module<a class="headerlink" href="#azure-cognitiveservices-anomalydetector-models-module" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-azure.cognitiveservices.anomalydetector.models">
+<span id="azure-cognitiveservices-anomalydetector-models-module"></span><h1>azure.cognitiveservices.anomalydetector.models module<a class="headerlink" href="#module-azure.cognitiveservices.anomalydetector.models" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="azure.cognitiveservices.anomalydetector.models.APIError">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.anomalydetector.models.</code><code class="descname">APIError</code><span class="sig-paren">(</span><em>*</em>, <em>code=None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/models/api_error_py3.html#APIError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.APIError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error information returned by the API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – The error code.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A message explaining the error reported by the service.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.cognitiveservices.anomalydetector.models.APIErrorException">
+<em class="property">exception </em><code class="descclassname">azure.cognitiveservices.anomalydetector.models.</code><code class="descname">APIErrorException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/models/api_error_py3.html#APIErrorException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.APIErrorException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘APIError’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.anomalydetector.models.Point">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.anomalydetector.models.</code><code class="descname">Point</code><span class="sig-paren">(</span><em>*</em>, <em>timestamp</em>, <em>value: float</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/models/point_py3.html#Point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Point.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timestamp</strong> (<em>datetime</em>) – Required. Timestamp of a data point (ISO8601 format).</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Required. The measurement of that point, should be float.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.anomalydetector.models.Request">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.anomalydetector.models.</code><code class="descname">Request</code><span class="sig-paren">(</span><em>*</em>, <em>series</em>, <em>granularity</em>, <em>custom_interval: int = None</em>, <em>period: int = None</em>, <em>max_anomaly_ratio: float = None</em>, <em>sensitivity: int = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/models/request_py3.html#Request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.Request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>series</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.cognitiveservices.anomalydetector.models.Point" title="azure.cognitiveservices.anomalydetector.models.Point"><em>Point</em></a><em>]</em>) – Required. Time series data points. Points should be sorted
+by timestamp in ascending order to match the anomaly detection result. If
+the data is not sorted correctly or there is duplicated timestamp, the API
+will not work. In such case, an error message will be returned.</p></li>
+<li><p><strong>granularity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.cognitiveservices.anomalydetector.models.Granularity" title="azure.cognitiveservices.anomalydetector.models.Granularity"><em>Granularity</em></a>) – Required. Can only be one of yearly, monthly, weekly,
+daily, hourly or minutely. Granularity is used for verify whether input
+series is valid. Possible values include: ‘yearly’, ‘monthly’, ‘weekly’,
+‘daily’, ‘hourly’, ‘minutely’</p></li>
+<li><p><strong>custom_interval</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Custom Interval is used to set non-standard time
+interval, for example, if the series is 5 minutes, request can be set as
+{“granularity”:”minutely”, “customInterval”:5}.</p></li>
+<li><p><strong>period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Optional argument, periodic value of a time series. If the
+value is null or does not present, the API will determine the period
+automatically.</p></li>
+<li><p><strong>max_anomaly_ratio</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Optional argument, advanced model parameter, max
+anomaly ratio in a time series.</p></li>
+<li><p><strong>sensitivity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Optional argument, advanced model parameter, between
+0-99, the lower the value is, the larger the margin value will be which
+means less anomalies will be accepted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.anomalydetector.models.EntireDetectResponse">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.anomalydetector.models.</code><code class="descname">EntireDetectResponse</code><span class="sig-paren">(</span><em>*</em>, <em>period: int</em>, <em>expected_values</em>, <em>upper_margins</em>, <em>lower_margins</em>, <em>is_anomaly</em>, <em>is_negative_anomaly</em>, <em>is_positive_anomaly</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/models/entire_detect_response_py3.html#EntireDetectResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.EntireDetectResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>EntireDetectResponse.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Frequency extracted from the series, zero means
+no recurrent pattern has been found.</p></li>
+<li><p><strong>expected_values</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a><em>]</em>) – Required. ExpectedValues contain expected value
+for each input point. The index of the array is consistent with the input
+series.</p></li>
+<li><p><strong>upper_margins</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a><em>]</em>) – Required. UpperMargins contain upper margin of each
+input point. UpperMargin is used to calculate upperBoundary, which equals
+to expectedValue + (100 - marginScale)*upperMargin. Anomalies in response
+can be filtered by upperBoundary and lowerBoundary. By adjusting
+marginScale value, less significant anomalies can be filtered in client
+side. The index of the array is consistent with the input series.</p></li>
+<li><p><strong>lower_margins</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a><em>]</em>) – Required. LowerMargins contain lower margin of each
+input point. LowerMargin is used to calculate lowerBoundary, which equals
+to expectedValue - (100 - marginScale)*lowerMargin. Points between the
+boundary can be marked as normal ones in client side. The index of the
+array is consistent with the input series.</p></li>
+<li><p><strong>is_anomaly</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a><em>]</em>) – Required. IsAnomaly contains anomaly properties for
+each input point. True means an anomaly either negative or positive has
+been detected. The index of the array is consistent with the input series.</p></li>
+<li><p><strong>is_negative_anomaly</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a><em>]</em>) – Required. IsNegativeAnomaly contains anomaly
+status in negative direction for each input point. True means a negative
+anomaly has been detected. A negative anomaly means the point is detected
+as an anomaly and its real value is smaller than the expected one. The
+index of the array is consistent with the input series.</p></li>
+<li><p><strong>is_positive_anomaly</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a><em>]</em>) – Required. IsPositiveAnomaly contain anomaly
+status in positive direction for each input point. True means a positive
+anomaly has been detected. A positive anomaly means the point is detected
+as an anomaly and its real value is larger than the expected one. The
+index of the array is consistent with the input series.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.anomalydetector.models.LastDetectResponse">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.anomalydetector.models.</code><code class="descname">LastDetectResponse</code><span class="sig-paren">(</span><em>*</em>, <em>period: int</em>, <em>suggested_window: int</em>, <em>expected_value: float</em>, <em>upper_margin: float</em>, <em>lower_margin: float</em>, <em>is_anomaly: bool</em>, <em>is_negative_anomaly: bool</em>, <em>is_positive_anomaly: bool</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/models/last_detect_response_py3.html#LastDetectResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.LastDetectResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>LastDetectResponse.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Frequency extracted from the series, zero means
+no recurrent pattern has been found.</p></li>
+<li><p><strong>suggested_window</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Required. Suggested input series points needed
+for detecting the latest point.</p></li>
+<li><p><strong>expected_value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Required. Expected value of the latest point.</p></li>
+<li><p><strong>upper_margin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Required. Upper margin of the latest point.
+UpperMargin is used to calculate upperBoundary, which equals to
+expectedValue + (100 - marginScale)*upperMargin. If the value of latest
+point is between upperBoundary and lowerBoundary, it should be treated as
+normal value. By adjusting marginScale value, anomaly status of latest
+point can be changed.</p></li>
+<li><p><strong>lower_margin</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Required. Lower margin of the latest point.
+LowerMargin is used to calculate lowerBoundary, which equals to
+expectedValue - (100 - marginScale)*lowerMargin.</p></li>
+<li><p><strong>is_anomaly</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. Anomaly status of the latest point, true
+means the latest point is an anomaly either in negative direction or
+positive direction.</p></li>
+<li><p><strong>is_negative_anomaly</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. Anomaly status in negative direction
+of the latest point. True means the latest point is an anomaly and its
+real value is smaller than the expected one.</p></li>
+<li><p><strong>is_positive_anomaly</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. Anomaly status in positive direction
+of the latest point. True means the latest point is an anomaly and its
+real value is larger than the expected one.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.cognitiveservices.anomalydetector.models.Granularity">
+<em class="property">class </em><code class="descclassname">azure.cognitiveservices.anomalydetector.models.</code><code class="descname">Granularity</code><a class="reference internal" href="../_modules/azure/cognitiveservices/anomalydetector/models/anomaly_detector_client_enums.html#Granularity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.Granularity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.cognitiveservices.anomalydetector.models.Granularity.daily">
+<code class="descname">daily</code><em class="property"> = 'daily'</em><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.Granularity.daily" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.anomalydetector.models.Granularity.hourly">
+<code class="descname">hourly</code><em class="property"> = 'hourly'</em><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.Granularity.hourly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.anomalydetector.models.Granularity.minutely">
+<code class="descname">minutely</code><em class="property"> = 'minutely'</em><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.Granularity.minutely" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.anomalydetector.models.Granularity.monthly">
+<code class="descname">monthly</code><em class="property"> = 'monthly'</em><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.Granularity.monthly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.anomalydetector.models.Granularity.weekly">
+<code class="descname">weekly</code><em class="property"> = 'weekly'</em><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.Granularity.weekly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.cognitiveservices.anomalydetector.models.Granularity.yearly">
+<code class="descname">yearly</code><em class="property"> = 'yearly'</em><a class="headerlink" href="#azure.cognitiveservices.anomalydetector.models.Granularity.yearly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 
 

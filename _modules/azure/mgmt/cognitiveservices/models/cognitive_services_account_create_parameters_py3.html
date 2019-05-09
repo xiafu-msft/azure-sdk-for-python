@@ -323,13 +323,7 @@
 <span class="sd">    :param sku: Required. Required. Gets or sets the SKU of the resource.</span>
 <span class="sd">    :type sku: ~azure.mgmt.cognitiveservices.models.Sku</span>
 <span class="sd">    :param kind: Required. Required. Gets or sets the Kind of the resource.</span>
-<span class="sd">     Possible values include: &#39;Bing.Autosuggest.v7&#39;, &#39;Bing.CustomSearch&#39;,</span>
-<span class="sd">     &#39;Bing.Search.v7&#39;, &#39;Bing.Speech&#39;, &#39;Bing.SpellCheck.v7&#39;, &#39;ComputerVision&#39;,</span>
-<span class="sd">     &#39;ContentModerator&#39;, &#39;CustomSpeech&#39;, &#39;CustomVision.Prediction&#39;,</span>
-<span class="sd">     &#39;CustomVision.Training&#39;, &#39;Emotion&#39;, &#39;Face&#39;, &#39;LUIS&#39;, &#39;QnAMaker&#39;,</span>
-<span class="sd">     &#39;SpeakerRecognition&#39;, &#39;SpeechTranslation&#39;, &#39;TextAnalytics&#39;,</span>
-<span class="sd">     &#39;TextTranslation&#39;, &#39;WebLM&#39;</span>
-<span class="sd">    :type kind: str or ~azure.mgmt.cognitiveservices.models.Kind</span>
+<span class="sd">    :type kind: str</span>
 <span class="sd">    :param location: Required. Required. Gets or sets the location of the</span>
 <span class="sd">     resource. This will be one of the supported and registered Azure Geo</span>
 <span class="sd">     Regions (e.g. West US, East US, Southeast Asia, etc.). The geo region of a</span>
@@ -362,7 +356,7 @@
         <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;properties&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;object&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">sku</span><span class="p">,</span> <span class="n">kind</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">sku</span><span class="p">,</span> <span class="n">kind</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">properties</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">CognitiveServicesAccountCreateParameters</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sku</span> <span class="o">=</span> <span class="n">sku</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">kind</span> <span class="o">=</span> <span class="n">kind</span>
