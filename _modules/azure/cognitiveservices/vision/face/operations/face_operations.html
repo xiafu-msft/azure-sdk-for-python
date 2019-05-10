@@ -707,7 +707,7 @@
 <span class="sd">        Attributes include age, gender, headPose, smile, facialHair, glasses,</span>
 <span class="sd">        emotion, hair, makeup, occlusion, accessories, blur, exposure and</span>
 <span class="sd">        noise.</span>
-<span class="sd">        * The extracted face feature, instead of the actual image, will be</span>
+<span class="sd">        * No image will be stored. Only the extracted face feature will be</span>
 <span class="sd">        stored on server. The faceId is an identifier of the face feature and</span>
 <span class="sd">        will be used in [Face -</span>
 <span class="sd">        Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239),</span>
@@ -731,8 +731,7 @@
 <span class="sd">        (head-pose) or being occluded, or wrong image orientation.</span>
 <span class="sd">        * Attributes (age, gender, headPose, smile, facialHair, glasses,</span>
 <span class="sd">        emotion, hair, makeup, occlusion, accessories, blur, exposure and</span>
-<span class="sd">        noise) may not be perfectly accurate. HeadPose&#39;s pitch value is a</span>
-<span class="sd">        reserved field and will always return 0.</span>
+<span class="sd">        noise) may not be perfectly accurate.</span>
 <span class="sd">        * Different &#39;recognitionModel&#39; values are provided. If follow-up</span>
 <span class="sd">        operations like Verify, Identify, Find Similar are needed, please</span>
 <span class="sd">        specify the recognition model with &#39;recognitionModel&#39; parameter. The</span>
@@ -741,8 +740,7 @@
 <span class="sd">        parameter. Once specified, the detected faceIds will be associated with</span>
 <span class="sd">        the specified recognition model. More details, please refer to [How to</span>
 <span class="sd">        specify a recognition</span>
-<span class="sd">        model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model)</span>
-<span class="sd">        .</span>
+<span class="sd">        model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-recognition-model).</span>
 
 <span class="sd">        :param url: Publicly reachable URL of an image</span>
 <span class="sd">        :type url: str</span>

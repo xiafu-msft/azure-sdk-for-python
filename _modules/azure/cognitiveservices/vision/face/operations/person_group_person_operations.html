@@ -466,8 +466,9 @@
 
 <div class="viewcode-block" id="PersonGroupPersonOperations.delete"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">person_group_id</span><span class="p">,</span> <span class="n">person_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Delete an existing person from a person group. All stored person data,</span>
-<span class="sd">        and face features in the person entry will be deleted.</span>
+        <span class="sd">&quot;&quot;&quot;Delete an existing person from a person group. The persistedFaceId,</span>
+<span class="sd">        userData, person name and face feature in the person entry will all be</span>
+<span class="sd">        deleted.</span>
 
 <span class="sd">        :param person_group_id: Id referencing a particular person group.</span>
 <span class="sd">        :type person_group_id: str</span>
@@ -628,8 +629,11 @@
 
 <div class="viewcode-block" id="PersonGroupPersonOperations.delete_face"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.delete_face">[docs]</a>    <span class="k">def</span> <span class="nf">delete_face</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">person_group_id</span><span class="p">,</span> <span class="n">person_id</span><span class="p">,</span> <span class="n">persisted_face_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Delete a face from a person. Relative feature for the persisted face</span>
-<span class="sd">        will also be deleted.</span>
+        <span class="sd">&quot;&quot;&quot;Delete a face from a person in a person group by specified</span>
+<span class="sd">        personGroupId, personId and persistedFaceId.</span>
+<span class="sd">        &lt;br /&gt; Adding/deleting faces to/from a same person will be processed</span>
+<span class="sd">        sequentially. Adding/deleting faces to/from different persons are</span>
+<span class="sd">        processed in parallel.</span>
 
 <span class="sd">        :param person_group_id: Id referencing a particular person group.</span>
 <span class="sd">        :type person_group_id: str</span>
@@ -741,7 +745,37 @@
 
 <div class="viewcode-block" id="PersonGroupPersonOperations.update_face"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.update_face">[docs]</a>    <span class="k">def</span> <span class="nf">update_face</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">person_group_id</span><span class="p">,</span> <span class="n">person_id</span><span class="p">,</span> <span class="n">persisted_face_id</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Update a person persisted face&#39;s userData field.</span>
+        <span class="sd">&quot;&quot;&quot;Add a face to a person into a person group for face identification or</span>
+<span class="sd">        verification. To deal with an image contains multiple faces, input face</span>
+<span class="sd">        can be specified as an image with a targetFace rectangle. It returns a</span>
+<span class="sd">        persistedFaceId representing the added face. No image will be stored.</span>
+<span class="sd">        Only the extracted face feature will be stored on server until</span>
+<span class="sd">        [PersonGroup PersonFace -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523e),</span>
+<span class="sd">        [PersonGroup Person -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039523d)</span>
+<span class="sd">        or [PersonGroup -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395245)</span>
+<span class="sd">        is called.</span>
+<span class="sd">        &lt;br /&gt; Note persistedFaceId is different from faceId generated by [Face</span>
+<span class="sd">        -</span>
+<span class="sd">        Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span>
+<span class="sd">        * Higher face image quality means better recognition precision. Please</span>
+<span class="sd">        consider high-quality faces: frontal, clear, and face size is 200x200</span>
+<span class="sd">        pixels (100 pixels between eyes) or bigger.</span>
+<span class="sd">        * Each person entry can hold up to 248 faces.</span>
+<span class="sd">        * JPEG, PNG, GIF (the first frame), and BMP format are supported. The</span>
+<span class="sd">        allowed image file size is from 1KB to 6MB.</span>
+<span class="sd">        * &quot;targetFace&quot; rectangle should contain one face. Zero or multiple</span>
+<span class="sd">        faces will be regarded as an error. If the provided &quot;targetFace&quot;</span>
+<span class="sd">        rectangle is not returned from [Face -</span>
+<span class="sd">        Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236),</span>
+<span class="sd">        there’s no guarantee to detect and add the face successfully.</span>
+<span class="sd">        * Out of detectable face size (36x36 - 4096x4096 pixels), large</span>
+<span class="sd">        head-pose, or large occlusions will cause failures.</span>
+<span class="sd">        * Adding/deleting faces to/from a same person will be processed</span>
+<span class="sd">        sequentially. Adding/deleting faces to/from different persons are</span>
+<span class="sd">        processed in parallel.</span>
 
 <span class="sd">        :param person_group_id: Id referencing a particular person group.</span>
 <span class="sd">        :type person_group_id: str</span>
@@ -801,8 +835,37 @@
 
 <div class="viewcode-block" id="PersonGroupPersonOperations.add_face_from_url"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.PersonGroupPersonOperations.add_face_from_url">[docs]</a>    <span class="k">def</span> <span class="nf">add_face_from_url</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">person_group_id</span><span class="p">,</span> <span class="n">person_id</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_face</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Add a representative face to a person for identification. The input</span>
-<span class="sd">        face is specified as an image with a targetFace rectangle.</span>
+        <span class="sd">&quot;&quot;&quot;Add a face to a person into a large person group for face</span>
+<span class="sd">        identification or verification. To deal with an image contains multiple</span>
+<span class="sd">        faces, input face can be specified as an image with a targetFace</span>
+<span class="sd">        rectangle. It returns a persistedFaceId representing the added face. No</span>
+<span class="sd">        image will be stored. Only the extracted face feature will be stored on</span>
+<span class="sd">        server until [LargePersonGroup PersonFace -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ae2966ac60f11b48b5aa3),</span>
+<span class="sd">        [LargePersonGroup Person -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/599ade5c6ac60f11b48b5aa2)</span>
+<span class="sd">        or [LargePersonGroup -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/599adc216ac60f11b48b5a9f)</span>
+<span class="sd">        is called.</span>
+<span class="sd">        &lt;br /&gt; Note persistedFaceId is different from faceId generated by [Face</span>
+<span class="sd">        -</span>
+<span class="sd">        Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span>
+<span class="sd">        *   Higher face image quality means better recognition precision.</span>
+<span class="sd">        Please consider high-quality faces: frontal, clear, and face size is</span>
+<span class="sd">        200x200 pixels (100 pixels between eyes) or bigger.</span>
+<span class="sd">        *   Each person entry can hold up to 248 faces.</span>
+<span class="sd">        *   JPEG, PNG, GIF (the first frame), and BMP format are supported. The</span>
+<span class="sd">        allowed image file size is from 1KB to 6MB.</span>
+<span class="sd">        *   &quot;targetFace&quot; rectangle should contain one face. Zero or multiple</span>
+<span class="sd">        faces will be regarded as an error. If the provided &quot;targetFace&quot;</span>
+<span class="sd">        rectangle is not returned from [Face -</span>
+<span class="sd">        Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236),</span>
+<span class="sd">        there’s no guarantee to detect and add the face successfully.</span>
+<span class="sd">        *   Out of detectable face size (36x36 - 4096x4096 pixels), large</span>
+<span class="sd">        head-pose, or large occlusions will cause failures.</span>
+<span class="sd">        *   Adding/deleting faces to/from a same person will be processed</span>
+<span class="sd">        sequentially. Adding/deleting faces to/from different persons are</span>
+<span class="sd">        processed in parallel.</span>
 
 <span class="sd">        :param person_group_id: Id referencing a particular person group.</span>
 <span class="sd">        :type person_group_id: str</span>

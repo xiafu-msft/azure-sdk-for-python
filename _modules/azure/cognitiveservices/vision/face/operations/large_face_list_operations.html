@@ -347,9 +347,10 @@
 <span class="sd">        Add](/docs/services/563879b61984550e40cbbe8d/operations/5a158c10d2de3616c086f2d3)</span>
 <span class="sd">        to import the faces and [LargeFaceList -</span>
 <span class="sd">        Train](/docs/services/563879b61984550e40cbbe8d/operations/5a158422d2de3616c086f2d1)</span>
-<span class="sd">        to make it ready for [Face -</span>
-<span class="sd">        FindSimilar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span>
-<span class="sd">        Faces are stored on server until [LargeFaceList -</span>
+<span class="sd">        to make it ready for [Face - Find</span>
+<span class="sd">        Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span>
+<span class="sd">        No image will be stored. Only the extracted face features are stored on</span>
+<span class="sd">        server until [LargeFaceList -</span>
 <span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)</span>
 <span class="sd">        is called.</span>
 <span class="sd">        &lt;br /&gt; Find Similar is used for scenario like finding celebrity-like</span>
@@ -360,19 +361,24 @@
 <span class="sd">        [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d)</span>
 <span class="sd">        and [Face -</span>
 <span class="sd">        Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span>
-<span class="sd">        &lt;br /&gt;</span>
-<span class="sd">        * Free-tier subscription quota: 64 large face lists.</span>
-<span class="sd">        * S0-tier subscription quota: 1,000,000 large face lists.</span>
-<span class="sd">        &lt;br /&gt;</span>
-<span class="sd">        &#39;recognitionModel&#39; should be specified to associate with this large</span>
-<span class="sd">        face list. The default value for &#39;recognitionModel&#39; is</span>
+<span class="sd">        &lt;br/&gt;&#39;recognitionModel&#39; should be specified to associate with this</span>
+<span class="sd">        large face list. The default value for &#39;recognitionModel&#39; is</span>
 <span class="sd">        &#39;recognition_01&#39;, if the latest model needed, please explicitly specify</span>
 <span class="sd">        the model you need in this parameter. New faces that are added to an</span>
 <span class="sd">        existing large face list will use the recognition model that&#39;s already</span>
 <span class="sd">        associated with the collection. Existing face features in a large face</span>
 <span class="sd">        list can&#39;t be updated to features extracted by another version of</span>
 <span class="sd">        recognition model.</span>
-<span class="sd">        .</span>
+<span class="sd">        * &#39;recognition_01&#39;: The default recognition model for [LargeFaceList-</span>
+<span class="sd">        Create](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc).</span>
+<span class="sd">        All those large face lists created before 2019 March are bonded with</span>
+<span class="sd">        this recognition model.</span>
+<span class="sd">        * &#39;recognition_02&#39;: Recognition model released in 2019 March.</span>
+<span class="sd">        &#39;recognition_02&#39; is recommended since its overall accuracy is improved</span>
+<span class="sd">        compared with &#39;recognition_01&#39;.</span>
+<span class="sd">        Large face list quota:</span>
+<span class="sd">        * Free-tier subscription quota: 64 large face lists.</span>
+<span class="sd">        * S0-tier subscription quota: 1,000,000 large face lists.</span>
 
 <span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
 <span class="sd">         list.</span>
@@ -546,8 +552,7 @@
 
 <div class="viewcode-block" id="LargeFaceListOperations.delete"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.delete">[docs]</a>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Delete an existing large face list according to faceListId. Persisted</span>
-<span class="sd">        face images in the large face list will also be deleted.</span>
+        <span class="sd">&quot;&quot;&quot;Delete a specified large face list.</span>
 
 <span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
 <span class="sd">         list.</span>
@@ -768,9 +773,11 @@
 
 <div class="viewcode-block" id="LargeFaceListOperations.delete_face"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.delete_face">[docs]</a>    <span class="k">def</span> <span class="nf">delete_face</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">persisted_face_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Delete an existing face from a large face list (given by a</span>
-<span class="sd">        persistedFaceId and a largeFaceListId). Persisted image related to the</span>
-<span class="sd">        face will also be deleted.</span>
+        <span class="sd">&quot;&quot;&quot;Delete a face from a large face list by specified largeFaceListId and</span>
+<span class="sd">        persistedFaceId.</span>
+<span class="sd">        &lt;br /&gt; Adding/deleting faces to/from a same large face list are</span>
+<span class="sd">        processed sequentially and to/from different large face lists are in</span>
+<span class="sd">        parallel.</span>
 
 <span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
 <span class="sd">         list.</span>
@@ -936,9 +943,36 @@
 
 <div class="viewcode-block" id="LargeFaceListOperations.add_face_from_url"><a class="viewcode-back" href="../../../../../../ref/azure.cognitiveservices.vision.face.operations.html#azure.cognitiveservices.vision.face.operations.LargeFaceListOperations.add_face_from_url">[docs]</a>    <span class="k">def</span> <span class="nf">add_face_from_url</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">large_face_list_id</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">user_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_face</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Add a face to a large face list. The input face is specified as an</span>
-<span class="sd">        image with a targetFace rectangle. It returns a persistedFaceId</span>
-<span class="sd">        representing the added face, and persistedFaceId will not expire.</span>
+        <span class="sd">&quot;&quot;&quot;Add a face to a specified large face list, up to 1,000,000 faces.</span>
+<span class="sd">        &lt;br /&gt; To deal with an image contains multiple faces, input face can be</span>
+<span class="sd">        specified as an image with a targetFace rectangle. It returns a</span>
+<span class="sd">        persistedFaceId representing the added face. No image will be stored.</span>
+<span class="sd">        Only the extracted face feature will be stored on server until</span>
+<span class="sd">        [LargeFaceList Face -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a158c8ad2de3616c086f2d4)</span>
+<span class="sd">        or [LargeFaceList -</span>
+<span class="sd">        Delete](/docs/services/563879b61984550e40cbbe8d/operations/5a1580d5d2de3616c086f2cd)</span>
+<span class="sd">        is called.</span>
+<span class="sd">        &lt;br /&gt; Note persistedFaceId is different from faceId generated by [Face</span>
+<span class="sd">        -</span>
+<span class="sd">        Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span>
+<span class="sd">        * Higher face image quality means better recognition precision. Please</span>
+<span class="sd">        consider high-quality faces: frontal, clear, and face size is 200x200</span>
+<span class="sd">        pixels (100 pixels between eyes) or bigger.</span>
+<span class="sd">        * JPEG, PNG, GIF (the first frame), and BMP format are supported. The</span>
+<span class="sd">        allowed image file size is from 1KB to 6MB.</span>
+<span class="sd">        * &quot;targetFace&quot; rectangle should contain one face. Zero or multiple</span>
+<span class="sd">        faces will be regarded as an error. If the provided &quot;targetFace&quot;</span>
+<span class="sd">        rectangle is not returned from [Face -</span>
+<span class="sd">        Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236),</span>
+<span class="sd">        there’s no guarantee to detect and add the face successfully.</span>
+<span class="sd">        * Out of detectable face size (36x36 - 4096x4096 pixels), large</span>
+<span class="sd">        head-pose, or large occlusions will cause failures.</span>
+<span class="sd">        * Adding/deleting faces to/from a same face list are processed</span>
+<span class="sd">        sequentially and to/from different face lists are in parallel.</span>
+<span class="sd">        Quota:</span>
+<span class="sd">        * Free-tier subscription quota: 1,000 faces per large face list.</span>
+<span class="sd">        * S0-tier subscription quota: 1,000,000 faces per large face list.</span>
 
 <span class="sd">        :param large_face_list_id: Id referencing a particular large face</span>
 <span class="sd">         list.</span>
