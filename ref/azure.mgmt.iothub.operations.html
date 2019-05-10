@@ -331,7 +331,7 @@
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – The version of the API. Constant value: “2018-12-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the API. Constant value: “2019-03-22-preview”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -382,7 +382,7 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – The version of the API. Constant value: “2018-12-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the API. Constant value: “2019-03-22-preview”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -1161,7 +1161,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – The version of the API. Constant value: “2018-12-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the API. Constant value: “2019-03-22-preview”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -1215,7 +1215,7 @@ ClientRawResponse</p>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – The version of the API. Constant value: “2018-12-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the API. Constant value: “2019-03-22-preview”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -1425,6 +1425,62 @@ ClientRawResponse</p>
 </dd>
 </dl>
 </dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.iothub.operations.IotHubOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.operations.</code><code class="descname">IotHubOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/operations/iot_hub_operations.html#IotHubOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.operations.IotHubOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>IotHubOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – The version of the API. Constant value: “2019-03-22-preview”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.iothub.operations.IotHubOperations.manual_failover">
+<code class="descname">manual_failover</code><span class="sig-paren">(</span><em>iot_hub_name</em>, <em>resource_group_name</em>, <em>failover_region</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/operations/iot_hub_operations.html#IotHubOperations.manual_failover"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.operations.IotHubOperations.manual_failover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manual Failover Fail over.</p>
+<p>Perform manual fail over of given hub.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iot_hub_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – IotHub to fail over</p></li>
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – resource group which Iot Hub belongs to</p></li>
+<li><p><strong>failover_region</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Region the hub will be failed over to</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>IotHubDescription or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.iothub.models.html#azure.mgmt.iothub.models.IotHubDescription" title="azure.mgmt.iothub.models.IotHubDescription">IotHubDescription</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.iothub.models.html#azure.mgmt.iothub.models.ErrorDetailsException" title="azure.mgmt.iothub.models.ErrorDetailsException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorDetailsException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.iothub.operations.IotHubOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.IotHubOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

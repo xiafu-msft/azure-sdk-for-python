@@ -537,9 +537,9 @@ bus queue endpoint.</p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name that identifies this endpoint. The name
 can only include alphanumeric characters, periods, underscores, hyphens
 and has a maximum length of 64 characters. The following names are
-reserved:  events, operationsMonitoringEvents, fileNotifications,
-$default. Endpoint names must be unique across endpoint types. The name
-need not be the same as the actual queue name.</p></li>
+reserved:  events, fileNotifications, $default. Endpoint names must be
+unique across endpoint types. The name need not be the same as the actual
+queue name.</p></li>
 <li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription identifier of the service bus
 queue endpoint.</p></li>
 <li><p><strong>resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group of the service bus
@@ -563,9 +563,9 @@ bus topic endpoint.</p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name that identifies this endpoint. The name
 can only include alphanumeric characters, periods, underscores, hyphens
 and has a maximum length of 64 characters. The following names are
-reserved:  events, operationsMonitoringEvents, fileNotifications,
-$default. Endpoint names must be unique across endpoint types.  The name
-need not be the same as the actual topic name.</p></li>
+reserved:  events, fileNotifications, $default. Endpoint names must be
+unique across endpoint types.  The name need not be the same as the actual
+topic name.</p></li>
 <li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription identifier of the service bus
 topic endpoint.</p></li>
 <li><p><strong>resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group of the service bus
@@ -589,8 +589,8 @@ endpoint.</p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name that identifies this endpoint. The name
 can only include alphanumeric characters, periods, underscores, hyphens
 and has a maximum length of 64 characters. The following names are
-reserved:  events, operationsMonitoringEvents, fileNotifications,
-$default. Endpoint names must be unique across endpoint types.</p></li>
+reserved:  events, fileNotifications, $default. Endpoint names must be
+unique across endpoint types.</p></li>
 <li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription identifier of the event hub
 endpoint.</p></li>
 <li><p><strong>resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group of the event hub
@@ -602,7 +602,7 @@ endpoint.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.iothub.models.RoutingStorageContainerProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">RoutingStorageContainerProperties</code><span class="sig-paren">(</span><em>*</em>, <em>connection_string: str</em>, <em>name: str</em>, <em>container_name: str</em>, <em>subscription_id: str = None</em>, <em>resource_group: str = None</em>, <em>file_name_format: str = None</em>, <em>batch_frequency_in_seconds: int = None</em>, <em>max_chunk_size_in_bytes: int = None</em>, <em>encoding: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/routing_storage_container_properties_py3.html#RoutingStorageContainerProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.RoutingStorageContainerProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">RoutingStorageContainerProperties</code><span class="sig-paren">(</span><em>*</em>, <em>connection_string: str</em>, <em>name: str</em>, <em>container_name: str</em>, <em>subscription_id: str = None</em>, <em>resource_group: str = None</em>, <em>file_name_format: str = None</em>, <em>batch_frequency_in_seconds: int = None</em>, <em>max_chunk_size_in_bytes: int = None</em>, <em>encoding=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/routing_storage_container_properties_py3.html#RoutingStorageContainerProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.RoutingStorageContainerProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The properties related to a storage container endpoint.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -614,8 +614,8 @@ account.</p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The name that identifies this endpoint. The name
 can only include alphanumeric characters, periods, underscores, hyphens
 and has a maximum length of 64 characters. The following names are
-reserved:  events, operationsMonitoringEvents, fileNotifications,
-$default. Endpoint names must be unique across endpoint types.</p></li>
+reserved:  events, fileNotifications, $default. Endpoint names must be
+unique across endpoint types.</p></li>
 <li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subscription identifier of the storage
 account.</p></li>
 <li><p><strong>resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group of the storage
@@ -631,8 +631,9 @@ value is 300 seconds.</p></li>
 <li><p><strong>max_chunk_size_in_bytes</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Maximum number of bytes for each blob
 written to storage. Value should be between 10485760(10MB) and
 524288000(500MB). Default value is 314572800(300MB).</p></li>
-<li><p><strong>encoding</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Encoding that is used to serialize messages to blobs.
-Supported values are ‘avro’ and ‘avrodeflate’. Default value is ‘avro’.</p></li>
+<li><p><strong>encoding</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><em>enum</em>) – Encoding that is used to serialize messages to blobs.
+Supported values are ‘avro’, ‘avrodeflate’, and ‘JSON’. Default value is
+‘avro’. Possible values include: ‘Avro’, ‘AvroDeflate’, ‘JSON’</p></li>
 </ul>
 </dd>
 </dl>
@@ -732,8 +733,27 @@ applied to. For example, DeviceMessages. Default value: “DeviceMessages” .</
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.iothub.models.EnrichmentProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">EnrichmentProperties</code><span class="sig-paren">(</span><em>*</em>, <em>key: str</em>, <em>value: str</em>, <em>endpoint_names</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/enrichment_properties_py3.html#EnrichmentProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.EnrichmentProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The properties of an enrichment that your IoT hub applies to messages
+delivered to endpoints.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The key or name for the enrichment property.</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The value for the enrichment property.</p></li>
+<li><p><strong>endpoint_names</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. The list of endpoints for which the
+enrichment is applied to the message.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.iothub.models.RoutingProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">RoutingProperties</code><span class="sig-paren">(</span><em>*</em>, <em>endpoints=None</em>, <em>routes=None</em>, <em>fallback_route=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/routing_properties_py3.html#RoutingProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.RoutingProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">RoutingProperties</code><span class="sig-paren">(</span><em>*</em>, <em>endpoints=None</em>, <em>routes=None</em>, <em>fallback_route=None</em>, <em>enrichments=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/routing_properties_py3.html#RoutingProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.RoutingProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The routing related properties of the IoT hub. See:
 <a class="reference external" href="https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging">https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging</a>.</p>
@@ -750,6 +770,9 @@ fall-back route when none of the conditions specified in the ‘routes’
 section are met. This is an optional parameter. When this property is not
 set, the messages which do not meet any of the conditions specified in the
 ‘routes’ section get routed to the built-in eventhub endpoint.</p></li>
+<li><p><strong>enrichments</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.iothub.models.EnrichmentProperties" title="azure.mgmt.iothub.models.EnrichmentProperties"><em>EnrichmentProperties</em></a><em>]</em>) – The list of user-provided enrichments that the IoT hub
+applies to messages to be delivered to built-in and custom endpoints. See:
+<a class="reference external" href="https://aka.ms/iotmsgenrich">https://aka.ms/iotmsgenrich</a></p></li>
 </ul>
 </dd>
 </dl>
@@ -764,7 +787,7 @@ set, the messages which do not meet any of the conditions specified in the
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sas_ttl_as_iso8601</strong> (<em>timedelta</em>) – The period of time for which the the SAS URI
+<li><p><strong>sas_ttl_as_iso8601</strong> (<em>timedelta</em>) – The period of time for which the SAS URI
 generated by IoT Hub for file upload is valid. See:
 <a class="reference external" href="https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options">https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload#file-upload-notification-configuration-options</a>.</p></li>
 <li><p><strong>connection_string</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The connection string for the Azure
@@ -841,22 +864,6 @@ cloud-to-device messages in the device queue. See:
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.iothub.models.OperationsMonitoringProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">OperationsMonitoringProperties</code><span class="sig-paren">(</span><em>*</em>, <em>events=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/operations_monitoring_properties_py3.html#OperationsMonitoringProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.OperationsMonitoringProperties" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The operations monitoring properties for the IoT hub. The possible keys to
-the dictionary are Connections, DeviceTelemetry, C2DCommands,
-DeviceIdentityOperations, FileUploadOperations, Routes, D2CTwinOperations,
-C2DTwinOperations, TwinQueries, JobsOperations, DirectMethods.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>events</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.iothub.models.OperationMonitoringLevel" title="azure.mgmt.iothub.models.OperationMonitoringLevel"><em>OperationMonitoringLevel</em></a><em>]</em>) – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.iothub.models.IotHubPropertiesDeviceStreams">
 <em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">IotHubPropertiesDeviceStreams</code><span class="sig-paren">(</span><em>*</em>, <em>streaming_endpoints=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/iot_hub_properties_device_streams_py3.html#IotHubPropertiesDeviceStreams"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.IotHubPropertiesDeviceStreams" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
@@ -870,7 +877,7 @@ C2DTwinOperations, TwinQueries, JobsOperations, DirectMethods.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.iothub.models.IotHubProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">IotHubProperties</code><span class="sig-paren">(</span><em>*</em>, <em>authorization_policies=None</em>, <em>ip_filter_rules=None</em>, <em>event_hub_endpoints=None</em>, <em>routing=None</em>, <em>storage_endpoints=None</em>, <em>messaging_endpoints=None</em>, <em>enable_file_upload_notifications: bool = None</em>, <em>cloud_to_device=None</em>, <em>comments: str = None</em>, <em>operations_monitoring_properties=None</em>, <em>device_streams=None</em>, <em>features=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/iot_hub_properties_py3.html#IotHubProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.IotHubProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">IotHubProperties</code><span class="sig-paren">(</span><em>*</em>, <em>authorization_policies=None</em>, <em>ip_filter_rules=None</em>, <em>event_hub_endpoints=None</em>, <em>routing=None</em>, <em>storage_endpoints=None</em>, <em>messaging_endpoints=None</em>, <em>enable_file_upload_notifications: bool = None</em>, <em>cloud_to_device=None</em>, <em>comments: str = None</em>, <em>device_streams=None</em>, <em>features=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/iot_hub_properties_py3.html#IotHubProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.IotHubProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The properties of an IoT hub.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -883,9 +890,9 @@ secure a connection to the IoT hub.</p></li>
 <li><p><strong>ip_filter_rules</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.iothub.models.IpFilterRule" title="azure.mgmt.iothub.models.IpFilterRule"><em>IpFilterRule</em></a><em>]</em>) – The IP filter rules.</p></li>
 <li><p><strong>event_hub_endpoints</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>,
 </em><a class="reference internal" href="#azure.mgmt.iothub.models.EventHubProperties" title="azure.mgmt.iothub.models.EventHubProperties"><em>EventHubProperties</em></a><em>]</em>) – The Event Hub-compatible endpoint properties.
-The possible keys to this dictionary are events and
-operationsMonitoringEvents. Both of these keys have to be present in the
-dictionary while making create or update calls for the IoT hub.</p></li>
+The only possible keys to this dictionary is events. This key has to be
+present in the dictionary while making create or update calls for the IoT
+hub.</p></li>
 <li><p><strong>routing</strong> (<a class="reference internal" href="#azure.mgmt.iothub.models.RoutingProperties" title="azure.mgmt.iothub.models.RoutingProperties"><em>RoutingProperties</em></a>) – </p></li>
 <li><p><strong>storage_endpoints</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>,
 </em><a class="reference internal" href="#azure.mgmt.iothub.models.StorageEndpointProperties" title="azure.mgmt.iothub.models.StorageEndpointProperties"><em>StorageEndpointProperties</em></a><em>]</em>) – The list of Azure Storage endpoints where you
@@ -901,7 +908,6 @@ upload notification queue.</p></li>
 notifications are enabled.</p></li>
 <li><p><strong>cloud_to_device</strong> (<a class="reference internal" href="#azure.mgmt.iothub.models.CloudToDeviceProperties" title="azure.mgmt.iothub.models.CloudToDeviceProperties"><em>CloudToDeviceProperties</em></a>) – </p></li>
 <li><p><strong>comments</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – IoT hub comments.</p></li>
-<li><p><strong>operations_monitoring_properties</strong> (<a class="reference internal" href="#azure.mgmt.iothub.models.OperationsMonitoringProperties" title="azure.mgmt.iothub.models.OperationsMonitoringProperties"><em>OperationsMonitoringProperties</em></a>) – </p></li>
 <li><p><strong>device_streams</strong> (<a class="reference internal" href="#azure.mgmt.iothub.models.IotHubPropertiesDeviceStreams" title="azure.mgmt.iothub.models.IotHubPropertiesDeviceStreams"><em>IotHubPropertiesDeviceStreams</em></a>) – The device streams properties of iothub.</p></li>
 <li><p><strong>features</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.iothub.models.Capabilities" title="azure.mgmt.iothub.models.Capabilities"><em>Capabilities</em></a>) – The capabilities and features enabled for the IoT hub.
 Possible values include: ‘None’, ‘DeviceManagement’</p></li>
@@ -910,7 +916,7 @@ Possible values include: ‘None’, ‘DeviceManagement’</p></li>
 <dt class="field-even">Variables</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The provisioning state.</p></li>
-<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Thehub state state.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The hub state.</p></li>
 <li><p><strong>host_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the host.</p></li>
 </ul>
 </dd>
@@ -1094,8 +1100,18 @@ sending a request.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>endpoint_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id of the endpoint</p></li>
-<li><p><strong>health_status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.iothub.models.EndpointHealthStatus" title="azure.mgmt.iothub.models.EndpointHealthStatus"><em>EndpointHealthStatus</em></a>) – Health status. Possible values include: ‘unknown’,
-‘healthy’, ‘unhealthy’, ‘dead’</p></li>
+<li><p><strong>health_status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.iothub.models.EndpointHealthStatus" title="azure.mgmt.iothub.models.EndpointHealthStatus"><em>EndpointHealthStatus</em></a>) – Health statuses have following meanings. The
+‘healthy’ status shows that the endpoint is accepting messages as
+expected. The ‘unhealthy’ status shows that the endpoint is not accepting
+messages as expected and IoT Hub is retrying to send data to this
+endpoint. The status of an unhealthy endpoint will be updated to healthy
+when IoT Hub has established an eventually consistent state of health. The
+‘dead’ status shows that the endpoint is not accepting messages, after IoT
+Hub retried sending messages for the retrial period. See IoT Hub metrics
+to identify errors and monitor issues with endpoints. The ‘unknown’ status
+shows that the IoT Hub has not established a connection with the endpoint.
+No messages have been delivered to or rejected from this endpoint.
+Possible values include: ‘unknown’, ‘healthy’, ‘unhealthy’, ‘dead’</p></li>
 </ul>
 </dd>
 </dl>
@@ -1530,6 +1546,19 @@ hub.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.iothub.models.FailoverInput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">FailoverInput</code><span class="sig-paren">(</span><em>*</em>, <em>failover_region: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/failover_input_py3.html#FailoverInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.FailoverInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Use to provide failover region when requesting manual Failover for a hub.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>failover_region</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Region the hub will be failed over to</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.iothub.models.OperationPaged">
 <em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">OperationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/operation_paged.html#OperationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.OperationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
@@ -1712,33 +1741,6 @@ hub.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.iothub.models.RoutingSource.twin_change_events">
 <code class="descname">twin_change_events</code><em class="property"> = 'TwinChangeEvents'</em><a class="headerlink" href="#azure.mgmt.iothub.models.RoutingSource.twin_change_events" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.iothub.models.OperationMonitoringLevel">
-<em class="property">class </em><code class="descclassname">azure.mgmt.iothub.models.</code><code class="descname">OperationMonitoringLevel</code><a class="reference internal" href="../_modules/azure/mgmt/iothub/models/iot_hub_client_enums.html#OperationMonitoringLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.models.OperationMonitoringLevel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
-<p>An enumeration.</p>
-<dl class="attribute">
-<dt id="azure.mgmt.iothub.models.OperationMonitoringLevel.error">
-<code class="descname">error</code><em class="property"> = 'Error'</em><a class="headerlink" href="#azure.mgmt.iothub.models.OperationMonitoringLevel.error" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.iothub.models.OperationMonitoringLevel.error_information">
-<code class="descname">error_information</code><em class="property"> = 'Error, Information'</em><a class="headerlink" href="#azure.mgmt.iothub.models.OperationMonitoringLevel.error_information" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.iothub.models.OperationMonitoringLevel.information">
-<code class="descname">information</code><em class="property"> = 'Information'</em><a class="headerlink" href="#azure.mgmt.iothub.models.OperationMonitoringLevel.information" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.iothub.models.OperationMonitoringLevel.none">
-<code class="descname">none</code><em class="property"> = 'None'</em><a class="headerlink" href="#azure.mgmt.iothub.models.OperationMonitoringLevel.none" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

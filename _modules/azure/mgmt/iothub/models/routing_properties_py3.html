@@ -332,19 +332,25 @@
 <span class="sd">     set, the messages which do not meet any of the conditions specified in the</span>
 <span class="sd">     &#39;routes&#39; section get routed to the built-in eventhub endpoint.</span>
 <span class="sd">    :type fallback_route: ~azure.mgmt.iothub.models.FallbackRouteProperties</span>
+<span class="sd">    :param enrichments: The list of user-provided enrichments that the IoT hub</span>
+<span class="sd">     applies to messages to be delivered to built-in and custom endpoints. See:</span>
+<span class="sd">     https://aka.ms/iotmsgenrich</span>
+<span class="sd">    :type enrichments: list[~azure.mgmt.iothub.models.EnrichmentProperties]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;endpoints&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;endpoints&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;RoutingEndpoints&#39;</span><span class="p">},</span>
         <span class="s1">&#39;routes&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;routes&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[RouteProperties]&#39;</span><span class="p">},</span>
         <span class="s1">&#39;fallback_route&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;fallbackRoute&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;FallbackRouteProperties&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;enrichments&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;enrichments&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;[EnrichmentProperties]&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">endpoints</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">routes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fallback_route</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">endpoints</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">routes</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fallback_route</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">enrichments</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">RoutingProperties</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">endpoints</span> <span class="o">=</span> <span class="n">endpoints</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">routes</span> <span class="o">=</span> <span class="n">routes</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">fallback_route</span> <span class="o">=</span> <span class="n">fallback_route</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fallback_route</span> <span class="o">=</span> <span class="n">fallback_route</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enrichments</span> <span class="o">=</span> <span class="n">enrichments</span></div>
 </pre></div>
 
            </div>

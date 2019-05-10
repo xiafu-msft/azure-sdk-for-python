@@ -320,8 +320,18 @@
 
 <span class="sd">    :param endpoint_id: Id of the endpoint</span>
 <span class="sd">    :type endpoint_id: str</span>
-<span class="sd">    :param health_status: Health status. Possible values include: &#39;unknown&#39;,</span>
-<span class="sd">     &#39;healthy&#39;, &#39;unhealthy&#39;, &#39;dead&#39;</span>
+<span class="sd">    :param health_status: Health statuses have following meanings. The</span>
+<span class="sd">     &#39;healthy&#39; status shows that the endpoint is accepting messages as</span>
+<span class="sd">     expected. The &#39;unhealthy&#39; status shows that the endpoint is not accepting</span>
+<span class="sd">     messages as expected and IoT Hub is retrying to send data to this</span>
+<span class="sd">     endpoint. The status of an unhealthy endpoint will be updated to healthy</span>
+<span class="sd">     when IoT Hub has established an eventually consistent state of health. The</span>
+<span class="sd">     &#39;dead&#39; status shows that the endpoint is not accepting messages, after IoT</span>
+<span class="sd">     Hub retried sending messages for the retrial period. See IoT Hub metrics</span>
+<span class="sd">     to identify errors and monitor issues with endpoints. The &#39;unknown&#39; status</span>
+<span class="sd">     shows that the IoT Hub has not established a connection with the endpoint.</span>
+<span class="sd">     No messages have been delivered to or rejected from this endpoint.</span>
+<span class="sd">     Possible values include: &#39;unknown&#39;, &#39;healthy&#39;, &#39;unhealthy&#39;, &#39;dead&#39;</span>
 <span class="sd">    :type health_status: str or ~azure.mgmt.iothub.models.EndpointHealthStatus</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 

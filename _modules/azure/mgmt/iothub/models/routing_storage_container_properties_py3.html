@@ -326,8 +326,8 @@
 <span class="sd">    :param name: Required. The name that identifies this endpoint. The name</span>
 <span class="sd">     can only include alphanumeric characters, periods, underscores, hyphens</span>
 <span class="sd">     and has a maximum length of 64 characters. The following names are</span>
-<span class="sd">     reserved:  events, operationsMonitoringEvents, fileNotifications,</span>
-<span class="sd">     $default. Endpoint names must be unique across endpoint types.</span>
+<span class="sd">     reserved:  events, fileNotifications, $default. Endpoint names must be</span>
+<span class="sd">     unique across endpoint types.</span>
 <span class="sd">    :type name: str</span>
 <span class="sd">    :param subscription_id: The subscription identifier of the storage</span>
 <span class="sd">     account.</span>
@@ -351,8 +351,9 @@
 <span class="sd">     524288000(500MB). Default value is 314572800(300MB).</span>
 <span class="sd">    :type max_chunk_size_in_bytes: int</span>
 <span class="sd">    :param encoding: Encoding that is used to serialize messages to blobs.</span>
-<span class="sd">     Supported values are &#39;avro&#39; and &#39;avrodeflate&#39;. Default value is &#39;avro&#39;.</span>
-<span class="sd">    :type encoding: str</span>
+<span class="sd">     Supported values are &#39;avro&#39;, &#39;avrodeflate&#39;, and &#39;JSON&#39;. Default value is</span>
+<span class="sd">     &#39;avro&#39;. Possible values include: &#39;Avro&#39;, &#39;AvroDeflate&#39;, &#39;JSON&#39;</span>
+<span class="sd">    :type encoding: str or ~azure.mgmt.iothub.models.enum</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
@@ -375,7 +376,7 @@
         <span class="s1">&#39;encoding&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;encoding&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">connection_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">container_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">resource_group</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">file_name_format</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">batch_frequency_in_seconds</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_chunk_size_in_bytes</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">connection_string</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">container_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">resource_group</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">file_name_format</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">batch_frequency_in_seconds</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_chunk_size_in_bytes</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">RoutingStorageContainerProperties</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">connection_string</span> <span class="o">=</span> <span class="n">connection_string</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
