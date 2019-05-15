@@ -314,6 +314,8 @@
 
 <span class="kn">import</span> <span class="nn">uuid</span>
 <span class="kn">from</span> <span class="nn">msrest.pipeline</span> <span class="k">import</span> <span class="n">ClientRawResponse</span>
+<span class="kn">from</span> <span class="nn">msrest.polling</span> <span class="k">import</span> <span class="n">LROPoller</span><span class="p">,</span> <span class="n">NoPolling</span>
+<span class="kn">from</span> <span class="nn">msrestazure.polling.arm_polling</span> <span class="k">import</span> <span class="n">ARMPolling</span>
 
 <span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">models</span>
 
@@ -339,29 +341,9 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
 
-<div class="viewcode-block" id="IotHubOperations.manual_failover"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.iothub.operations.html#azure.mgmt.iothub.operations.IotHubOperations.manual_failover">[docs]</a>    <span class="k">def</span> <span class="nf">manual_failover</span><span class="p">(</span>
+
+    <span class="k">def</span> <span class="nf">_manual_failover_initial</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">iot_hub_name</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">failover_region</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Manual Failover Fail over.</span>
-
-<span class="sd">        Perform manual fail over of given hub.</span>
-
-<span class="sd">        :param iot_hub_name: IotHub to fail over</span>
-<span class="sd">        :type iot_hub_name: str</span>
-<span class="sd">        :param resource_group_name: resource group which Iot Hub belongs to</span>
-<span class="sd">        :type resource_group_name: str</span>
-<span class="sd">        :param failover_region: Region the hub will be failed over to</span>
-<span class="sd">        :type failover_region: str</span>
-<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
-<span class="sd">        :param bool raw: returns the direct response alongside the</span>
-<span class="sd">         deserialized response</span>
-<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
-<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
-<span class="sd">        :return: IotHubDescription or ClientRawResponse if raw=true</span>
-<span class="sd">        :rtype: ~azure.mgmt.iothub.models.IotHubDescription or</span>
-<span class="sd">         ~msrest.pipeline.ClientRawResponse</span>
-<span class="sd">        :raises:</span>
-<span class="sd">         :class:`ErrorDetailsException&lt;azure.mgmt.iothub.models.ErrorDetailsException&gt;`</span>
-<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">failover_input</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">FailoverInput</span><span class="p">(</span><span class="n">failover_region</span><span class="o">=</span><span class="n">failover_region</span><span class="p">)</span>
 
         <span class="c1"># Construct URL</span>
@@ -379,7 +361,6 @@
 
         <span class="c1"># Construct headers</span>
         <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
         <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
@@ -395,19 +376,58 @@
         <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">)</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">202</span><span class="p">]:</span>
             <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">ErrorDetailsException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
 
-        <span class="n">deserialized</span> <span class="o">=</span> <span class="kc">None</span>
-
-        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-            <span class="n">deserialized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="s1">&#39;IotHubDescription&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-
         <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
-            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="n">deserialized</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">client_raw_response</span>
 
-        <span class="k">return</span> <span class="n">deserialized</span></div>
+<div class="viewcode-block" id="IotHubOperations.manual_failover"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.iothub.operations.html#azure.mgmt.iothub.operations.IotHubOperations.manual_failover">[docs]</a>    <span class="k">def</span> <span class="nf">manual_failover</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">iot_hub_name</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">failover_region</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">polling</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Manual Failover Fail over.</span>
+
+<span class="sd">        Perform manual fail over of given hub.</span>
+
+<span class="sd">        :param iot_hub_name: IotHub to fail over</span>
+<span class="sd">        :type iot_hub_name: str</span>
+<span class="sd">        :param resource_group_name: resource group which Iot Hub belongs to</span>
+<span class="sd">        :type resource_group_name: str</span>
+<span class="sd">        :param failover_region: Region the hub will be failed over to</span>
+<span class="sd">        :type failover_region: str</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: The poller return type is ClientRawResponse, the</span>
+<span class="sd">         direct response alongside the deserialized response</span>
+<span class="sd">        :param polling: True for ARMPolling, False for no polling, or a</span>
+<span class="sd">         polling object for personal polling strategy</span>
+<span class="sd">        :return: An instance of LROPoller that returns None or</span>
+<span class="sd">         ClientRawResponse&lt;None&gt; if raw==True</span>
+<span class="sd">        :rtype: ~msrestazure.azure_operation.AzureOperationPoller[None] or</span>
+<span class="sd">         ~msrestazure.azure_operation.AzureOperationPoller[~msrest.pipeline.ClientRawResponse[None]]</span>
+<span class="sd">        :raises:</span>
+<span class="sd">         :class:`ErrorDetailsException&lt;azure.mgmt.iothub.models.ErrorDetailsException&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">raw_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_manual_failover_initial</span><span class="p">(</span>
+            <span class="n">iot_hub_name</span><span class="o">=</span><span class="n">iot_hub_name</span><span class="p">,</span>
+            <span class="n">resource_group_name</span><span class="o">=</span><span class="n">resource_group_name</span><span class="p">,</span>
+            <span class="n">failover_region</span><span class="o">=</span><span class="n">failover_region</span><span class="p">,</span>
+            <span class="n">custom_headers</span><span class="o">=</span><span class="n">custom_headers</span><span class="p">,</span>
+            <span class="n">raw</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">operation_config</span>
+        <span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">get_long_running_output</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+                <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">client_raw_response</span>
+
+        <span class="n">lro_delay</span> <span class="o">=</span> <span class="n">operation_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;long_running_operation_timeout&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">long_running_operation_timeout</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">polling</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">ARMPolling</span><span class="p">(</span><span class="n">lro_delay</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">polling</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">NoPolling</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">polling</span>
+        <span class="k">return</span> <span class="n">LROPoller</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="n">raw_result</span><span class="p">,</span> <span class="n">get_long_running_output</span><span class="p">,</span> <span class="n">polling_method</span><span class="p">)</span></div>
     <span class="n">manual_failover</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/subscriptions/</span><span class="si">{subscriptionId}</span><span class="s1">/resourceGroups/</span><span class="si">{resourceGroupName}</span><span class="s1">/providers/Microsoft.Devices/IotHubs/</span><span class="si">{iotHubName}</span><span class="s1">/failover&#39;</span><span class="p">}</span></div>
 </pre></div>
 

@@ -362,7 +362,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.iothub.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\sdk\\iothub\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1045,7 +1045,7 @@ SharedAccessSignatureAuthorizationRule</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.iothub.operations.IotHubResourceOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.IotHubResourceOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\sdk\\iothub\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.IotHubResourceOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1195,7 +1195,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.iothub.operations.ResourceProviderCommonOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.ResourceProviderCommonOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\sdk\\iothub\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.ResourceProviderCommonOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1387,7 +1387,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.iothub.operations.CertificatesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.CertificatesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\sdk\\iothub\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.CertificatesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1448,7 +1448,7 @@ ClientRawResponse</p>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.iothub.operations.IotHubOperations.manual_failover">
-<code class="descname">manual_failover</code><span class="sig-paren">(</span><em>iot_hub_name</em>, <em>resource_group_name</em>, <em>failover_region</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/operations/iot_hub_operations.html#IotHubOperations.manual_failover"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.operations.IotHubOperations.manual_failover" title="Permalink to this definition">¶</a></dt>
+<code class="descname">manual_failover</code><span class="sig-paren">(</span><em>iot_hub_name</em>, <em>resource_group_name</em>, <em>failover_region</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/iothub/operations/iot_hub_operations.html#IotHubOperations.manual_failover"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.iothub.operations.IotHubOperations.manual_failover" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manual Failover Fail over.</p>
 <p>Perform manual fail over of given hub.</p>
 <dl class="field-list simple">
@@ -1458,18 +1458,19 @@ ClientRawResponse</p>
 <li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – resource group which Iot Hub belongs to</p></li>
 <li><p><strong>failover_region</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Region the hub will be failed over to</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>IotHubDescription or ClientRawResponse if raw=true</p>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.iothub.models.html#azure.mgmt.iothub.models.IotHubDescription" title="azure.mgmt.iothub.models.IotHubDescription">IotHubDescription</a> or
-ClientRawResponse</p>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference internal" href="azure.mgmt.iothub.models.html#azure.mgmt.iothub.models.ErrorDetailsException" title="azure.mgmt.iothub.models.ErrorDetailsException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorDetailsException</span></code></a></p>
@@ -1479,7 +1480,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.iothub.operations.IotHubOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.IotHubOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.iothub.models' from 'd:\\a\\1\\s\\sdk\\iothub\\azure-mgmt-iothub\\azure\\mgmt\\iothub\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.iothub.operations.IotHubOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
