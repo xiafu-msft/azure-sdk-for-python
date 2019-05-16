@@ -312,18 +312,26 @@
 <span class="c1"># regenerated.</span>
 <span class="c1"># --------------------------------------------------------------------------</span>
 
-<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">ServiceClient</span>
+<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">SDKClient</span>
 <span class="kn">from</span> <span class="nn">msrest</span> <span class="k">import</span> <span class="n">Serializer</span><span class="p">,</span> <span class="n">Deserializer</span>
 <span class="kn">from</span> <span class="nn">msrestazure</span> <span class="k">import</span> <span class="n">AzureConfiguration</span>
 <span class="kn">from</span> <span class="nn">.version</span> <span class="k">import</span> <span class="n">VERSION</span>
 <span class="kn">from</span> <span class="nn">.operations.operations</span> <span class="k">import</span> <span class="n">Operations</span>
-<span class="kn">from</span> <span class="nn">.operations.components_operations</span> <span class="k">import</span> <span class="n">ComponentsOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.web_tests_operations</span> <span class="k">import</span> <span class="n">WebTestsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.annotations_operations</span> <span class="k">import</span> <span class="n">AnnotationsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.api_keys_operations</span> <span class="k">import</span> <span class="n">APIKeysOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.export_configurations_operations</span> <span class="k">import</span> <span class="n">ExportConfigurationsOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.proactive_detection_configurations_operations</span> <span class="k">import</span> <span class="n">ProactiveDetectionConfigurationsOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.component_current_billing_features_operations</span> <span class="k">import</span> <span class="n">ComponentCurrentBillingFeaturesOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.component_quota_status_operations</span> <span class="k">import</span> <span class="n">ComponentQuotaStatusOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.api_keys_operations</span> <span class="k">import</span> <span class="n">APIKeysOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.component_feature_capabilities_operations</span> <span class="k">import</span> <span class="n">ComponentFeatureCapabilitiesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.component_available_features_operations</span> <span class="k">import</span> <span class="n">ComponentAvailableFeaturesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.proactive_detection_configurations_operations</span> <span class="k">import</span> <span class="n">ProactiveDetectionConfigurationsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.components_operations</span> <span class="k">import</span> <span class="n">ComponentsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.work_item_configurations_operations</span> <span class="k">import</span> <span class="n">WorkItemConfigurationsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.favorites_operations</span> <span class="k">import</span> <span class="n">FavoritesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.web_test_locations_operations</span> <span class="k">import</span> <span class="n">WebTestLocationsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.web_tests_operations</span> <span class="k">import</span> <span class="n">WebTestsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.analytics_items_operations</span> <span class="k">import</span> <span class="n">AnalyticsItemsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.workbooks_operations</span> <span class="k">import</span> <span class="n">WorkbooksOperations</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">models</span>
 
 
@@ -335,7 +343,7 @@
 <span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
 <span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
 <span class="sd">     object&lt;msrestazure.azure_active_directory&gt;`</span>
-<span class="sd">    :param subscription_id: The Azure subscription ID.</span>
+<span class="sd">    :param subscription_id: The ID of the target subscription.</span>
 <span class="sd">    :type subscription_id: str</span>
 <span class="sd">    :param str base_url: Service URL</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -359,7 +367,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">subscription_id</span> <span class="o">=</span> <span class="n">subscription_id</span>
 
 
-<div class="viewcode-block" id="ApplicationInsightsManagementClient"><a class="viewcode-back" href="../../../../ref/azure.mgmt.applicationinsights.html#azure.mgmt.applicationinsights.ApplicationInsightsManagementClient">[docs]</a><span class="k">class</span> <span class="nc">ApplicationInsightsManagementClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="ApplicationInsightsManagementClient"><a class="viewcode-back" href="../../../../ref/azure.mgmt.applicationinsights.html#azure.mgmt.applicationinsights.ApplicationInsightsManagementClient">[docs]</a><span class="k">class</span> <span class="nc">ApplicationInsightsManagementClient</span><span class="p">(</span><span class="n">SDKClient</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Composite Swagger for Application Insights Management Client</span>
 
 <span class="sd">    :ivar config: Configuration for client.</span>
@@ -367,25 +375,41 @@
 
 <span class="sd">    :ivar operations: Operations operations</span>
 <span class="sd">    :vartype operations: azure.mgmt.applicationinsights.operations.Operations</span>
-<span class="sd">    :ivar components: Components operations</span>
-<span class="sd">    :vartype components: azure.mgmt.applicationinsights.operations.ComponentsOperations</span>
-<span class="sd">    :ivar web_tests: WebTests operations</span>
-<span class="sd">    :vartype web_tests: azure.mgmt.applicationinsights.operations.WebTestsOperations</span>
+<span class="sd">    :ivar annotations: Annotations operations</span>
+<span class="sd">    :vartype annotations: azure.mgmt.applicationinsights.operations.AnnotationsOperations</span>
+<span class="sd">    :ivar api_keys: APIKeys operations</span>
+<span class="sd">    :vartype api_keys: azure.mgmt.applicationinsights.operations.APIKeysOperations</span>
 <span class="sd">    :ivar export_configurations: ExportConfigurations operations</span>
 <span class="sd">    :vartype export_configurations: azure.mgmt.applicationinsights.operations.ExportConfigurationsOperations</span>
-<span class="sd">    :ivar proactive_detection_configurations: ProactiveDetectionConfigurations operations</span>
-<span class="sd">    :vartype proactive_detection_configurations: azure.mgmt.applicationinsights.operations.ProactiveDetectionConfigurationsOperations</span>
 <span class="sd">    :ivar component_current_billing_features: ComponentCurrentBillingFeatures operations</span>
 <span class="sd">    :vartype component_current_billing_features: azure.mgmt.applicationinsights.operations.ComponentCurrentBillingFeaturesOperations</span>
 <span class="sd">    :ivar component_quota_status: ComponentQuotaStatus operations</span>
 <span class="sd">    :vartype component_quota_status: azure.mgmt.applicationinsights.operations.ComponentQuotaStatusOperations</span>
-<span class="sd">    :ivar api_keys: APIKeys operations</span>
-<span class="sd">    :vartype api_keys: azure.mgmt.applicationinsights.operations.APIKeysOperations</span>
+<span class="sd">    :ivar component_feature_capabilities: ComponentFeatureCapabilities operations</span>
+<span class="sd">    :vartype component_feature_capabilities: azure.mgmt.applicationinsights.operations.ComponentFeatureCapabilitiesOperations</span>
+<span class="sd">    :ivar component_available_features: ComponentAvailableFeatures operations</span>
+<span class="sd">    :vartype component_available_features: azure.mgmt.applicationinsights.operations.ComponentAvailableFeaturesOperations</span>
+<span class="sd">    :ivar proactive_detection_configurations: ProactiveDetectionConfigurations operations</span>
+<span class="sd">    :vartype proactive_detection_configurations: azure.mgmt.applicationinsights.operations.ProactiveDetectionConfigurationsOperations</span>
+<span class="sd">    :ivar components: Components operations</span>
+<span class="sd">    :vartype components: azure.mgmt.applicationinsights.operations.ComponentsOperations</span>
+<span class="sd">    :ivar work_item_configurations: WorkItemConfigurations operations</span>
+<span class="sd">    :vartype work_item_configurations: azure.mgmt.applicationinsights.operations.WorkItemConfigurationsOperations</span>
+<span class="sd">    :ivar favorites: Favorites operations</span>
+<span class="sd">    :vartype favorites: azure.mgmt.applicationinsights.operations.FavoritesOperations</span>
+<span class="sd">    :ivar web_test_locations: WebTestLocations operations</span>
+<span class="sd">    :vartype web_test_locations: azure.mgmt.applicationinsights.operations.WebTestLocationsOperations</span>
+<span class="sd">    :ivar web_tests: WebTests operations</span>
+<span class="sd">    :vartype web_tests: azure.mgmt.applicationinsights.operations.WebTestsOperations</span>
+<span class="sd">    :ivar analytics_items: AnalyticsItems operations</span>
+<span class="sd">    :vartype analytics_items: azure.mgmt.applicationinsights.operations.AnalyticsItemsOperations</span>
+<span class="sd">    :ivar workbooks: Workbooks operations</span>
+<span class="sd">    :vartype workbooks: azure.mgmt.applicationinsights.operations.WorkbooksOperations</span>
 
 <span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
 <span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
 <span class="sd">     object&lt;msrestazure.azure_active_directory&gt;`</span>
-<span class="sd">    :param subscription_id: The Azure subscription ID.</span>
+<span class="sd">    :param subscription_id: The ID of the target subscription.</span>
 <span class="sd">    :type subscription_id: str</span>
 <span class="sd">    :param str base_url: Service URL</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -394,7 +418,7 @@
             <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">ApplicationInsightsManagementClientConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">ServiceClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ApplicationInsightsManagementClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
 
         <span class="n">client_models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">type</span><span class="p">)}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s1">&#39;2015-05-01&#39;</span>
@@ -403,19 +427,35 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">=</span> <span class="n">Operations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">components</span> <span class="o">=</span> <span class="n">ComponentsOperations</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="n">AnnotationsOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">web_tests</span> <span class="o">=</span> <span class="n">WebTestsOperations</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_keys</span> <span class="o">=</span> <span class="n">APIKeysOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">export_configurations</span> <span class="o">=</span> <span class="n">ExportConfigurationsOperations</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">proactive_detection_configurations</span> <span class="o">=</span> <span class="n">ProactiveDetectionConfigurationsOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">component_current_billing_features</span> <span class="o">=</span> <span class="n">ComponentCurrentBillingFeaturesOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">component_quota_status</span> <span class="o">=</span> <span class="n">ComponentQuotaStatusOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">api_keys</span> <span class="o">=</span> <span class="n">APIKeysOperations</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">component_feature_capabilities</span> <span class="o">=</span> <span class="n">ComponentFeatureCapabilitiesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">component_available_features</span> <span class="o">=</span> <span class="n">ComponentAvailableFeaturesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proactive_detection_configurations</span> <span class="o">=</span> <span class="n">ProactiveDetectionConfigurationsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">components</span> <span class="o">=</span> <span class="n">ComponentsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">work_item_configurations</span> <span class="o">=</span> <span class="n">WorkItemConfigurationsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">favorites</span> <span class="o">=</span> <span class="n">FavoritesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">web_test_locations</span> <span class="o">=</span> <span class="n">WebTestLocationsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">web_tests</span> <span class="o">=</span> <span class="n">WebTestsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">analytics_items</span> <span class="o">=</span> <span class="n">AnalyticsItemsOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">workbooks</span> <span class="o">=</span> <span class="n">WorkbooksOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span></div>
 </pre></div>
 

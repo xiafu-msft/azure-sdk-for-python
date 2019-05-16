@@ -318,9 +318,9 @@
 <span id="azure-mgmt-applicationinsights-models-module"></span><h1>azure.mgmt.applicationinsights.models module<a class="headerlink" href="#module-azure.mgmt.applicationinsights.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.ErrorResponse">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>code=None</em>, <em>message=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/error_response.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Error reponse indicates Insights service is not able to process the
+<p>Error response indicates Insights service is not able to process the
 incoming request. The reason is provided in the error message.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -334,7 +334,7 @@ incoming request. The reason is provided in the error message.</p>
 
 <dl class="exception">
 <dt id="azure.mgmt.applicationinsights.models.ErrorResponseException">
-<em class="property">exception </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/error_response.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
 <p>Server responsed with exception of type: ‘ErrorResponse’.</p>
 <dl class="field-list simple">
@@ -349,7 +349,7 @@ incoming request. The reason is provided in the error message.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.OperationDisplay">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>provider=None</em>, <em>resource=None</em>, <em>operation=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/operation_display.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>*</em>, <em>provider: str = None</em>, <em>resource: str = None</em>, <em>operation: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The object that represents the operation.</p>
 <dl class="field-list simple">
@@ -366,7 +366,7 @@ endpoint, etc.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.Operation">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>name=None</em>, <em>display=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/operation.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.Operation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.Operation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>CDN REST API operation.</p>
 <dl class="field-list simple">
@@ -380,171 +380,110 @@ endpoint, etc.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.Resource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>location</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/resource.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.Resource" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.applicationinsights.models.Annotation">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">Annotation</code><span class="sig-paren">(</span><em>*</em>, <em>annotation_name: str = None</em>, <em>category: str = None</em>, <em>event_time=None</em>, <em>id: str = None</em>, <em>properties: str = None</em>, <em>related_annotation: str = 'null'</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/annotation_py3.html#Annotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.Annotation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An azure resource object.</p>
+<p>Annotation associated with an application insights resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotation_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of annotation</p></li>
+<li><p><strong>category</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Category of annotation, free form</p></li>
+<li><p><strong>event_time</strong> (<em>datetime</em>) – Time when event occurred</p></li>
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unique Id for annotation</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Serialized JSON object for detailed properties</p></li>
+<li><p><strong>related_annotation</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Related parent annotation if any. Default
+value: “null” .</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.InnerError">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">InnerError</code><span class="sig-paren">(</span><em>*</em>, <em>diagnosticcontext: str = None</em>, <em>time=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/inner_error_py3.html#InnerError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.InnerError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Inner error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>diagnosticcontext</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Provides correlation for request</p></li>
+<li><p><strong>time</strong> (<em>datetime</em>) – Request time</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.AnnotationError">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">AnnotationError</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>innererror=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/annotation_error_py3.html#AnnotationError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.AnnotationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error associated with trying to create annotation with Id that already
+exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error detail code and explanation</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error message</p></li>
+<li><p><strong>innererror</strong> (<a class="reference internal" href="#azure.mgmt.applicationinsights.models.InnerError" title="azure.mgmt.applicationinsights.models.InnerError"><em>InnerError</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.mgmt.applicationinsights.models.AnnotationErrorException">
+<em class="property">exception </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">AnnotationErrorException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/annotation_error_py3.html#AnnotationErrorException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.AnnotationErrorException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘AnnotationError’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.APIKeyRequest">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">APIKeyRequest</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>linked_read_properties=None</em>, <em>linked_write_properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/api_key_request_py3.html#APIKeyRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.APIKeyRequest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An Application Insights component API Key creation request definition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the API Key.</p></li>
+<li><p><strong>linked_read_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The read access rights of this API Key.</p></li>
+<li><p><strong>linked_write_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The write access rights of this API Key.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAPIKey">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentAPIKey</code><span class="sig-paren">(</span><em>*</em>, <em>created_date: str = None</em>, <em>name: str = None</em>, <em>linked_read_properties=None</em>, <em>linked_write_properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_api_key_py3.html#ApplicationInsightsComponentAPIKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAPIKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties that define an API key of an Application Insights Component.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource type</p></li>
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique ID of the API key inside an Application Insights
+component. It is auto generated when the API key is created.</p></li>
+<li><p><strong>api_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The API key value. It will be only return once when the API
+Key was created.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.TagsResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">TagsResource</code><span class="sig-paren">(</span><em>tags=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/tags_resource.html#TagsResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.TagsResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A container holding only the Tags for a resource, allowing the user to
-update the tags on a WebTest instance.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponent">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponent</code><span class="sig-paren">(</span><em>location</em>, <em>kind</em>, <em>tags=None</em>, <em>application_type='web'</em>, <em>flow_type='Bluefield'</em>, <em>request_source='rest'</em>, <em>hockey_app_id=None</em>, <em>sampling_percentage=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component.html#ApplicationInsightsComponent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.applicationinsights.models.resource.Resource</span></code></p>
-<p>An Application Insights component definition.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource type</p></li>
-<li><p><strong>application_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique ID of your application. This field
-mirrors the ‘Name’ field and cannot be changed.</p></li>
-<li><p><strong>app_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Application Insights Unique ID for your Application.</p></li>
-<li><p><strong>instrumentation_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Application Insights Instrumentation key. A
-read-only value that applications can use to identify the destination for
-all telemetry sent to Azure Application Insights. This value will be
-supplied upon construction of each new Application Insights component.</p></li>
-<li><p><strong>creation_date</strong> (<em>datetime</em>) – Creation Date for the Application Insights component,
-in ISO 8601 format.</p></li>
-<li><p><strong>tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Tenant Id.</p></li>
-<li><p><strong>hockey_app_token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Token used to authenticate communications with
-between Application Insights and HockeyApp.</p></li>
-<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Current state of this component: whether or not
-is has been provisioned within the resource group it is defined. Users
-cannot change this value but are able to read from it. Values will include
-Succeeded, Deploying, Canceled, and Failed.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
-<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The kind of application that this component refers to, used
-to customize UI. This value is a freeform string, values should typically
-be one of the following: web, ios, other, store, java, phone.</p></li>
-<li><p><strong>application_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationType" title="azure.mgmt.applicationinsights.models.ApplicationType"><em>ApplicationType</em></a>) – Type of application being monitored. Possible
-values include: ‘web’, ‘other’. Default value: “web” .</p></li>
-<li><p><strong>flow_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.FlowType" title="azure.mgmt.applicationinsights.models.FlowType"><em>FlowType</em></a>) – Used by the Application Insights system to determine
-what kind of flow this component was created by. This is to be set to
-‘Bluefield’ when creating/updating a component via the REST API. Possible
-values include: ‘Bluefield’. Default value: “Bluefield” .</p></li>
-<li><p><strong>request_source</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.RequestSource" title="azure.mgmt.applicationinsights.models.RequestSource"><em>RequestSource</em></a>) – Describes what tool created this Application
-Insights component. Customers using this API should set this to the
-default ‘rest’. Possible values include: ‘rest’. Default value: “rest” .</p></li>
-<li><p><strong>hockey_app_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique application ID created when a new
-application is added to HockeyApp, used for communications with HockeyApp.</p></li>
-<li><p><strong>sampling_percentage</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Percentage of the data produced by the
-application being monitored that is being sampled for Application Insights
-telemetry.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.WebTestGeolocation">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WebTestGeolocation</code><span class="sig-paren">(</span><em>location=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/web_test_geolocation.html#WebTestGeolocation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebTestGeolocation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Geo-physical location to run a web test from. You must specify one or more
-locations for the test to run from.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Location ID for the webtest to run from.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.WebTestPropertiesConfiguration">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WebTestPropertiesConfiguration</code><span class="sig-paren">(</span><em>web_test=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/web_test_properties_configuration.html#WebTestPropertiesConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebTestPropertiesConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An XML configuration specification for a WebTest.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>web_test</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The XML specification of a WebTest to run against an
-application.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.WebTest">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WebTest</code><span class="sig-paren">(</span><em>location</em>, <em>synthetic_monitor_id</em>, <em>web_test_name</em>, <em>locations</em>, <em>tags=None</em>, <em>kind='ping'</em>, <em>description=None</em>, <em>enabled=None</em>, <em>frequency=300</em>, <em>timeout=30</em>, <em>web_test_kind='ping'</em>, <em>retry_enabled=None</em>, <em>configuration=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/web_test.html#WebTest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebTest" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.applicationinsights.models.resource.Resource</span></code></p>
-<p>An Application Insights web test definition.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource Id</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource name</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource type</p></li>
-<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Current state of this component, whether or not
-is has been provisioned within the resource group it is defined. Users
-cannot change this value but are able to read from it. Values will include
-Succeeded, Deploying, Canceled, and Failed.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
-<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
-<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.WebTestKind" title="azure.mgmt.applicationinsights.models.WebTestKind"><em>WebTestKind</em></a>) – The kind of web test that this web test watches. Choices are
-ping and multistep. Possible values include: ‘ping’, ‘multistep’. Default
-value: “ping” .</p></li>
-<li><p><strong>synthetic_monitor_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unique ID of this WebTest. This is typically
-the same value as the Name field.</p></li>
-<li><p><strong>web_test_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User defined name if this WebTest.</p></li>
-<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Purpose/user defined descriptive test for this
-WebTest.</p></li>
-<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Is the test actively being monitored.</p></li>
-<li><p><strong>frequency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Interval in seconds between test runs for this WebTest.
-Default value is 300. Default value: 300 .</p></li>
-<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Seconds until this WebTest will timeout and fail. Default
-value is 30. Default value: 30 .</p></li>
-<li><p><strong>web_test_kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
-</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.WebTestKind" title="azure.mgmt.applicationinsights.models.WebTestKind"><em>WebTestKind</em></a>) – The kind of web test this is, valid choices are ping
-and multistep. Possible values include: ‘ping’, ‘multistep’. Default
-value: “ping” .</p></li>
-<li><p><strong>retry_enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Allow for retries should this WebTest fail.</p></li>
-<li><p><strong>locations</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.WebTestGeolocation" title="azure.mgmt.applicationinsights.models.WebTestGeolocation"><em>WebTestGeolocation</em></a><em>]</em>) – A list of where to physically run the tests from to give
-global coverage for accessibility of your application.</p></li>
-<li><p><strong>configuration</strong> (<a class="reference internal" href="#azure.mgmt.applicationinsights.models.WebTestPropertiesConfiguration" title="azure.mgmt.applicationinsights.models.WebTestPropertiesConfiguration"><em>WebTestPropertiesConfiguration</em></a>) – An XML configuration specification for a WebTest.</p></li>
+<li><p><strong>created_date</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The create date of this API key.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the API key.</p></li>
+<li><p><strong>linked_read_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The read access rights of this API Key.</p></li>
+<li><p><strong>linked_write_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The write access rights of this API Key.</p></li>
 </ul>
 </dd>
 </dl>
@@ -552,7 +491,7 @@ global coverage for accessibility of your application.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentExportRequest">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentExportRequest</code><span class="sig-paren">(</span><em>record_types=None</em>, <em>destination_type=None</em>, <em>destination_address=None</em>, <em>is_enabled=None</em>, <em>notification_queue_enabled=None</em>, <em>notification_queue_uri=None</em>, <em>destination_storage_subscription_id=None</em>, <em>destination_storage_location_id=None</em>, <em>destination_account_id=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_export_request.html#ApplicationInsightsComponentExportRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentExportRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentExportRequest</code><span class="sig-paren">(</span><em>*</em>, <em>record_types: str = None</em>, <em>destination_type: str = None</em>, <em>destination_address: str = None</em>, <em>is_enabled: str = None</em>, <em>notification_queue_enabled: str = None</em>, <em>notification_queue_uri: str = None</em>, <em>destination_storage_subscription_id: str = None</em>, <em>destination_storage_location_id: str = None</em>, <em>destination_account_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_export_request_py3.html#ApplicationInsightsComponentExportRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentExportRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An Application Insights component Continuous Export configuration request
 definition.</p>
@@ -583,7 +522,7 @@ storage container.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentExportConfiguration">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentExportConfiguration</code><span class="sig-paren">(</span><em>record_types=None</em>, <em>notification_queue_enabled=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_export_configuration.html#ApplicationInsightsComponentExportConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentExportConfiguration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentExportConfiguration</code><span class="sig-paren">(</span><em>*</em>, <em>record_types: str = None</em>, <em>notification_queue_enabled: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_export_configuration_py3.html#ApplicationInsightsComponentExportConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentExportConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Properties that define a Continuous Export configuration.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -592,7 +531,7 @@ sending a request.</p>
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>export_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique ID of the export configuration inside an
-Applciation Insights component. It is auto generated when the Continuous
+Application Insights component. It is auto generated when the Continuous
 Export configuration is created.</p></li>
 <li><p><strong>instrumentation_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The instrumentation key of the Application
 Insights component.</p></li>
@@ -639,58 +578,10 @@ be exported. The possible values include ‘Requests’, ‘Event’,
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions</code><span class="sig-paren">(</span><em>name=None</em>, <em>display_name=None</em>, <em>description=None</em>, <em>help_url=None</em>, <em>is_hidden=None</em>, <em>is_enabled_by_default=None</em>, <em>is_in_preview=None</em>, <em>supports_email_notifications=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_proactive_detection_configuration_rule_definitions.html#ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Static definitions of the ProactiveDetection configuration rule (same
-values for all components).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The rule name</p></li>
-<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The rule name as it is displayed in UI</p></li>
-<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The rule description</p></li>
-<li><p><strong>help_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – URL which displays aditional info about the proactive
-detection rule</p></li>
-<li><p><strong>is_hidden</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag indicating whether the rule is hidden (from the
-UI)</p></li>
-<li><p><strong>is_enabled_by_default</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag indicating whether the rule is
-enabled by default</p></li>
-<li><p><strong>is_in_preview</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag indicating whether the rule is in preview</p></li>
-<li><p><strong>supports_email_notifications</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag indicating whether email
-notifications are supported for detections for this rule</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfiguration">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentProactiveDetectionConfiguration</code><span class="sig-paren">(</span><em>name=None</em>, <em>enabled=None</em>, <em>send_emails_to_subscription_owners=None</em>, <em>custom_emails=None</em>, <em>last_updated_time=None</em>, <em>rule_definitions=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_proactive_detection_configuration.html#ApplicationInsightsComponentProactiveDetectionConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties that define a ProactiveDetection configuration.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The rule name</p></li>
-<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag that indicates whether this rule is enabled by the
-user</p></li>
-<li><p><strong>send_emails_to_subscription_owners</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag that indicated whether
-notifications on this rule should be sent to subscription owners</p></li>
-<li><p><strong>custom_emails</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Custom email addresses for this rule notifications</p></li>
-<li><p><strong>last_updated_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The last time this rule was updated</p></li>
-<li><p><strong>rule_definitions</strong> (<a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions" title="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions"><em>ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions</em></a>) – Static definitions of the ProactiveDetection
-configuration rule (same values for all components).</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentDataVolumeCap">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentDataVolumeCap</code><span class="sig-paren">(</span><em>cap=None</em>, <em>warning_threshold=None</em>, <em>stop_send_notification_when_hit_threshold=None</em>, <em>stop_send_notification_when_hit_cap=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_data_volume_cap.html#ApplicationInsightsComponentDataVolumeCap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentDataVolumeCap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentDataVolumeCap</code><span class="sig-paren">(</span><em>*</em>, <em>cap: float = None</em>, <em>warning_threshold: int = None</em>, <em>stop_send_notification_when_hit_threshold: bool = None</em>, <em>stop_send_notification_when_hit_cap: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_data_volume_cap_py3.html#ApplicationInsightsComponentDataVolumeCap"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentDataVolumeCap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An Application Insights component daily data volumne cap.</p>
+<p>An Application Insights component daily data volume cap.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
@@ -716,14 +607,14 @@ for this component.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentBillingFeatures">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentBillingFeatures</code><span class="sig-paren">(</span><em>data_volume_cap=None</em>, <em>current_billing_features=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_billing_features.html#ApplicationInsightsComponentBillingFeatures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentBillingFeatures" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentBillingFeatures</code><span class="sig-paren">(</span><em>*</em>, <em>data_volume_cap=None</em>, <em>current_billing_features=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_billing_features_py3.html#ApplicationInsightsComponentBillingFeatures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentBillingFeatures" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An Application Insights component billing features.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data_volume_cap</strong> (<a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentDataVolumeCap" title="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentDataVolumeCap"><em>ApplicationInsightsComponentDataVolumeCap</em></a>) – An Application Insights component daily data
-volumne cap</p></li>
+volume cap</p></li>
 <li><p><strong>current_billing_features</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Current enabled pricing plan. When the
 component is in the Enterprise plan, this will list both ‘Basic’ and
 ‘Application Insights Enterprise’.</p></li>
@@ -734,7 +625,7 @@ component is in the Enterprise plan, this will list both ‘Basic’ and
 
 <dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentQuotaStatus">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentQuotaStatus</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_quota_status.html#ApplicationInsightsComponentQuotaStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentQuotaStatus" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentQuotaStatus</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_quota_status_py3.html#ApplicationInsightsComponentQuotaStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentQuotaStatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>An Application Insights component daily data volume cap status.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -753,43 +644,724 @@ be reset, and data ingestion will resume.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.APIKeyRequest">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">APIKeyRequest</code><span class="sig-paren">(</span><em>name=None</em>, <em>linked_read_properties=None</em>, <em>linked_write_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/api_key_request.html#APIKeyRequest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.APIKeyRequest" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFeatureCapabilities">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentFeatureCapabilities</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_feature_capabilities_py3.html#ApplicationInsightsComponentFeatureCapabilities"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFeatureCapabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>An Application Insights component API Key createion request definition.</p>
+<p>An Application Insights component feature capabilities.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the API Key.</p></li>
-<li><p><strong>linked_read_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The read access rights of this API Key.</p></li>
-<li><p><strong>linked_write_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The write access rights of this API Key.</p></li>
+<li><p><strong>support_export_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether allow to use continuous export feature.</p></li>
+<li><p><strong>burst_throttle_policy</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>metadata_class</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>live_stream_metrics</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>application_map</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>work_item_integration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether allow to use work item integration
+feature.</p></li>
+<li><p><strong>power_bi_integration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>open_schema</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>proactive_detection</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>analytics_integration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>multiple_step_web_test</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether allow to use multiple steps web test
+feature.</p></li>
+<li><p><strong>api_access_level</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>tracking_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The application insights component used tracking
+type.</p></li>
+<li><p><strong>daily_cap</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Daily data volume cap in GB.</p></li>
+<li><p><strong>daily_cap_reset_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Daily data volume cap UTC reset hour.</p></li>
+<li><p><strong>throttle_rate</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Reserved, not used now.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAPIKey">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentAPIKey</code><span class="sig-paren">(</span><em>created_date=None</em>, <em>name=None</em>, <em>linked_read_properties=None</em>, <em>linked_write_properties=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_api_key.html#ApplicationInsightsComponentAPIKey"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAPIKey" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFeatureCapability">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentFeatureCapability</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_feature_capability_py3.html#ApplicationInsightsComponentFeatureCapability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFeatureCapability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Properties that define an API key of an Application Insights Component.</p>
+<p>An Application Insights component feature capability.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique ID of the API key inside an Applciation Insights
-component. It is auto generated when the API key is created.</p></li>
-<li><p><strong>api_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The API key value. It will be only return once when the API
-Key was created.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the capability.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.vision.computervision.models.html#azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description" title="azure.cognitiveservices.vision.computervision.models.VisualFeatureTypes.description"><strong>description</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The description of the capability.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The value of the capability.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.compute.v2015_06_15.models.html#azure.mgmt.compute.v2015_06_15.models.Usage.unit" title="azure.mgmt.compute.v2015_06_15.models.Usage.unit"><strong>unit</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unit of the capability.</p></li>
+<li><p><strong>meter_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter used for the capability.</p></li>
+<li><p><strong>meter_rate_frequency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter rate of the meter.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFeature">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentFeature</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_feature_py3.html#ApplicationInsightsComponentFeature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFeature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An Application Insights component daily data volume cap status.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>feature_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The pricing feature name.</p></li>
+<li><p><strong>meter_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter id used for the feature.</p></li>
+<li><p><strong>meter_rate_frequency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter rate for the feature’s meter.</p></li>
+<li><p><strong>resouce_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>is_hidden</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Reserved, not used now.</p></li>
+<li><p><strong>capabilities</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFeatureCapability" title="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFeatureCapability"><em>ApplicationInsightsComponentFeatureCapability</em></a><em>]</em>) – A list of Application Insights component feature
+capability.</p></li>
+<li><p><strong>title</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Display name of the feature.</p></li>
+<li><p><strong>is_main_feature</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether can apply addon feature on to it.</p></li>
+<li><p><strong>supported_addon_features</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The add on features on main feature.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAvailableFeatures">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentAvailableFeatures</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_available_features_py3.html#ApplicationInsightsComponentAvailableFeatures"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAvailableFeatures" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An Application Insights component available features.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>result</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFeature" title="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFeature"><em>ApplicationInsightsComponentFeature</em></a><em>]</em>) – A list of Application Insights component feature.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>display_name: str = None</em>, <em>description: str = None</em>, <em>help_url: str = None</em>, <em>is_hidden: bool = None</em>, <em>is_enabled_by_default: bool = None</em>, <em>is_in_preview: bool = None</em>, <em>supports_email_notifications: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_proactive_detection_configuration_rule_definitions_py3.html#ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Static definitions of the ProactiveDetection configuration rule (same
+values for all components).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The rule name</p></li>
+<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The rule name as it is displayed in UI</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The rule description</p></li>
+<li><p><strong>help_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – URL which displays additional info about the proactive
+detection rule</p></li>
+<li><p><strong>is_hidden</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag indicating whether the rule is hidden (from the
+UI)</p></li>
+<li><p><strong>is_enabled_by_default</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag indicating whether the rule is
+enabled by default</p></li>
+<li><p><strong>is_in_preview</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag indicating whether the rule is in preview</p></li>
+<li><p><strong>supports_email_notifications</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag indicating whether email
+notifications are supported for detections for this rule</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfiguration">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentProactiveDetectionConfiguration</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>enabled: bool = None</em>, <em>send_emails_to_subscription_owners: bool = None</em>, <em>custom_emails=None</em>, <em>last_updated_time: str = None</em>, <em>rule_definitions=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_proactive_detection_configuration_py3.html#ApplicationInsightsComponentProactiveDetectionConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties that define a ProactiveDetection configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The rule name</p></li>
+<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag that indicates whether this rule is enabled by the
+user</p></li>
+<li><p><strong>send_emails_to_subscription_owners</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – A flag that indicated whether
+notifications on this rule should be sent to subscription owners</p></li>
+<li><p><strong>custom_emails</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Custom email addresses for this rule notifications</p></li>
+<li><p><strong>last_updated_time</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The last time this rule was updated</p></li>
+<li><p><strong>rule_definitions</strong> (<a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions" title="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions"><em>ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitions</em></a>) – Static definitions of the ProactiveDetection
+configuration rule (same values for all components).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ComponentsResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ComponentsResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/components_resource_py3.html#ComponentsResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ComponentsResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An azure resource object.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource type</p></li>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>created_date</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The create date of this API key.</p></li>
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the API key.</p></li>
-<li><p><strong>linked_read_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The read access rights of this API Key.</p></li>
-<li><p><strong>linked_write_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The write access rights of this API Key.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.TagsResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">TagsResource</code><span class="sig-paren">(</span><em>*</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/tags_resource_py3.html#TagsResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.TagsResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A container holding only the Tags for a resource, allowing the user to
+update the tags on a WebTest instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponent">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponent</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>kind: str</em>, <em>tags=None</em>, <em>application_type='web'</em>, <em>flow_type='Bluefield'</em>, <em>request_source='rest'</em>, <em>hockey_app_id: str = None</em>, <em>sampling_percentage: float = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_py3.html#ApplicationInsightsComponent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.applicationinsights.models.components_resource_py3.ComponentsResource</span></code></p>
+<p>An Application Insights component definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource type</p></li>
+<li><p><strong>application_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique ID of your application. This field
+mirrors the ‘Name’ field and cannot be changed.</p></li>
+<li><p><strong>app_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Application Insights Unique ID for your Application.</p></li>
+<li><p><strong>instrumentation_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Application Insights Instrumentation key. A
+read-only value that applications can use to identify the destination for
+all telemetry sent to Azure Application Insights. This value will be
+supplied upon construction of each new Application Insights component.</p></li>
+<li><p><strong>creation_date</strong> (<em>datetime</em>) – Creation Date for the Application Insights component,
+in ISO 8601 format.</p></li>
+<li><p><strong>tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Tenant Id.</p></li>
+<li><p><strong>hockey_app_token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Token used to authenticate communications with
+between Application Insights and HockeyApp.</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Current state of this component: whether or not
+is has been provisioned within the resource group it is defined. Users
+cannot change this value but are able to read from it. Values will include
+Succeeded, Deploying, Canceled, and Failed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The kind of application that this component refers
+to, used to customize UI. This value is a freeform string, values should
+typically be one of the following: web, ios, other, store, java, phone.</p></li>
+<li><p><strong>application_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationType" title="azure.mgmt.applicationinsights.models.ApplicationType"><em>ApplicationType</em></a>) – Required. Type of application being monitored.
+Possible values include: ‘web’, ‘other’. Default value: “web” .</p></li>
+<li><p><strong>flow_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.FlowType" title="azure.mgmt.applicationinsights.models.FlowType"><em>FlowType</em></a>) – Used by the Application Insights system to determine
+what kind of flow this component was created by. This is to be set to
+‘Bluefield’ when creating/updating a component via the REST API. Possible
+values include: ‘Bluefield’. Default value: “Bluefield” .</p></li>
+<li><p><strong>request_source</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.RequestSource" title="azure.mgmt.applicationinsights.models.RequestSource"><em>RequestSource</em></a>) – Describes what tool created this Application
+Insights component. Customers using this API should set this to the
+default ‘rest’. Possible values include: ‘rest’. Default value: “rest” .</p></li>
+<li><p><strong>hockey_app_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique application ID created when a new
+application is added to HockeyApp, used for communications with HockeyApp.</p></li>
+<li><p><strong>sampling_percentage</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Percentage of the data produced by the
+application being monitored that is being sampled for Application Insights
+telemetry.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ComponentPurgeBodyFilters">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ComponentPurgeBodyFilters</code><span class="sig-paren">(</span><em>*</em>, <em>column: str = None</em>, <em>operator: str = None</em>, <em>value=None</em>, <em>key: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/component_purge_body_filters_py3.html#ComponentPurgeBodyFilters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ComponentPurgeBodyFilters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>User-defined filters to return data which will be purged from the table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>column</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The column of the table over which the given query should
+run</p></li>
+<li><p><strong>operator</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A query operator to evaluate over the provided column and
+value(s).</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – the value for the operator to function over. This can be a
+number (e.g., &gt; 100), a string (timestamp &gt;= ‘2017-09-01’) or array of
+values.</p></li>
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – When filtering over custom dimensions, this key will be used
+as the name of the custom dimension.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ComponentPurgeBody">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ComponentPurgeBody</code><span class="sig-paren">(</span><em>*</em>, <em>table: str</em>, <em>filters</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/component_purge_body_py3.html#ComponentPurgeBody"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ComponentPurgeBody" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Describes the body of a purge request for an App Insights component.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Table from which to purge data.</p></li>
+<li><p><strong>filters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.ComponentPurgeBodyFilters" title="azure.mgmt.applicationinsights.models.ComponentPurgeBodyFilters"><em>ComponentPurgeBodyFilters</em></a><em>]</em>) – Required. The set of columns and filters (queries) to run
+over them to purge the resulting data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ComponentPurgeResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ComponentPurgeResponse</code><span class="sig-paren">(</span><em>*</em>, <em>operation_id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/component_purge_response_py3.html#ComponentPurgeResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ComponentPurgeResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Response containing operationId for a specific purge action.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>operation_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Id to use when querying for status for a
+particular purge operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ComponentPurgeStatusResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ComponentPurgeStatusResponse</code><span class="sig-paren">(</span><em>*</em>, <em>status</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/component_purge_status_response_py3.html#ComponentPurgeStatusResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ComponentPurgeStatusResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Response containing status for a specific purge operation.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.PurgeState" title="azure.mgmt.applicationinsights.models.PurgeState"><em>PurgeState</em></a>) – Required. Status of the operation represented by the
+requested Id. Possible values include: ‘pending’, ‘completed’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WorkItemConfiguration">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WorkItemConfiguration</code><span class="sig-paren">(</span><em>*</em>, <em>connector_id: str = None</em>, <em>config_display_name: str = None</em>, <em>is_default: bool = None</em>, <em>id: str = None</em>, <em>config_properties: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/work_item_configuration_py3.html#WorkItemConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WorkItemConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Work item configuration associated with an application insights resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>connector_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Connector identifier where work item is created</p></li>
+<li><p><strong>config_display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Configuration friendly name</p></li>
+<li><p><strong>is_default</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Boolean value indicating whether configuration is
+default</p></li>
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unique Id for work item</p></li>
+<li><p><strong>config_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Serialized JSON object for detailed properties</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WorkItemCreateConfiguration">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WorkItemCreateConfiguration</code><span class="sig-paren">(</span><em>*</em>, <em>connector_id: str = None</em>, <em>connector_data_configuration: str = None</em>, <em>validate_only: bool = None</em>, <em>work_item_properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/work_item_create_configuration_py3.html#WorkItemCreateConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WorkItemCreateConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Work item configuration creation payload.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>connector_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unique connector id</p></li>
+<li><p><strong>connector_data_configuration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Serialized JSON object for detailed
+properties</p></li>
+<li><p><strong>validate_only</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Boolean indicating validate only</p></li>
+<li><p><strong>work_item_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Custom work item properties</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WorkItemConfigurationError">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WorkItemConfigurationError</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>innererror=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/work_item_configuration_error_py3.html#WorkItemConfigurationError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WorkItemConfigurationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error associated with trying to get work item configuration or
+configurations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error detail code and explanation</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Error message</p></li>
+<li><p><strong>innererror</strong> (<a class="reference internal" href="#azure.mgmt.applicationinsights.models.InnerError" title="azure.mgmt.applicationinsights.models.InnerError"><em>InnerError</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.mgmt.applicationinsights.models.WorkItemConfigurationErrorException">
+<em class="property">exception </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WorkItemConfigurationErrorException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/work_item_configuration_error_py3.html#WorkItemConfigurationErrorException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WorkItemConfigurationErrorException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘WorkItemConfigurationError’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFavorite">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentFavorite</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>config: str = None</em>, <em>version: str = None</em>, <em>favorite_type=None</em>, <em>source_type: str = None</em>, <em>tags=None</em>, <em>category: str = None</em>, <em>is_generated_from_template: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_favorite_py3.html#ApplicationInsightsComponentFavorite"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentFavorite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties that define a favorite that is associated to an Application
+Insights component.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user-defined name of the favorite.</p></li>
+<li><p><strong>config</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Configuration of this particular favorite, which are driven
+by the Azure portal UX. Configuration data is a string containing valid
+JSON</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – This instance’s version of the data model. This can change
+as new features are added that can be marked favorite. Current examples
+include MetricsExplorer (ME) and Search.</p></li>
+<li><p><strong>favorite_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.FavoriteType" title="azure.mgmt.applicationinsights.models.FavoriteType"><em>FavoriteType</em></a>) – Enum indicating if this favorite definition is owned
+by a specific user or is shared between all users with access to the
+Application Insights component. Possible values include: ‘shared’, ‘user’</p></li>
+<li><p><strong>source_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The source of the favorite definition.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A list of 0 or more tags that are associated with this
+favorite definition</p></li>
+<li><p><strong>category</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Favorite category, as defined by the user at creation
+time.</p></li>
+<li><p><strong>is_generated_from_template</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Flag denoting wether or not this
+favorite was generated from a template.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>favorite_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Internally assigned unique id of the favorite
+definition.</p></li>
+<li><p><strong>time_modified</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Date and time in UTC of the last modification that
+was made to this favorite definition.</p></li>
+<li><p><strong>user_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unique user id of the specific user that owns this
+favorite.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentWebTestLocation">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentWebTestLocation</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_web_test_location_py3.html#ApplicationInsightsComponentWebTestLocation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentWebTestLocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties that define a web test location available to an Application
+Insights Component.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The display name of the web test location.</p></li>
+<li><p><strong>tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Internally defined geographic location tag.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WebtestsResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WebtestsResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/webtests_resource_py3.html#WebtestsResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebtestsResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An azure resource object.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WebTestGeolocation">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WebTestGeolocation</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/web_test_geolocation_py3.html#WebTestGeolocation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebTestGeolocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Geo-physical location to run a web test from. You must specify one or more
+locations for the test to run from.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Location ID for the webtest to run from.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WebTestPropertiesConfiguration">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WebTestPropertiesConfiguration</code><span class="sig-paren">(</span><em>*</em>, <em>web_test: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/web_test_properties_configuration_py3.html#WebTestPropertiesConfiguration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebTestPropertiesConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An XML configuration specification for a WebTest.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>web_test</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The XML specification of a WebTest to run against an
+application.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WebTest">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WebTest</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>synthetic_monitor_id: str</em>, <em>web_test_name: str</em>, <em>locations</em>, <em>tags=None</em>, <em>kind='ping'</em>, <em>description: str = None</em>, <em>enabled: bool = None</em>, <em>frequency: int = 300</em>, <em>timeout: int = 30</em>, <em>web_test_kind='ping'</em>, <em>retry_enabled: bool = None</em>, <em>configuration=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/web_test_py3.html#WebTest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.applicationinsights.models.webtests_resource_py3.WebtestsResource</span></code></p>
+<p>An Application Insights web test definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource type</p></li>
+<li><p><strong>provisioning_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Current state of this component, whether or not
+is has been provisioned within the resource group it is defined. Users
+cannot change this value but are able to read from it. Values will include
+Succeeded, Deploying, Canceled, and Failed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.WebTestKind" title="azure.mgmt.applicationinsights.models.WebTestKind"><em>WebTestKind</em></a>) – The kind of web test that this web test watches. Choices are
+ping and multistep. Possible values include: ‘ping’, ‘multistep’. Default
+value: “ping” .</p></li>
+<li><p><strong>synthetic_monitor_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Unique ID of this WebTest. This is
+typically the same value as the Name field.</p></li>
+<li><p><strong>web_test_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. User defined name if this WebTest.</p></li>
+<li><p><strong>description</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Purpose/user defined descriptive test for this
+WebTest.</p></li>
+<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Is the test actively being monitored.</p></li>
+<li><p><strong>frequency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Interval in seconds between test runs for this WebTest.
+Default value is 300. Default value: 300 .</p></li>
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Seconds until this WebTest will timeout and fail. Default
+value is 30. Default value: 30 .</p></li>
+<li><p><strong>web_test_kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.WebTestKind" title="azure.mgmt.applicationinsights.models.WebTestKind"><em>WebTestKind</em></a>) – Required. The kind of web test this is, valid
+choices are ping and multistep. Possible values include: ‘ping’,
+‘multistep’. Default value: “ping” .</p></li>
+<li><p><strong>retry_enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Allow for retries should this WebTest fail.</p></li>
+<li><p><strong>locations</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.WebTestGeolocation" title="azure.mgmt.applicationinsights.models.WebTestGeolocation"><em>WebTestGeolocation</em></a><em>]</em>) – Required. A list of where to physically run the tests
+from to give global coverage for accessibility of your application.</p></li>
+<li><p><strong>configuration</strong> (<a class="reference internal" href="#azure.mgmt.applicationinsights.models.WebTestPropertiesConfiguration" title="azure.mgmt.applicationinsights.models.WebTestPropertiesConfiguration"><em>WebTestPropertiesConfiguration</em></a>) – An XML configuration specification for a WebTest.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAnalyticsItemProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentAnalyticsItemProperties</code><span class="sig-paren">(</span><em>*</em>, <em>function_alias: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_analytics_item_properties_py3.html#ApplicationInsightsComponentAnalyticsItemProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAnalyticsItemProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>A set of properties that can be defined in the context of a specific item
+type. Each type may have its own properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>function_alias</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A function alias, used when the type of the item is
+Function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAnalyticsItem">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentAnalyticsItem</code><span class="sig-paren">(</span><em>*</em>, <em>id: str = None</em>, <em>name: str = None</em>, <em>content: str = None</em>, <em>scope=None</em>, <em>type=None</em>, <em>properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_analytics_item_py3.html#ApplicationInsightsComponentAnalyticsItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAnalyticsItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Properties that define an Analytics item that is associated to an
+Application Insights component.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Internally assigned unique id of the item definition.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user-defined name of the item.</p></li>
+<li><p><strong>content</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The content of this item</p></li>
+<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.ItemScope" title="azure.mgmt.applicationinsights.models.ItemScope"><em>ItemScope</em></a>) – Enum indicating if this item definition is owned by a
+specific user or is shared between all users with access to the
+Application Insights component. Possible values include: ‘shared’, ‘user’</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.ItemType" title="azure.mgmt.applicationinsights.models.ItemType"><em>ItemType</em></a>) – Enum indicating the type of the Analytics item. Possible
+values include: ‘query’, ‘function’, ‘folder’, ‘recent’</p></li>
+<li><p><strong>properties</strong> (<a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAnalyticsItemProperties" title="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentAnalyticsItemProperties"><em>ApplicationInsightsComponentAnalyticsItemProperties</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – This instance’s version of the data model. This can change
+as new features are added.</p></li>
+<li><p><strong>time_created</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Date and time in UTC when this item was created.</p></li>
+<li><p><strong>time_modified</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Date and time in UTC of the last modification that
+was made to this item.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WorkbookResource">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WorkbookResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/workbook_resource_py3.html#WorkbookResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WorkbookResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>An azure resource object.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource type</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.Workbook">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">Workbook</code><span class="sig-paren">(</span><em>*</em>, <em>workbook_name: str</em>, <em>serialized_data: str</em>, <em>workbook_id: str</em>, <em>category: str</em>, <em>user_id: str</em>, <em>location: str = None</em>, <em>tags=None</em>, <em>kind=None</em>, <em>version: str = None</em>, <em>shared_type_kind='shared'</em>, <em>workbook_tags=None</em>, <em>source_resource_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/workbook_py3.html#Workbook"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.Workbook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.applicationinsights.models.workbook_resource_py3.WorkbookResource</span></code></p>
+<p>An Application Insights workbook definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource Id</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource name</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource type</p></li>
+<li><p><strong>time_modified</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Date and time in UTC of the last modification that
+was made to this workbook definition.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags</p></li>
+<li><p><strong>kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.SharedTypeKind" title="azure.mgmt.applicationinsights.models.SharedTypeKind"><em>SharedTypeKind</em></a>) – The kind of workbook. Choices are user and shared. Possible
+values include: ‘user’, ‘shared’</p></li>
+<li><p><strong>workbook_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The user-defined name of the workbook.</p></li>
+<li><p><strong>serialized_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Configuration of this particular
+workbook. Configuration data is a string containing valid JSON</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – This instance’s version of the data model. This can change
+as new features are added that can be marked workbook.</p></li>
+<li><p><strong>workbook_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Internally assigned unique id of the
+workbook definition.</p></li>
+<li><p><strong>shared_type_kind</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.SharedTypeKind" title="azure.mgmt.applicationinsights.models.SharedTypeKind"><em>SharedTypeKind</em></a>) – Required. Enum indicating if this workbook
+definition is owned by a specific user or is shared between all users with
+access to the Application Insights component. Possible values include:
+‘user’, ‘shared’. Default value: “shared” .</p></li>
+<li><p><strong>category</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Workbook category, as defined by the user at
+creation time.</p></li>
+<li><p><strong>workbook_tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – A list of 0 or more tags that are associated with
+this workbook definition</p></li>
+<li><p><strong>user_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Unique user id of the specific user that owns
+this workbook.</p></li>
+<li><p><strong>source_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional resourceId for a source resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.LinkProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">LinkProperties</code><span class="sig-paren">(</span><em>*</em>, <em>source_id: str = None</em>, <em>target_id: str = None</em>, <em>category: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/link_properties_py3.html#LinkProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.LinkProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Contains a sourceId and workbook resource id to link two resources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The source Azure resource id</p></li>
+<li><p><strong>target_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The workbook Azure resource id</p></li>
+<li><p><strong>category</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The category of workbook</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ErrorFieldContract">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ErrorFieldContract</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>target: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/error_field_contract_py3.html#ErrorFieldContract"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ErrorFieldContract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error Field contract.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Property level error code.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Human-readable representation of property-level error.</p></li>
+<li><p><strong>target</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Property name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WorkbookError">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WorkbookError</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>details=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/workbook_error_py3.html#WorkbookError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WorkbookError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Error message body that will indicate why the operation failed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service-defined error code. This code serves as a sub-status
+for the HTTP error code specified in the response.</p></li>
+<li><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Human-readable representation of the error.</p></li>
+<li><p><strong>details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.applicationinsights.models.ErrorFieldContract" title="azure.mgmt.applicationinsights.models.ErrorFieldContract"><em>ErrorFieldContract</em></a><em>]</em>) – The list of invalid fields send in request, in case of
+validation error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="exception">
+<dt id="azure.mgmt.applicationinsights.models.WorkbookErrorException">
+<em class="property">exception </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WorkbookErrorException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/workbook_error_py3.html#WorkbookErrorException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WorkbookErrorException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
+<p>Server responsed with exception of type: ‘WorkbookError’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>deserialize</strong> – A deserializer</p></li>
+<li><p><strong>response</strong> – Server response to be deserialized.</p></li>
 </ul>
 </dd>
 </dl>
@@ -803,17 +1375,10 @@ Key was created.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_paged.html#ApplicationInsightsComponentPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentPaged" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.applicationinsights.models.AnnotationPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">AnnotationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/annotation_paged.html#AnnotationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.AnnotationPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
-<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponent" title="azure.mgmt.applicationinsights.models.ApplicationInsightsComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApplicationInsightsComponent</span></code></a> object</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.applicationinsights.models.WebTestPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WebTestPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/web_test_paged.html#WebTestPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebTestPaged" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
-<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.applicationinsights.models.WebTest" title="azure.mgmt.applicationinsights.models.WebTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebTest</span></code></a> object</p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.applicationinsights.models.Annotation" title="azure.mgmt.applicationinsights.models.Annotation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Annotation</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
@@ -824,9 +1389,44 @@ Key was created.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_paged.html#ApplicationInsightsComponentPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponent" title="azure.mgmt.applicationinsights.models.ApplicationInsightsComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApplicationInsightsComponent</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WorkItemConfigurationPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WorkItemConfigurationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/work_item_configuration_paged.html#WorkItemConfigurationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WorkItemConfigurationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.applicationinsights.models.WorkItemConfiguration" title="azure.mgmt.applicationinsights.models.WorkItemConfiguration"><code class="xref py py-class docutils literal notranslate"><span class="pre">WorkItemConfiguration</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentWebTestLocationPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationInsightsComponentWebTestLocationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_component_web_test_location_paged.html#ApplicationInsightsComponentWebTestLocationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentWebTestLocationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.applicationinsights.models.ApplicationInsightsComponentWebTestLocation" title="azure.mgmt.applicationinsights.models.ApplicationInsightsComponentWebTestLocation"><code class="xref py py-class docutils literal notranslate"><span class="pre">ApplicationInsightsComponentWebTestLocation</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WebTestPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WebTestPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/web_test_paged.html#WebTestPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebTestPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.applicationinsights.models.WebTest" title="azure.mgmt.applicationinsights.models.WebTest"><code class="xref py py-class docutils literal notranslate"><span class="pre">WebTest</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.WorkbookPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WorkbookPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/workbook_paged.html#WorkbookPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WorkbookPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.applicationinsights.models.Workbook" title="azure.mgmt.applicationinsights.models.Workbook"><code class="xref py py-class docutils literal notranslate"><span class="pre">Workbook</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.ApplicationType">
 <em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ApplicationType</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#ApplicationType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ApplicationType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.applicationinsights.models.ApplicationType.other">
@@ -843,7 +1443,7 @@ Key was created.</p></li>
 <dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.FlowType">
 <em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">FlowType</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#FlowType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FlowType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.applicationinsights.models.FlowType.bluefield">
@@ -855,7 +1455,7 @@ Key was created.</p></li>
 <dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.RequestSource">
 <em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">RequestSource</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#RequestSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.RequestSource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.applicationinsights.models.RequestSource.rest">
@@ -865,9 +1465,43 @@ Key was created.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.PurgeState">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">PurgeState</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#PurgeState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.PurgeState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.PurgeState.completed">
+<code class="descname">completed</code><em class="property"> = 'completed'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.PurgeState.completed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.PurgeState.pending">
+<code class="descname">pending</code><em class="property"> = 'pending'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.PurgeState.pending" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">FavoriteType</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#FavoriteType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteType.shared">
+<code class="descname">shared</code><em class="property"> = 'shared'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteType.shared" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteType.user">
+<code class="descname">user</code><em class="property"> = 'user'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteType.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.applicationinsights.models.WebTestKind">
 <em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">WebTestKind</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#WebTestKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebTestKind" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.applicationinsights.models.WebTestKind.multistep">
@@ -877,6 +1511,190 @@ Key was created.</p></li>
 <dl class="attribute">
 <dt id="azure.mgmt.applicationinsights.models.WebTestKind.ping">
 <code class="descname">ping</code><em class="property"> = 'ping'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.WebTestKind.ping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ItemScope">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ItemScope</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#ItemScope"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemScope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemScope.shared">
+<code class="descname">shared</code><em class="property"> = 'shared'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemScope.shared" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemScope.user">
+<code class="descname">user</code><em class="property"> = 'user'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemScope.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ItemType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ItemType</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#ItemType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemType.folder">
+<code class="descname">folder</code><em class="property"> = 'folder'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemType.folder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemType.function">
+<code class="descname">function</code><em class="property"> = 'function'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemType.function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemType.query">
+<code class="descname">query</code><em class="property"> = 'query'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemType.query" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemType.recent">
+<code class="descname">recent</code><em class="property"> = 'recent'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemType.recent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.SharedTypeKind">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">SharedTypeKind</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#SharedTypeKind"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.SharedTypeKind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.SharedTypeKind.shared">
+<code class="descname">shared</code><em class="property"> = 'shared'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.SharedTypeKind.shared" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.SharedTypeKind.user">
+<code class="descname">user</code><em class="property"> = 'user'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.SharedTypeKind.user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteSourceType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">FavoriteSourceType</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#FavoriteSourceType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteSourceType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteSourceType.events">
+<code class="descname">events</code><em class="property"> = 'events'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteSourceType.events" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteSourceType.funnel">
+<code class="descname">funnel</code><em class="property"> = 'funnel'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteSourceType.funnel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteSourceType.impact">
+<code class="descname">impact</code><em class="property"> = 'impact'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteSourceType.impact" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteSourceType.notebook">
+<code class="descname">notebook</code><em class="property"> = 'notebook'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteSourceType.notebook" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteSourceType.retention">
+<code class="descname">retention</code><em class="property"> = 'retention'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteSourceType.retention" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteSourceType.segmentation">
+<code class="descname">segmentation</code><em class="property"> = 'segmentation'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteSourceType.segmentation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteSourceType.sessions">
+<code class="descname">sessions</code><em class="property"> = 'sessions'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteSourceType.sessions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.FavoriteSourceType.userflows">
+<code class="descname">userflows</code><em class="property"> = 'userflows'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.FavoriteSourceType.userflows" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ItemScopePath">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ItemScopePath</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#ItemScopePath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemScopePath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemScopePath.analytics_items">
+<code class="descname">analytics_items</code><em class="property"> = 'analyticsItems'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemScopePath.analytics_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemScopePath.myanalytics_items">
+<code class="descname">myanalytics_items</code><em class="property"> = 'myanalyticsItems'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemScopePath.myanalytics_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.ItemTypeParameter">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">ItemTypeParameter</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#ItemTypeParameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemTypeParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemTypeParameter.folder">
+<code class="descname">folder</code><em class="property"> = 'folder'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemTypeParameter.folder" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemTypeParameter.function">
+<code class="descname">function</code><em class="property"> = 'function'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemTypeParameter.function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemTypeParameter.none">
+<code class="descname">none</code><em class="property"> = 'none'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemTypeParameter.none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemTypeParameter.query">
+<code class="descname">query</code><em class="property"> = 'query'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemTypeParameter.query" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.ItemTypeParameter.recent">
+<code class="descname">recent</code><em class="property"> = 'recent'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.ItemTypeParameter.recent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.applicationinsights.models.CategoryType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.applicationinsights.models.</code><code class="descname">CategoryType</code><a class="reference internal" href="../_modules/azure/mgmt/applicationinsights/models/application_insights_management_client_enums.html#CategoryType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.applicationinsights.models.CategoryType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.CategoryType.performance">
+<code class="descname">performance</code><em class="property"> = 'performance'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.CategoryType.performance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.CategoryType.retention">
+<code class="descname">retention</code><em class="property"> = 'retention'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.CategoryType.retention" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.CategoryType.tsg">
+<code class="descname">tsg</code><em class="property"> = 'TSG'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.CategoryType.tsg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.applicationinsights.models.CategoryType.workbook">
+<code class="descname">workbook</code><em class="property"> = 'workbook'</em><a class="headerlink" href="#azure.mgmt.applicationinsights.models.CategoryType.workbook" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
