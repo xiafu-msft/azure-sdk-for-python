@@ -331,52 +331,44 @@
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2018-01-31. Constant value: “2018-01-31”.</p>
 </dd>
 </dl>
 <dl class="method">
-<dt id="azure.mgmt.consumption.operations.UsageDetailsOperations.download">
-<code class="descname">download</code><span class="sig-paren">(</span><em>scope</em>, <em>metric=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/usage_details_operations.html#UsageDetailsOperations.download"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.UsageDetailsOperations.download" title="Permalink to this definition">¶</a></dt>
-<dd><p>Download usage details data.</p>
+<dt id="azure.mgmt.consumption.operations.UsageDetailsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>expand=None</em>, <em>filter=None</em>, <em>skiptoken=None</em>, <em>top=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/usage_details_operations.html#UsageDetailsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.UsageDetailsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the usage details for a scope by billing period. Usage details
+are available via this API only for May 1, 2014 or later.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope associated with usage details operations. This
-includes ‘/subscriptions/{subscriptionId}/’ for subscription scope,
-‘/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}’
-for resourceGroup scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}’ for
-Billing Account scope,
-‘/providers/Microsoft.Billing/departments/{departmentId}’ for
-Department scope,
-‘/providers/Microsoft.Billing/enrollmentAccounts/{enrollmentAccountId}’
-for EnrollmentAccount scope and
-‘/providers/Microsoft.Management/managementGroups/{managementGroupId}’
-for Management Group scope. For subscription, billing account,
-department, enrollment account and management group, you can also add
-billing period to the scope using
-‘/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}’. For
-e.g. to specify billing period at department scope use
-‘/providers/Microsoft.Billing/departments/{departmentId}/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}’</p></li>
-<li><p><strong>metric</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Metrictype" title="azure.mgmt.consumption.models.Metrictype"><em>Metrictype</em></a>) – Allows to select different type of cost/usage records.
-Possible values include: ‘ActualCostMetricType’,
-‘AmortizedCostMetricType’, ‘UsageMetricType’</p></li>
+<li><p><strong>expand</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to expand the
+properties/additionalProperties or properties/meterDetails within a
+list of usage details. By default, these fields are not included when
+listing usage details.</p></li>
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to filter usageDetails by
+properties/usageEnd (Utc time), properties/usageStart (Utc time),
+properties/resourceGroup, properties/instanceName or
+properties/instanceId. The filter supports ‘eq’, ‘lt’, ‘gt’, ‘le’,
+‘ge’, and ‘and’. It does not currently support ‘ne’, ‘or’, or ‘not’.</p></li>
+<li><p><strong>skiptoken</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Skiptoken is only used if a previous operation
+returned a partial result. If a previous response contains a nextLink
+element, the value of the nextLink element will include a skiptoken
+parameter that specifies a starting point to use for subsequent calls.</p></li>
+<li><p><strong>top</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – May be used to limit the number of results to the most
+recent N usageDetails.</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
-direct response alongside the deserialized response</p></li>
-<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
-polling object for personal polling strategy</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An instance of LROPoller that returns
-UsageDetailsDownloadResponse or
-ClientRawResponse&lt;UsageDetailsDownloadResponse&gt; if raw==True</p>
+<dd class="field-even"><p>An iterator like instance of UsageDetail</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.UsageDetailsDownloadResponse" title="azure.mgmt.consumption.models.UsageDetailsDownloadResponse">UsageDetailsDownloadResponse</a>]
-or
-AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.UsageDetailsDownloadResponse" title="azure.mgmt.consumption.models.UsageDetailsDownloadResponse">UsageDetailsDownloadResponse</a>]]</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.UsageDetailPaged" title="azure.mgmt.consumption.models.UsageDetailPaged">UsageDetailPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.UsageDetail" title="azure.mgmt.consumption.models.UsageDetail">UsageDetail</a>]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
@@ -385,48 +377,29 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </dd></dl>
 
 <dl class="method">
-<dt id="azure.mgmt.consumption.operations.UsageDetailsOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>scope</em>, <em>expand=None</em>, <em>filter=None</em>, <em>skiptoken=None</em>, <em>top=None</em>, <em>metric=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/usage_details_operations.html#UsageDetailsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.UsageDetailsOperations.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists the usage details for the defined scope. Usage details are
-available via this API only for May 1, 2014 or later.</p>
+<dt id="azure.mgmt.consumption.operations.UsageDetailsOperations.list_by_billing_period">
+<code class="descname">list_by_billing_period</code><span class="sig-paren">(</span><em>billing_period_name</em>, <em>expand=None</em>, <em>filter=None</em>, <em>skiptoken=None</em>, <em>top=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/usage_details_operations.html#UsageDetailsOperations.list_by_billing_period"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.UsageDetailsOperations.list_by_billing_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the usage details for a scope by billing period. Usage details
+are available via this API only for May 1, 2014 or later.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope associated with usage details operations. This
-includes ‘/subscriptions/{subscriptionId}/’ for subscription scope,
-‘/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}’
-for resourceGroup scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}’ for
-Billing Account scope,
-‘/providers/Microsoft.Billing/departments/{departmentId}’ for
-Department scope,
-‘/providers/Microsoft.Billing/enrollmentAccounts/{enrollmentAccountId}’
-for EnrollmentAccount scope and
-‘/providers/Microsoft.Management/managementGroups/{managementGroupId}’
-for Management Group scope. For subscription, billing account,
-department, enrollment account and management group, you can also add
-billing period to the scope using
-‘/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}’. For
-e.g. to specify billing period at department scope use
-‘/providers/Microsoft.Billing/departments/{departmentId}/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}’</p></li>
-<li><p><strong>expand</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to expand the properties/additionalInfo or
-properties/meterDetails within a list of usage details. By default,
-these fields are not included when listing usage details.</p></li>
+<li><p><strong>billing_period_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Billing Period Name.</p></li>
+<li><p><strong>expand</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to expand the
+properties/additionalProperties or properties/meterDetails within a
+list of usage details. By default, these fields are not included when
+listing usage details.</p></li>
 <li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to filter usageDetails by
-properties/resourceGroup, properties/resourceName,
-properties/resourceId, properties/chargeType, properties/reservationId
-or tags. The filter supports ‘eq’, ‘lt’, ‘gt’, ‘le’, ‘ge’, and ‘and’.
-It does not currently support ‘ne’, ‘or’, or ‘not’. Tag filter is a
-key value pair string where key and value is separated by a colon (:).</p></li>
+properties/usageEnd (Utc time), properties/usageStart (Utc time),
+properties/resourceGroup, properties/instanceName or
+properties/instanceId. The filter supports ‘eq’, ‘lt’, ‘gt’, ‘le’,
+‘ge’, and ‘and’. It does not currently support ‘ne’, ‘or’, or ‘not’.</p></li>
 <li><p><strong>skiptoken</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Skiptoken is only used if a previous operation
 returned a partial result. If a previous response contains a nextLink
 element, the value of the nextLink element will include a skiptoken
 parameter that specifies a starting point to use for subsequent calls.</p></li>
 <li><p><strong>top</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – May be used to limit the number of results to the most
 recent N usageDetails.</p></li>
-<li><p><strong>metric</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Metrictype" title="azure.mgmt.consumption.models.Metrictype"><em>Metrictype</em></a>) – Allows to select different type of cost/usage records.
-Possible values include: ‘ActualCostMetricType’,
-‘AmortizedCostMetricType’, ‘UsageMetricType’</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
 deserialized response</p></li>
@@ -448,7 +421,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.consumption.operations.UsageDetailsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.UsageDetailsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.UsageDetailsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -468,34 +441,57 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2018-01-31. Constant value: “2018-01-31”.</p>
 </dd>
 </dl>
 <dl class="method">
 <dt id="azure.mgmt.consumption.operations.MarketplacesOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>scope</em>, <em>filter=None</em>, <em>top=None</em>, <em>skiptoken=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/marketplaces_operations.html#MarketplacesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.MarketplacesOperations.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists the marketplaces for a scope at the defined scope. Marketplaces
-are available via this API only for May 1, 2014 or later.</p>
+<code class="descname">list</code><span class="sig-paren">(</span><em>filter=None</em>, <em>top=None</em>, <em>skiptoken=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/marketplaces_operations.html#MarketplacesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.MarketplacesOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the marketplaces for a scope by subscriptionId. Marketplaces are
+available via this API only for May 1, 2014 or later.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope associated with marketplace operations. This
-includes ‘/subscriptions/{subscriptionId}/’ for subscription scope,
-‘/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}’
-for resourceGroup scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}’ for
-Billing Account scope,
-‘/providers/Microsoft.Billing/departments/{departmentId}’ for
-Department scope,
-‘/providers/Microsoft.Billing/enrollmentAccounts/{enrollmentAccountId}’
-for EnrollmentAccount scope and
-‘/providers/Microsoft.Management/managementGroups/{managementGroupId}’
-for Management Group scope. For subscription, billing account,
-department, enrollment account and ManagementGroup, you can also add
-billing period to the scope using
-‘/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}’. For
-e.g. to specify billing period at department scope use
-‘/providers/Microsoft.Billing/departments/{departmentId}/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}’</p></li>
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to filter marketplaces by
+properties/usageEnd (Utc time), properties/usageStart (Utc time),
+properties/resourceGroup, properties/instanceName or
+properties/instanceId. The filter supports ‘eq’, ‘lt’, ‘gt’, ‘le’,
+‘ge’, and ‘and’. It does not currently support ‘ne’, ‘or’, or ‘not’.</p></li>
+<li><p><strong>top</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – May be used to limit the number of results to the most
+recent N marketplaces.</p></li>
+<li><p><strong>skiptoken</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Skiptoken is only used if a previous operation
+returned a partial result. If a previous response contains a nextLink
+element, the value of the nextLink element will include a skiptoken
+parameter that specifies a starting point to use for subsequent calls.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Marketplace</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.MarketplacePaged" title="azure.mgmt.consumption.models.MarketplacePaged">MarketplacePaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Marketplace" title="azure.mgmt.consumption.models.Marketplace">Marketplace</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.consumption.operations.MarketplacesOperations.list_by_billing_period">
+<code class="descname">list_by_billing_period</code><span class="sig-paren">(</span><em>billing_period_name</em>, <em>filter=None</em>, <em>top=None</em>, <em>skiptoken=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/marketplaces_operations.html#MarketplacesOperations.list_by_billing_period"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.MarketplacesOperations.list_by_billing_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists the marketplaces for a scope by billing period and
+subscripotionId. Marketplaces are available via this API only for May
+1, 2014 or later.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>billing_period_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Billing Period Name.</p></li>
 <li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to filter marketplaces by
 properties/usageEnd (Utc time), properties/usageStart (Utc time),
 properties/resourceGroup, properties/instanceName or
@@ -528,424 +524,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.consumption.operations.MarketplacesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.MarketplacesOperations.models" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.consumption.operations.BudgetsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.operations.</code><code class="descname">BudgetsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>BudgetsOperations operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> – Client for service requests.</p></li>
-<li><p><strong>config</strong> – Configuration of service client.</p></li>
-<li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.BudgetsOperations.create_or_update">
-<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>scope</em>, <em>budget_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
-<dd><p>The operation to create or update a budget. Update operation requires
-latest eTag to be set in the request mandatorily. You may obtain the
-latest eTag by performing a get operation. Create operation does not
-require eTag.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope associated with budget operations. This
-includes ‘/subscriptions/{subscriptionId}/’ for subscription scope,
-‘/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}’
-for resourceGroup scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}’ for
-Billing Account scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}’
-for Department scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}’
-for EnrollmentAccount scope,
-‘/providers/Microsoft.Management/managementGroups/{managementGroupId}’
-for Management Group scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}’
-for billingProfile scope,
-‘providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}’
-for invoiceSection scope.</p></li>
-<li><p><strong>budget_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Budget Name.</p></li>
-<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget"><em>Budget</em></a>) – Parameters supplied to the Create Budget operation.</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Budget or ClientRawResponse if raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget">Budget</a> or
-ClientRawResponse</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.BudgetsOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>scope</em>, <em>budget_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>The operation to delete a budget.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope associated with budget operations. This
-includes ‘/subscriptions/{subscriptionId}/’ for subscription scope,
-‘/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}’
-for resourceGroup scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}’ for
-Billing Account scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}’
-for Department scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}’
-for EnrollmentAccount scope,
-‘/providers/Microsoft.Management/managementGroups/{managementGroupId}’
-for Management Group scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}’
-for billingProfile scope,
-‘providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}’
-for invoiceSection scope.</p></li>
-<li><p><strong>budget_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Budget Name.</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.BudgetsOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>scope</em>, <em>budget_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the budget for the scope by budget name.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope associated with budget operations. This
-includes ‘/subscriptions/{subscriptionId}/’ for subscription scope,
-‘/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}’
-for resourceGroup scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}’ for
-Billing Account scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}’
-for Department scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}’
-for EnrollmentAccount scope,
-‘/providers/Microsoft.Management/managementGroups/{managementGroupId}’
-for Management Group scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}’
-for billingProfile scope,
-‘providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}’
-for invoiceSection scope.</p></li>
-<li><p><strong>budget_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Budget Name.</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Budget or ClientRawResponse if raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget">Budget</a> or
-ClientRawResponse</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.BudgetsOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>scope</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists all budgets for the defined scope.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope associated with budget operations. This
-includes ‘/subscriptions/{subscriptionId}/’ for subscription scope,
-‘/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}’
-for resourceGroup scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}’ for
-Billing Account scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}’
-for Department scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}’
-for EnrollmentAccount scope,
-‘/providers/Microsoft.Management/managementGroups/{managementGroupId}’
-for Management Group scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}’
-for billingProfile scope,
-‘providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}’
-for invoiceSection scope.</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An iterator like instance of Budget</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.BudgetPaged" title="azure.mgmt.consumption.models.BudgetPaged">BudgetPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget">Budget</a>]</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.consumption.operations.BudgetsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.models" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.consumption.operations.TagsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.operations.</code><code class="descname">TagsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/tags_operations.html#TagsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.TagsOperations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>TagsOperations operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> – Client for service requests.</p></li>
-<li><p><strong>config</strong> – Configuration of service client.</p></li>
-<li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.TagsOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>scope</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/tags_operations.html#TagsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.TagsOperations.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get all available tag keys for the defined scope.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope associated with tags operations. This includes
-‘/subscriptions/{subscriptionId}/’ for subscription scope,
-‘/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}’
-for resourceGroup scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}’ for
-Billing Account scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}’
-for Department scope,
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}’
-for EnrollmentAccount scope and
-‘/providers/Microsoft.Management/managementGroups/{managementGroupId}’
-for Management Group scope..</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>TagsResult or ClientRawResponse if raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.TagsResult" title="azure.mgmt.consumption.models.TagsResult">TagsResult</a> or
-ClientRawResponse</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.consumption.operations.TagsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.TagsOperations.models" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.consumption.operations.ChargesOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.operations.</code><code class="descname">ChargesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/charges_operations.html#ChargesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.ChargesOperations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>ChargesOperations operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> – Client for service requests.</p></li>
-<li><p><strong>config</strong> – Configuration of service client.</p></li>
-<li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.ChargesOperations.list_by_scope">
-<code class="descname">list_by_scope</code><span class="sig-paren">(</span><em>scope</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/charges_operations.html#ChargesOperations.list_by_scope"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.ChargesOperations.list_by_scope" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists the charges based for the defined scope.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>scope</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The scope associated with usage details operations. This
-includes
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}’
-for Department scope and
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}’
-for EnrollmentAccount scope. For department and enrollment accounts,
-you can also add billing period to the scope using
-‘/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}’. For
-e.g. to specify billing period at department scope use
-‘/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}/providers/Microsoft.Billing/billingPeriods/{billingPeriodName}’</p></li>
-<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to filter charges by properties/usageEnd
-(Utc time), properties/usageStart (Utc time). The filter supports
-‘eq’, ‘lt’, ‘gt’, ‘le’, ‘ge’, and ‘and’. It does not currently support
-‘ne’, ‘or’, or ‘not’. Tag filter is a key value pair string where key
-and value is separated by a colon (:).</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>ChargeSummary or ClientRawResponse if raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ChargeSummary" title="azure.mgmt.consumption.models.ChargeSummary">ChargeSummary</a> or
-ClientRawResponse</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.consumption.operations.ChargesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.ChargesOperations.models" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.consumption.operations.BalancesOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.operations.</code><code class="descname">BalancesOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/balances_operations.html#BalancesOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BalancesOperations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>BalancesOperations operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> – Client for service requests.</p></li>
-<li><p><strong>config</strong> – Configuration of service client.</p></li>
-<li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.BalancesOperations.get_by_billing_account">
-<code class="descname">get_by_billing_account</code><span class="sig-paren">(</span><em>billing_account_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/balances_operations.html#BalancesOperations.get_by_billing_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BalancesOperations.get_by_billing_account" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the balances for a scope by billingAccountId. Balances are
-available via this API only for May 1, 2014 or later.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>billing_account_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – BillingAccount ID</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Balance or ClientRawResponse if raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Balance" title="azure.mgmt.consumption.models.Balance">Balance</a> or
-ClientRawResponse</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.BalancesOperations.get_for_billing_period_by_billing_account">
-<code class="descname">get_for_billing_period_by_billing_account</code><span class="sig-paren">(</span><em>billing_account_id</em>, <em>billing_period_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/balances_operations.html#BalancesOperations.get_for_billing_period_by_billing_account"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BalancesOperations.get_for_billing_period_by_billing_account" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets the balances for a scope by billing period and billingAccountId.
-Balances are available via this API only for May 1, 2014 or later.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>billing_account_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – BillingAccount ID</p></li>
-<li><p><strong>billing_period_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Billing Period Name.</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Balance or ClientRawResponse if raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Balance" title="azure.mgmt.consumption.models.Balance">Balance</a> or
-ClientRawResponse</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.consumption.operations.BalancesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.BalancesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.MarketplacesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -965,7 +544,7 @@ ClientRawResponse</p>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2018-01-31. Constant value: “2018-01-31”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -988,10 +567,10 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An iterator like instance of ReservationSummary</p>
+<dd class="field-even"><p>An iterator like instance of ReservationSummaries</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationSummaryPaged" title="azure.mgmt.consumption.models.ReservationSummaryPaged">ReservationSummaryPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationSummary" title="azure.mgmt.consumption.models.ReservationSummary">ReservationSummary</a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationSummariesPaged" title="azure.mgmt.consumption.models.ReservationSummariesPaged">ReservationSummariesPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationSummaries" title="azure.mgmt.consumption.models.ReservationSummaries">ReservationSummaries</a>]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
@@ -1020,10 +599,10 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An iterator like instance of ReservationSummary</p>
+<dd class="field-even"><p>An iterator like instance of ReservationSummaries</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationSummaryPaged" title="azure.mgmt.consumption.models.ReservationSummaryPaged">ReservationSummaryPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationSummary" title="azure.mgmt.consumption.models.ReservationSummary">ReservationSummary</a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationSummariesPaged" title="azure.mgmt.consumption.models.ReservationSummariesPaged">ReservationSummariesPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationSummaries" title="azure.mgmt.consumption.models.ReservationSummaries">ReservationSummaries</a>]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
@@ -1033,7 +612,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.consumption.operations.ReservationsSummariesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.ReservationsSummariesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.ReservationsSummariesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1053,7 +632,7 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2018-01-31. Constant value: “2018-01-31”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -1075,10 +654,10 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An iterator like instance of ReservationDetail</p>
+<dd class="field-even"><p>An iterator like instance of ReservationDetails</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationDetailPaged" title="azure.mgmt.consumption.models.ReservationDetailPaged">ReservationDetailPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationDetail" title="azure.mgmt.consumption.models.ReservationDetail">ReservationDetail</a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationDetailsPaged" title="azure.mgmt.consumption.models.ReservationDetailsPaged">ReservationDetailsPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationDetails" title="azure.mgmt.consumption.models.ReservationDetails">ReservationDetails</a>]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
@@ -1106,10 +685,10 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An iterator like instance of ReservationDetail</p>
+<dd class="field-even"><p>An iterator like instance of ReservationDetails</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationDetailPaged" title="azure.mgmt.consumption.models.ReservationDetailPaged">ReservationDetailPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationDetail" title="azure.mgmt.consumption.models.ReservationDetail">ReservationDetail</a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationDetailsPaged" title="azure.mgmt.consumption.models.ReservationDetailsPaged">ReservationDetailsPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationDetails" title="azure.mgmt.consumption.models.ReservationDetails">ReservationDetails</a>]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
@@ -1119,16 +698,16 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.consumption.operations.ReservationsDetailsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.ReservationsDetailsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.ReservationsDetailsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.consumption.operations.ReservationRecommendationsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.operations.</code><code class="descname">ReservationRecommendationsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/reservation_recommendations_operations.html#ReservationRecommendationsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.ReservationRecommendationsOperations" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.consumption.operations.BudgetsOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.operations.</code><code class="descname">BudgetsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>ReservationRecommendationsOperations operations.</p>
+<p>BudgetsOperations operations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1139,18 +718,21 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2018-01-31. Constant value: “2018-01-31”.</p>
 </dd>
 </dl>
 <dl class="method">
-<dt id="azure.mgmt.consumption.operations.ReservationRecommendationsOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/reservation_recommendations_operations.html#ReservationRecommendationsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.ReservationRecommendationsOperations.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of recommendations for purchasing reserved instances.</p>
+<dt id="azure.mgmt.consumption.operations.BudgetsOperations.create_or_update">
+<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>budget_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operation to create or update a budget. Update operation requires
+latest eTag to be set in the request mandatorily. You may obtain the
+latest eTag by performing a get operation. Create operation does not
+require eTag.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to filter reservationRecommendations by
-properties/scope and properties/lookBackPeriod.</p></li>
+<li><p><strong>budget_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Budget Name.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget"><em>Budget</em></a>) – Parameters supplied to the Create Budget operation.</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
 deserialized response</p></li>
@@ -1159,10 +741,210 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An iterator like instance of ReservationRecommendation</p>
+<dd class="field-even"><p>Budget or ClientRawResponse if raw=true</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationRecommendationPaged" title="azure.mgmt.consumption.models.ReservationRecommendationPaged">ReservationRecommendationPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ReservationRecommendation" title="azure.mgmt.consumption.models.ReservationRecommendation">ReservationRecommendation</a>]</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget">Budget</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.consumption.operations.BudgetsOperations.create_or_update_by_resource_group_name">
+<code class="descname">create_or_update_by_resource_group_name</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>budget_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.create_or_update_by_resource_group_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.create_or_update_by_resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operation to create or update a budget. Update operation requires
+latest eTag to be set in the request mandatorily. You may obtain the
+latest eTag by performing a get operation. Create operation does not
+require eTag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Resource Group Name.</p></li>
+<li><p><strong>budget_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Budget Name.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget"><em>Budget</em></a>) – Parameters supplied to the Create Budget operation.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Budget or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget">Budget</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.consumption.operations.BudgetsOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>budget_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operation to delete a budget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>budget_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Budget Name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.consumption.operations.BudgetsOperations.delete_by_resource_group_name">
+<code class="descname">delete_by_resource_group_name</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>budget_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.delete_by_resource_group_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.delete_by_resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operation to delete a budget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Resource Group Name.</p></li>
+<li><p><strong>budget_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Budget Name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.consumption.operations.BudgetsOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>budget_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the budget for a subscription by budget name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>budget_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Budget Name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Budget or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget">Budget</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.consumption.operations.BudgetsOperations.get_by_resource_group_name">
+<code class="descname">get_by_resource_group_name</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>budget_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.get_by_resource_group_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.get_by_resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the budget for a resource group under a subscription by budget
+name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Resource Group Name.</p></li>
+<li><p><strong>budget_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Budget Name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Budget or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget">Budget</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.consumption.operations.BudgetsOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all budgets for a subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Budget</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.BudgetPaged" title="azure.mgmt.consumption.models.BudgetPaged">BudgetPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget">Budget</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.consumption.operations.BudgetsOperations.list_by_resource_group_name">
+<code class="descname">list_by_resource_group_name</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/budgets_operations.html#BudgetsOperations.list_by_resource_group_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.list_by_resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all budgets for a resource group under a subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Resource Group Name.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Budget</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.BudgetPaged" title="azure.mgmt.consumption.models.BudgetPaged">BudgetPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget">Budget</a>]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
@@ -1171,8 +953,59 @@ overrides</span>.</p></li>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="azure.mgmt.consumption.operations.ReservationRecommendationsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.ReservationRecommendationsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.consumption.operations.BudgetsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.BudgetsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.operations.Operations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.Operations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Operations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2018-01-31. Constant value: “2018-01-31”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.consumption.operations.Operations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all of the available consumption REST API operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of Operation</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.OperationPaged" title="azure.mgmt.consumption.models.OperationPaged">OperationPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Operation" title="azure.mgmt.consumption.models.Operation">Operation</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.operations.Operations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1192,7 +1025,7 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2018-01-31. Constant value: “2018-01-31”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -1272,204 +1105,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.consumption.operations.PriceSheetOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.PriceSheetOperations.models" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.consumption.operations.ForecastsOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.operations.</code><code class="descname">ForecastsOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/forecasts_operations.html#ForecastsOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.ForecastsOperations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>ForecastsOperations operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> – Client for service requests.</p></li>
-<li><p><strong>config</strong> – Configuration of service client.</p></li>
-<li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.ForecastsOperations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/forecasts_operations.html#ForecastsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.ForecastsOperations.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists the forecast charges by subscriptionId.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to filter forecasts by properties/usageDate
-(Utc time), properties/chargeType or properties/grain. The filter
-supports ‘eq’, ‘lt’, ‘gt’, ‘le’, ‘ge’, and ‘and’. It does not
-currently support ‘ne’, ‘or’, or ‘not’.</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An iterator like instance of Forecast</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ForecastPaged" title="azure.mgmt.consumption.models.ForecastPaged">ForecastPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Forecast" title="azure.mgmt.consumption.models.Forecast">Forecast</a>]</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.consumption.operations.ForecastsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.ForecastsOperations.models" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.consumption.operations.Operations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.operations.</code><code class="descname">Operations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/operations.html#Operations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.Operations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Operations operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> – Client for service requests.</p></li>
-<li><p><strong>config</strong> – Configuration of service client.</p></li>
-<li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.Operations.list">
-<code class="descname">list</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/operations.html#Operations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.Operations.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists all of the available consumption REST API operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An iterator like instance of Operation</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.OperationPaged" title="azure.mgmt.consumption.models.OperationPaged">OperationPaged</a>[<a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Operation" title="azure.mgmt.consumption.models.Operation">Operation</a>]</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.consumption.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.consumption.operations.AggregatedCostOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.operations.</code><code class="descname">AggregatedCostOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/aggregated_cost_operations.html#AggregatedCostOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.AggregatedCostOperations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>AggregatedCostOperations operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> – Client for service requests.</p></li>
-<li><p><strong>config</strong> – Configuration of service client.</p></li>
-<li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: “2019-04-01-preview”.</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.AggregatedCostOperations.get_by_management_group">
-<code class="descname">get_by_management_group</code><span class="sig-paren">(</span><em>management_group_id</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/aggregated_cost_operations.html#AggregatedCostOperations.get_by_management_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.AggregatedCostOperations.get_by_management_group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides the aggregate cost of a management group and all child
-management groups by current billing period.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>management_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Management Group ID.</p></li>
-<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – May be used to filter aggregated cost by
-properties/usageStart (Utc time), properties/usageEnd (Utc time). The
-filter supports ‘eq’, ‘lt’, ‘gt’, ‘le’, ‘ge’, and ‘and’. It does not
-currently support ‘ne’, ‘or’, or ‘not’. Tag filter is a key value pair
-string where key and value is separated by a colon (:).</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>ManagementGroupAggregatedCostResult or ClientRawResponse if
-raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ManagementGroupAggregatedCostResult" title="azure.mgmt.consumption.models.ManagementGroupAggregatedCostResult">ManagementGroupAggregatedCostResult</a> or
-ClientRawResponse</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="azure.mgmt.consumption.operations.AggregatedCostOperations.get_for_billing_period_by_management_group">
-<code class="descname">get_for_billing_period_by_management_group</code><span class="sig-paren">(</span><em>management_group_id</em>, <em>billing_period_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/operations/aggregated_cost_operations.html#AggregatedCostOperations.get_for_billing_period_by_management_group"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.operations.AggregatedCostOperations.get_for_billing_period_by_management_group" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides the aggregate cost of a management group and all child
-management groups by specified billing period.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>management_group_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure Management Group ID.</p></li>
-<li><p><strong>billing_period_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Billing Period Name.</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>ManagementGroupAggregatedCostResult or ClientRawResponse if
-raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ManagementGroupAggregatedCostResult" title="azure.mgmt.consumption.models.ManagementGroupAggregatedCostResult">ManagementGroupAggregatedCostResult</a> or
-ClientRawResponse</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ErrorResponseException" title="azure.mgmt.consumption.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.consumption.operations.AggregatedCostOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\sdk\\consumption\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.AggregatedCostOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.consumption.models' from 'd:\\a\\1\\s\\azure-mgmt-consumption\\azure\\mgmt\\consumption\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.consumption.operations.PriceSheetOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

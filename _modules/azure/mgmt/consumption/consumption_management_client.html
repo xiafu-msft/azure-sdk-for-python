@@ -312,23 +312,17 @@
 <span class="c1"># regenerated.</span>
 <span class="c1"># --------------------------------------------------------------------------</span>
 
-<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">SDKClient</span>
+<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">ServiceClient</span>
 <span class="kn">from</span> <span class="nn">msrest</span> <span class="k">import</span> <span class="n">Serializer</span><span class="p">,</span> <span class="n">Deserializer</span>
 <span class="kn">from</span> <span class="nn">msrestazure</span> <span class="k">import</span> <span class="n">AzureConfiguration</span>
 <span class="kn">from</span> <span class="nn">.version</span> <span class="k">import</span> <span class="n">VERSION</span>
 <span class="kn">from</span> <span class="nn">.operations.usage_details_operations</span> <span class="k">import</span> <span class="n">UsageDetailsOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.marketplaces_operations</span> <span class="k">import</span> <span class="n">MarketplacesOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.budgets_operations</span> <span class="k">import</span> <span class="n">BudgetsOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.tags_operations</span> <span class="k">import</span> <span class="n">TagsOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.charges_operations</span> <span class="k">import</span> <span class="n">ChargesOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.balances_operations</span> <span class="k">import</span> <span class="n">BalancesOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.reservations_summaries_operations</span> <span class="k">import</span> <span class="n">ReservationsSummariesOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.reservations_details_operations</span> <span class="k">import</span> <span class="n">ReservationsDetailsOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.reservation_recommendations_operations</span> <span class="k">import</span> <span class="n">ReservationRecommendationsOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.price_sheet_operations</span> <span class="k">import</span> <span class="n">PriceSheetOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.forecasts_operations</span> <span class="k">import</span> <span class="n">ForecastsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.budgets_operations</span> <span class="k">import</span> <span class="n">BudgetsOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.operations</span> <span class="k">import</span> <span class="n">Operations</span>
-<span class="kn">from</span> <span class="nn">.operations.aggregated_cost_operations</span> <span class="k">import</span> <span class="n">AggregatedCostOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.price_sheet_operations</span> <span class="k">import</span> <span class="n">PriceSheetOperations</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">models</span>
 
 
@@ -364,7 +358,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">subscription_id</span> <span class="o">=</span> <span class="n">subscription_id</span>
 
 
-<div class="viewcode-block" id="ConsumptionManagementClient"><a class="viewcode-back" href="../../../../ref/azure.mgmt.consumption.html#azure.mgmt.consumption.ConsumptionManagementClient">[docs]</a><span class="k">class</span> <span class="nc">ConsumptionManagementClient</span><span class="p">(</span><span class="n">SDKClient</span><span class="p">):</span>
+<div class="viewcode-block" id="ConsumptionManagementClient"><a class="viewcode-back" href="../../../../ref/azure.mgmt.consumption.html#azure.mgmt.consumption.ConsumptionManagementClient">[docs]</a><span class="k">class</span> <span class="nc">ConsumptionManagementClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Consumption management client provides access to consumption resources for Azure Enterprise Subscriptions.</span>
 
 <span class="sd">    :ivar config: Configuration for client.</span>
@@ -374,28 +368,16 @@
 <span class="sd">    :vartype usage_details: azure.mgmt.consumption.operations.UsageDetailsOperations</span>
 <span class="sd">    :ivar marketplaces: Marketplaces operations</span>
 <span class="sd">    :vartype marketplaces: azure.mgmt.consumption.operations.MarketplacesOperations</span>
-<span class="sd">    :ivar budgets: Budgets operations</span>
-<span class="sd">    :vartype budgets: azure.mgmt.consumption.operations.BudgetsOperations</span>
-<span class="sd">    :ivar tags: Tags operations</span>
-<span class="sd">    :vartype tags: azure.mgmt.consumption.operations.TagsOperations</span>
-<span class="sd">    :ivar charges: Charges operations</span>
-<span class="sd">    :vartype charges: azure.mgmt.consumption.operations.ChargesOperations</span>
-<span class="sd">    :ivar balances: Balances operations</span>
-<span class="sd">    :vartype balances: azure.mgmt.consumption.operations.BalancesOperations</span>
 <span class="sd">    :ivar reservations_summaries: ReservationsSummaries operations</span>
 <span class="sd">    :vartype reservations_summaries: azure.mgmt.consumption.operations.ReservationsSummariesOperations</span>
 <span class="sd">    :ivar reservations_details: ReservationsDetails operations</span>
 <span class="sd">    :vartype reservations_details: azure.mgmt.consumption.operations.ReservationsDetailsOperations</span>
-<span class="sd">    :ivar reservation_recommendations: ReservationRecommendations operations</span>
-<span class="sd">    :vartype reservation_recommendations: azure.mgmt.consumption.operations.ReservationRecommendationsOperations</span>
-<span class="sd">    :ivar price_sheet: PriceSheet operations</span>
-<span class="sd">    :vartype price_sheet: azure.mgmt.consumption.operations.PriceSheetOperations</span>
-<span class="sd">    :ivar forecasts: Forecasts operations</span>
-<span class="sd">    :vartype forecasts: azure.mgmt.consumption.operations.ForecastsOperations</span>
+<span class="sd">    :ivar budgets: Budgets operations</span>
+<span class="sd">    :vartype budgets: azure.mgmt.consumption.operations.BudgetsOperations</span>
 <span class="sd">    :ivar operations: Operations operations</span>
 <span class="sd">    :vartype operations: azure.mgmt.consumption.operations.Operations</span>
-<span class="sd">    :ivar aggregated_cost: AggregatedCost operations</span>
-<span class="sd">    :vartype aggregated_cost: azure.mgmt.consumption.operations.AggregatedCostOperations</span>
+<span class="sd">    :ivar price_sheet: PriceSheet operations</span>
+<span class="sd">    :vartype price_sheet: azure.mgmt.consumption.operations.PriceSheetOperations</span>
 
 <span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
 <span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
@@ -409,10 +391,10 @@
             <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">ConsumptionManagementClientConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">ConsumptionManagementClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">ServiceClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
 
         <span class="n">client_models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">type</span><span class="p">)}</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s1">&#39;2019-04-01-preview&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s1">&#39;2018-01-31&#39;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">Serializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">Deserializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
 
@@ -420,27 +402,15 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">marketplaces</span> <span class="o">=</span> <span class="n">MarketplacesOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">budgets</span> <span class="o">=</span> <span class="n">BudgetsOperations</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="n">TagsOperations</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">charges</span> <span class="o">=</span> <span class="n">ChargesOperations</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">balances</span> <span class="o">=</span> <span class="n">BalancesOperations</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reservations_summaries</span> <span class="o">=</span> <span class="n">ReservationsSummariesOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reservations_details</span> <span class="o">=</span> <span class="n">ReservationsDetailsOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">reservation_recommendations</span> <span class="o">=</span> <span class="n">ReservationRecommendationsOperations</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">price_sheet</span> <span class="o">=</span> <span class="n">PriceSheetOperations</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">forecasts</span> <span class="o">=</span> <span class="n">ForecastsOperations</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">budgets</span> <span class="o">=</span> <span class="n">BudgetsOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">=</span> <span class="n">Operations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">aggregated_cost</span> <span class="o">=</span> <span class="n">AggregatedCostOperations</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">price_sheet</span> <span class="o">=</span> <span class="n">PriceSheetOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span></div>
 </pre></div>
 

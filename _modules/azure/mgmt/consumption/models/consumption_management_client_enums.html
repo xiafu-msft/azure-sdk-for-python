@@ -315,63 +315,30 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">Enum</span>
 
 
-<div class="viewcode-block" id="BillingFrequency"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.BillingFrequency">[docs]</a><span class="k">class</span> <span class="nc">BillingFrequency</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">month</span> <span class="o">=</span> <span class="s2">&quot;Month&quot;</span>
-    <span class="n">quarter</span> <span class="o">=</span> <span class="s2">&quot;Quarter&quot;</span>
-    <span class="n">year</span> <span class="o">=</span> <span class="s2">&quot;Year&quot;</span></div>
-
-
-<div class="viewcode-block" id="CategoryType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.CategoryType">[docs]</a><span class="k">class</span> <span class="nc">CategoryType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+<div class="viewcode-block" id="CategoryType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.CategoryType">[docs]</a><span class="k">class</span> <span class="nc">CategoryType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">cost</span> <span class="o">=</span> <span class="s2">&quot;Cost&quot;</span>
     <span class="n">usage</span> <span class="o">=</span> <span class="s2">&quot;Usage&quot;</span></div>
 
 
-<div class="viewcode-block" id="TimeGrainType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.TimeGrainType">[docs]</a><span class="k">class</span> <span class="nc">TimeGrainType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+<div class="viewcode-block" id="TimeGrainType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.TimeGrainType">[docs]</a><span class="k">class</span> <span class="nc">TimeGrainType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">monthly</span> <span class="o">=</span> <span class="s2">&quot;Monthly&quot;</span>
     <span class="n">quarterly</span> <span class="o">=</span> <span class="s2">&quot;Quarterly&quot;</span>
     <span class="n">annually</span> <span class="o">=</span> <span class="s2">&quot;Annually&quot;</span></div>
 
 
-<div class="viewcode-block" id="OperatorType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.OperatorType">[docs]</a><span class="k">class</span> <span class="nc">OperatorType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+<div class="viewcode-block" id="OperatorType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.OperatorType">[docs]</a><span class="k">class</span> <span class="nc">OperatorType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">equal_to</span> <span class="o">=</span> <span class="s2">&quot;EqualTo&quot;</span>
     <span class="n">greater_than</span> <span class="o">=</span> <span class="s2">&quot;GreaterThan&quot;</span>
     <span class="n">greater_than_or_equal_to</span> <span class="o">=</span> <span class="s2">&quot;GreaterThanOrEqualTo&quot;</span></div>
 
 
-<div class="viewcode-block" id="Grain"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Grain">[docs]</a><span class="k">class</span> <span class="nc">Grain</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+<div class="viewcode-block" id="Datagrain"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Datagrain">[docs]</a><span class="k">class</span> <span class="nc">Datagrain</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
 
-    <span class="n">daily</span> <span class="o">=</span> <span class="s2">&quot;Daily&quot;</span>
-    <span class="n">monthly</span> <span class="o">=</span> <span class="s2">&quot;Monthly&quot;</span>
-    <span class="n">yearly</span> <span class="o">=</span> <span class="s2">&quot;Yearly&quot;</span></div>
-
-
-<div class="viewcode-block" id="ChargeType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.ChargeType">[docs]</a><span class="k">class</span> <span class="nc">ChargeType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">actual</span> <span class="o">=</span> <span class="s2">&quot;Actual&quot;</span>
-    <span class="n">forecast</span> <span class="o">=</span> <span class="s2">&quot;Forecast&quot;</span></div>
-
-
-<div class="viewcode-block" id="Bound"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Bound">[docs]</a><span class="k">class</span> <span class="nc">Bound</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">upper</span> <span class="o">=</span> <span class="s2">&quot;Upper&quot;</span>
-    <span class="n">lower</span> <span class="o">=</span> <span class="s2">&quot;Lower&quot;</span></div>
-
-
-<div class="viewcode-block" id="Datagrain"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Datagrain">[docs]</a><span class="k">class</span> <span class="nc">Datagrain</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">daily_grain</span> <span class="o">=</span> <span class="s2">&quot;daily&quot;</span>  <span class="c1">#: Daily grain of data</span>
-    <span class="n">monthly_grain</span> <span class="o">=</span> <span class="s2">&quot;monthly&quot;</span>  <span class="c1">#: Monthly grain of data</span></div>
-
-
-<div class="viewcode-block" id="Metrictype"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.consumption.models.html#azure.mgmt.consumption.models.Metrictype">[docs]</a><span class="k">class</span> <span class="nc">Metrictype</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">actual_cost_metric_type</span> <span class="o">=</span> <span class="s2">&quot;actualcost&quot;</span>  <span class="c1">#: Actual cost data.</span>
-    <span class="n">amortized_cost_metric_type</span> <span class="o">=</span> <span class="s2">&quot;amortizedcost&quot;</span>  <span class="c1">#: Amortized cost data.</span>
-    <span class="n">usage_metric_type</span> <span class="o">=</span> <span class="s2">&quot;usage&quot;</span>  <span class="c1">#: Usage data.</span></div>
+    <span class="n">daily_grain</span> <span class="o">=</span> <span class="s2">&quot;daily&quot;</span>
+    <span class="n">monthly_grain</span> <span class="o">=</span> <span class="s2">&quot;monthly&quot;</span></div>
 </pre></div>
 
            </div>
