@@ -318,11 +318,12 @@
 <span id="azure-mgmt-relay-models-module"></span><h1>azure.mgmt.relay.models module<a class="headerlink" href="#module-azure.mgmt.relay.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.relay.models.TrackedResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">TrackedResource</code><span class="sig-paren">(</span><em>location</em>, <em>tags=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/tracked_resource.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource.Resource</span></code></p>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">TrackedResource</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/tracked_resource_py3.html#TrackedResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.TrackedResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource_py3.Resource</span></code></p>
 <p>Definition of resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
@@ -333,7 +334,7 @@ sending a request.</p>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location.</p></li>
 <li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
 </ul>
 </dd>
@@ -342,8 +343,8 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.ResourceNamespacePatch">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">ResourceNamespacePatch</code><span class="sig-paren">(</span><em>tags=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/resource_namespace_patch.html#ResourceNamespacePatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.ResourceNamespacePatch" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource.Resource</span></code></p>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">ResourceNamespacePatch</code><span class="sig-paren">(</span><em>*</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/resource_namespace_patch_py3.html#ResourceNamespacePatch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.ResourceNamespacePatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource_py3.Resource</span></code></p>
 <p>Definition of resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -363,7 +364,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.Resource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">Resource</code><a class="reference internal" href="../_modules/azure/mgmt/relay/models/resource.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.Resource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The resource definition.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -381,8 +382,8 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.HybridConnection">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">HybridConnection</code><span class="sig-paren">(</span><em>requires_client_authorization=None</em>, <em>user_metadata=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/hybrid_connection.html#HybridConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.HybridConnection" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource.Resource</span></code></p>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">HybridConnection</code><span class="sig-paren">(</span><em>*</em>, <em>requires_client_authorization: bool = None</em>, <em>user_metadata: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/hybrid_connection_py3.html#HybridConnection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.HybridConnection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource_py3.Resource</span></code></p>
 <p>Description of hybrid connection resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -414,8 +415,8 @@ be stored.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.WcfRelay">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">WcfRelay</code><span class="sig-paren">(</span><em>relay_type=None</em>, <em>requires_client_authorization=None</em>, <em>requires_transport_security=None</em>, <em>user_metadata=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/wcf_relay.html#WcfRelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.WcfRelay" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource.Resource</span></code></p>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">WcfRelay</code><span class="sig-paren">(</span><em>*</em>, <em>relay_type=None</em>, <em>requires_client_authorization: bool = None</em>, <em>requires_transport_security: bool = None</em>, <em>user_metadata: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/wcf_relay_py3.html#WcfRelay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.WcfRelay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource_py3.Resource</span></code></p>
 <p>Description of the WCF relay resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -451,14 +452,15 @@ information. Also, user-defined configuration settings can be stored.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.Sku">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">Sku</code><span class="sig-paren">(</span><em>tier=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/sku.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.Sku" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">Sku</code><span class="sig-paren">(</span><em>*</em>, <em>tier=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/sku_py3.html#Sku"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.Sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>SKU of the namespace.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of this SKU. Default value: “Standard” .</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of this SKU. Default value: “Standard” .</p>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><p><strong>tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.relay.models.SkuTier" title="azure.mgmt.relay.models.SkuTier"><em>SkuTier</em></a>) – The tier of this SKU. Possible values include: ‘Standard’</p>
@@ -473,11 +475,12 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.RelayNamespace">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">RelayNamespace</code><span class="sig-paren">(</span><em>location</em>, <em>tags=None</em>, <em>sku=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/relay_namespace.html#RelayNamespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.RelayNamespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.tracked_resource.TrackedResource</span></code></p>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">RelayNamespace</code><span class="sig-paren">(</span><em>*</em>, <em>location: str</em>, <em>tags=None</em>, <em>sku=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/relay_namespace_py3.html#RelayNamespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.RelayNamespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.tracked_resource_py3.TrackedResource</span></code></p>
 <p>Description of a namespace resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
@@ -496,7 +499,7 @@ operations.</p></li>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location.</p></li>
+<li><p><strong>location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource location.</p></li>
 <li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
 <li><p><strong>sku</strong> (<a class="reference internal" href="#azure.mgmt.relay.models.Sku" title="azure.mgmt.relay.models.Sku"><em>Sku</em></a>) – SKU of the namespace.</p></li>
 </ul>
@@ -506,8 +509,8 @@ operations.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.RelayUpdateParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">RelayUpdateParameters</code><span class="sig-paren">(</span><em>tags=None</em>, <em>sku=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/relay_update_parameters.html#RelayUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.RelayUpdateParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource_namespace_patch.ResourceNamespacePatch</span></code></p>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">RelayUpdateParameters</code><span class="sig-paren">(</span><em>*</em>, <em>tags=None</em>, <em>sku=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/relay_update_parameters_py3.html#RelayUpdateParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.RelayUpdateParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource_namespace_patch_py3.ResourceNamespacePatch</span></code></p>
 <p>Description of a namespace resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -538,11 +541,12 @@ operations.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.AuthorizationRule">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">AuthorizationRule</code><span class="sig-paren">(</span><em>rights=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/authorization_rule.html#AuthorizationRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource.Resource</span></code></p>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">AuthorizationRule</code><span class="sig-paren">(</span><em>*</em>, <em>rights</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/authorization_rule_py3.html#AuthorizationRule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.AuthorizationRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.relay.models.resource_py3.Resource</span></code></p>
 <p>Description of a namespace authorization rule.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
@@ -552,14 +556,14 @@ sending a request.</p>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>rights</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.relay.models.AccessRights" title="azure.mgmt.relay.models.AccessRights"><em>AccessRights</em></a><em>]</em>) – The rights associated with the rule.</p>
+<dd class="field-even"><p><strong>rights</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.relay.models.AccessRights" title="azure.mgmt.relay.models.AccessRights"><em>AccessRights</em></a><em>]</em>) – Required. The rights associated with the rule.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.AccessKeys">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">AccessKeys</code><span class="sig-paren">(</span><em>primary_connection_string=None</em>, <em>secondary_connection_string=None</em>, <em>primary_key=None</em>, <em>secondary_key=None</em>, <em>key_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/access_keys.html#AccessKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.AccessKeys" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">AccessKeys</code><span class="sig-paren">(</span><em>*</em>, <em>primary_connection_string: str = None</em>, <em>secondary_connection_string: str = None</em>, <em>primary_key: str = None</em>, <em>secondary_key: str = None</em>, <em>key_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/access_keys_py3.html#AccessKeys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.AccessKeys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Namespace/Relay Connection String.</p>
 <dl class="field-list simple">
@@ -581,15 +585,16 @@ and validating the SAS token.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.RegenerateAccessKeyParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">RegenerateAccessKeyParameters</code><span class="sig-paren">(</span><em>key_type</em>, <em>key=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/regenerate_access_key_parameters.html#RegenerateAccessKeyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.RegenerateAccessKeyParameters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">RegenerateAccessKeyParameters</code><span class="sig-paren">(</span><em>*</em>, <em>key_type</em>, <em>key: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/regenerate_access_key_parameters_py3.html#RegenerateAccessKeyParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.RegenerateAccessKeyParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Parameters supplied to the regenerate authorization rule operation,
 specifies which key neeeds to be reset.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>key_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.relay.models.KeyType" title="azure.mgmt.relay.models.KeyType"><em>KeyType</em></a>) – The access key to regenerate. Possible values include:
-‘PrimaryKey’, ‘SecondaryKey’</p></li>
+<li><p><strong>key_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.relay.models.KeyType" title="azure.mgmt.relay.models.KeyType"><em>KeyType</em></a>) – Required. The access key to regenerate. Possible values
+include: ‘PrimaryKey’, ‘SecondaryKey’</p></li>
 <li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Optional. If the key value is provided, this is set to key
 type, or autogenerated key value set for key type.</p></li>
 </ul>
@@ -599,21 +604,23 @@ type, or autogenerated key value set for key type.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.CheckNameAvailability">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">CheckNameAvailability</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/check_name_availability.html#CheckNameAvailability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.CheckNameAvailability" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">CheckNameAvailability</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/check_name_availability_py3.html#CheckNameAvailability"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.CheckNameAvailability" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Description of the check name availability request properties.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The namespace name to check for availability. The namespace
-name can contain only letters, numbers, and hyphens. The namespace must
-start with a letter, and it must end with a letter or number.</p>
+<dd class="field-odd"><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The namespace name to check for availability. The
+namespace name can contain only letters, numbers, and hyphens. The
+namespace must start with a letter, and it must end with a letter or
+number.</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.CheckNameAvailabilityResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">CheckNameAvailabilityResult</code><span class="sig-paren">(</span><em>name_available=None</em>, <em>reason=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/check_name_availability_result.html#CheckNameAvailabilityResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.CheckNameAvailabilityResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">CheckNameAvailabilityResult</code><span class="sig-paren">(</span><em>*</em>, <em>name_available: bool = None</em>, <em>reason=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/check_name_availability_result_py3.html#CheckNameAvailabilityResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.CheckNameAvailabilityResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Description of the check name availability request properties.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -637,7 +644,7 @@ values include: ‘None’, ‘InvalidName’, ‘SubscriptionIsDisabled’,
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.OperationDisplay">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">OperationDisplay</code><a class="reference internal" href="../_modules/azure/mgmt/relay/models/operation_display.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The object that represents the operation.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -656,7 +663,7 @@ etc.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.Operation">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>display=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/operation.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.Operation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>*</em>, <em>display=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.Operation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A Relay REST API operation.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -673,7 +680,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.relay.models.ErrorResponse">
-<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>code=None</em>, <em>message=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/error_response.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Error reponse indicates Relay service is not able to process the incoming
 request. The reason is provided in the error message.</p>
@@ -689,7 +696,7 @@ request. The reason is provided in the error message.</p>
 
 <dl class="exception">
 <dt id="azure.mgmt.relay.models.ErrorResponseException">
-<em class="property">exception </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/error_response.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
 <p>Server responsed with exception of type: ‘ErrorResponse’.</p>
 <dl class="field-list simple">
@@ -740,7 +747,7 @@ request. The reason is provided in the error message.</p>
 <dl class="class">
 <dt id="azure.mgmt.relay.models.Relaytype">
 <em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">Relaytype</code><a class="reference internal" href="../_modules/azure/mgmt/relay/models/relay_management_client_enums.html#Relaytype"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.Relaytype" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.relay.models.Relaytype.http">
@@ -757,7 +764,7 @@ request. The reason is provided in the error message.</p>
 <dl class="class">
 <dt id="azure.mgmt.relay.models.SkuTier">
 <em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">SkuTier</code><a class="reference internal" href="../_modules/azure/mgmt/relay/models/relay_management_client_enums.html#SkuTier"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.SkuTier" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.relay.models.SkuTier.standard">
@@ -769,7 +776,7 @@ request. The reason is provided in the error message.</p>
 <dl class="class">
 <dt id="azure.mgmt.relay.models.ProvisioningStateEnum">
 <em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">ProvisioningStateEnum</code><a class="reference internal" href="../_modules/azure/mgmt/relay/models/relay_management_client_enums.html#ProvisioningStateEnum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.ProvisioningStateEnum" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.relay.models.ProvisioningStateEnum.created">
@@ -806,7 +813,7 @@ request. The reason is provided in the error message.</p>
 <dl class="class">
 <dt id="azure.mgmt.relay.models.AccessRights">
 <em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">AccessRights</code><a class="reference internal" href="../_modules/azure/mgmt/relay/models/relay_management_client_enums.html#AccessRights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.AccessRights" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.relay.models.AccessRights.listen">
@@ -828,7 +835,7 @@ request. The reason is provided in the error message.</p>
 <dl class="class">
 <dt id="azure.mgmt.relay.models.KeyType">
 <em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">KeyType</code><a class="reference internal" href="../_modules/azure/mgmt/relay/models/relay_management_client_enums.html#KeyType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.KeyType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.relay.models.KeyType.primary_key">
@@ -845,7 +852,7 @@ request. The reason is provided in the error message.</p>
 <dl class="class">
 <dt id="azure.mgmt.relay.models.UnavailableReason">
 <em class="property">class </em><code class="descclassname">azure.mgmt.relay.models.</code><code class="descname">UnavailableReason</code><a class="reference internal" href="../_modules/azure/mgmt/relay/models/relay_management_client_enums.html#UnavailableReason"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.models.UnavailableReason" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.relay.models.UnavailableReason.invalid_name">

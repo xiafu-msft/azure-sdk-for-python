@@ -312,7 +312,7 @@
 <span class="c1"># regenerated.</span>
 <span class="c1"># --------------------------------------------------------------------------</span>
 
-<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">ServiceClient</span>
+<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">SDKClient</span>
 <span class="kn">from</span> <span class="nn">msrest</span> <span class="k">import</span> <span class="n">Serializer</span><span class="p">,</span> <span class="n">Deserializer</span>
 <span class="kn">from</span> <span class="nn">msrestazure</span> <span class="k">import</span> <span class="n">AzureConfiguration</span>
 <span class="kn">from</span> <span class="nn">.version</span> <span class="k">import</span> <span class="n">VERSION</span>
@@ -357,7 +357,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">subscription_id</span> <span class="o">=</span> <span class="n">subscription_id</span>
 
 
-<div class="viewcode-block" id="RelayManagementClient"><a class="viewcode-back" href="../../../../ref/azure.mgmt.relay.html#azure.mgmt.relay.RelayManagementClient">[docs]</a><span class="k">class</span> <span class="nc">RelayManagementClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="RelayManagementClient"><a class="viewcode-back" href="../../../../ref/azure.mgmt.relay.html#azure.mgmt.relay.RelayManagementClient">[docs]</a><span class="k">class</span> <span class="nc">RelayManagementClient</span><span class="p">(</span><span class="n">SDKClient</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Use these API to manage Azure Relay resources through Azure Resource Manager.</span>
 
 <span class="sd">    :ivar config: Configuration for client.</span>
@@ -386,7 +386,7 @@
             <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">RelayManagementClientConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">ServiceClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">RelayManagementClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
 
         <span class="n">client_models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">type</span><span class="p">)}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s1">&#39;2017-04-01&#39;</span>

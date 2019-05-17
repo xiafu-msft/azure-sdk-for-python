@@ -327,7 +327,7 @@
 <li><p><strong>client</strong> – Client for service requests.</p></li>
 <li><p><strong>config</strong> – Configuration of service client.</p></li>
 <li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An objec model deserializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
@@ -360,6 +360,11 @@ overrides</span>.</p></li>
 </dl>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="azure.mgmt.relay.operations.Operations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.relay.models' from 'd:\\a\\1\\s\\sdk\\relay\\azure-mgmt-relay\\azure\\mgmt\\relay\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.relay.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -373,7 +378,7 @@ overrides</span>.</p></li>
 <li><p><strong>client</strong> – Client for service requests.</p></li>
 <li><p><strong>config</strong> – Configuration of service client.</p></li>
 <li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An objec model deserializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
@@ -413,7 +418,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.relay.operations.NamespacesOperations.create_or_update">
-<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/namespaces_operations.html#NamespacesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.NamespacesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
+<code class="descname">create_or_update</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/namespaces_operations.html#NamespacesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.NamespacesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Azure Relay namespace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -423,17 +428,20 @@ Azure subscription.</p></li>
 <li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The namespace name</p></li>
 <li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.relay.models.html#azure.mgmt.relay.models.RelayNamespace" title="azure.mgmt.relay.models.RelayNamespace"><em>RelayNamespace</em></a>) – Parameters supplied to create a namespace resource.</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An instance of AzureOperationPoller that returns
-RelayNamespace or ClientRawResponse if raw=true</p>
+<dd class="field-even"><p>An instance of LROPoller that returns RelayNamespace or
+ClientRawResponse&lt;RelayNamespace&gt; if raw==True</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.relay.models.html#azure.mgmt.relay.models.RelayNamespace" title="azure.mgmt.relay.models.RelayNamespace">RelayNamespace</a>]
-or ClientRawResponse</p>
+or
+AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.relay.models.html#azure.mgmt.relay.models.RelayNamespace" title="azure.mgmt.relay.models.RelayNamespace">RelayNamespace</a>]]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference internal" href="azure.mgmt.relay.models.html#azure.mgmt.relay.models.ErrorResponseException" title="azure.mgmt.relay.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
@@ -443,7 +451,7 @@ or ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.relay.operations.NamespacesOperations.create_or_update_authorization_rule">
-<code class="descname">create_or_update_authorization_rule</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>authorization_rule_name</em>, <em>rights=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/namespaces_operations.html#NamespacesOperations.create_or_update_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.NamespacesOperations.create_or_update_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<code class="descname">create_or_update_authorization_rule</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>authorization_rule_name</em>, <em>rights</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/namespaces_operations.html#NamespacesOperations.create_or_update_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.NamespacesOperations.create_or_update_authorization_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates or updates an authorization rule for a namespace.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -475,7 +483,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.relay.operations.NamespacesOperations.delete">
-<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/namespaces_operations.html#NamespacesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.NamespacesOperations.delete" title="Permalink to this definition">¶</a></dt>
+<code class="descname">delete</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/namespaces_operations.html#NamespacesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.NamespacesOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes an existing namespace. This operation also removes all
 associated resources under the namespace.</p>
 <dl class="field-list simple">
@@ -485,17 +493,19 @@ associated resources under the namespace.</p>
 Azure subscription.</p></li>
 <li><p><strong>namespace_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The namespace name</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An instance of AzureOperationPoller that returns None or
-ClientRawResponse if raw=true</p>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
-ClientRawResponse</p>
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><a class="reference internal" href="azure.mgmt.relay.models.html#azure.mgmt.relay.models.ErrorResponseException" title="azure.mgmt.relay.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
@@ -709,6 +719,11 @@ ClientRawResponse</p>
 </dl>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="azure.mgmt.relay.operations.NamespacesOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.relay.models' from 'd:\\a\\1\\s\\sdk\\relay\\azure-mgmt-relay\\azure\\mgmt\\relay\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.relay.operations.NamespacesOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="azure.mgmt.relay.operations.NamespacesOperations.regenerate_keys">
 <code class="descname">regenerate_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>authorization_rule_name</em>, <em>key_type</em>, <em>key=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/namespaces_operations.html#NamespacesOperations.regenerate_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.NamespacesOperations.regenerate_keys" title="Permalink to this definition">¶</a></dt>
@@ -791,7 +806,7 @@ ClientRawResponse</p>
 <li><p><strong>client</strong> – Client for service requests.</p></li>
 <li><p><strong>config</strong> – Configuration of service client.</p></li>
 <li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An objec model deserializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
@@ -839,7 +854,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.relay.operations.HybridConnectionsOperations.create_or_update_authorization_rule">
-<code class="descname">create_or_update_authorization_rule</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>hybrid_connection_name</em>, <em>authorization_rule_name</em>, <em>rights=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/hybrid_connections_operations.html#HybridConnectionsOperations.create_or_update_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.HybridConnectionsOperations.create_or_update_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<code class="descname">create_or_update_authorization_rule</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>hybrid_connection_name</em>, <em>authorization_rule_name</em>, <em>rights</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/hybrid_connections_operations.html#HybridConnectionsOperations.create_or_update_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.HybridConnectionsOperations.create_or_update_authorization_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates or updates an authorization rule for a hybrid connection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1085,6 +1100,11 @@ ClientRawResponse</p>
 </dl>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="azure.mgmt.relay.operations.HybridConnectionsOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.relay.models' from 'd:\\a\\1\\s\\sdk\\relay\\azure-mgmt-relay\\azure\\mgmt\\relay\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.relay.operations.HybridConnectionsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="azure.mgmt.relay.operations.HybridConnectionsOperations.regenerate_keys">
 <code class="descname">regenerate_keys</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>hybrid_connection_name</em>, <em>authorization_rule_name</em>, <em>key_type</em>, <em>key=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/hybrid_connections_operations.html#HybridConnectionsOperations.regenerate_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.HybridConnectionsOperations.regenerate_keys" title="Permalink to this definition">¶</a></dt>
@@ -1135,7 +1155,7 @@ ClientRawResponse</p>
 <li><p><strong>client</strong> – Client for service requests.</p></li>
 <li><p><strong>config</strong> – Configuration of service client.</p></li>
 <li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An objec model deserializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
@@ -1176,7 +1196,7 @@ ClientRawResponse</p>
 
 <dl class="method">
 <dt id="azure.mgmt.relay.operations.WCFRelaysOperations.create_or_update_authorization_rule">
-<code class="descname">create_or_update_authorization_rule</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>relay_name</em>, <em>authorization_rule_name</em>, <em>rights=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/wcf_relays_operations.html#WCFRelaysOperations.create_or_update_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.WCFRelaysOperations.create_or_update_authorization_rule" title="Permalink to this definition">¶</a></dt>
+<code class="descname">create_or_update_authorization_rule</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>namespace_name</em>, <em>relay_name</em>, <em>authorization_rule_name</em>, <em>rights</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/relay/operations/wcf_relays_operations.html#WCFRelaysOperations.create_or_update_authorization_rule"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.relay.operations.WCFRelaysOperations.create_or_update_authorization_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates or updates an authorization rule for a WCF relay.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1421,6 +1441,11 @@ ClientRawResponse</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.relay.operations.WCFRelaysOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.relay.models' from 'd:\\a\\1\\s\\sdk\\relay\\azure-mgmt-relay\\azure\\mgmt\\relay\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.relay.operations.WCFRelaysOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.relay.operations.WCFRelaysOperations.regenerate_keys">
