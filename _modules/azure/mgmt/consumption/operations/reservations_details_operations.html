@@ -325,7 +325,7 @@
 <span class="sd">    :param config: Configuration of service client.</span>
 <span class="sd">    :param serializer: An object model serializer.</span>
 <span class="sd">    :param deserializer: An object model deserializer.</span>
-<span class="sd">    :ivar api_version: Version of the API to be used with the client request. The current version is 2018-01-31. Constant value: &quot;2018-01-31&quot;.</span>
+<span class="sd">    :ivar api_version: Version of the API to be used with the client request. The current version is 2019-04-01-preview. Constant value: &quot;2019-04-01-preview&quot;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">models</span> <span class="o">=</span> <span class="n">models</span>
@@ -335,7 +335,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">client</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">serializer</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">deserializer</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s2">&quot;2018-01-31&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s2">&quot;2019-04-01-preview&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
 
@@ -354,9 +354,9 @@
 <span class="sd">         deserialized response</span>
 <span class="sd">        :param operation_config: :ref:`Operation configuration</span>
 <span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
-<span class="sd">        :return: An iterator like instance of ReservationDetails</span>
+<span class="sd">        :return: An iterator like instance of ReservationDetail</span>
 <span class="sd">        :rtype:</span>
-<span class="sd">         ~azure.mgmt.consumption.models.ReservationDetailsPaged[~azure.mgmt.consumption.models.ReservationDetails]</span>
+<span class="sd">         ~azure.mgmt.consumption.models.ReservationDetailPaged[~azure.mgmt.consumption.models.ReservationDetail]</span>
 <span class="sd">        :raises:</span>
 <span class="sd">         :class:`ErrorResponseException&lt;azure.mgmt.consumption.models.ErrorResponseException&gt;`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -381,7 +381,7 @@
 
             <span class="c1"># Construct headers</span>
             <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
+            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
                 <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
             <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
@@ -390,9 +390,8 @@
                 <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;accept-language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;self.config.accept_language&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
 
             <span class="c1"># Construct and send request</span>
-            <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
-                <span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+            <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
                 <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">ErrorResponseException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
@@ -400,11 +399,11 @@
             <span class="k">return</span> <span class="n">response</span>
 
         <span class="c1"># Deserialize response</span>
-        <span class="n">deserialized</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ReservationDetailsPaged</span><span class="p">(</span><span class="n">internal_paging</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="o">.</span><span class="n">dependencies</span><span class="p">)</span>
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ReservationDetailPaged</span><span class="p">(</span><span class="n">internal_paging</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="o">.</span><span class="n">dependencies</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
             <span class="n">header_dict</span> <span class="o">=</span> <span class="p">{}</span>
-            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ReservationDetailsPaged</span><span class="p">(</span><span class="n">internal_paging</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="o">.</span><span class="n">dependencies</span><span class="p">,</span> <span class="n">header_dict</span><span class="p">)</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ReservationDetailPaged</span><span class="p">(</span><span class="n">internal_paging</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="o">.</span><span class="n">dependencies</span><span class="p">,</span> <span class="n">header_dict</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">client_raw_response</span>
 
         <span class="k">return</span> <span class="n">deserialized</span></div>
@@ -427,9 +426,9 @@
 <span class="sd">         deserialized response</span>
 <span class="sd">        :param operation_config: :ref:`Operation configuration</span>
 <span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
-<span class="sd">        :return: An iterator like instance of ReservationDetails</span>
+<span class="sd">        :return: An iterator like instance of ReservationDetail</span>
 <span class="sd">        :rtype:</span>
-<span class="sd">         ~azure.mgmt.consumption.models.ReservationDetailsPaged[~azure.mgmt.consumption.models.ReservationDetails]</span>
+<span class="sd">         ~azure.mgmt.consumption.models.ReservationDetailPaged[~azure.mgmt.consumption.models.ReservationDetail]</span>
 <span class="sd">        :raises:</span>
 <span class="sd">         :class:`ErrorResponseException&lt;azure.mgmt.consumption.models.ErrorResponseException&gt;`</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -455,7 +454,7 @@
 
             <span class="c1"># Construct headers</span>
             <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
+            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
                 <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
             <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
@@ -464,9 +463,8 @@
                 <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;accept-language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;self.config.accept_language&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
 
             <span class="c1"># Construct and send request</span>
-            <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
-                <span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+            <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
             <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
                 <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">ErrorResponseException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
@@ -474,11 +472,11 @@
             <span class="k">return</span> <span class="n">response</span>
 
         <span class="c1"># Deserialize response</span>
-        <span class="n">deserialized</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ReservationDetailsPaged</span><span class="p">(</span><span class="n">internal_paging</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="o">.</span><span class="n">dependencies</span><span class="p">)</span>
+        <span class="n">deserialized</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ReservationDetailPaged</span><span class="p">(</span><span class="n">internal_paging</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="o">.</span><span class="n">dependencies</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
             <span class="n">header_dict</span> <span class="o">=</span> <span class="p">{}</span>
-            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ReservationDetailsPaged</span><span class="p">(</span><span class="n">internal_paging</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="o">.</span><span class="n">dependencies</span><span class="p">,</span> <span class="n">header_dict</span><span class="p">)</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ReservationDetailPaged</span><span class="p">(</span><span class="n">internal_paging</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="o">.</span><span class="n">dependencies</span><span class="p">,</span> <span class="n">header_dict</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">client_raw_response</span>
 
         <span class="k">return</span> <span class="n">deserialized</span></div>
