@@ -318,7 +318,7 @@
 <span id="azure-mgmt-consumption-models-module"></span><h1>azure.mgmt.consumption.models module<a class="headerlink" href="#module-azure.mgmt.consumption.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.MeterDetails">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">MeterDetails</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/meter_details.html#MeterDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.MeterDetails" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">MeterDetails</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/meter_details_py3.html#MeterDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.MeterDetails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The properties of the meter detail.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -338,6 +338,31 @@ available.</p></li>
 <li><p><strong>total_included_quantity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The total included quantity associated with
 the offer.</p></li>
 <li><p><strong>pretax_standard_rate</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The pretax listing price.</p></li>
+<li><p><strong>service_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the service.</p></li>
+<li><p><strong>service_tier</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The service tier.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.MeterDetailsResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">MeterDetailsResponse</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/meter_details_response_py3.html#MeterDetailsResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.MeterDetailsResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The properties of the meter detail.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>meter_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the meter, within the given meter category</p></li>
+<li><p><strong>meter_category</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The category of the meter, for example, ‘Cloud
+services’, ‘Networking’, etc..</p></li>
+<li><p><strong>meter_sub_category</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The subcategory of the meter, for example, ‘A6
+Cloud services’, ‘ExpressRoute (IXP)’, etc..</p></li>
+<li><p><strong>unit_of_measure</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unit in which the meter consumption is charged,
+for example, ‘Hours’, ‘GB’, etc.</p></li>
+<li><p><strong>service_family</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The service family.</p></li>
 </ul>
 </dd>
 </dl>
@@ -345,8 +370,8 @@ the offer.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.UsageDetail">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">UsageDetail</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/usage_detail.html#UsageDetail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.UsageDetail" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource.Resource</span></code></p>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">UsageDetail</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/usage_detail_py3.html#UsageDetail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.UsageDetail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource_py3.Resource</span></code></p>
 <p>An usage detail resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -357,39 +382,91 @@ sending a request.</p>
 <li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
 <li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
 <li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
-<li><p><strong>billing_period_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the billing period resource that the
-usage belongs to.</p></li>
-<li><p><strong>invoice_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the invoice resource that the usage belongs
-to.</p></li>
-<li><p><strong>usage_start</strong> (<em>datetime</em>) – The start of the date time range covered by the usage
-detail.</p></li>
-<li><p><strong>usage_end</strong> (<em>datetime</em>) – The end of the date time range covered by the usage
-detail.</p></li>
-<li><p><a class="reference internal" href="azure.applicationinsights.models.html#azure.applicationinsights.models.MetricsSegment.instance_name" title="azure.applicationinsights.models.MetricsSegment.instance_name"><strong>instance_name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource instance that the usage is
-about.</p></li>
-<li><p><strong>instance_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The uri of the resource instance that the usage is
-about.</p></li>
-<li><p><strong>instance_location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The location of the resource instance that the
-usage is about.</p></li>
-<li><p><strong>currency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ISO currency in which the meter is charged, for
-example, USD.</p></li>
-<li><p><strong>usage_quantity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The quantity of usage.</p></li>
-<li><p><strong>billable_quantity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The billable usage quantity.</p></li>
-<li><p><strong>pretax_cost</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The amount of cost before tax.</p></li>
-<li><p><strong>is_estimated</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The estimated usage is subject to change.</p></li>
-<li><p><strong>meter_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter id.</p></li>
-<li><p><strong>meter_details</strong> (<a class="reference internal" href="#azure.mgmt.consumption.models.MeterDetails" title="azure.mgmt.consumption.models.MeterDetails"><em>MeterDetails</em></a>) – The details about the meter. By default this is not
-populated, unless it’s specified in $expand.</p></li>
-<li><p><strong>subscription_guid</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subscription guid.</p></li>
+<li><p><strong>billing_account_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Billing Account identifier.</p></li>
+<li><p><strong>billing_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Billing Account Name.</p></li>
+<li><p><strong>billing_period_start_date</strong> (<em>datetime</em>) – The billing period start date.</p></li>
+<li><p><strong>billing_period_end_date</strong> (<em>datetime</em>) – The billing period end date.</p></li>
+<li><p><strong>billing_profile_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Billing Profile identifier.</p></li>
+<li><p><strong>billing_profile_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Billing Profile Name.</p></li>
+<li><p><strong>account_owner_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Account Owner Id.</p></li>
+<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Account Name.</p></li>
+<li><p><strong>subscription_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subscription guid.</p></li>
 <li><p><strong>subscription_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subscription name.</p></li>
-<li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Account name.</p></li>
-<li><p><strong>department_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Department name.</p></li>
-<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.product" title="azure.cognitiveservices.search.entitysearch.models.EntityType.product"><strong>product</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Product name.</p></li>
-<li><p><strong>consumed_service</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Consumed service name.</p></li>
+<li><p><strong>date_property</strong> (<em>datetime</em>) – Date for the usage record.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.product" title="azure.cognitiveservices.search.entitysearch.models.EntityType.product"><strong>product</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Product name for the consumed service or purchase. Not
+available for Marketplace.</p></li>
+<li><p><strong>part_number</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Part Number of the service used. Can be used to join
+with the price sheet. Not available for marketplace.</p></li>
+<li><p><strong>meter_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter id (GUID). Not available for marketplace. For
+reserved instance this represents the primary meter for which the
+reservation was purchased. For the actual VM Size for which the
+reservation is purchased see productOrderName.</p></li>
+<li><p><strong>meter_details</strong> (<a class="reference internal" href="#azure.mgmt.consumption.models.MeterDetailsResponse" title="azure.mgmt.consumption.models.MeterDetailsResponse"><em>MeterDetailsResponse</em></a>) – The details about the meter. By default this is not
+populated, unless it’s specified in $expand.</p></li>
+<li><p><strong>quantity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The usage quantity.</p></li>
+<li><p><strong>effective_price</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Effective Price that’s charged for the usage.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.advisor.models.html#azure.mgmt.advisor.models.Category.cost" title="azure.mgmt.advisor.models.Category.cost"><strong>cost</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The amount of cost before tax.</p></li>
+<li><p><strong>unit_price</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Unit Price is the price applicable to you. (your EA or
+other contract price).</p></li>
+<li><p><strong>billing_currency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Billing Currency.</p></li>
+<li><p><strong>resource_location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Location.</p></li>
+<li><p><strong>consumed_service</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Consumed service name. Name of the azure resource
+provider that emits the usage or was purchased. This value is not provided
+for marketplace usage.</p></li>
+<li><p><strong>resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Azure resource manager resource identifier.</p></li>
+<li><p><strong>resource_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Name.</p></li>
+<li><p><strong>service_info1</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service Info 1.</p></li>
+<li><p><strong>service_info2</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Service Info 2.</p></li>
+<li><p><strong>additional_info</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Additional details of this usage item. By default
+this is not populated, unless it’s specified in $expand. Use this field to
+get usage line item specific details such as the actual VM Size
+(ServiceType) or the ratio in which the reservation discount is applied.</p></li>
+<li><p><strong>invoice_section</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Invoice Section Name.</p></li>
 <li><p><strong>cost_center</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The cost center of this department if it is a
-department and a costcenter exists</p></li>
-<li><p><strong>additional_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Additional details of this usage item. By
-default this is not populated, unless it’s specified in $expand.</p></li>
+department and a cost center is provided.</p></li>
+<li><p><strong>resource_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Group Name.</p></li>
+<li><p><strong>reservation_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ARM resource id of the reservation. Only applies to
+records relevant to reservations.</p></li>
+<li><p><strong>reservation_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User provided display name of the reservation.
+Last known name for a particular day is populated in the daily data. Only
+applies to records relevant to reservations.</p></li>
+<li><p><strong>product_order_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Product Order Id. For reservations this is the
+Reservation Order ID.</p></li>
+<li><p><strong>product_order_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Product Order Name. For reservations this is the
+SKU that was purchased.</p></li>
+<li><p><strong>offer_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Offer Id. Ex: MS-AZR-0017P, MS-AZR-0148P.</p></li>
+<li><p><strong>is_azure_credit_eligible</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Is Azure Credit Eligible.</p></li>
+<li><p><strong>term</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Term (in months). 1 month for monthly recurring purchase. 12
+months for a 1 year reservation. 36 months for a 3 year reservation.</p></li>
+<li><p><strong>publisher_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Publisher Name.</p></li>
+<li><p><strong>publisher_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Publisher Type.</p></li>
+<li><p><strong>plan_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Plan Name.</p></li>
+<li><p><strong>charge_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Indicates a charge represents credits, usage, a
+Marketplace purchase, a reservation fee, or a refund.</p></li>
+<li><p><strong>frequency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Indicates how frequently this charge will occur. OneTime
+for purchases which only happen once, Monthly for fees which recur every
+month, and UsageBased for charges based on how much a service is used.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.UsageDetailsDownloadResponse">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">UsageDetailsDownloadResponse</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/usage_details_download_response_py3.html#UsageDetailsDownloadResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.UsageDetailsDownloadResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource_py3.Resource</span></code></p>
+<p>Download response of Usage Details.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>download_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The URL to the csv file.</p></li>
+<li><p><strong>valid_till</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The time in UTC at which this download URL will expire.</p></li>
 </ul>
 </dd>
 </dl>
@@ -397,8 +474,8 @@ default this is not populated, unless it’s specified in $expand.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.Marketplace">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Marketplace</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/marketplace.html#Marketplace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Marketplace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource.Resource</span></code></p>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Marketplace</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/marketplace_py3.html#Marketplace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Marketplace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource_py3.Resource</span></code></p>
 <p>An marketplace resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
@@ -429,7 +506,7 @@ example, USD.</p></li>
 <li><p><strong>unit_of_measure</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unit of measure.</p></li>
 <li><p><strong>pretax_cost</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The amount of cost before tax.</p></li>
 <li><p><strong>is_estimated</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The estimated usage is subject to change.</p></li>
-<li><p><strong>meter_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter id.</p></li>
+<li><p><strong>meter_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter id (GUID).</p></li>
 <li><p><strong>subscription_guid</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subscription guid.</p></li>
 <li><p><strong>subscription_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Subscription name.</p></li>
 <li><p><strong>account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Account name.</p></li>
@@ -441,16 +518,94 @@ department and a costcenter exists</p></li>
 default this is not populated, unless it’s specified in $expand.</p></li>
 <li><p><strong>publisher_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of publisher.</p></li>
 <li><p><strong>plan_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of plan.</p></li>
+<li><p><strong>is_recurring_charge</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Flag indicating whether this is a recurring
+charge or not.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.consumption.models.ReservationSummaries">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ReservationSummaries</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/reservation_summaries.html#ReservationSummaries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ReservationSummaries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource.Resource</span></code></p>
-<p>reservation summaries resource.</p>
+<dt id="azure.mgmt.consumption.models.BalancePropertiesNewPurchasesDetailsItem">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">BalancePropertiesNewPurchasesDetailsItem</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/balance_properties_new_purchases_details_item_py3.html#BalancePropertiesNewPurchasesDetailsItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.BalancePropertiesNewPurchasesDetailsItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>BalancePropertiesNewPurchasesDetailsItem.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of new purchase.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – the value of new purchase.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.BalancePropertiesAdjustmentDetailsItem">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">BalancePropertiesAdjustmentDetailsItem</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/balance_properties_adjustment_details_item_py3.html#BalancePropertiesAdjustmentDetailsItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.BalancePropertiesAdjustmentDetailsItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>BalancePropertiesAdjustmentDetailsItem.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – the name of new adjustment.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – the value of new adjustment.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.Balance">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Balance</code><span class="sig-paren">(</span><em>*</em>, <em>billing_frequency=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/balance_py3.html#Balance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Balance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource_py3.Resource</span></code></p>
+<p>A balance resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>currency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ISO currency in which the meter is charged, for
+example, USD.</p></li>
+<li><p><strong>beginning_balance</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The beginning balance for the billing period.</p></li>
+<li><p><strong>ending_balance</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The ending balance for the billing period (for open
+periods this will be updated daily).</p></li>
+<li><p><strong>new_purchases</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Total new purchase amount.</p></li>
+<li><p><strong>adjustments</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Total adjustment amount.</p></li>
+<li><p><strong>utilized</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Total Commitment usage.</p></li>
+<li><p><strong>service_overage</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Overage for Azure services.</p></li>
+<li><p><strong>charges_billed_separately</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Charges Billed separately.</p></li>
+<li><p><strong>total_overage</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – serviceOverage + chargesBilledSeparately.</p></li>
+<li><p><strong>total_usage</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Azure service commitment + total Overage.</p></li>
+<li><p><strong>azure_marketplace_service_charges</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Total charges for Azure
+Marketplace.</p></li>
+<li><p><strong>price_hidden</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Price is hidden or not.</p></li>
+<li><p><strong>new_purchases_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.consumption.models.BalancePropertiesNewPurchasesDetailsItem" title="azure.mgmt.consumption.models.BalancePropertiesNewPurchasesDetailsItem"><em>BalancePropertiesNewPurchasesDetailsItem</em></a><em>]</em>) – List of new purchases.</p></li>
+<li><p><strong>adjustment_details</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.consumption.models.BalancePropertiesAdjustmentDetailsItem" title="azure.mgmt.consumption.models.BalancePropertiesAdjustmentDetailsItem"><em>BalancePropertiesAdjustmentDetailsItem</em></a><em>]</em>) – List of Adjustments (Promo credit, SIE credit
+etc.).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>billing_frequency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.consumption.models.BillingFrequency" title="azure.mgmt.consumption.models.BillingFrequency"><em>BillingFrequency</em></a>) – The billing frequency. Possible values include:
+‘Month’, ‘Quarter’, ‘Year’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ReservationSummary">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ReservationSummary</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/reservation_summary_py3.html#ReservationSummary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ReservationSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource_py3.Resource</span></code></p>
+<p>reservation summary resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
@@ -469,7 +624,7 @@ reservation within a reservation order. Each reservation is the grouping
 for applying the benefit scope and also specifies the number of instances
 to which the reservation benefit can be applied to.</p></li>
 <li><p><strong>sku_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – This is the ARM Sku name. It can be used to join with the
-servicetype field in additoinalinfo in usage records.</p></li>
+serviceType field in additional info in usage records.</p></li>
 <li><p><strong>reserved_hours</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – This is the total hours reserved. E.g. if
 reservation for 1 instance was made on 1 PM, this will be 11 hours for
 that day and 24 hours from subsequent days</p></li>
@@ -492,10 +647,10 @@ will return 100% for that day.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.consumption.models.ReservationDetails">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ReservationDetails</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/reservation_details.html#ReservationDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ReservationDetails" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource.Resource</span></code></p>
-<p>reservation details resource.</p>
+<dt id="azure.mgmt.consumption.models.ReservationDetail">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ReservationDetail</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/reservation_detail_py3.html#ReservationDetail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ReservationDetail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource_py3.Resource</span></code></p>
+<p>reservation detail resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
@@ -514,7 +669,7 @@ reservation within a reservation order. Each reservation is the grouping
 for applying the benefit scope and also specifies the number of instances
 to which the reservation benefit can be applied to.</p></li>
 <li><p><strong>sku_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – This is the ARM Sku name. It can be used to join with the
-servicetype field in additoinalinfo in usage records.</p></li>
+serviceType field in additional info in usage records.</p></li>
 <li><p><strong>reserved_hours</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – This is the total hours reserved for the day. E.g.
 if reservation for 1 instance was made on 1 PM, this will be 11 hours for
 that day and 24 hours from subsequent days.</p></li>
@@ -523,7 +678,78 @@ that day and 24 hours from subsequent days.</p></li>
 <li><p><strong>instance_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – This identifier is the name of the resource or the
 fully qualified Resource ID.</p></li>
 <li><p><strong>total_reserved_quantity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – This is the total count of instances that
-are reserved for the reservationid.</p></li>
+are reserved for the reservationId.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ReservationRecommendation">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ReservationRecommendation</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/reservation_recommendation_py3.html#ReservationRecommendation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ReservationRecommendation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Reservation recommendation resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.cognitiveservices.models.html#azure.mgmt.cognitiveservices.models.ResourceSkuRestrictionsType.location" title="azure.mgmt.cognitiveservices.models.ResourceSkuRestrictionsType.location"><strong>location</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.powerbiembedded.models.html#azure.mgmt.powerbiembedded.models.WorkspaceCollection.sku" title="azure.mgmt.powerbiembedded.models.WorkspaceCollection.sku"><strong>sku</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource sku</p></li>
+<li><p><strong>look_back_period</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The number of days of usage to look back for
+recommendation.</p></li>
+<li><p><strong>meter_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter id (GUID)</p></li>
+<li><p><strong>term</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – RI recommendations in one or three year terms.</p></li>
+<li><p><strong>cost_with_no_reserved_instances</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The total amount of cost without
+reserved instances.</p></li>
+<li><p><strong>recommended_quantity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Recommended quality for reserved instances.</p></li>
+<li><p><strong>total_cost_with_reserved_instances</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The total amount of cost with
+reserved instances.</p></li>
+<li><p><strong>net_savings</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Total estimated savings with reserved instances.</p></li>
+<li><p><strong>first_usage_date</strong> (<em>datetime</em>) – The usage date for looking back.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datalake.analytics.job.models.html#azure.mgmt.datalake.analytics.job.models.JobType.scope" title="azure.mgmt.datalake.analytics.job.models.JobType.scope"><strong>scope</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Shared or single recommendation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.Tag">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Tag</code><span class="sig-paren">(</span><em>*</em>, <em>key: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/tag_py3.html#Tag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The tag resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Tag key.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.TagsResult">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">TagsResult</code><span class="sig-paren">(</span><em>*</em>, <em>e_tag: str = None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/tags_result_py3.html#TagsResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.TagsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.proxy_resource_py3.ProxyResource</span></code></p>
+<p>A resource listing all tags.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – eTag of the resource. To handle concurrent update scenario,
+this field will be used to determine whether the user is updating the
+latest version or not.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.consumption.models.Tag" title="azure.mgmt.consumption.models.Tag"><em>Tag</em></a><em>]</em>) – A list of Tag.</p></li>
 </ul>
 </dd>
 </dl>
@@ -531,13 +757,14 @@ are reserved for the reservationid.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.BudgetTimePeriod">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">BudgetTimePeriod</code><span class="sig-paren">(</span><em>start_date</em>, <em>end_date=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/budget_time_period.html#BudgetTimePeriod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.BudgetTimePeriod" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">BudgetTimePeriod</code><span class="sig-paren">(</span><em>*</em>, <em>start_date</em>, <em>end_date=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/budget_time_period_py3.html#BudgetTimePeriod"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.BudgetTimePeriod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The start and end date for a budget.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>start_date</strong> (<em>datetime</em>) – The start date for the budget.</p></li>
+<li><p><strong>start_date</strong> (<em>datetime</em>) – Required. The start date for the budget.</p></li>
 <li><p><strong>end_date</strong> (<em>datetime</em>) – The end date for the budget. If not provided, we default
 this to 10 years from the start date.</p></li>
 </ul>
@@ -547,7 +774,7 @@ this to 10 years from the start date.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.Filters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Filters</code><span class="sig-paren">(</span><em>resource_groups=None</em>, <em>resources=None</em>, <em>meters=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/filters.html#Filters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Filters" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Filters</code><span class="sig-paren">(</span><em>*</em>, <em>resource_groups=None</em>, <em>resources=None</em>, <em>meters=None</em>, <em>tags=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/filters_py3.html#Filters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Filters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>May be used to filter budgets by resource group, resource, or meter.</p>
 <dl class="field-list simple">
@@ -556,8 +783,9 @@ this to 10 years from the start date.</p></li>
 <li><p><strong>resource_groups</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of filters on resource groups, allowed at
 subscription level only.</p></li>
 <li><p><strong>resources</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of filters on resources.</p></li>
-<li><p><strong>meters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of filters on meters, mandatory for budgets of
-usage category.</p></li>
+<li><p><strong>meters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of filters on meters (GUID), mandatory for budgets
+of usage category.</p></li>
+<li><p><strong>tags</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em><em>]</em>) – The dictionary of filters on tags.</p></li>
 </ul>
 </dd>
 </dl>
@@ -565,7 +793,7 @@ usage category.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.CurrentSpend">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">CurrentSpend</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/current_spend.html#CurrentSpend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.CurrentSpend" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">CurrentSpend</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/current_spend_py3.html#CurrentSpend"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.CurrentSpend" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The current amount of cost which is being tracked for a budget.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -583,20 +811,21 @@ budget.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.Notification">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Notification</code><span class="sig-paren">(</span><em>enabled</em>, <em>operator</em>, <em>threshold</em>, <em>contact_emails</em>, <em>contact_roles=None</em>, <em>contact_groups=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/notification.html#Notification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Notification" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Notification</code><span class="sig-paren">(</span><em>*</em>, <em>enabled: bool</em>, <em>operator</em>, <em>threshold</em>, <em>contact_emails</em>, <em>contact_roles=None</em>, <em>contact_groups=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/notification_py3.html#Notification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Notification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The notification associated with a budget.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The notification is enabled or not.</p></li>
-<li><p><strong>operator</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.consumption.models.OperatorType" title="azure.mgmt.consumption.models.OperatorType"><em>OperatorType</em></a>) – The comparison operator. Possible values include:
-‘EqualTo’, ‘GreaterThan’, ‘GreaterThanOrEqualTo’</p></li>
-<li><p><strong>threshold</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Threshold value associated with a notification.
-Notification is sent when the cost exceeded the threshold. It is always
-percent and has to be between 0 and 1000.</p></li>
-<li><p><strong>contact_emails</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Email addresses to send the budget notification to
-when the threshold is exceeded.</p></li>
+<li><p><strong>enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Required. The notification is enabled or not.</p></li>
+<li><p><strong>operator</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.consumption.models.OperatorType" title="azure.mgmt.consumption.models.OperatorType"><em>OperatorType</em></a>) – Required. The comparison operator. Possible values
+include: ‘EqualTo’, ‘GreaterThan’, ‘GreaterThanOrEqualTo’</p></li>
+<li><p><strong>threshold</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Required. Threshold value associated with a
+notification. Notification is sent when the cost exceeded the threshold.
+It is always percent and has to be between 0 and 1000.</p></li>
+<li><p><strong>contact_emails</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Required. Email addresses to send the budget
+notification to when the threshold is exceeded.</p></li>
 <li><p><strong>contact_roles</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Contact roles to send the budget notification to
 when the threshold is exceeded.</p></li>
 <li><p><strong>contact_groups</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Action groups to send the budget notification to
@@ -608,11 +837,12 @@ when the threshold is exceeded.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.Budget">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Budget</code><span class="sig-paren">(</span><em>category</em>, <em>amount</em>, <em>time_grain</em>, <em>time_period</em>, <em>e_tag=None</em>, <em>filters=None</em>, <em>notifications=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/budget.html#Budget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Budget" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.proxy_resource.ProxyResource</span></code></p>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Budget</code><span class="sig-paren">(</span><em>*</em>, <em>category</em>, <em>amount</em>, <em>time_grain</em>, <em>time_period</em>, <em>e_tag: str = None</em>, <em>filters=None</em>, <em>notifications=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/budget_py3.html#Budget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Budget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.proxy_resource_py3.ProxyResource</span></code></p>
 <p>A budget resource.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
@@ -625,20 +855,21 @@ a budget.</p></li>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – eTag of the resource. To handle concurrent update scenarion,
+<li><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – eTag of the resource. To handle concurrent update scenario,
 this field will be used to determine whether the user is updating the
 latest version or not.</p></li>
-<li><p><strong>category</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.consumption.models.CategoryType" title="azure.mgmt.consumption.models.CategoryType"><em>CategoryType</em></a>) – The category of the budget, whether the budget tracks
-cost or usage. Possible values include: ‘Cost’, ‘Usage’</p></li>
-<li><p><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The total amount of cost to track with the budget</p></li>
-<li><p><strong>time_grain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.consumption.models.TimeGrainType" title="azure.mgmt.consumption.models.TimeGrainType"><em>TimeGrainType</em></a>) – The time covered by a budget. Tracking of the amount
-will be reset based on the time grain. Possible values include: ‘Monthly’,
-‘Quarterly’, ‘Annually’</p></li>
-<li><p><strong>time_period</strong> (<a class="reference internal" href="#azure.mgmt.consumption.models.BudgetTimePeriod" title="azure.mgmt.consumption.models.BudgetTimePeriod"><em>BudgetTimePeriod</em></a>) – Has start and end date of the budget. The start date
-must be first of the month and should be less than the end date. Budget
-start date must be on or after June 1, 2017. Future start date should not
-be more than three months. Past start date should  be selected within the
-timegrain preiod. There are no restrictions on the end date.</p></li>
+<li><p><strong>category</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.consumption.models.CategoryType" title="azure.mgmt.consumption.models.CategoryType"><em>CategoryType</em></a>) – Required. The category of the budget, whether the budget
+tracks cost or usage. Possible values include: ‘Cost’, ‘Usage’</p></li>
+<li><p><strong>amount</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Required. The total amount of cost to track with the budget</p></li>
+<li><p><strong>time_grain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.consumption.models.TimeGrainType" title="azure.mgmt.consumption.models.TimeGrainType"><em>TimeGrainType</em></a>) – Required. The time covered by a budget. Tracking of the
+amount will be reset based on the time grain. Possible values include:
+‘Monthly’, ‘Quarterly’, ‘Annually’</p></li>
+<li><p><strong>time_period</strong> (<a class="reference internal" href="#azure.mgmt.consumption.models.BudgetTimePeriod" title="azure.mgmt.consumption.models.BudgetTimePeriod"><em>BudgetTimePeriod</em></a>) – Required. Has start and end date of the budget. The
+start date must be first of the month and should be less than the end
+date. Budget start date must be on or after June 1, 2017. Future start
+date should not be more than three months. Past start date should  be
+selected within the timegrain period. There are no restrictions on the end
+date.</p></li>
 <li><p><strong>filters</strong> (<a class="reference internal" href="#azure.mgmt.consumption.models.Filters" title="azure.mgmt.consumption.models.Filters"><em>Filters</em></a>) – May be used to filter budgets by resource group, resource,
 or meter.</p></li>
 <li><p><strong>notifications</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>,
@@ -650,8 +881,189 @@ budget. Budget can have up to five notifications.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.consumption.models.PriceSheetProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">PriceSheetProperties</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/price_sheet_properties_py3.html#PriceSheetProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.PriceSheetProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The properties of the price sheet.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>billing_period_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the billing period resource that the
+usage belongs to.</p></li>
+<li><p><strong>meter_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter id (GUID)</p></li>
+<li><p><strong>meter_details</strong> (<a class="reference internal" href="#azure.mgmt.consumption.models.MeterDetails" title="azure.mgmt.consumption.models.MeterDetails"><em>MeterDetails</em></a>) – The details about the meter. By default this is not
+populated, unless it’s specified in $expand.</p></li>
+<li><p><strong>unit_of_measure</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unit of measure</p></li>
+<li><p><strong>included_quantity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Included quality for an offer</p></li>
+<li><p><strong>part_number</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Part Number</p></li>
+<li><p><strong>unit_price</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Unit Price</p></li>
+<li><p><strong>currency_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Currency Code</p></li>
+<li><p><strong>offer_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Offer Id</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.PriceSheetResult">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">PriceSheetResult</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/price_sheet_result_py3.html#PriceSheetResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.PriceSheetResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource_py3.Resource</span></code></p>
+<p>An pricesheet resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>pricesheets</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.consumption.models.PriceSheetProperties" title="azure.mgmt.consumption.models.PriceSheetProperties"><em>PriceSheetProperties</em></a><em>]</em>) – Price sheet</p></li>
+<li><p><strong>next_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link (url) to the next page of results.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ForecastPropertiesConfidenceLevelsItem">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ForecastPropertiesConfidenceLevelsItem</code><span class="sig-paren">(</span><em>*</em>, <em>bound=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/forecast_properties_confidence_levels_item_py3.html#ForecastPropertiesConfidenceLevelsItem"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ForecastPropertiesConfidenceLevelsItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>ForecastPropertiesConfidenceLevelsItem.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.percentage" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.percentage"><strong>percentage</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The percentage level of the confidence</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The amount of forecast within the percentage level</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>bound</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.consumption.models.Bound" title="azure.mgmt.consumption.models.Bound"><em>Bound</em></a>) – The boundary of the percentage, values could be ‘Upper’ or
+‘Lower’. Possible values include: ‘Upper’, ‘Lower’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.Forecast">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Forecast</code><span class="sig-paren">(</span><em>*</em>, <em>grain=None</em>, <em>charge_type=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/forecast_py3.html#Forecast"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Forecast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource_py3.Resource</span></code></p>
+<p>A forecast resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>usage_date</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The usage date of the forecast.</p></li>
+<li><p><strong>charge</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – The amount of charge</p></li>
+<li><p><strong>currency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ISO currency in which the meter is charged, for
+example, USD.</p></li>
+<li><p><strong>confidence_levels</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.consumption.models.ForecastPropertiesConfidenceLevelsItem" title="azure.mgmt.consumption.models.ForecastPropertiesConfidenceLevelsItem"><em>ForecastPropertiesConfidenceLevelsItem</em></a><em>]</em>) – The details about the forecast confidence levels.
+This is populated only when chargeType is Forecast.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>grain</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.consumption.models.Grain" title="azure.mgmt.consumption.models.Grain"><em>Grain</em></a>) – The granularity of forecast. Possible values include:
+‘Daily’, ‘Monthly’, ‘Yearly’</p></li>
+<li><p><strong>charge_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.consumption.models.ChargeType" title="azure.mgmt.consumption.models.ChargeType"><em>ChargeType</em></a>) – The type of the charge. Could be actual or forecast.
+Possible values include: ‘Actual’, ‘Forecast’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ManagementGroupAggregatedCostResult">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ManagementGroupAggregatedCostResult</code><span class="sig-paren">(</span><em>*</em>, <em>children=None</em>, <em>included_subscriptions=None</em>, <em>excluded_subscriptions=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/management_group_aggregated_cost_result_py3.html#ManagementGroupAggregatedCostResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ManagementGroupAggregatedCostResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource_py3.Resource</span></code></p>
+<p>A management group aggregated cost resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>billing_period_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the billing period resource that the
+aggregated cost belongs to.</p></li>
+<li><p><strong>usage_start</strong> (<em>datetime</em>) – The start of the date time range covered by aggregated
+cost.</p></li>
+<li><p><strong>usage_end</strong> (<em>datetime</em>) – The end of the date time range covered by the aggregated
+cost.</p></li>
+<li><p><strong>azure_charges</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Azure Charges.</p></li>
+<li><p><strong>marketplace_charges</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Marketplace Charges.</p></li>
+<li><p><strong>charges_billed_separately</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Charges Billed Separately.</p></li>
+<li><p><strong>currency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ISO currency in which the meter is charged, for
+example, USD.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>children</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.consumption.models.ManagementGroupAggregatedCostResult" title="azure.mgmt.consumption.models.ManagementGroupAggregatedCostResult"><em>ManagementGroupAggregatedCostResult</em></a><em>]</em>) – Children of a management group</p></li>
+<li><p><strong>included_subscriptions</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of subscription Guids included in the
+calculation of aggregated cost</p></li>
+<li><p><strong>excluded_subscriptions</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of subscription Guids excluded from
+the calculation of aggregated cost</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ChargeSummary">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ChargeSummary</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/charge_summary_py3.html#ChargeSummary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ChargeSummary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource_py3.Resource</span></code></p>
+<p>A charge summary resource.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
+<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
+<li><p><strong>billing_period_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the billing period resource that the
+charge belongs to.</p></li>
+<li><p><strong>usage_start</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Usage start date.</p></li>
+<li><p><strong>usage_end</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Usage end date.</p></li>
+<li><p><strong>azure_charges</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Azure Charges.</p></li>
+<li><p><strong>charges_billed_separately</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Charges Billed separately.</p></li>
+<li><p><strong>marketplace_charges</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Marketplace Charges.</p></li>
+<li><p><strong>currency</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Currency Code</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ChargesListResult">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ChargesListResult</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/charges_list_result_py3.html#ChargesListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ChargesListResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Result of listing charge summary.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.consumption.models.ChargeSummary" title="azure.mgmt.consumption.models.ChargeSummary"><em>ChargeSummary</em></a><em>]</em>) – The list of charge summary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.consumption.models.ErrorDetails">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ErrorDetails</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/error_details.html#ErrorDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ErrorDetails" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ErrorDetails</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/error_details_py3.html#ErrorDetails"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ErrorDetails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The details of the error.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -668,7 +1080,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.ErrorResponse">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>error=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/error_response.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>*</em>, <em>error=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Error response indicates that the service is not able to process the
 incoming request. The reason is provided in the error message.</p>
@@ -681,7 +1093,7 @@ incoming request. The reason is provided in the error message.</p>
 
 <dl class="exception">
 <dt id="azure.mgmt.consumption.models.ErrorResponseException">
-<em class="property">exception </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/error_response.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ErrorResponseException</code><span class="sig-paren">(</span><em>deserialize</em>, <em>response</em>, <em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/error_response_py3.html#ErrorResponseException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ErrorResponseException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.exceptions.HttpOperationError</span></code></p>
 <p>Server responsed with exception of type: ‘ErrorResponse’.</p>
 <dl class="field-list simple">
@@ -696,7 +1108,7 @@ incoming request. The reason is provided in the error message.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.OperationDisplay">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">OperationDisplay</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/operation_display.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">OperationDisplay</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/operation_display_py3.html#OperationDisplay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.OperationDisplay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The object that represents the operation.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -715,7 +1127,7 @@ etc.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.Operation">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>display=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/operation.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Operation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Operation</code><span class="sig-paren">(</span><em>*</em>, <em>display=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/operation_py3.html#Operation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Operation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>A Consumption REST API operation.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -732,7 +1144,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.Resource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Resource</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/resource.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Resource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Resource</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/resource_py3.html#Resource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Resource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The Resource model definition.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -750,8 +1162,25 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.consumption.models.ResourceAttributes">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ResourceAttributes</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/resource_attributes_py3.html#ResourceAttributes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ResourceAttributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The Resource model definition.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.mgmt.cognitiveservices.models.html#azure.mgmt.cognitiveservices.models.ResourceSkuRestrictionsType.location" title="azure.mgmt.cognitiveservices.models.ResourceSkuRestrictionsType.location"><strong>location</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource location</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.powerbiembedded.models.html#azure.mgmt.powerbiembedded.models.WorkspaceCollection.sku" title="azure.mgmt.powerbiembedded.models.WorkspaceCollection.sku"><strong>sku</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource sku</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.consumption.models.ProxyResource">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ProxyResource</code><span class="sig-paren">(</span><em>e_tag=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/proxy_resource.html#ProxyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ProxyResource" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ProxyResource</code><span class="sig-paren">(</span><em>*</em>, <em>e_tag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/proxy_resource_py3.html#ProxyResource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ProxyResource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>The Resource model definition.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -765,55 +1194,9 @@ sending a request.</p>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – eTag of the resource. To handle concurrent update scenarion,
+<dd class="field-even"><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – eTag of the resource. To handle concurrent update scenario,
 this field will be used to determine whether the user is updating the
 latest version or not.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.consumption.models.PriceSheetProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">PriceSheetProperties</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/price_sheet_properties.html#PriceSheetProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.PriceSheetProperties" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The properties of the price sheet.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>billing_period_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The id of the billing period resource that the
-usage belongs to.</p></li>
-<li><p><strong>meter_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The meter id</p></li>
-<li><p><strong>meter_details</strong> (<a class="reference internal" href="#azure.mgmt.consumption.models.MeterDetails" title="azure.mgmt.consumption.models.MeterDetails"><em>MeterDetails</em></a>) – The details about the meter. By default this is not
-populated, unless it’s specified in $expand.</p></li>
-<li><p><strong>unit_of_measure</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Unit of measure</p></li>
-<li><p><strong>included_quantity</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Included quality for an offer</p></li>
-<li><p><strong>part_number</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Part Number</p></li>
-<li><p><strong>unit_price</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/decimal.html#decimal.Decimal" title="(in Python v3.5)"><em>decimal.Decimal</em></a>) – Unit Price</p></li>
-<li><p><strong>currency_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Currency Code</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.consumption.models.PriceSheetResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">PriceSheetResult</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/price_sheet_result.html#PriceSheetResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.PriceSheetResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.consumption.models.resource.Resource</span></code></p>
-<p>An pricesheet resource.</p>
-<p>Variables are only populated by the server, and will be ignored when
-sending a request.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource Id.</p></li>
-<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource name.</p></li>
-<li><p><a class="reference internal" href="azure.batch.models.html#azure.batch.models.ContainerConfiguration.type" title="azure.batch.models.ContainerConfiguration.type"><strong>type</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Resource type.</p></li>
-<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.models.html#azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags" title="azure.cognitiveservices.search.imagesearch.models.ImageInsightModule.tags"><strong>tags</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Resource tags.</p></li>
-<li><p><strong>pricesheets</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.consumption.models.PriceSheetProperties" title="azure.mgmt.consumption.models.PriceSheetProperties"><em>PriceSheetProperties</em></a><em>]</em>) – Price sheet</p></li>
-<li><p><strong>next_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link (url) to the next page of results.</p></li>
-</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -833,24 +1216,38 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.consumption.models.ReservationSummariesPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ReservationSummariesPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/reservation_summaries_paged.html#ReservationSummariesPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ReservationSummariesPaged" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
-<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.consumption.models.ReservationSummaries" title="azure.mgmt.consumption.models.ReservationSummaries"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReservationSummaries</span></code></a> object</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.consumption.models.ReservationDetailsPaged">
-<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ReservationDetailsPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/reservation_details_paged.html#ReservationDetailsPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ReservationDetailsPaged" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
-<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.consumption.models.ReservationDetails" title="azure.mgmt.consumption.models.ReservationDetails"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReservationDetails</span></code></a> object</p>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.consumption.models.BudgetPaged">
 <em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">BudgetPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/budget_paged.html#BudgetPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.BudgetPaged" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
 <p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.consumption.models.Budget" title="azure.mgmt.consumption.models.Budget"><code class="xref py py-class docutils literal notranslate"><span class="pre">Budget</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ReservationSummaryPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ReservationSummaryPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/reservation_summary_paged.html#ReservationSummaryPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ReservationSummaryPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.consumption.models.ReservationSummary" title="azure.mgmt.consumption.models.ReservationSummary"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReservationSummary</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ReservationDetailPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ReservationDetailPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/reservation_detail_paged.html#ReservationDetailPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ReservationDetailPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.consumption.models.ReservationDetail" title="azure.mgmt.consumption.models.ReservationDetail"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReservationDetail</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ReservationRecommendationPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ReservationRecommendationPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/reservation_recommendation_paged.html#ReservationRecommendationPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ReservationRecommendationPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.consumption.models.ReservationRecommendation" title="azure.mgmt.consumption.models.ReservationRecommendation"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReservationRecommendation</span></code></a> object</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ForecastPaged">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ForecastPaged</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/forecast_paged.html#ForecastPaged"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ForecastPaged" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.paging.Paged</span></code></p>
+<p>A paging container for iterating over a list of <a class="reference internal" href="#azure.mgmt.consumption.models.Forecast" title="azure.mgmt.consumption.models.Forecast"><code class="xref py py-class docutils literal notranslate"><span class="pre">Forecast</span></code></a> object</p>
 </dd></dl>
 
 <dl class="class">
@@ -861,9 +1258,31 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.consumption.models.BillingFrequency">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">BillingFrequency</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/consumption_management_client_enums.html#BillingFrequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.BillingFrequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.BillingFrequency.month">
+<code class="descname">month</code><em class="property"> = 'Month'</em><a class="headerlink" href="#azure.mgmt.consumption.models.BillingFrequency.month" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.BillingFrequency.quarter">
+<code class="descname">quarter</code><em class="property"> = 'Quarter'</em><a class="headerlink" href="#azure.mgmt.consumption.models.BillingFrequency.quarter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.BillingFrequency.year">
+<code class="descname">year</code><em class="property"> = 'Year'</em><a class="headerlink" href="#azure.mgmt.consumption.models.BillingFrequency.year" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.consumption.models.CategoryType">
 <em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">CategoryType</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/consumption_management_client_enums.html#CategoryType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.CategoryType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.consumption.models.CategoryType.cost">
@@ -880,7 +1299,7 @@ sending a request.</p>
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.TimeGrainType">
 <em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">TimeGrainType</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/consumption_management_client_enums.html#TimeGrainType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.TimeGrainType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.consumption.models.TimeGrainType.annually">
@@ -902,7 +1321,7 @@ sending a request.</p>
 <dl class="class">
 <dt id="azure.mgmt.consumption.models.OperatorType">
 <em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">OperatorType</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/consumption_management_client_enums.html#OperatorType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.OperatorType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.consumption.models.OperatorType.equal_to">
@@ -922,19 +1341,102 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.consumption.models.Grain">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Grain</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/consumption_management_client_enums.html#Grain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Grain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.Grain.daily">
+<code class="descname">daily</code><em class="property"> = 'Daily'</em><a class="headerlink" href="#azure.mgmt.consumption.models.Grain.daily" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.Grain.monthly">
+<code class="descname">monthly</code><em class="property"> = 'Monthly'</em><a class="headerlink" href="#azure.mgmt.consumption.models.Grain.monthly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.Grain.yearly">
+<code class="descname">yearly</code><em class="property"> = 'Yearly'</em><a class="headerlink" href="#azure.mgmt.consumption.models.Grain.yearly" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.ChargeType">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">ChargeType</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/consumption_management_client_enums.html#ChargeType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.ChargeType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.ChargeType.actual">
+<code class="descname">actual</code><em class="property"> = 'Actual'</em><a class="headerlink" href="#azure.mgmt.consumption.models.ChargeType.actual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.ChargeType.forecast">
+<code class="descname">forecast</code><em class="property"> = 'Forecast'</em><a class="headerlink" href="#azure.mgmt.consumption.models.ChargeType.forecast" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.Bound">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Bound</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/consumption_management_client_enums.html#Bound"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Bound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.Bound.lower">
+<code class="descname">lower</code><em class="property"> = 'Lower'</em><a class="headerlink" href="#azure.mgmt.consumption.models.Bound.lower" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.Bound.upper">
+<code class="descname">upper</code><em class="property"> = 'Upper'</em><a class="headerlink" href="#azure.mgmt.consumption.models.Bound.upper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.consumption.models.Datagrain">
 <em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Datagrain</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/consumption_management_client_enums.html#Datagrain"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Datagrain" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
 <dt id="azure.mgmt.consumption.models.Datagrain.daily_grain">
 <code class="descname">daily_grain</code><em class="property"> = 'daily'</em><a class="headerlink" href="#azure.mgmt.consumption.models.Datagrain.daily_grain" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Daily grain of data</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="azure.mgmt.consumption.models.Datagrain.monthly_grain">
 <code class="descname">monthly_grain</code><em class="property"> = 'monthly'</em><a class="headerlink" href="#azure.mgmt.consumption.models.Datagrain.monthly_grain" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Monthly grain of data</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.consumption.models.Metrictype">
+<em class="property">class </em><code class="descclassname">azure.mgmt.consumption.models.</code><code class="descname">Metrictype</code><a class="reference internal" href="../_modules/azure/mgmt/consumption/models/consumption_management_client_enums.html#Metrictype"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.consumption.models.Metrictype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.Metrictype.actual_cost_metric_type">
+<code class="descname">actual_cost_metric_type</code><em class="property"> = 'actualcost'</em><a class="headerlink" href="#azure.mgmt.consumption.models.Metrictype.actual_cost_metric_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Actual cost data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.Metrictype.amortized_cost_metric_type">
+<code class="descname">amortized_cost_metric_type</code><em class="property"> = 'amortizedcost'</em><a class="headerlink" href="#azure.mgmt.consumption.models.Metrictype.amortized_cost_metric_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Amortized cost data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.consumption.models.Metrictype.usage_metric_type">
+<code class="descname">usage_metric_type</code><em class="property"> = 'usage'</em><a class="headerlink" href="#azure.mgmt.consumption.models.Metrictype.usage_metric_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Usage data.</p>
+</dd></dl>
 
 </dd></dl>
 

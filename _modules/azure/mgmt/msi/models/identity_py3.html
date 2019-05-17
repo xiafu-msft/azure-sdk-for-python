@@ -338,7 +338,9 @@
 <span class="sd">     random generated UUID by MSI.</span>
 <span class="sd">    :vartype client_id: str</span>
 <span class="sd">    :ivar client_secret_url:  The ManagedServiceIdentity DataPlane URL that</span>
-<span class="sd">     can be queried to obtain the identity credentials.</span>
+<span class="sd">     can be queried to obtain the identity credentials. If identity is user</span>
+<span class="sd">     assigned, then the clientSecretUrl will not be present in the response,</span>
+<span class="sd">     otherwise it will be present.</span>
 <span class="sd">    :vartype client_secret_url: str</span>
 <span class="sd">    :ivar type: The type of resource i.e.</span>
 <span class="sd">     Microsoft.ManagedIdentity/userAssignedIdentities. Possible values include:</span>
