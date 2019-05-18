@@ -327,7 +327,7 @@
 <li><p><strong>client</strong> – Client for service requests.</p></li>
 <li><p><strong>config</strong> – Configuration of service client.</p></li>
 <li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An objec model deserializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
@@ -422,7 +422,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.managementpartner.operations.PartnerOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementpartner.models' from 'd:\\a\\1\\s\\azure-mgmt-managementpartner\\azure\\mgmt\\managementpartner\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementpartner.operations.PartnerOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementpartner.models' from 'd:\\a\\1\\s\\sdk\\managementpartner\\azure-mgmt-managementpartner\\azure\\mgmt\\managementpartner\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementpartner.operations.PartnerOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -467,7 +467,7 @@ ClientRawResponse</p>
 <li><p><strong>client</strong> – Client for service requests.</p></li>
 <li><p><strong>config</strong> – Configuration of service client.</p></li>
 <li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An objec model deserializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
@@ -503,7 +503,60 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.managementpartner.operations.OperationOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementpartner.models' from 'd:\\a\\1\\s\\azure-mgmt-managementpartner\\azure\\mgmt\\managementpartner\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementpartner.operations.OperationOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementpartner.models' from 'd:\\a\\1\\s\\sdk\\managementpartner\\azure-mgmt-managementpartner\\azure\\mgmt\\managementpartner\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementpartner.operations.OperationOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.managementpartner.operations.PartnersOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.managementpartner.operations.</code><code class="descname">PartnersOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementpartner/operations/partners_operations.html#PartnersOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementpartner.operations.PartnersOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>PartnersOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Supported version. Constant value: “2018-02-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.managementpartner.operations.PartnersOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/managementpartner/operations/partners_operations.html#PartnersOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.managementpartner.operations.PartnersOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a specific <cite>Partner</cite>.</p>
+<p>Get the management partner using the objectId and tenantId.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>PartnerResponse or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.managementpartner.models.html#azure.mgmt.managementpartner.models.PartnerResponse" title="azure.mgmt.managementpartner.models.PartnerResponse">PartnerResponse</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.managementpartner.models.html#azure.mgmt.managementpartner.models.ErrorException" title="azure.mgmt.managementpartner.models.ErrorException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.managementpartner.operations.PartnersOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.managementpartner.models' from 'd:\\a\\1\\s\\sdk\\managementpartner\\azure-mgmt-managementpartner\\azure\\mgmt\\managementpartner\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.managementpartner.operations.PartnersOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

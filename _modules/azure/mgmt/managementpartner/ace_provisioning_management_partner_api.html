@@ -312,12 +312,13 @@
 <span class="c1"># regenerated.</span>
 <span class="c1"># --------------------------------------------------------------------------</span>
 
-<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">ServiceClient</span>
+<span class="kn">from</span> <span class="nn">msrest.service_client</span> <span class="k">import</span> <span class="n">SDKClient</span>
 <span class="kn">from</span> <span class="nn">msrest</span> <span class="k">import</span> <span class="n">Serializer</span><span class="p">,</span> <span class="n">Deserializer</span>
 <span class="kn">from</span> <span class="nn">msrestazure</span> <span class="k">import</span> <span class="n">AzureConfiguration</span>
 <span class="kn">from</span> <span class="nn">.version</span> <span class="k">import</span> <span class="n">VERSION</span>
 <span class="kn">from</span> <span class="nn">.operations.partner_operations</span> <span class="k">import</span> <span class="n">PartnerOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.operation_operations</span> <span class="k">import</span> <span class="n">OperationOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.partners_operations</span> <span class="k">import</span> <span class="n">PartnersOperations</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">models</span>
 
 
@@ -348,7 +349,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span> <span class="o">=</span> <span class="n">credentials</span>
 
 
-<div class="viewcode-block" id="ACEProvisioningManagementPartnerAPI"><a class="viewcode-back" href="../../../../ref/azure.mgmt.managementpartner.html#azure.mgmt.managementpartner.ACEProvisioningManagementPartnerAPI">[docs]</a><span class="k">class</span> <span class="nc">ACEProvisioningManagementPartnerAPI</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="ACEProvisioningManagementPartnerAPI"><a class="viewcode-back" href="../../../../ref/azure.mgmt.managementpartner.html#azure.mgmt.managementpartner.ACEProvisioningManagementPartnerAPI">[docs]</a><span class="k">class</span> <span class="nc">ACEProvisioningManagementPartnerAPI</span><span class="p">(</span><span class="n">SDKClient</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;This API describe ACE Provisioning ManagementPartner</span>
 
 <span class="sd">    :ivar config: Configuration for client.</span>
@@ -358,6 +359,8 @@
 <span class="sd">    :vartype partner: azure.mgmt.managementpartner.operations.PartnerOperations</span>
 <span class="sd">    :ivar operation: Operation operations</span>
 <span class="sd">    :vartype operation: azure.mgmt.managementpartner.operations.OperationOperations</span>
+<span class="sd">    :ivar partners: Partners operations</span>
+<span class="sd">    :vartype partners: azure.mgmt.managementpartner.operations.PartnersOperations</span>
 
 <span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
 <span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
@@ -369,7 +372,7 @@
             <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">ACEProvisioningManagementPartnerAPIConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">ServiceClient</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">ACEProvisioningManagementPartnerAPI</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
 
         <span class="n">client_models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">type</span><span class="p">)}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s1">&#39;2018-02-01&#39;</span>
@@ -379,6 +382,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">partner</span> <span class="o">=</span> <span class="n">PartnerOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">operation</span> <span class="o">=</span> <span class="n">OperationOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">partners</span> <span class="o">=</span> <span class="n">PartnersOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span></div>
 </pre></div>
 
