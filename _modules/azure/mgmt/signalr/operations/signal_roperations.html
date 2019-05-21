@@ -328,7 +328,7 @@
 <span class="sd">    :param config: Configuration of service client.</span>
 <span class="sd">    :param serializer: An object model serializer.</span>
 <span class="sd">    :param deserializer: An object model deserializer.</span>
-<span class="sd">    :ivar api_version: Client Api Version. Constant value: &quot;2018-03-01-preview&quot;.</span>
+<span class="sd">    :ivar api_version: Client Api Version. Possible values include: &#39;2018-03-01-preview&#39;, &#39;2018-10-01&#39;. Constant value: &quot;2018-10-01&quot;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">models</span> <span class="o">=</span> <span class="n">models</span>
@@ -338,7 +338,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">client</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">serializer</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">deserializer</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s2">&quot;2018-03-01-preview&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s2">&quot;2018-10-01&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
 
@@ -789,7 +789,7 @@
             <span class="k">return</span> <span class="n">client_raw_response</span>
 
         <span class="k">return</span> <span class="n">deserialized</span></div>
-    <span class="n">get</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/subscriptions/</span><span class="si">{subscriptionId}</span><span class="s1">/resourceGroups/</span><span class="si">{resourceGroupName}</span><span class="s1">/providers/Microsoft.SignalRService/SignalR/</span><span class="si">{resourceName}</span><span class="s1">&#39;</span><span class="p">}</span>
+    <span class="n">get</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/subscriptions/</span><span class="si">{subscriptionId}</span><span class="s1">/resourceGroups/</span><span class="si">{resourceGroupName}</span><span class="s1">/providers/Microsoft.SignalRService/signalR/</span><span class="si">{resourceName}</span><span class="s1">&#39;</span><span class="p">}</span>
 
 
     <span class="k">def</span> <span class="nf">_create_or_update_initial</span><span class="p">(</span>
@@ -894,7 +894,7 @@
         <span class="k">elif</span> <span class="n">polling</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">NoPolling</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">polling</span>
         <span class="k">return</span> <span class="n">LROPoller</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="n">raw_result</span><span class="p">,</span> <span class="n">get_long_running_output</span><span class="p">,</span> <span class="n">polling_method</span><span class="p">)</span></div>
-    <span class="n">create_or_update</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/subscriptions/</span><span class="si">{subscriptionId}</span><span class="s1">/resourceGroups/</span><span class="si">{resourceGroupName}</span><span class="s1">/providers/Microsoft.SignalRService/SignalR/</span><span class="si">{resourceName}</span><span class="s1">&#39;</span><span class="p">}</span>
+    <span class="n">create_or_update</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/subscriptions/</span><span class="si">{subscriptionId}</span><span class="s1">/resourceGroups/</span><span class="si">{resourceGroupName}</span><span class="s1">/providers/Microsoft.SignalRService/signalR/</span><span class="si">{resourceName}</span><span class="s1">&#39;</span><span class="p">}</span>
 
 
     <span class="k">def</span> <span class="nf">_delete_initial</span><span class="p">(</span>
@@ -975,7 +975,7 @@
         <span class="k">elif</span> <span class="n">polling</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">NoPolling</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">polling</span>
         <span class="k">return</span> <span class="n">LROPoller</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="n">raw_result</span><span class="p">,</span> <span class="n">get_long_running_output</span><span class="p">,</span> <span class="n">polling_method</span><span class="p">)</span></div>
-    <span class="n">delete</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/subscriptions/</span><span class="si">{subscriptionId}</span><span class="s1">/resourceGroups/</span><span class="si">{resourceGroupName}</span><span class="s1">/providers/Microsoft.SignalRService/SignalR/</span><span class="si">{resourceName}</span><span class="s1">&#39;</span><span class="p">}</span>
+    <span class="n">delete</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/subscriptions/</span><span class="si">{subscriptionId}</span><span class="s1">/resourceGroups/</span><span class="si">{resourceGroupName}</span><span class="s1">/providers/Microsoft.SignalRService/signalR/</span><span class="si">{resourceName}</span><span class="s1">&#39;</span><span class="p">}</span>
 
 
     <span class="k">def</span> <span class="nf">_update_initial</span><span class="p">(</span>
@@ -1080,7 +1080,88 @@
         <span class="k">elif</span> <span class="n">polling</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">NoPolling</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">polling</span>
         <span class="k">return</span> <span class="n">LROPoller</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="n">raw_result</span><span class="p">,</span> <span class="n">get_long_running_output</span><span class="p">,</span> <span class="n">polling_method</span><span class="p">)</span></div>
-    <span class="n">update</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/subscriptions/</span><span class="si">{subscriptionId}</span><span class="s1">/resourceGroups/</span><span class="si">{resourceGroupName}</span><span class="s1">/providers/Microsoft.SignalRService/SignalR/</span><span class="si">{resourceName}</span><span class="s1">&#39;</span><span class="p">}</span></div>
+    <span class="n">update</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/subscriptions/</span><span class="si">{subscriptionId}</span><span class="s1">/resourceGroups/</span><span class="si">{resourceGroupName}</span><span class="s1">/providers/Microsoft.SignalRService/signalR/</span><span class="si">{resourceName}</span><span class="s1">&#39;</span><span class="p">}</span>
+
+
+    <span class="k">def</span> <span class="nf">_restart_initial</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">resource_name</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="c1"># Construct URL</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">restart</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
+        <span class="n">path_format_arguments</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;subscriptionId&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;self.config.subscription_id&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">subscription_id</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;resourceGroupName&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;resource_group_name&quot;</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">),</span>
+            <span class="s1">&#39;resourceName&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">url</span><span class="p">(</span><span class="s2">&quot;resource_name&quot;</span><span class="p">,</span> <span class="n">resource_name</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">path_format_arguments</span><span class="p">)</span>
+
+        <span class="c1"># Construct parameters</span>
+        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;api-version&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;self.api_version&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct headers</span>
+        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;accept-language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;self.config.accept_language&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Construct and send request</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">202</span><span class="p">,</span> <span class="mi">204</span><span class="p">]:</span>
+            <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+            <span class="n">exp</span><span class="o">.</span><span class="n">request_id</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;x-ms-request-id&#39;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">exp</span>
+
+        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">client_raw_response</span>
+
+<div class="viewcode-block" id="SignalROperations.restart"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.signalr.operations.html#azure.mgmt.signalr.operations.SignalROperations.restart">[docs]</a>    <span class="k">def</span> <span class="nf">restart</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">resource_name</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">polling</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Operation to restart a SignalR service.</span>
+
+<span class="sd">        :param resource_group_name: The name of the resource group that</span>
+<span class="sd">         contains the resource. You can obtain this value from the Azure</span>
+<span class="sd">         Resource Manager API or the portal.</span>
+<span class="sd">        :type resource_group_name: str</span>
+<span class="sd">        :param resource_name: The name of the SignalR resource.</span>
+<span class="sd">        :type resource_name: str</span>
+<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
+<span class="sd">        :param bool raw: The poller return type is ClientRawResponse, the</span>
+<span class="sd">         direct response alongside the deserialized response</span>
+<span class="sd">        :param polling: True for ARMPolling, False for no polling, or a</span>
+<span class="sd">         polling object for personal polling strategy</span>
+<span class="sd">        :return: An instance of LROPoller that returns None or</span>
+<span class="sd">         ClientRawResponse&lt;None&gt; if raw==True</span>
+<span class="sd">        :rtype: ~msrestazure.azure_operation.AzureOperationPoller[None] or</span>
+<span class="sd">         ~msrestazure.azure_operation.AzureOperationPoller[~msrest.pipeline.ClientRawResponse[None]]</span>
+<span class="sd">        :raises: :class:`CloudError&lt;msrestazure.azure_exceptions.CloudError&gt;`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">raw_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_restart_initial</span><span class="p">(</span>
+            <span class="n">resource_group_name</span><span class="o">=</span><span class="n">resource_group_name</span><span class="p">,</span>
+            <span class="n">resource_name</span><span class="o">=</span><span class="n">resource_name</span><span class="p">,</span>
+            <span class="n">custom_headers</span><span class="o">=</span><span class="n">custom_headers</span><span class="p">,</span>
+            <span class="n">raw</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">operation_config</span>
+        <span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">get_long_running_output</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
+                <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">client_raw_response</span>
+
+        <span class="n">lro_delay</span> <span class="o">=</span> <span class="n">operation_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s1">&#39;long_running_operation_timeout&#39;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">long_running_operation_timeout</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">polling</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">ARMPolling</span><span class="p">(</span><span class="n">lro_delay</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">polling</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">NoPolling</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span> <span class="n">polling_method</span> <span class="o">=</span> <span class="n">polling</span>
+        <span class="k">return</span> <span class="n">LROPoller</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="n">raw_result</span><span class="p">,</span> <span class="n">get_long_running_output</span><span class="p">,</span> <span class="n">polling_method</span><span class="p">)</span></div>
+    <span class="n">restart</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/subscriptions/</span><span class="si">{subscriptionId}</span><span class="s1">/resourceGroups/</span><span class="si">{resourceGroupName}</span><span class="s1">/providers/Microsoft.SignalRService/signalR/</span><span class="si">{resourceName}</span><span class="s1">/restart&#39;</span><span class="p">}</span></div>
 </pre></div>
 
            </div>

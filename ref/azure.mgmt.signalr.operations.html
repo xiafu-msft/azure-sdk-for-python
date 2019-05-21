@@ -331,7 +331,7 @@
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Constant value: “2018-03-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Possible values include: ‘2018-03-01-preview’, ‘2018-10-01’. Constant value: “2018-10-01”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -363,7 +363,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.signalr.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.signalr.models' from 'd:\\a\\1\\s\\azure-mgmt-signalr\\azure\\mgmt\\signalr\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.signalr.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.signalr.models' from 'd:\\a\\1\\s\\sdk\\signalr\\azure-mgmt-signalr\\azure\\mgmt\\signalr\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.signalr.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -383,7 +383,7 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Constant value: “2018-03-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Possible values include: ‘2018-03-01-preview’, ‘2018-10-01’. Constant value: “2018-10-01”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -603,7 +603,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.signalr.operations.SignalROperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.signalr.models' from 'd:\\a\\1\\s\\azure-mgmt-signalr\\azure\\mgmt\\signalr\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.signalr.operations.SignalROperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.signalr.models' from 'd:\\a\\1\\s\\sdk\\signalr\\azure-mgmt-signalr\\azure\\mgmt\\signalr\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.signalr.operations.SignalROperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -636,6 +636,38 @@ ClientRawResponse&lt;SignalRKeys&gt; if raw==True</p>
 <dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.signalr.models.html#azure.mgmt.signalr.models.SignalRKeys" title="azure.mgmt.signalr.models.SignalRKeys">SignalRKeys</a>]
 or
 AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.signalr.models.html#azure.mgmt.signalr.models.SignalRKeys" title="azure.mgmt.signalr.models.SignalRKeys">SignalRKeys</a>]]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.signalr.operations.SignalROperations.restart">
+<code class="descname">restart</code><span class="sig-paren">(</span><em>resource_group_name</em>, <em>resource_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/signalr/operations/signal_roperations.html#SignalROperations.restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.signalr.operations.SignalROperations.restart" title="Permalink to this definition">¶</a></dt>
+<dd><p>Operation to restart a SignalR service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group that
+contains the resource. You can obtain this value from the Azure
+Resource Manager API or the portal.</p></li>
+<li><p><strong>resource_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the SignalR resource.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
+direct response alongside the deserialized response</p></li>
+<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
+polling object for personal polling strategy</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An instance of LROPoller that returns None or
+ClientRawResponse&lt;None&gt; if raw==True</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>AzureOperationPoller[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>] or
+AzureOperationPoller[ClientRawResponse[<a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a>]]</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
@@ -694,7 +726,7 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Constant value: “2018-03-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Possible values include: ‘2018-03-01-preview’, ‘2018-10-01’. Constant value: “2018-10-01”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -726,7 +758,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.signalr.operations.UsagesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.signalr.models' from 'd:\\a\\1\\s\\azure-mgmt-signalr\\azure\\mgmt\\signalr\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.signalr.operations.UsagesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.signalr.models' from 'd:\\a\\1\\s\\sdk\\signalr\\azure-mgmt-signalr\\azure\\mgmt\\signalr\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.signalr.operations.UsagesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
