@@ -320,15 +320,15 @@
 <span class="sd">    workloads are derived from this class.</span>
 
 <span class="sd">    You probably want to use the sub-classes and not this class directly. Known</span>
-<span class="sd">    sub-classes are: AzureBackupServerContainer, AzureSqlContainer,</span>
-<span class="sd">    AzureStorageContainer, AzureWorkloadContainer, DpmContainer,</span>
-<span class="sd">    GenericContainer, IaaSVMContainer, MabContainer</span>
+<span class="sd">    sub-classes are: AzureSqlContainer, AzureStorageContainer,</span>
+<span class="sd">    AzureWorkloadContainer, DpmContainer, GenericContainer, IaaSVMContainer,</span>
+<span class="sd">    MabContainer</span>
 
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
 <span class="sd">    :param friendly_name: Friendly name of the container.</span>
 <span class="sd">    :type friendly_name: str</span>
-<span class="sd">    :param backup_management_type: Type of backup managemenent for the</span>
+<span class="sd">    :param backup_management_type: Type of backup management for the</span>
 <span class="sd">     container. Possible values include: &#39;Invalid&#39;, &#39;AzureIaasVM&#39;, &#39;MAB&#39;,</span>
 <span class="sd">     &#39;DPM&#39;, &#39;AzureBackupServer&#39;, &#39;AzureSql&#39;, &#39;AzureStorage&#39;, &#39;AzureWorkload&#39;,</span>
 <span class="sd">     &#39;DefaultBackup&#39;</span>
@@ -356,7 +356,7 @@
     <span class="p">}</span>
 
     <span class="n">_subtype_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;container_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;AzureBackupServerContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureBackupServerContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;AzureSqlContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureSqlContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;StorageContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureStorageContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;AzureWorkloadContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;DPMContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;DpmContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;GenericContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;GenericContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;IaaSVMContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;IaaSVMContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;Windows&#39;</span><span class="p">:</span> <span class="s1">&#39;MabContainer&#39;</span><span class="p">}</span>
+        <span class="s1">&#39;container_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;AzureSqlContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureSqlContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;StorageContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureStorageContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;AzureWorkloadContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;DPMContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;DpmContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;GenericContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;GenericContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;IaaSVMContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;IaaSVMContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;Windows&#39;</span><span class="p">:</span> <span class="s1">&#39;MabContainer&#39;</span><span class="p">}</span>
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">friendly_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">backup_management_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">registration_status</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">health_status</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>

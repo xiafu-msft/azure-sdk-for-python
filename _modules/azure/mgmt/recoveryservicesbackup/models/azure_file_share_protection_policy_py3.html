@@ -324,8 +324,13 @@
 <span class="sd">    :type protected_items_count: int</span>
 <span class="sd">    :param backup_management_type: Required. Constant filled by server.</span>
 <span class="sd">    :type backup_management_type: str</span>
-<span class="sd">    :param work_load_type: Type of workload for the backup management</span>
-<span class="sd">    :type work_load_type: str</span>
+<span class="sd">    :param work_load_type: Type of workload for the backup management.</span>
+<span class="sd">     Possible values include: &#39;Invalid&#39;, &#39;VM&#39;, &#39;FileFolder&#39;, &#39;AzureSqlDb&#39;,</span>
+<span class="sd">     &#39;SQLDB&#39;, &#39;Exchange&#39;, &#39;Sharepoint&#39;, &#39;VMwareVM&#39;, &#39;SystemState&#39;, &#39;Client&#39;,</span>
+<span class="sd">     &#39;GenericDataSource&#39;, &#39;SQLDataBase&#39;, &#39;AzureFileShare&#39;, &#39;SAPHanaDatabase&#39;,</span>
+<span class="sd">     &#39;SAPAseDatabase&#39;</span>
+<span class="sd">    :type work_load_type: str or</span>
+<span class="sd">     ~azure.mgmt.recoveryservicesbackup.models.WorkloadType</span>
 <span class="sd">    :param schedule_policy: Backup schedule specified as part of backup</span>
 <span class="sd">     policy.</span>
 <span class="sd">    :type schedule_policy:</span>
@@ -352,7 +357,7 @@
         <span class="s1">&#39;time_zone&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;timeZone&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">protected_items_count</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">work_load_type</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schedule_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">retention_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_zone</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">protected_items_count</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">work_load_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schedule_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">retention_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_zone</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AzureFileShareProtectionPolicy</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">protected_items_count</span><span class="o">=</span><span class="n">protected_items_count</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">work_load_type</span> <span class="o">=</span> <span class="n">work_load_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">schedule_policy</span> <span class="o">=</span> <span class="n">schedule_policy</span>

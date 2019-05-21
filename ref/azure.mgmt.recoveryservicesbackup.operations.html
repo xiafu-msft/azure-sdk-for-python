@@ -368,9 +368,75 @@ ClientRawResponse</p>
 </dl>
 </dd></dl>
 
+<dl class="method">
+<dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionIntentOperations.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>intent_object_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protection_intent_operations.html#ProtectionIntentOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionIntentOperations.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to remove intent from an item.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vault_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the recovery services vault.</p></li>
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group where the
+recovery services vault is present.</p></li>
+<li><p><strong>fabric_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fabric name associated with the intent.</p></li>
+<li><p><strong>intent_object_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Intent to be deleted.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionIntentOperations.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>intent_object_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protection_intent_operations.html#ProtectionIntentOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionIntentOperations.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides the details of the protection intent up item. This is an
+asynchronous operation. To know the status of the operation,
+call the GetItemOperationResult API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vault_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the recovery services vault.</p></li>
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group where the
+recovery services vault is present.</p></li>
+<li><p><strong>fabric_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fabric name associated with the backed up item.</p></li>
+<li><p><strong>intent_object_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Backed up item name whose details are to be
+fetched.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ProtectionIntentResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.ProtectionIntentResource" title="azure.mgmt.recoveryservicesbackup.models.ProtectionIntentResource">ProtectionIntentResource</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionIntentOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionIntentOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionIntentOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -457,7 +523,7 @@ or ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupStatusOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupStatusOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupStatusOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -482,7 +548,7 @@ or ClientRawResponse</p>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.FeatureSupportOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.FeatureSupportOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.FeatureSupportOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -569,7 +635,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupJobsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupJobsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupJobsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -595,7 +661,7 @@ overrides</span>.</p></li>
 <dl class="method">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>job_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/job_details_operations.html#JobDetailsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Gets exteded information associated with the job.</p>
+<dd><p>Gets extended information associated with the job.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -625,7 +691,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.JobDetailsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -652,9 +718,9 @@ ClientRawResponse</p>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ExportJobsOperationResultsOperations.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>operation_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/export_jobs_operation_results_operations.html#ExportJobsOperationResultsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ExportJobsOperationResultsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the operation result of operation triggered by Export Jobs API. If
-the operation is successful, then it also contains URL of a Blob and a
-SAS key to access the same. The blob contains exported jobs in JSON
-serialized format.</p>
+the operation is successful, then it also
+contains URL of a Blob and a SAS key to access the same. The blob
+contains exported jobs in JSON serialized format.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -685,7 +751,7 @@ or ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ExportJobsOperationResultsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ExportJobsOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ExportJobsOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -741,7 +807,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.JobsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.JobsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.JobsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -768,7 +834,8 @@ overrides</span>.</p></li>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupPoliciesOperations.list">
 <code class="descname">list</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backup_policies_operations.html#BackupPoliciesOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupPoliciesOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists of backup policies associated with Recovery Services Vault. API
-provides pagination parameters to fetch scoped results.</p>
+provides pagination parameters to fetch
+scoped results.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -797,7 +864,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupPoliciesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupPoliciesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupPoliciesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -854,7 +921,64 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupProtectedItemsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupProtectedItemsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupProtectedItemsOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservicesbackup.operations.BackupProtectionIntentOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.recoveryservicesbackup.operations.</code><code class="descname">BackupProtectionIntentOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backup_protection_intent_operations.html#BackupProtectionIntentOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupProtectionIntentOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>BackupProtectionIntentOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Constant value: “2017-07-01”.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.recoveryservicesbackup.operations.BackupProtectionIntentOperations.list">
+<code class="descname">list</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>filter=None</em>, <em>skip_token=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backup_protection_intent_operations.html#BackupProtectionIntentOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupProtectionIntentOperations.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a pageable list of all intents that are present within a
+vault.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vault_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the recovery services vault.</p></li>
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group where the
+recovery services vault is present.</p></li>
+<li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter options.</p></li>
+<li><p><strong>skip_token</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – skipToken Filter.</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An iterator like instance of ProtectionIntentResource</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.ProtectionIntentResourcePaged" title="azure.mgmt.recoveryservicesbackup.models.ProtectionIntentResourcePaged">ProtectionIntentResourcePaged</a>[<a class="reference internal" href="azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.ProtectionIntentResource" title="azure.mgmt.recoveryservicesbackup.models.ProtectionIntentResource">ProtectionIntentResource</a>]</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservicesbackup.operations.BackupProtectionIntentOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupProtectionIntentOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -910,8 +1034,65 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.recoveryservicesbackup.operations.OperationOperations">
+<em class="property">class </em><code class="descclassname">azure.mgmt.recoveryservicesbackup.operations.</code><code class="descname">OperationOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/operation_operations.html#OperationOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.OperationOperations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>OperationOperations operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client</strong> – Client for service requests.</p></li>
+<li><p><strong>config</strong> – Configuration of service client.</p></li>
+<li><p><strong>serializer</strong> – An object model serializer.</p></li>
+<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><p><strong>api_version</strong> – Client Api Version. Constant value: “2017-07-01”.</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="azure.mgmt.recoveryservicesbackup.operations.OperationOperations.models">
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.OperationOperations.models" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.recoveryservicesbackup.operations.OperationOperations.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/operation_operations.html#OperationOperations.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.OperationOperations.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate operation for specified backed up item. This is a synchronous
+operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vault_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the recovery services vault.</p></li>
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group where the
+recovery services vault is present.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.ValidateOperationRequest" title="azure.mgmt.recoveryservicesbackup.models.ValidateOperationRequest"><em>ValidateOperationRequest</em></a>) – resource validate operation request</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ValidateOperationsResponse or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.ValidateOperationsResponse" title="azure.mgmt.recoveryservicesbackup.models.ValidateOperationsResponse">ValidateOperationsResponse</a>
+or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -966,7 +1147,7 @@ or ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -1088,7 +1269,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupEnginesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1146,7 +1327,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionContainerRefreshOperationResultsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainerRefreshOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainerRefreshOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1172,14 +1353,14 @@ overrides</span>.</p></li>
 <dl class="method">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectableContainersOperations.list">
 <code class="descname">list</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protectable_containers_operations.html#ProtectableContainersOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectableContainersOperations.list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists the containers registered to Recovery Services Vault.</p>
+<dd><p>Lists the containers that can be registered to Recovery Services Vault.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vault_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the recovery services vault.</p></li>
 <li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group where the
 recovery services vault is present.</p></li>
-<li><p><strong>fabric_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Fabric name associated with the container.</p></li>
+<li><p><strong>fabric_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – </p></li>
 <li><p><strong>filter</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – OData filter options.</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
@@ -1202,7 +1383,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectableContainersOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectableContainersOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectableContainersOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1262,10 +1443,9 @@ or ClientRawResponse</p>
 <dl class="method">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.inquire">
 <code class="descname">inquire</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protection_containers_operations.html#ProtectionContainersOperations.inquire"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.inquire" title="Permalink to this definition">¶</a></dt>
-<dd><p>Inquires all the protectable item in the given container that can be
-protected.</p>
-<p>Inquires all the protectable items that are protectable under the given
-container.</p>
+<dd><p>Inquires all the protectable items under the given container.</p>
+<p>This is an async operation and the results should be tracked using
+location header or Azure-async-url.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1297,15 +1477,16 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh">
 <code class="descname">refresh</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protection_containers_operations.html#ProtectionContainersOperations.refresh"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Discovers all the containers in the subscription that can be backed up
-to Recovery Services Vault. This is an asynchronous operation. To know
-the status of the operation, call GetRefreshOperationResult API.</p>
+to Recovery Services Vault. This is an
+asynchronous operation. To know the status of the operation, call
+GetRefreshOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1338,7 +1519,8 @@ overrides</span>.</p></li>
 <code class="descname">register</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protection_containers_operations.html#ProtectionContainersOperations.register"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.register" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers the container with Recovery Services vault.
 This is an asynchronous operation. To track the operation status, use
-location header to call get latest status of the operation.</p>
+location header to call get latest status of
+the operation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1371,10 +1553,10 @@ or ClientRawResponse</p>
 <dl class="method">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.unregister">
 <code class="descname">unregister</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protection_containers_operations.html#ProtectionContainersOperations.unregister"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.unregister" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unregisters the given container from your Recovery Services Vault.
-This is an asynchronous operation. To determine whether the backend
-service has finished processing the request, call Get Container
-Operation Result API.</p>
+<dd><p>Unregisters the given container from your Recovery Services Vault. This
+is an asynchronous operation. To determine
+whether the backend service has finished processing the request, call
+Get Container Operation Result API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1427,7 +1609,8 @@ overrides</span>.</p></li>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupWorkloadItemsOperations.list">
 <code class="descname">list</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>filter=None</em>, <em>skip_token=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backup_workload_items_operations.html#BackupWorkloadItemsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupWorkloadItemsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a pageable list of workload item of a specific container
-according to the query filter and the pagination parameters.</p>
+according to the query filter and the pagination
+parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1459,7 +1642,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupWorkloadItemsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupWorkloadItemsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupWorkloadItemsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1519,7 +1702,7 @@ or ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionContainerOperationResultsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainerOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainerOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1546,8 +1729,9 @@ or ClientRawResponse</p>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update">
 <code class="descname">create_or_update</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>protected_item_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protected_items_operations.html#ProtectedItemsOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enables backup of an item or to modifies the backup policy information
-of an already backed up item. This is an asynchronous operation. To
-know the status of the operation, call the GetItemOperationResult API.</p>
+of an already backed up item. This is an
+asynchronous operation. To know the status of the operation, call the
+GetItemOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1566,10 +1750,11 @@ overrides</span>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>None or ClientRawResponse if raw=true</p>
+<dd class="field-even"><p>ProtectedItemResource or ClientRawResponse if raw=true</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.ProtectedItemResource" title="azure.mgmt.recoveryservicesbackup.models.ProtectedItemResource">ProtectedItemResource</a> or
+ClientRawResponse</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
@@ -1581,8 +1766,8 @@ overrides</span>.</p></li>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete">
 <code class="descname">delete</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>protected_item_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protected_items_operations.html#ProtectedItemsOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Used to disable backup of an item within a container. This is an
-asynchronous operation. To know the status of the request, call the
-GetItemOperationResult API.</p>
+asynchronous operation. To know the status of the
+request, call the GetItemOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1616,8 +1801,8 @@ overrides</span>.</p></li>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>protected_item_name</em>, <em>filter=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protected_items_operations.html#ProtectedItemsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides the details of the backed up item. This is an asynchronous
-operation. To know the status of the operation, call the
-GetItemOperationResult API.</p>
+operation. To know the status of the operation,
+call the GetItemOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1652,7 +1837,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectedItemsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1677,15 +1862,15 @@ ClientRawResponse</p>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupsOperations.trigger">
 <code class="descname">trigger</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>protected_item_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backups_operations.html#BackupsOperations.trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupsOperations.trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Triggers backup for specified backed up item. This is an asynchronous
-operation. To know the status of the operation, call
-GetProtectedItemOperationResult API.</p>
+operation. To know the status of the
+operation, call GetProtectedItemOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1774,7 +1959,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationResultsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1801,10 +1986,11 @@ ClientRawResponse</p>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>protected_item_name</em>, <em>operation_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protected_item_operation_statuses_operations.html#ProtectedItemOperationStatusesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetches the status of an operation such as triggering a backup,
-restore. The status can be in progress, completed or failed. You can
-refer to the OperationStatus enum for all the possible states of the
-operation. Some operations create jobs. This method returns the list of
-jobs associated with the operation.</p>
+restore. The status can be in progress, completed
+or failed. You can refer to the OperationStatus enum for all the
+possible states of the operation. Some operations
+create jobs. This method returns the list of jobs associated with the
+operation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1839,7 +2025,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectedItemOperationStatusesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1866,8 +2052,9 @@ ClientRawResponse</p>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.RecoveryPointsOperations.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>protected_item_name</em>, <em>recovery_point_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/recovery_points_operations.html#RecoveryPointsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.RecoveryPointsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides the information of the backed up data identified using
-RecoveryPointID. This is an asynchronous operation. To know the status
-of the operation, call the GetProtectedItemOperationResult API.</p>
+RecoveryPointID. This is an asynchronous operation.
+To know the status of the operation, call the
+GetProtectedItemOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1937,7 +2124,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.RecoveryPointsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.RecoveryPointsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.RecoveryPointsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1962,17 +2149,17 @@ overrides</span>.</p></li>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision">
 <code class="descname">provision</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>protected_item_name</em>, <em>recovery_point_id</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/item_level_recovery_connections_operations.html#ItemLevelRecoveryConnectionsOperations.provision"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provisions a script which invokes an iSCSI connection to the backup
-data. Executing this script opens a file explorer displaying all the
-recoverable files and folders. This is an asynchronous operation. To
-know the status of provisioning, call GetProtectedItemOperationResult
-API.</p>
+data. Executing this script opens a file
+explorer displaying all the recoverable files and folders. This is an
+asynchronous operation. To know the status of
+provisioning, call GetProtectedItemOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1985,7 +2172,8 @@ items.</p></li>
 <li><p><strong>protected_item_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Backed up item name whose files/folders
 are to be restored.</p></li>
 <li><p><strong>recovery_point_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Recovery point ID which represents backed up
-data. iSCSI connection will be provisioned for this backed up data.</p></li>
+data. iSCSI connection will be provisioned
+for this backed up data.</p></li>
 <li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.ILRRequestResource" title="azure.mgmt.recoveryservicesbackup.models.ILRRequestResource"><em>ILRRequestResource</em></a>) – resource ILR request</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
@@ -2010,8 +2198,9 @@ overrides</span>.</p></li>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke">
 <code class="descname">revoke</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>fabric_name</em>, <em>container_name</em>, <em>protected_item_name</em>, <em>recovery_point_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/item_level_recovery_connections_operations.html#ItemLevelRecoveryConnectionsOperations.revoke"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke" title="Permalink to this definition">¶</a></dt>
 <dd><p>Revokes an iSCSI connection which can be used to download a script.
-Executing this script opens a file explorer displaying all recoverable
-files and folders. This is an asynchronous operation.</p>
+Executing this script opens a file explorer
+displaying all recoverable files and folders. This is an asynchronous
+operation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2024,7 +2213,8 @@ items.</p></li>
 <li><p><strong>protected_item_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Backed up item name whose files/folders
 are to be restored.</p></li>
 <li><p><strong>recovery_point_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Recovery point ID which represents backed up
-data. iSCSI connection will be revoked for this backed up data.</p></li>
+data. iSCSI connection will be revoked for
+this backed up data.</p></li>
 <li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
 <li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
 deserialized response</p></li>
@@ -2066,7 +2256,7 @@ overrides</span>.</p></li>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.RestoresOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -2129,14 +2319,15 @@ overrides</span>.</p></li>
 </dl>
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.JobCancellationsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.JobCancellationsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.JobCancellationsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.JobCancellationsOperations.trigger">
 <code class="descname">trigger</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>job_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/job_cancellations_operations.html#JobCancellationsOperations.trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.JobCancellationsOperations.trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cancels a job. This is an asynchronous operation. To know the status of
-the cancellation, call GetCancelOperationResult API.</p>
+the cancellation, call
+GetCancelOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2218,7 +2409,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.JobOperationResultsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.JobOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.JobOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2245,11 +2436,12 @@ overrides</span>.</p></li>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupOperationResultsOperations.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>operation_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backup_operation_results_operations.html#BackupOperationResultsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupOperationResultsOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides the status of the delete operations such as deleting backed up
-item. Once the operation has started, the status code in the response
-would be Accepted. It will continue to be in this state till it reaches
-completion. On successful completion, the status code will be OK. This
-method expects OperationID as an argument. OperationID is part of the
-Location header of the operation response.</p>
+item. Once the operation has started, the
+status code in the response would be Accepted. It will continue to be
+in this state till it reaches completion. On
+successful completion, the status code will be OK. This method expects
+OperationID as an argument. OperationID is
+part of the Location header of the operation response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2278,7 +2470,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupOperationResultsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2305,10 +2497,11 @@ overrides</span>.</p></li>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupOperationStatusesOperations.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>operation_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backup_operation_statuses_operations.html#BackupOperationStatusesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupOperationStatusesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fetches the status of an operation such as triggering a backup,
-restore. The status can be in progress, completed or failed. You can
-refer to the OperationStatus enum for all the possible states of an
-operation. Some operations create jobs. This method returns the list of
-jobs when the operation is complete.</p>
+restore. The status can be in progress, completed
+or failed. You can refer to the OperationStatus enum for all the
+possible states of an operation. Some operations
+create jobs. This method returns the list of jobs when the operation is
+complete.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2338,7 +2531,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupOperationStatusesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupOperationStatusesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupOperationStatusesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2365,8 +2558,8 @@ ClientRawResponse</p>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionPoliciesOperations.create_or_update">
 <code class="descname">create_or_update</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>policy_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protection_policies_operations.html#ProtectionPoliciesOperations.create_or_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionPoliciesOperations.create_or_update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates or modifies a backup policy. This is an asynchronous operation.
-Status of the operation can be fetched using GetPolicyOperationResult
-API.</p>
+Status of the operation can be fetched
+using GetPolicyOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2399,8 +2592,8 @@ ClientRawResponse</p>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionPoliciesOperations.delete">
 <code class="descname">delete</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>policy_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protection_policies_operations.html#ProtectionPoliciesOperations.delete"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionPoliciesOperations.delete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes specified backup policy from your Recovery Services Vault. This
-is an asynchronous operation. Status of the operation can be fetched
-using GetPolicyOperationResult API.</p>
+is an asynchronous operation. Status of the
+operation can be fetched using GetPolicyOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2431,8 +2624,9 @@ overrides</span>.</p></li>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionPoliciesOperations.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>policy_name</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protection_policies_operations.html#ProtectionPoliciesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionPoliciesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides the details of the backup policies associated to Recovery
-Services Vault. This is an asynchronous operation. Status of the
-operation can be fetched using GetPolicyOperationResult API.</p>
+Services Vault. This is an asynchronous
+operation. Status of the operation can be fetched using
+GetPolicyOperationResult API.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2462,7 +2656,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionPoliciesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionPoliciesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionPoliciesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2521,7 +2715,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationResultsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2548,10 +2742,11 @@ ClientRawResponse</p>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationStatusesOperations.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>policy_name</em>, <em>operation_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/protection_policy_operation_statuses_operations.html#ProtectionPolicyOperationStatusesOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationStatusesOperations.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides the status of the asynchronous operations like backup,
-restore. The status can be in progress, completed or failed. You can
-refer to the Operation Status enum for all the possible states of an
-operation. Some operations create jobs. This method returns the list of
-jobs associated with operation.</p>
+restore. The status can be in progress, completed
+or failed. You can refer to the Operation Status enum for all the
+possible states of an operation. Some operations
+create jobs. This method returns the list of jobs associated with
+operation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2584,7 +2779,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationStatusesOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationStatusesOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.ProtectionPolicyOperationStatusesOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2611,8 +2806,8 @@ ClientRawResponse</p>
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupProtectableItemsOperations.list">
 <code class="descname">list</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>filter=None</em>, <em>skip_token=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backup_protectable_items_operations.html#BackupProtectableItemsOperations.list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupProtectableItemsOperations.list" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a pageable list of protectable objects within your
-subscription according to the query filter and the pagination
-parameters.</p>
+subscription according to the query filter and the
+pagination parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2642,7 +2837,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupProtectableItemsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupProtectableItemsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupProtectableItemsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2697,7 +2892,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupProtectionContainersOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupProtectionContainersOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupProtectionContainersOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2752,7 +2947,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.SecurityPINsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.SecurityPINsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.SecurityPINsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2807,12 +3002,12 @@ or ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.BackupResourceStorageConfigsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupResourceStorageConfigsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupResourceStorageConfigsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="azure.mgmt.recoveryservicesbackup.operations.BackupResourceStorageConfigsOperations.update">
-<code class="descname">update</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backup_resource_storage_configs_operations.html#BackupResourceStorageConfigsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupResourceStorageConfigsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.recoveryservicesbackup.operations.BackupResourceStorageConfigsOperations.patch">
+<code class="descname">patch</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backup_resource_storage_configs_operations.html#BackupResourceStorageConfigsOperations.patch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupResourceStorageConfigsOperations.patch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Updates vault storage model type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2833,6 +3028,37 @@ overrides</span>.</p></li>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.5/library/constants.html#None" title="(in Python v3.5)">None</a> or ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.recoveryservicesbackup.operations.BackupResourceStorageConfigsOperations.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>vault_name</em>, <em>resource_group_name</em>, <em>parameters</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/recoveryservicesbackup/operations/backup_resource_storage_configs_operations.html#BackupResourceStorageConfigsOperations.update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.BackupResourceStorageConfigsOperations.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates vault storage model type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vault_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the recovery services vault.</p></li>
+<li><p><strong>resource_group_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the resource group where the
+recovery services vault is present.</p></li>
+<li><p><strong>parameters</strong> (<a class="reference internal" href="azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.BackupResourceConfigResource" title="azure.mgmt.recoveryservicesbackup.models.BackupResourceConfigResource"><em>BackupResourceConfigResource</em></a>) – Vault storage config request</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>BackupResourceConfigResource or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.BackupResourceConfigResource" title="azure.mgmt.recoveryservicesbackup.models.BackupResourceConfigResource">BackupResourceConfigResource</a>
+or ClientRawResponse</p>
 </dd>
 <dt class="field-even">Raises</dt>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
@@ -2888,7 +3114,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.recoveryservicesbackup.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.recoveryservicesbackup.models' from 'd:\\a\\1\\s\\sdk\\recoveryservices\\azure-mgmt-recoveryservicesbackup\\azure\\mgmt\\recoveryservicesbackup\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.recoveryservicesbackup.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

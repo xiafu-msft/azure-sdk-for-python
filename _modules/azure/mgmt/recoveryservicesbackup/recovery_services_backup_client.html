@@ -325,7 +325,9 @@
 <span class="kn">from</span> <span class="nn">.operations.jobs_operations</span> <span class="k">import</span> <span class="n">JobsOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.backup_policies_operations</span> <span class="k">import</span> <span class="n">BackupPoliciesOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.backup_protected_items_operations</span> <span class="k">import</span> <span class="n">BackupProtectedItemsOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.backup_protection_intent_operations</span> <span class="k">import</span> <span class="n">BackupProtectionIntentOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.backup_usage_summaries_operations</span> <span class="k">import</span> <span class="n">BackupUsageSummariesOperations</span>
+<span class="kn">from</span> <span class="nn">.operations.operation_operations</span> <span class="k">import</span> <span class="n">OperationOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.backup_resource_vault_configs_operations</span> <span class="k">import</span> <span class="n">BackupResourceVaultConfigsOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.backup_engines_operations</span> <span class="k">import</span> <span class="n">BackupEnginesOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.protection_container_refresh_operation_results_operations</span> <span class="k">import</span> <span class="n">ProtectionContainerRefreshOperationResultsOperations</span>
@@ -411,8 +413,12 @@
 <span class="sd">    :vartype backup_policies: azure.mgmt.recoveryservicesbackup.operations.BackupPoliciesOperations</span>
 <span class="sd">    :ivar backup_protected_items: BackupProtectedItems operations</span>
 <span class="sd">    :vartype backup_protected_items: azure.mgmt.recoveryservicesbackup.operations.BackupProtectedItemsOperations</span>
+<span class="sd">    :ivar backup_protection_intent: BackupProtectionIntent operations</span>
+<span class="sd">    :vartype backup_protection_intent: azure.mgmt.recoveryservicesbackup.operations.BackupProtectionIntentOperations</span>
 <span class="sd">    :ivar backup_usage_summaries: BackupUsageSummaries operations</span>
 <span class="sd">    :vartype backup_usage_summaries: azure.mgmt.recoveryservicesbackup.operations.BackupUsageSummariesOperations</span>
+<span class="sd">    :ivar operation: Operation operations</span>
+<span class="sd">    :vartype operation: azure.mgmt.recoveryservicesbackup.operations.OperationOperations</span>
 <span class="sd">    :ivar backup_resource_vault_configs: BackupResourceVaultConfigs operations</span>
 <span class="sd">    :vartype backup_resource_vault_configs: azure.mgmt.recoveryservicesbackup.operations.BackupResourceVaultConfigsOperations</span>
 <span class="sd">    :ivar backup_engines: BackupEngines operations</span>
@@ -502,7 +508,11 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">backup_protected_items</span> <span class="o">=</span> <span class="n">BackupProtectedItemsOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">backup_protection_intent</span> <span class="o">=</span> <span class="n">BackupProtectionIntentOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">backup_usage_summaries</span> <span class="o">=</span> <span class="n">BackupUsageSummariesOperations</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">operation</span> <span class="o">=</span> <span class="n">OperationOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">backup_resource_vault_configs</span> <span class="o">=</span> <span class="n">BackupResourceVaultConfigsOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>

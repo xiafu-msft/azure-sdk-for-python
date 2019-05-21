@@ -333,6 +333,49 @@
     <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span></div>
 
 
+<div class="viewcode-block" id="WorkloadType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.WorkloadType">[docs]</a><span class="k">class</span> <span class="nc">WorkloadType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
+    <span class="n">vm</span> <span class="o">=</span> <span class="s2">&quot;VM&quot;</span>
+    <span class="n">file_folder</span> <span class="o">=</span> <span class="s2">&quot;FileFolder&quot;</span>
+    <span class="n">azure_sql_db</span> <span class="o">=</span> <span class="s2">&quot;AzureSqlDb&quot;</span>
+    <span class="n">sqldb</span> <span class="o">=</span> <span class="s2">&quot;SQLDB&quot;</span>
+    <span class="n">exchange</span> <span class="o">=</span> <span class="s2">&quot;Exchange&quot;</span>
+    <span class="n">sharepoint</span> <span class="o">=</span> <span class="s2">&quot;Sharepoint&quot;</span>
+    <span class="n">vmware_vm</span> <span class="o">=</span> <span class="s2">&quot;VMwareVM&quot;</span>
+    <span class="n">system_state</span> <span class="o">=</span> <span class="s2">&quot;SystemState&quot;</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="s2">&quot;Client&quot;</span>
+    <span class="n">generic_data_source</span> <span class="o">=</span> <span class="s2">&quot;GenericDataSource&quot;</span>
+    <span class="n">sql_data_base</span> <span class="o">=</span> <span class="s2">&quot;SQLDataBase&quot;</span>
+    <span class="n">azure_file_share</span> <span class="o">=</span> <span class="s2">&quot;AzureFileShare&quot;</span>
+    <span class="n">sap_hana_database</span> <span class="o">=</span> <span class="s2">&quot;SAPHanaDatabase&quot;</span>
+    <span class="n">sap_ase_database</span> <span class="o">=</span> <span class="s2">&quot;SAPAseDatabase&quot;</span></div>
+
+
+<div class="viewcode-block" id="RecoveryType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.RecoveryType">[docs]</a><span class="k">class</span> <span class="nc">RecoveryType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
+    <span class="n">original_location</span> <span class="o">=</span> <span class="s2">&quot;OriginalLocation&quot;</span>
+    <span class="n">alternate_location</span> <span class="o">=</span> <span class="s2">&quot;AlternateLocation&quot;</span>
+    <span class="n">restore_disks</span> <span class="o">=</span> <span class="s2">&quot;RestoreDisks&quot;</span></div>
+
+
+<div class="viewcode-block" id="CopyOptions"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.CopyOptions">[docs]</a><span class="k">class</span> <span class="nc">CopyOptions</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
+    <span class="n">create_copy</span> <span class="o">=</span> <span class="s2">&quot;CreateCopy&quot;</span>
+    <span class="n">skip</span> <span class="o">=</span> <span class="s2">&quot;Skip&quot;</span>
+    <span class="n">overwrite</span> <span class="o">=</span> <span class="s2">&quot;Overwrite&quot;</span>
+    <span class="n">fail_on_conflict</span> <span class="o">=</span> <span class="s2">&quot;FailOnConflict&quot;</span></div>
+
+
+<div class="viewcode-block" id="RestoreRequestType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.RestoreRequestType">[docs]</a><span class="k">class</span> <span class="nc">RestoreRequestType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
+    <span class="n">full_share_restore</span> <span class="o">=</span> <span class="s2">&quot;FullShareRestore&quot;</span>
+    <span class="n">item_level_restore</span> <span class="o">=</span> <span class="s2">&quot;ItemLevelRestore&quot;</span></div>
+
+
 <div class="viewcode-block" id="JobSupportedAction"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.JobSupportedAction">[docs]</a><span class="k">class</span> <span class="nc">JobSupportedAction</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
@@ -376,13 +419,38 @@
     <span class="n">ir_pending</span> <span class="o">=</span> <span class="s2">&quot;IRPending&quot;</span></div>
 
 
+<div class="viewcode-block" id="PolicyType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.PolicyType">[docs]</a><span class="k">class</span> <span class="nc">PolicyType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
+    <span class="n">full</span> <span class="o">=</span> <span class="s2">&quot;Full&quot;</span>
+    <span class="n">differential</span> <span class="o">=</span> <span class="s2">&quot;Differential&quot;</span>
+    <span class="n">log</span> <span class="o">=</span> <span class="s2">&quot;Log&quot;</span>
+    <span class="n">copy_only_full</span> <span class="o">=</span> <span class="s2">&quot;CopyOnlyFull&quot;</span></div>
+
+
+<div class="viewcode-block" id="OverwriteOptions"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.OverwriteOptions">[docs]</a><span class="k">class</span> <span class="nc">OverwriteOptions</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
+    <span class="n">fail_on_conflict</span> <span class="o">=</span> <span class="s2">&quot;FailOnConflict&quot;</span>
+    <span class="n">overwrite</span> <span class="o">=</span> <span class="s2">&quot;Overwrite&quot;</span></div>
+
+
 <div class="viewcode-block" id="WorkloadItemType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.WorkloadItemType">[docs]</a><span class="k">class</span> <span class="nc">WorkloadItemType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
     <span class="n">sql_instance</span> <span class="o">=</span> <span class="s2">&quot;SQLInstance&quot;</span>
     <span class="n">sql_data_base</span> <span class="o">=</span> <span class="s2">&quot;SQLDataBase&quot;</span>
     <span class="n">sap_hana_system</span> <span class="o">=</span> <span class="s2">&quot;SAPHanaSystem&quot;</span>
-    <span class="n">sap_hana_database</span> <span class="o">=</span> <span class="s2">&quot;SAPHanaDatabase&quot;</span></div>
+    <span class="n">sap_hana_database</span> <span class="o">=</span> <span class="s2">&quot;SAPHanaDatabase&quot;</span>
+    <span class="n">sap_ase_system</span> <span class="o">=</span> <span class="s2">&quot;SAPAseSystem&quot;</span>
+    <span class="n">sap_ase_database</span> <span class="o">=</span> <span class="s2">&quot;SAPAseDatabase&quot;</span></div>
+
+
+<div class="viewcode-block" id="SQLDataDirectoryType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.SQLDataDirectoryType">[docs]</a><span class="k">class</span> <span class="nc">SQLDataDirectoryType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;Data&quot;</span>
+    <span class="n">log</span> <span class="o">=</span> <span class="s2">&quot;Log&quot;</span></div>
 
 
 <div class="viewcode-block" id="UsagesUnit"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.UsagesUnit">[docs]</a><span class="k">class</span> <span class="nc">UsagesUnit</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
@@ -410,7 +478,8 @@
     <span class="n">generic_data_source</span> <span class="o">=</span> <span class="s2">&quot;GenericDataSource&quot;</span>
     <span class="n">sql_data_base</span> <span class="o">=</span> <span class="s2">&quot;SQLDataBase&quot;</span>
     <span class="n">azure_file_share</span> <span class="o">=</span> <span class="s2">&quot;AzureFileShare&quot;</span>
-    <span class="n">sap_hana_database</span> <span class="o">=</span> <span class="s2">&quot;SAPHanaDatabase&quot;</span></div>
+    <span class="n">sap_hana_database</span> <span class="o">=</span> <span class="s2">&quot;SAPHanaDatabase&quot;</span>
+    <span class="n">sap_ase_database</span> <span class="o">=</span> <span class="s2">&quot;SAPAseDatabase&quot;</span></div>
 
 
 <div class="viewcode-block" id="ProtectionStatus"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.ProtectionStatus">[docs]</a><span class="k">class</span> <span class="nc">ProtectionStatus</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
@@ -541,30 +610,7 @@
     <span class="n">vm_app_container</span> <span class="o">=</span> <span class="s2">&quot;VMAppContainer&quot;</span>
     <span class="n">sqlag_work_load_container</span> <span class="o">=</span> <span class="s2">&quot;SQLAGWorkLoadContainer&quot;</span>
     <span class="n">storage_container</span> <span class="o">=</span> <span class="s2">&quot;StorageContainer&quot;</span>
-    <span class="n">generic_container</span> <span class="o">=</span> <span class="s2">&quot;GenericContainer&quot;</span>
-    <span class="n">sql_cluster</span> <span class="o">=</span> <span class="s2">&quot;SqlCluster&quot;</span>
-    <span class="n">exchange_dag</span> <span class="o">=</span> <span class="s2">&quot;ExchangeDAG&quot;</span>
-    <span class="n">sharepoint_farm</span> <span class="o">=</span> <span class="s2">&quot;SharepointFarm&quot;</span>
-    <span class="n">hyper_vcluster</span> <span class="o">=</span> <span class="s2">&quot;HyperVCluster&quot;</span>
-    <span class="n">windows_client</span> <span class="o">=</span> <span class="s2">&quot;WindowsClient&quot;</span></div>
-
-
-<div class="viewcode-block" id="WorkloadType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.WorkloadType">[docs]</a><span class="k">class</span> <span class="nc">WorkloadType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
-    <span class="n">vm</span> <span class="o">=</span> <span class="s2">&quot;VM&quot;</span>
-    <span class="n">file_folder</span> <span class="o">=</span> <span class="s2">&quot;FileFolder&quot;</span>
-    <span class="n">azure_sql_db</span> <span class="o">=</span> <span class="s2">&quot;AzureSqlDb&quot;</span>
-    <span class="n">sqldb</span> <span class="o">=</span> <span class="s2">&quot;SQLDB&quot;</span>
-    <span class="n">exchange</span> <span class="o">=</span> <span class="s2">&quot;Exchange&quot;</span>
-    <span class="n">sharepoint</span> <span class="o">=</span> <span class="s2">&quot;Sharepoint&quot;</span>
-    <span class="n">vmware_vm</span> <span class="o">=</span> <span class="s2">&quot;VMwareVM&quot;</span>
-    <span class="n">system_state</span> <span class="o">=</span> <span class="s2">&quot;SystemState&quot;</span>
-    <span class="n">client</span> <span class="o">=</span> <span class="s2">&quot;Client&quot;</span>
-    <span class="n">generic_data_source</span> <span class="o">=</span> <span class="s2">&quot;GenericDataSource&quot;</span>
-    <span class="n">sql_data_base</span> <span class="o">=</span> <span class="s2">&quot;SQLDataBase&quot;</span>
-    <span class="n">azure_file_share</span> <span class="o">=</span> <span class="s2">&quot;AzureFileShare&quot;</span>
-    <span class="n">sap_hana_database</span> <span class="o">=</span> <span class="s2">&quot;SAPHanaDatabase&quot;</span></div>
+    <span class="n">generic_container</span> <span class="o">=</span> <span class="s2">&quot;GenericContainer&quot;</span></div>
 
 
 <div class="viewcode-block" id="HttpStatusCode"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.HttpStatusCode">[docs]</a><span class="k">class</span> <span class="nc">HttpStatusCode</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
@@ -640,6 +686,13 @@
     <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span></div>
 
 
+<div class="viewcode-block" id="IntentItemType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.IntentItemType">[docs]</a><span class="k">class</span> <span class="nc">IntentItemType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
+    <span class="n">sql_instance</span> <span class="o">=</span> <span class="s2">&quot;SQLInstance&quot;</span>
+    <span class="n">sql_availability_group_container</span> <span class="o">=</span> <span class="s2">&quot;SQLAvailabilityGroupContainer&quot;</span></div>
+
+
 <div class="viewcode-block" id="ScheduleRunType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.ScheduleRunType">[docs]</a><span class="k">class</span> <span class="nc">ScheduleRunType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
@@ -654,42 +707,11 @@
     <span class="n">xsync</span> <span class="o">=</span> <span class="s2">&quot;XSync&quot;</span></div>
 
 
-<div class="viewcode-block" id="RecoveryType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.RecoveryType">[docs]</a><span class="k">class</span> <span class="nc">RecoveryType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
-    <span class="n">original_location</span> <span class="o">=</span> <span class="s2">&quot;OriginalLocation&quot;</span>
-    <span class="n">alternate_location</span> <span class="o">=</span> <span class="s2">&quot;AlternateLocation&quot;</span>
-    <span class="n">restore_disks</span> <span class="o">=</span> <span class="s2">&quot;RestoreDisks&quot;</span></div>
-
-
-<div class="viewcode-block" id="CopyOptions"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.CopyOptions">[docs]</a><span class="k">class</span> <span class="nc">CopyOptions</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
-    <span class="n">create_copy</span> <span class="o">=</span> <span class="s2">&quot;CreateCopy&quot;</span>
-    <span class="n">skip</span> <span class="o">=</span> <span class="s2">&quot;Skip&quot;</span>
-    <span class="n">overwrite</span> <span class="o">=</span> <span class="s2">&quot;Overwrite&quot;</span>
-    <span class="n">fail_on_conflict</span> <span class="o">=</span> <span class="s2">&quot;FailOnConflict&quot;</span></div>
-
-
-<div class="viewcode-block" id="RestoreRequestType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.RestoreRequestType">[docs]</a><span class="k">class</span> <span class="nc">RestoreRequestType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
-    <span class="n">full_share_restore</span> <span class="o">=</span> <span class="s2">&quot;FullShareRestore&quot;</span>
-    <span class="n">item_level_restore</span> <span class="o">=</span> <span class="s2">&quot;ItemLevelRestore&quot;</span></div>
-
-
 <div class="viewcode-block" id="InquiryStatus"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.InquiryStatus">[docs]</a><span class="k">class</span> <span class="nc">InquiryStatus</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
     <span class="n">success</span> <span class="o">=</span> <span class="s2">&quot;Success&quot;</span>
     <span class="n">failed</span> <span class="o">=</span> <span class="s2">&quot;Failed&quot;</span></div>
-
-
-<div class="viewcode-block" id="SQLDataDirectoryType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.SQLDataDirectoryType">[docs]</a><span class="k">class</span> <span class="nc">SQLDataDirectoryType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;Data&quot;</span>
-    <span class="n">log</span> <span class="o">=</span> <span class="s2">&quot;Log&quot;</span></div>
 
 
 <div class="viewcode-block" id="BackupType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.BackupType">[docs]</a><span class="k">class</span> <span class="nc">BackupType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
@@ -701,19 +723,19 @@
     <span class="n">copy_only_full</span> <span class="o">=</span> <span class="s2">&quot;CopyOnlyFull&quot;</span></div>
 
 
+<div class="viewcode-block" id="OperationType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.OperationType">[docs]</a><span class="k">class</span> <span class="nc">OperationType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
+    <span class="n">register</span> <span class="o">=</span> <span class="s2">&quot;Register&quot;</span>
+    <span class="n">reregister</span> <span class="o">=</span> <span class="s2">&quot;Reregister&quot;</span></div>
+
+
 <div class="viewcode-block" id="RestorePointType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.RestorePointType">[docs]</a><span class="k">class</span> <span class="nc">RestorePointType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
     <span class="n">full</span> <span class="o">=</span> <span class="s2">&quot;Full&quot;</span>
     <span class="n">log</span> <span class="o">=</span> <span class="s2">&quot;Log&quot;</span>
     <span class="n">differential</span> <span class="o">=</span> <span class="s2">&quot;Differential&quot;</span></div>
-
-
-<div class="viewcode-block" id="OverwriteOptions"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.OverwriteOptions">[docs]</a><span class="k">class</span> <span class="nc">OverwriteOptions</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
-
-    <span class="n">invalid</span> <span class="o">=</span> <span class="s2">&quot;Invalid&quot;</span>
-    <span class="n">fail_on_conflict</span> <span class="o">=</span> <span class="s2">&quot;FailOnConflict&quot;</span>
-    <span class="n">overwrite</span> <span class="o">=</span> <span class="s2">&quot;Overwrite&quot;</span></div>
 
 
 <div class="viewcode-block" id="StorageType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.StorageType">[docs]</a><span class="k">class</span> <span class="nc">StorageType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
@@ -753,12 +775,7 @@
     <span class="n">vm_app_container</span> <span class="o">=</span> <span class="s2">&quot;VMAppContainer&quot;</span>
     <span class="n">sqlag_work_load_container</span> <span class="o">=</span> <span class="s2">&quot;SQLAGWorkLoadContainer&quot;</span>
     <span class="n">storage_container</span> <span class="o">=</span> <span class="s2">&quot;StorageContainer&quot;</span>
-    <span class="n">generic_container</span> <span class="o">=</span> <span class="s2">&quot;GenericContainer&quot;</span>
-    <span class="n">sql_cluster</span> <span class="o">=</span> <span class="s2">&quot;SqlCluster&quot;</span>
-    <span class="n">exchange_dag</span> <span class="o">=</span> <span class="s2">&quot;ExchangeDAG&quot;</span>
-    <span class="n">sharepoint_farm</span> <span class="o">=</span> <span class="s2">&quot;SharepointFarm&quot;</span>
-    <span class="n">hyper_vcluster</span> <span class="o">=</span> <span class="s2">&quot;HyperVCluster&quot;</span>
-    <span class="n">windows_client</span> <span class="o">=</span> <span class="s2">&quot;WindowsClient&quot;</span></div>
+    <span class="n">generic_container</span> <span class="o">=</span> <span class="s2">&quot;GenericContainer&quot;</span></div>
 
 
 <div class="viewcode-block" id="RestorePointQueryType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.RestorePointQueryType">[docs]</a><span class="k">class</span> <span class="nc">RestorePointQueryType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
@@ -801,7 +818,8 @@
     <span class="n">generic_data_source</span> <span class="o">=</span> <span class="s2">&quot;GenericDataSource&quot;</span>
     <span class="n">sql_data_base</span> <span class="o">=</span> <span class="s2">&quot;SQLDataBase&quot;</span>
     <span class="n">azure_file_share</span> <span class="o">=</span> <span class="s2">&quot;AzureFileShare&quot;</span>
-    <span class="n">sap_hana_database</span> <span class="o">=</span> <span class="s2">&quot;SAPHanaDatabase&quot;</span></div>
+    <span class="n">sap_hana_database</span> <span class="o">=</span> <span class="s2">&quot;SAPHanaDatabase&quot;</span>
+    <span class="n">sap_ase_database</span> <span class="o">=</span> <span class="s2">&quot;SAPAseDatabase&quot;</span></div>
 
 
 <div class="viewcode-block" id="OperationStatusValues"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.OperationStatusValues">[docs]</a><span class="k">class</span> <span class="nc">OperationStatusValues</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>

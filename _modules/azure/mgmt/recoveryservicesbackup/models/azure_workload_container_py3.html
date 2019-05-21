@@ -327,7 +327,7 @@
 
 <span class="sd">    :param friendly_name: Friendly name of the container.</span>
 <span class="sd">    :type friendly_name: str</span>
-<span class="sd">    :param backup_management_type: Type of backup managemenent for the</span>
+<span class="sd">    :param backup_management_type: Type of backup management for the</span>
 <span class="sd">     container. Possible values include: &#39;Invalid&#39;, &#39;AzureIaasVM&#39;, &#39;MAB&#39;,</span>
 <span class="sd">     &#39;DPM&#39;, &#39;AzureBackupServer&#39;, &#39;AzureSql&#39;, &#39;AzureStorage&#39;, &#39;AzureWorkload&#39;,</span>
 <span class="sd">     &#39;DefaultBackup&#39;</span>
@@ -351,9 +351,14 @@
 <span class="sd">    :param workload_type: Workload type for which registration was sent.</span>
 <span class="sd">     Possible values include: &#39;Invalid&#39;, &#39;VM&#39;, &#39;FileFolder&#39;, &#39;AzureSqlDb&#39;,</span>
 <span class="sd">     &#39;SQLDB&#39;, &#39;Exchange&#39;, &#39;Sharepoint&#39;, &#39;VMwareVM&#39;, &#39;SystemState&#39;, &#39;Client&#39;,</span>
-<span class="sd">     &#39;GenericDataSource&#39;, &#39;SQLDataBase&#39;, &#39;AzureFileShare&#39;, &#39;SAPHanaDatabase&#39;</span>
+<span class="sd">     &#39;GenericDataSource&#39;, &#39;SQLDataBase&#39;, &#39;AzureFileShare&#39;, &#39;SAPHanaDatabase&#39;,</span>
+<span class="sd">     &#39;SAPAseDatabase&#39;</span>
 <span class="sd">    :type workload_type: str or</span>
 <span class="sd">     ~azure.mgmt.recoveryservicesbackup.models.WorkloadType</span>
+<span class="sd">    :param operation_type: Re-Do Operation. Possible values include:</span>
+<span class="sd">     &#39;Invalid&#39;, &#39;Register&#39;, &#39;Reregister&#39;</span>
+<span class="sd">    :type operation_type: str or</span>
+<span class="sd">     ~azure.mgmt.recoveryservicesbackup.models.OperationType</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
@@ -370,18 +375,20 @@
         <span class="s1">&#39;last_updated_time&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;lastUpdatedTime&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;iso-8601&#39;</span><span class="p">},</span>
         <span class="s1">&#39;extended_info&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;extendedInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadContainerExtendedInfo&#39;</span><span class="p">},</span>
         <span class="s1">&#39;workload_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;workloadType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;operation_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;operationType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
     <span class="n">_subtype_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;container_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;SQLAGWorkLoadContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureSQLAGWorkloadContainerProtectionContainer&#39;</span><span class="p">,</span> <span class="s1">&#39;VMAppContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureVMAppContainerProtectionContainer&#39;</span><span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">friendly_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">backup_management_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">registration_status</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">health_status</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source_resource_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">last_updated_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extended_info</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">workload_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">friendly_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">backup_management_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">registration_status</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">health_status</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source_resource_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">last_updated_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extended_info</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">workload_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">operation_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AzureWorkloadContainer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">friendly_name</span><span class="o">=</span><span class="n">friendly_name</span><span class="p">,</span> <span class="n">backup_management_type</span><span class="o">=</span><span class="n">backup_management_type</span><span class="p">,</span> <span class="n">registration_status</span><span class="o">=</span><span class="n">registration_status</span><span class="p">,</span> <span class="n">health_status</span><span class="o">=</span><span class="n">health_status</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">source_resource_id</span> <span class="o">=</span> <span class="n">source_resource_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">last_updated_time</span> <span class="o">=</span> <span class="n">last_updated_time</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">extended_info</span> <span class="o">=</span> <span class="n">extended_info</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">workload_type</span> <span class="o">=</span> <span class="n">workload_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">operation_type</span> <span class="o">=</span> <span class="n">operation_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">container_type</span> <span class="o">=</span> <span class="s1">&#39;AzureWorkloadContainer&#39;</span></div>
 </pre></div>
 

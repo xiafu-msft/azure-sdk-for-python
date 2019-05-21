@@ -312,17 +312,17 @@
 <span class="c1"># regenerated.</span>
 <span class="c1"># --------------------------------------------------------------------------</span>
 
-<span class="kn">from</span> <span class="nn">.azure_workload_sap_hana_recovery_point_py3</span> <span class="k">import</span> <span class="n">AzureWorkloadSAPHanaRecoveryPoint</span>
+<span class="kn">from</span> <span class="nn">.azure_workload_point_in_time_recovery_point_py3</span> <span class="k">import</span> <span class="n">AzureWorkloadPointInTimeRecoveryPoint</span>
 
 
-<div class="viewcode-block" id="AzureWorkloadSAPHanaPointInTimeRecoveryPoint"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.AzureWorkloadSAPHanaPointInTimeRecoveryPoint">[docs]</a><span class="k">class</span> <span class="nc">AzureWorkloadSAPHanaPointInTimeRecoveryPoint</span><span class="p">(</span><span class="n">AzureWorkloadSAPHanaRecoveryPoint</span><span class="p">):</span>
+<div class="viewcode-block" id="AzureWorkloadSAPHanaPointInTimeRecoveryPoint"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.AzureWorkloadSAPHanaPointInTimeRecoveryPoint">[docs]</a><span class="k">class</span> <span class="nc">AzureWorkloadSAPHanaPointInTimeRecoveryPoint</span><span class="p">(</span><span class="n">AzureWorkloadPointInTimeRecoveryPoint</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Recovery point specific to PointInTime in SAPHana.</span>
 
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
 <span class="sd">    :param object_type: Required. Constant filled by server.</span>
 <span class="sd">    :type object_type: str</span>
-<span class="sd">    :param recovery_point_time_in_utc: UTC time at which recoverypoint was</span>
+<span class="sd">    :param recovery_point_time_in_utc: UTC time at which recovery point was</span>
 <span class="sd">     created</span>
 <span class="sd">    :type recovery_point_time_in_utc: datetime</span>
 <span class="sd">    :param type: Type of restore point. Possible values include: &#39;Invalid&#39;,</span>
@@ -346,8 +346,7 @@
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">recovery_point_time_in_utc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">time_ranges</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">AzureWorkloadSAPHanaPointInTimeRecoveryPoint</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">recovery_point_time_in_utc</span><span class="o">=</span><span class="n">recovery_point_time_in_utc</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">time_ranges</span> <span class="o">=</span> <span class="n">time_ranges</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">AzureWorkloadSAPHanaPointInTimeRecoveryPoint</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">recovery_point_time_in_utc</span><span class="o">=</span><span class="n">recovery_point_time_in_utc</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">type</span><span class="p">,</span> <span class="n">time_ranges</span><span class="o">=</span><span class="n">time_ranges</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">object_type</span> <span class="o">=</span> <span class="s1">&#39;AzureWorkloadSAPHanaPointInTimeRecoveryPoint&#39;</span></div>
 </pre></div>
 

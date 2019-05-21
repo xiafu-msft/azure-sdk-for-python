@@ -318,11 +318,14 @@
 <div class="viewcode-block" id="DpmContainer"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.DpmContainer">[docs]</a><span class="k">class</span> <span class="nc">DpmContainer</span><span class="p">(</span><span class="n">ProtectionContainer</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;DPM workload-specific protection container.</span>
 
+<span class="sd">    You probably want to use the sub-classes and not this class directly. Known</span>
+<span class="sd">    sub-classes are: AzureBackupServerContainer</span>
+
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
 <span class="sd">    :param friendly_name: Friendly name of the container.</span>
 <span class="sd">    :type friendly_name: str</span>
-<span class="sd">    :param backup_management_type: Type of backup managemenent for the</span>
+<span class="sd">    :param backup_management_type: Type of backup management for the</span>
 <span class="sd">     container. Possible values include: &#39;Invalid&#39;, &#39;AzureIaasVM&#39;, &#39;MAB&#39;,</span>
 <span class="sd">     &#39;DPM&#39;, &#39;AzureBackupServer&#39;, &#39;AzureSql&#39;, &#39;AzureStorage&#39;, &#39;AzureWorkload&#39;,</span>
 <span class="sd">     &#39;DefaultBackup&#39;</span>
@@ -372,6 +375,10 @@
         <span class="s1">&#39;upgrade_available&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;upgradeAvailable&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;bool&#39;</span><span class="p">},</span>
         <span class="s1">&#39;protection_status&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;protectionStatus&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;extended_info&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;extendedInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;DPMContainerExtendedInfo&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+    <span class="n">_subtype_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;container_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;AzureBackupServerContainer&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureBackupServerContainer&#39;</span><span class="p">}</span>
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">friendly_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">backup_management_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">registration_status</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">health_status</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">can_re_register</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">container_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">protected_item_count</span><span class="p">:</span> <span class="nb">int</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dpm_agent_version</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dpm_servers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upgrade_available</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">protection_status</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extended_info</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>

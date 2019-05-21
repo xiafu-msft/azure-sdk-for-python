@@ -319,12 +319,14 @@
     <span class="sd">&quot;&quot;&quot;Azure VM workload-specific protected item.</span>
 
 <span class="sd">    You probably want to use the sub-classes and not this class directly. Known</span>
-<span class="sd">    sub-classes are: AzureVmWorkloadSAPHanaDatabaseProtectedItem</span>
+<span class="sd">    sub-classes are: AzureVmWorkloadSAPAseDatabaseProtectedItem,</span>
+<span class="sd">    AzureVmWorkloadSAPHanaDatabaseProtectedItem,</span>
+<span class="sd">    AzureVmWorkloadSQLDatabaseProtectedItem</span>
 
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
-<span class="sd">    :param backup_management_type: Type of backup managemenent for the backed</span>
-<span class="sd">     up item. Possible values include: &#39;Invalid&#39;, &#39;AzureIaasVM&#39;, &#39;MAB&#39;, &#39;DPM&#39;,</span>
+<span class="sd">    :param backup_management_type: Type of backup management for the backed up</span>
+<span class="sd">     item. Possible values include: &#39;Invalid&#39;, &#39;AzureIaasVM&#39;, &#39;MAB&#39;, &#39;DPM&#39;,</span>
 <span class="sd">     &#39;AzureBackupServer&#39;, &#39;AzureSql&#39;, &#39;AzureStorage&#39;, &#39;AzureWorkload&#39;,</span>
 <span class="sd">     &#39;DefaultBackup&#39;</span>
 <span class="sd">    :type backup_management_type: str or</span>
@@ -332,7 +334,8 @@
 <span class="sd">    :param workload_type: Type of workload this item represents. Possible</span>
 <span class="sd">     values include: &#39;Invalid&#39;, &#39;VM&#39;, &#39;FileFolder&#39;, &#39;AzureSqlDb&#39;, &#39;SQLDB&#39;,</span>
 <span class="sd">     &#39;Exchange&#39;, &#39;Sharepoint&#39;, &#39;VMwareVM&#39;, &#39;SystemState&#39;, &#39;Client&#39;,</span>
-<span class="sd">     &#39;GenericDataSource&#39;, &#39;SQLDataBase&#39;, &#39;AzureFileShare&#39;, &#39;SAPHanaDatabase&#39;</span>
+<span class="sd">     &#39;GenericDataSource&#39;, &#39;SQLDataBase&#39;, &#39;AzureFileShare&#39;, &#39;SAPHanaDatabase&#39;,</span>
+<span class="sd">     &#39;SAPAseDatabase&#39;</span>
 <span class="sd">    :type workload_type: str or</span>
 <span class="sd">     ~azure.mgmt.recoveryservicesbackup.models.DataSourceType</span>
 <span class="sd">    :param container_name: Unique name of container</span>
@@ -424,7 +427,7 @@
     <span class="p">}</span>
 
     <span class="n">_subtype_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;protected_item_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;AzureVmWorkloadSAPHanaDatabase&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureVmWorkloadSAPHanaDatabaseProtectedItem&#39;</span><span class="p">}</span>
+        <span class="s1">&#39;protected_item_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;AzureVmWorkloadSAPAseDatabase&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureVmWorkloadSAPAseDatabaseProtectedItem&#39;</span><span class="p">,</span> <span class="s1">&#39;AzureVmWorkloadSAPHanaDatabase&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureVmWorkloadSAPHanaDatabaseProtectedItem&#39;</span><span class="p">,</span> <span class="s1">&#39;AzureVmWorkloadSQLDatabase&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureVmWorkloadSQLDatabaseProtectedItem&#39;</span><span class="p">}</span>
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">backup_management_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">workload_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">container_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source_resource_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">policy_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">last_recovery_point</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">backup_set_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">create_mode</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">friendly_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">server_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">parent_type</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">protection_status</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">protection_state</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">last_backup_status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">last_backup_time</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">last_backup_error_detail</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">protected_item_data_source_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">protected_item_health_status</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">extended_info</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>

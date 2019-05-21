@@ -383,7 +383,7 @@
 
         <span class="c1"># Construct headers</span>
         <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
@@ -392,8 +392,8 @@
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;accept-language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;self.config.accept_language&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
 
         <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
             <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
@@ -416,7 +416,8 @@
             <span class="bp">self</span><span class="p">,</span> <span class="n">vault_name</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">fabric_name</span><span class="p">,</span> <span class="n">container_name</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Registers the container with Recovery Services vault.</span>
 <span class="sd">        This is an asynchronous operation. To track the operation status, use</span>
-<span class="sd">        location header to call get latest status of the operation.</span>
+<span class="sd">        location header to call get latest status of</span>
+<span class="sd">        the operation.</span>
 
 <span class="sd">        :param vault_name: The name of the recovery services vault.</span>
 <span class="sd">        :type vault_name: str</span>
@@ -458,6 +459,7 @@
 
         <span class="c1"># Construct headers</span>
         <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
         <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
@@ -470,9 +472,8 @@
         <span class="n">body_content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="s1">&#39;ProtectionContainerResource&#39;</span><span class="p">)</span>
 
         <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
-            <span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">202</span><span class="p">]:</span>
             <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
@@ -493,10 +494,10 @@
 
 <div class="viewcode-block" id="ProtectionContainersOperations.unregister"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.operations.html#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.unregister">[docs]</a>    <span class="k">def</span> <span class="nf">unregister</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">vault_name</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">fabric_name</span><span class="p">,</span> <span class="n">container_name</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Unregisters the given container from your Recovery Services Vault.</span>
-<span class="sd">        This is an asynchronous operation. To determine whether the backend</span>
-<span class="sd">        service has finished processing the request, call Get Container</span>
-<span class="sd">        Operation Result API.</span>
+        <span class="sd">&quot;&quot;&quot;Unregisters the given container from your Recovery Services Vault. This</span>
+<span class="sd">        is an asynchronous operation. To determine</span>
+<span class="sd">        whether the backend service has finished processing the request, call</span>
+<span class="sd">        Get Container Operation Result API.</span>
 
 <span class="sd">        :param vault_name: The name of the recovery services vault.</span>
 <span class="sd">        :type vault_name: str</span>
@@ -534,7 +535,6 @@
 
         <span class="c1"># Construct headers</span>
         <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
@@ -543,8 +543,8 @@
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;accept-language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;self.config.accept_language&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
 
         <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">202</span><span class="p">,</span> <span class="mi">204</span><span class="p">]:</span>
             <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
@@ -558,11 +558,10 @@
 
 <div class="viewcode-block" id="ProtectionContainersOperations.inquire"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.operations.html#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.inquire">[docs]</a>    <span class="k">def</span> <span class="nf">inquire</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">vault_name</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">fabric_name</span><span class="p">,</span> <span class="n">container_name</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Inquires all the protectable item in the given container that can be</span>
-<span class="sd">        protected.</span>
+        <span class="sd">&quot;&quot;&quot;Inquires all the protectable items under the given container.</span>
 
-<span class="sd">        Inquires all the protectable items that are protectable under the given</span>
-<span class="sd">        container.</span>
+<span class="sd">        This is an async operation and the results should be tracked using</span>
+<span class="sd">        location header or Azure-async-url.</span>
 
 <span class="sd">        :param vault_name: The name of the recovery services vault.</span>
 <span class="sd">        :type vault_name: str</span>
@@ -604,7 +603,6 @@
 
         <span class="c1"># Construct headers</span>
         <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
@@ -613,8 +611,8 @@
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;accept-language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;self.config.accept_language&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
 
         <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">202</span><span class="p">]:</span>
             <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
@@ -629,8 +627,9 @@
 <div class="viewcode-block" id="ProtectionContainersOperations.refresh"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.operations.html#azure.mgmt.recoveryservicesbackup.operations.ProtectionContainersOperations.refresh">[docs]</a>    <span class="k">def</span> <span class="nf">refresh</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">vault_name</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">fabric_name</span><span class="p">,</span> <span class="nb">filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Discovers all the containers in the subscription that can be backed up</span>
-<span class="sd">        to Recovery Services Vault. This is an asynchronous operation. To know</span>
-<span class="sd">        the status of the operation, call GetRefreshOperationResult API.</span>
+<span class="sd">        to Recovery Services Vault. This is an</span>
+<span class="sd">        asynchronous operation. To know the status of the operation, call</span>
+<span class="sd">        GetRefreshOperationResult API.</span>
 
 <span class="sd">        :param vault_name: The name of the recovery services vault.</span>
 <span class="sd">        :type vault_name: str</span>
@@ -668,7 +667,6 @@
 
         <span class="c1"># Construct headers</span>
         <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
@@ -677,8 +675,8 @@
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;accept-language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;self.config.accept_language&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
 
         <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">202</span><span class="p">]:</span>
             <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>

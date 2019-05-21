@@ -343,11 +343,12 @@
 <div class="viewcode-block" id="BackupOperationResultsOperations.get"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.operations.html#azure.mgmt.recoveryservicesbackup.operations.BackupOperationResultsOperations.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">vault_name</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">operation_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Provides the status of the delete operations such as deleting backed up</span>
-<span class="sd">        item. Once the operation has started, the status code in the response</span>
-<span class="sd">        would be Accepted. It will continue to be in this state till it reaches</span>
-<span class="sd">        completion. On successful completion, the status code will be OK. This</span>
-<span class="sd">        method expects OperationID as an argument. OperationID is part of the</span>
-<span class="sd">        Location header of the operation response.</span>
+<span class="sd">        item. Once the operation has started, the</span>
+<span class="sd">        status code in the response would be Accepted. It will continue to be</span>
+<span class="sd">        in this state till it reaches completion. On</span>
+<span class="sd">        successful completion, the status code will be OK. This method expects</span>
+<span class="sd">        OperationID as an argument. OperationID is</span>
+<span class="sd">        part of the Location header of the operation response.</span>
 
 <span class="sd">        :param vault_name: The name of the recovery services vault.</span>
 <span class="sd">        :type vault_name: str</span>
@@ -381,7 +382,6 @@
 
         <span class="c1"># Construct headers</span>
         <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
@@ -390,8 +390,8 @@
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;accept-language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;self.config.accept_language&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
 
         <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">204</span><span class="p">]:</span>
             <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>

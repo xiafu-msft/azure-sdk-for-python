@@ -318,8 +318,10 @@
 <div class="viewcode-block" id="SubProtectionPolicy"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.SubProtectionPolicy">[docs]</a><span class="k">class</span> <span class="nc">SubProtectionPolicy</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Sub-protection policy which includes schedule and retention.</span>
 
-<span class="sd">    :param policy_type: Type of backup policy type</span>
-<span class="sd">    :type policy_type: str</span>
+<span class="sd">    :param policy_type: Type of backup policy type. Possible values include:</span>
+<span class="sd">     &#39;Invalid&#39;, &#39;Full&#39;, &#39;Differential&#39;, &#39;Log&#39;, &#39;CopyOnlyFull&#39;</span>
+<span class="sd">    :type policy_type: str or</span>
+<span class="sd">     ~azure.mgmt.recoveryservicesbackup.models.PolicyType</span>
 <span class="sd">    :param schedule_policy: Backup schedule specified as part of backup</span>
 <span class="sd">     policy.</span>
 <span class="sd">    :type schedule_policy:</span>
@@ -336,7 +338,7 @@
         <span class="s1">&#39;retention_policy&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;retentionPolicy&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;RetentionPolicy&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">policy_type</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schedule_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">retention_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">policy_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">schedule_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">retention_policy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">SubProtectionPolicy</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">policy_type</span> <span class="o">=</span> <span class="n">policy_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">schedule_policy</span> <span class="o">=</span> <span class="n">schedule_policy</span>

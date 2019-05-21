@@ -343,10 +343,10 @@
 <div class="viewcode-block" id="ItemLevelRecoveryConnectionsOperations.provision"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.operations.html#azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.provision">[docs]</a>    <span class="k">def</span> <span class="nf">provision</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">vault_name</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">fabric_name</span><span class="p">,</span> <span class="n">container_name</span><span class="p">,</span> <span class="n">protected_item_name</span><span class="p">,</span> <span class="n">recovery_point_id</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Provisions a script which invokes an iSCSI connection to the backup</span>
-<span class="sd">        data. Executing this script opens a file explorer displaying all the</span>
-<span class="sd">        recoverable files and folders. This is an asynchronous operation. To</span>
-<span class="sd">        know the status of provisioning, call GetProtectedItemOperationResult</span>
-<span class="sd">        API.</span>
+<span class="sd">        data. Executing this script opens a file</span>
+<span class="sd">        explorer displaying all the recoverable files and folders. This is an</span>
+<span class="sd">        asynchronous operation. To know the status of</span>
+<span class="sd">        provisioning, call GetProtectedItemOperationResult API.</span>
 
 <span class="sd">        :param vault_name: The name of the recovery services vault.</span>
 <span class="sd">        :type vault_name: str</span>
@@ -362,7 +362,8 @@
 <span class="sd">         are to be restored.</span>
 <span class="sd">        :type protected_item_name: str</span>
 <span class="sd">        :param recovery_point_id: Recovery point ID which represents backed up</span>
-<span class="sd">         data. iSCSI connection will be provisioned for this backed up data.</span>
+<span class="sd">         data. iSCSI connection will be provisioned</span>
+<span class="sd">         for this backed up data.</span>
 <span class="sd">        :type recovery_point_id: str</span>
 <span class="sd">        :param parameters: resource ILR request</span>
 <span class="sd">        :type parameters:</span>
@@ -407,9 +408,8 @@
         <span class="n">body_content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="s1">&#39;ILRRequestResource&#39;</span><span class="p">)</span>
 
         <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
-            <span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">202</span><span class="p">]:</span>
             <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
@@ -424,8 +424,9 @@
 <div class="viewcode-block" id="ItemLevelRecoveryConnectionsOperations.revoke"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.operations.html#azure.mgmt.recoveryservicesbackup.operations.ItemLevelRecoveryConnectionsOperations.revoke">[docs]</a>    <span class="k">def</span> <span class="nf">revoke</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">vault_name</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">fabric_name</span><span class="p">,</span> <span class="n">container_name</span><span class="p">,</span> <span class="n">protected_item_name</span><span class="p">,</span> <span class="n">recovery_point_id</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Revokes an iSCSI connection which can be used to download a script.</span>
-<span class="sd">        Executing this script opens a file explorer displaying all recoverable</span>
-<span class="sd">        files and folders. This is an asynchronous operation.</span>
+<span class="sd">        Executing this script opens a file explorer</span>
+<span class="sd">        displaying all recoverable files and folders. This is an asynchronous</span>
+<span class="sd">        operation.</span>
 
 <span class="sd">        :param vault_name: The name of the recovery services vault.</span>
 <span class="sd">        :type vault_name: str</span>
@@ -441,7 +442,8 @@
 <span class="sd">         are to be restored.</span>
 <span class="sd">        :type protected_item_name: str</span>
 <span class="sd">        :param recovery_point_id: Recovery point ID which represents backed up</span>
-<span class="sd">         data. iSCSI connection will be revoked for this backed up data.</span>
+<span class="sd">         data. iSCSI connection will be revoked for</span>
+<span class="sd">         this backed up data.</span>
 <span class="sd">        :type recovery_point_id: str</span>
 <span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
 <span class="sd">        :param bool raw: returns the direct response alongside the</span>
@@ -471,7 +473,6 @@
 
         <span class="c1"># Construct headers</span>
         <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json; charset=utf-8&#39;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
         <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
@@ -480,8 +481,8 @@
             <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;accept-language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;self.config.accept_language&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
 
         <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">202</span><span class="p">]:</span>
             <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>

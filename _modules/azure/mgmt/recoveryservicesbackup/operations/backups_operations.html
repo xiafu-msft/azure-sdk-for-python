@@ -343,8 +343,8 @@
 <div class="viewcode-block" id="BackupsOperations.trigger"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.operations.html#azure.mgmt.recoveryservicesbackup.operations.BackupsOperations.trigger">[docs]</a>    <span class="k">def</span> <span class="nf">trigger</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">vault_name</span><span class="p">,</span> <span class="n">resource_group_name</span><span class="p">,</span> <span class="n">fabric_name</span><span class="p">,</span> <span class="n">container_name</span><span class="p">,</span> <span class="n">protected_item_name</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Triggers backup for specified backed up item. This is an asynchronous</span>
-<span class="sd">        operation. To know the status of the operation, call</span>
-<span class="sd">        GetProtectedItemOperationResult API.</span>
+<span class="sd">        operation. To know the status of the</span>
+<span class="sd">        operation, call GetProtectedItemOperationResult API.</span>
 
 <span class="sd">        :param vault_name: The name of the recovery services vault.</span>
 <span class="sd">        :type vault_name: str</span>
@@ -400,9 +400,8 @@
         <span class="n">body_content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="s1">&#39;BackupRequestResource&#39;</span><span class="p">)</span>
 
         <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
-            <span class="n">request</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">,</span> <span class="n">body_content</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">202</span><span class="p">]:</span>
             <span class="n">exp</span> <span class="o">=</span> <span class="n">CloudError</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>

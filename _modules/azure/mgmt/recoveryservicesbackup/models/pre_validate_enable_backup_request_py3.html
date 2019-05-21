@@ -326,12 +326,13 @@
 <span class="sd">    :param resource_type: ProtectedItem Type- VM, SqlDataBase, AzureFileShare</span>
 <span class="sd">     etc. Possible values include: &#39;Invalid&#39;, &#39;VM&#39;, &#39;FileFolder&#39;, &#39;AzureSqlDb&#39;,</span>
 <span class="sd">     &#39;SQLDB&#39;, &#39;Exchange&#39;, &#39;Sharepoint&#39;, &#39;VMwareVM&#39;, &#39;SystemState&#39;, &#39;Client&#39;,</span>
-<span class="sd">     &#39;GenericDataSource&#39;, &#39;SQLDataBase&#39;, &#39;AzureFileShare&#39;, &#39;SAPHanaDatabase&#39;</span>
+<span class="sd">     &#39;GenericDataSource&#39;, &#39;SQLDataBase&#39;, &#39;AzureFileShare&#39;, &#39;SAPHanaDatabase&#39;,</span>
+<span class="sd">     &#39;SAPAseDatabase&#39;</span>
 <span class="sd">    :type resource_type: str or</span>
 <span class="sd">     ~azure.mgmt.recoveryservicesbackup.models.DataSourceType</span>
 <span class="sd">    :param resource_id: ARM Virtual Machine Id</span>
 <span class="sd">    :type resource_id: str</span>
-<span class="sd">    :param vault_id: ARM id of the Recovery Services Vault</span>
+<span class="sd">    :param vault_id: Specifies the arm resource id of the vault</span>
 <span class="sd">    :type vault_id: str</span>
 <span class="sd">    :param properties: Configuration of VM if any needs to be validated like</span>
 <span class="sd">     OS type etc</span>

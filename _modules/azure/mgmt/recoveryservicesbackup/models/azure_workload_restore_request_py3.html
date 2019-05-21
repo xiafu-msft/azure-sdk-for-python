@@ -319,7 +319,8 @@
     <span class="sd">&quot;&quot;&quot;AzureWorkload-specific restore.</span>
 
 <span class="sd">    You probably want to use the sub-classes and not this class directly. Known</span>
-<span class="sd">    sub-classes are: AzureWorkloadSQLRestoreRequest</span>
+<span class="sd">    sub-classes are: AzureWorkloadPointInTimeRestoreRequest,</span>
+<span class="sd">    AzureWorkloadSAPHanaRestoreRequest, AzureWorkloadSQLRestoreRequest</span>
 
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
@@ -335,6 +336,9 @@
 <span class="sd">    :type source_resource_id: str</span>
 <span class="sd">    :param property_bag: Workload specific property bag.</span>
 <span class="sd">    :type property_bag: dict[str, str]</span>
+<span class="sd">    :param target_info: Details of target database</span>
+<span class="sd">    :type target_info:</span>
+<span class="sd">     ~azure.mgmt.recoveryservicesbackup.models.TargetRestoreInfo</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
@@ -346,17 +350,19 @@
         <span class="s1">&#39;recovery_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;recoveryType&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;source_resource_id&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;sourceResourceId&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
         <span class="s1">&#39;property_bag&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;propertyBag&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{str}</span><span class="s1">&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;target_info&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;targetInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;TargetRestoreInfo&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
     <span class="n">_subtype_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;object_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;AzureWorkloadSQLRestoreRequest&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadSQLRestoreRequest&#39;</span><span class="p">}</span>
+        <span class="s1">&#39;object_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;AzureWorkloadPointInTimeRestoreRequest&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadPointInTimeRestoreRequest&#39;</span><span class="p">,</span> <span class="s1">&#39;AzureWorkloadSAPHanaRestoreRequest&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadSAPHanaRestoreRequest&#39;</span><span class="p">,</span> <span class="s1">&#39;AzureWorkloadSQLRestoreRequest&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadSQLRestoreRequest&#39;</span><span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">recovery_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source_resource_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">property_bag</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">recovery_type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">source_resource_id</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">property_bag</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">target_info</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AzureWorkloadRestoreRequest</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">recovery_type</span> <span class="o">=</span> <span class="n">recovery_type</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">source_resource_id</span> <span class="o">=</span> <span class="n">source_resource_id</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">property_bag</span> <span class="o">=</span> <span class="n">property_bag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">target_info</span> <span class="o">=</span> <span class="n">target_info</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">object_type</span> <span class="o">=</span> <span class="s1">&#39;AzureWorkloadRestoreRequest&#39;</span></div>
 </pre></div>
 

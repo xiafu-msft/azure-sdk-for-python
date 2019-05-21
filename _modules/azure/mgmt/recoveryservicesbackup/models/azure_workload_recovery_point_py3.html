@@ -316,17 +316,18 @@
 
 
 <div class="viewcode-block" id="AzureWorkloadRecoveryPoint"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.recoveryservicesbackup.models.html#azure.mgmt.recoveryservicesbackup.models.AzureWorkloadRecoveryPoint">[docs]</a><span class="k">class</span> <span class="nc">AzureWorkloadRecoveryPoint</span><span class="p">(</span><span class="n">RecoveryPoint</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Workload specific recoverypoint, specifcally encaspulates full/diff</span>
-<span class="sd">    recoverypoint.</span>
+    <span class="sd">&quot;&quot;&quot;Workload specific recovery point, specifically encapsulates full/diff</span>
+<span class="sd">    recovery point.</span>
 
 <span class="sd">    You probably want to use the sub-classes and not this class directly. Known</span>
-<span class="sd">    sub-classes are: AzureWorkloadSQLRecoveryPoint</span>
+<span class="sd">    sub-classes are: AzureWorkloadPointInTimeRecoveryPoint,</span>
+<span class="sd">    AzureWorkloadSAPHanaRecoveryPoint, AzureWorkloadSQLRecoveryPoint</span>
 
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
 <span class="sd">    :param object_type: Required. Constant filled by server.</span>
 <span class="sd">    :type object_type: str</span>
-<span class="sd">    :param recovery_point_time_in_utc: UTC time at which recoverypoint was</span>
+<span class="sd">    :param recovery_point_time_in_utc: UTC time at which recovery point was</span>
 <span class="sd">     created</span>
 <span class="sd">    :type recovery_point_time_in_utc: datetime</span>
 <span class="sd">    :param type: Type of restore point. Possible values include: &#39;Invalid&#39;,</span>
@@ -346,7 +347,7 @@
     <span class="p">}</span>
 
     <span class="n">_subtype_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;object_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;AzureWorkloadSQLRecoveryPoint&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadSQLRecoveryPoint&#39;</span><span class="p">}</span>
+        <span class="s1">&#39;object_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;AzureWorkloadPointInTimeRecoveryPoint&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadPointInTimeRecoveryPoint&#39;</span><span class="p">,</span> <span class="s1">&#39;AzureWorkloadSAPHanaRecoveryPoint&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadSAPHanaRecoveryPoint&#39;</span><span class="p">,</span> <span class="s1">&#39;AzureWorkloadSQLRecoveryPoint&#39;</span><span class="p">:</span> <span class="s1">&#39;AzureWorkloadSQLRecoveryPoint&#39;</span><span class="p">}</span>
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">recovery_point_time_in_utc</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
