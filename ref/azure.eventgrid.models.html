@@ -333,7 +333,7 @@ storage API operation that triggered this event.</p></li>
 <li><p><strong>e_tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The etag of the object at the time this event was triggered.</p></li>
 <li><p><strong>content_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The content type of the blob. This is the same as
 what would be returned in the Content-Type header from the blob.</p></li>
-<li><p><strong>content_length</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – The size of the blob in bytes. This is the same as
+<li><p><strong>content_length</strong> (<em>long</em>) – The size of the blob in bytes. This is the same as
 what would be returned in the Content-Length header from the blob.</p></li>
 <li><p><strong>blob_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The type of blob.</p></li>
 <li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The path to the blob.</p></li>
@@ -814,6 +814,24 @@ connection state event.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.eventgrid.models.IotHubDeviceTelemetryEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">IotHubDeviceTelemetryEventData</code><span class="sig-paren">(</span><em>*</em>, <em>body=None</em>, <em>properties=None</em>, <em>system_properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/iot_hub_device_telemetry_event_data_py3.html#IotHubDeviceTelemetryEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.IotHubDeviceTelemetryEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.device_telemetry_event_properties_py3.DeviceTelemetryEventProperties</span></code></p>
+<p>Event data for Microsoft.Devices.DeviceTelemetry event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – The content of the message from the device.</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Application properties are user-defined strings that
+can be added to the message. These fields are optional.</p></li>
+<li><p><strong>system_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – System properties help identify contents and
+source of the messages.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.eventgrid.models.DeviceTwinMetadata">
 <em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">DeviceTwinMetadata</code><span class="sig-paren">(</span><em>*</em>, <em>last_updated: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/device_twin_metadata_py3.html#DeviceTwinMetadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.DeviceTwinMetadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
@@ -975,6 +993,25 @@ connection state event.</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.eventgrid.models.DeviceTelemetryEventProperties">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">DeviceTelemetryEventProperties</code><span class="sig-paren">(</span><em>*</em>, <em>body=None</em>, <em>properties=None</em>, <em>system_properties=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/device_telemetry_event_properties_py3.html#DeviceTelemetryEventProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.DeviceTelemetryEventProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for a device telemetry
+event (DeviceTelemetry).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>body</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a>) – The content of the message from the device.</p></li>
+<li><p><strong>properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Application properties are user-defined strings that
+can be added to the message. These fields are optional.</p></li>
+<li><p><strong>system_properties</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – System properties help identify contents and
+source of the messages.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.eventgrid.models.ContainerRegistryImagePushedEventData">
 <em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">ContainerRegistryImagePushedEventData</code><span class="sig-paren">(</span><em>*</em>, <em>id: str = None</em>, <em>timestamp=None</em>, <em>action: str = None</em>, <em>target=None</em>, <em>request=None</em>, <em>actor=None</em>, <em>source=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/container_registry_image_pushed_event_data_py3.html#ContainerRegistryImagePushedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.ContainerRegistryImagePushedEventData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.container_registry_event_data_py3.ContainerRegistryEventData</span></code></p>
@@ -1015,6 +1052,42 @@ Microsoft.ContainerRegistry.ImageDeleted event.</p>
 this could be from the authorization context of the request.</p></li>
 <li><p><strong>source</strong> (<a class="reference internal" href="#azure.eventgrid.models.ContainerRegistryEventSource" title="azure.eventgrid.models.ContainerRegistryEventSource"><em>ContainerRegistryEventSource</em></a>) – The registry node that generated the event. Put
 differently, while the actor initiates the event, the source generates it.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.ContainerRegistryChartPushedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">ContainerRegistryChartPushedEventData</code><span class="sig-paren">(</span><em>*</em>, <em>id: str = None</em>, <em>timestamp=None</em>, <em>action: str = None</em>, <em>target=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/container_registry_chart_pushed_event_data_py3.html#ContainerRegistryChartPushedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.ContainerRegistryChartPushedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.container_registry_artifact_event_data_py3.ContainerRegistryArtifactEventData</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for a
+Microsoft.ContainerRegistry.ChartPushed event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The event ID.</p></li>
+<li><p><strong>timestamp</strong> (<em>datetime</em>) – The time at which the event occurred.</p></li>
+<li><p><strong>action</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The action that encompasses the provided event.</p></li>
+<li><p><strong>target</strong> (<a class="reference internal" href="#azure.eventgrid.models.ContainerRegistryArtifactEventTarget" title="azure.eventgrid.models.ContainerRegistryArtifactEventTarget"><em>ContainerRegistryArtifactEventTarget</em></a>) – The target of the event.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.ContainerRegistryChartDeletedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">ContainerRegistryChartDeletedEventData</code><span class="sig-paren">(</span><em>*</em>, <em>id: str = None</em>, <em>timestamp=None</em>, <em>action: str = None</em>, <em>target=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/container_registry_chart_deleted_event_data_py3.html#ContainerRegistryChartDeletedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.ContainerRegistryChartDeletedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.container_registry_artifact_event_data_py3.ContainerRegistryArtifactEventData</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for a
+Microsoft.ContainerRegistry.ChartDeleted event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The event ID.</p></li>
+<li><p><strong>timestamp</strong> (<em>datetime</em>) – The time at which the event occurred.</p></li>
+<li><p><strong>action</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The action that encompasses the provided event.</p></li>
+<li><p><strong>target</strong> (<a class="reference internal" href="#azure.eventgrid.models.ContainerRegistryArtifactEventTarget" title="azure.eventgrid.models.ContainerRegistryArtifactEventTarget"><em>ContainerRegistryArtifactEventTarget</em></a>) – The target of the event.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1118,6 +1191,43 @@ differently, while the actor initiates the event, the source generates it.</p></
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.eventgrid.models.ContainerRegistryArtifactEventTarget">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">ContainerRegistryArtifactEventTarget</code><span class="sig-paren">(</span><em>*</em>, <em>media_type: str = None</em>, <em>size: int = None</em>, <em>digest: str = None</em>, <em>repository: str = None</em>, <em>tag: str = None</em>, <em>name: str = None</em>, <em>version: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/container_registry_artifact_event_target_py3.html#ContainerRegistryArtifactEventTarget"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.ContainerRegistryArtifactEventTarget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The target of the event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>media_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The MIME type of the artifact.</p></li>
+<li><p><strong>size</strong> (<em>long</em>) – The size in bytes of the artifact.</p></li>
+<li><p><strong>digest</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The digest of the artifact.</p></li>
+<li><p><strong>repository</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The repository name of the artifact.</p></li>
+<li><p><strong>tag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The tag of the artifact.</p></li>
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the artifact.</p></li>
+<li><p><strong>version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The version of the artifact.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.ContainerRegistryArtifactEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">ContainerRegistryArtifactEventData</code><span class="sig-paren">(</span><em>*</em>, <em>id: str = None</em>, <em>timestamp=None</em>, <em>action: str = None</em>, <em>target=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/container_registry_artifact_event_data_py3.html#ContainerRegistryArtifactEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.ContainerRegistryArtifactEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The content of the event request message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The event ID.</p></li>
+<li><p><strong>timestamp</strong> (<em>datetime</em>) – The time at which the event occurred.</p></li>
+<li><p><strong>action</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The action that encompasses the provided event.</p></li>
+<li><p><strong>target</strong> (<a class="reference internal" href="#azure.eventgrid.models.ContainerRegistryArtifactEventTarget" title="azure.eventgrid.models.ContainerRegistryArtifactEventTarget"><em>ContainerRegistryArtifactEventTarget</em></a>) – The target of the event.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.eventgrid.models.ServiceBusActiveMessagesAvailableWithNoListenersEventData">
 <em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">ServiceBusActiveMessagesAvailableWithNoListenersEventData</code><span class="sig-paren">(</span><em>*</em>, <em>namespace_name: str = None</em>, <em>request_uri: str = None</em>, <em>entity_type: str = None</em>, <em>queue_name: str = None</em>, <em>topic_name: str = None</em>, <em>subscription_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/service_bus_active_messages_available_with_no_listeners_event_data_py3.html#ServiceBusActiveMessagesAvailableWithNoListenersEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.ServiceBusActiveMessagesAvailableWithNoListenersEventData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
@@ -1171,7 +1281,7 @@ be null.</p></li>
 
 <dl class="class">
 <dt id="azure.eventgrid.models.MediaJobStateChangeEventData">
-<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobStateChangeEventData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_state_change_event_data_py3.html#MediaJobStateChangeEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobStateChangeEventData" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobStateChangeEventData</code><span class="sig-paren">(</span><em>*</em>, <em>correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_state_change_event_data_py3.html#MediaJobStateChangeEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobStateChangeEventData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Schema of the Data property of an EventGridEvent for a
 Microsoft.Media.JobStateChange event.</p>
@@ -1180,62 +1290,1007 @@ sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.JobState" title="azure.eventgrid.models.JobState"><em>JobState</em></a>) – The previous state of the Job. Possible values
+<li><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
 include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
 ‘Queued’, ‘Scheduled’</p></li>
-<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.JobState" title="azure.eventgrid.models.JobState"><em>JobState</em></a>) – The new state of the Job. Possible values include:
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The new state of the Job. Possible values include:
 ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’, ‘Queued’,
 ‘Scheduled’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobErrorDetail">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobErrorDetail</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_error_detail_py3.html#MediaJobErrorDetail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorDetail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Details of JobOutput errors.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.code" title="azure.servicefabric.models.PackageSharingPolicyScope.code"><strong>code</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Code describing the error detail.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A human-readable representation of the error.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.eventgrid.models.JobState">
-<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">JobState</code><a class="reference internal" href="../_modules/azure/eventgrid/models/event_grid_client_enums.html#JobState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.JobState" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.eventgrid.models.MediaJobError">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobError</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_error_py3.html#MediaJobError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Details of JobOutput errors.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.servicefabric.models.html#azure.servicefabric.models.PackageSharingPolicyScope.code" title="azure.servicefabric.models.PackageSharingPolicyScope.code"><strong>code</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobErrorCode" title="azure.eventgrid.models.MediaJobErrorCode"><em>MediaJobErrorCode</em></a>) – Error code describing the error. Possible values include:
+‘ServiceError’, ‘ServiceTransientError’, ‘DownloadNotAccessible’,
+‘DownloadTransientError’, ‘UploadNotAccessible’, ‘UploadTransientError’,
+‘ConfigurationUnsupported’, ‘ContentMalformed’, ‘ContentUnsupported’</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – A human-readable language-dependent representation of the
+error.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.newssearch.operations.html#azure.cognitiveservices.search.newssearch.operations.NewsOperations.category" title="azure.cognitiveservices.search.newssearch.operations.NewsOperations.category"><strong>category</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobErrorCategory" title="azure.eventgrid.models.MediaJobErrorCategory"><em>MediaJobErrorCategory</em></a>) – Helps with categorization of errors. Possible values
+include: ‘Service’, ‘Download’, ‘Upload’, ‘Configuration’, ‘Content’</p></li>
+<li><p><strong>retry</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobRetry" title="azure.eventgrid.models.MediaJobRetry"><em>MediaJobRetry</em></a>) – Indicates that it may be possible to retry the Job. If retry
+is unsuccessful, please contact Azure support via Azure Portal. Possible
+values include: ‘DoNotRetry’, ‘MayRetry’</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.imagesearch.operations.html#azure.cognitiveservices.search.imagesearch.operations.ImagesOperations.details" title="azure.cognitiveservices.search.imagesearch.operations.ImagesOperations.details"><strong>details</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.eventgrid.models.MediaJobErrorDetail" title="azure.eventgrid.models.MediaJobErrorDetail"><em>MediaJobErrorDetail</em></a><em>]</em>) – An array of details about specific errors that led to this
+reported error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobOutput">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobOutput</code><span class="sig-paren">(</span><em>*</em>, <em>progress: int</em>, <em>state</em>, <em>error=None</em>, <em>label: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_output_py3.html#MediaJobOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The event data for a Job output.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: MediaJobOutputAsset</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>error</strong> (<a class="reference internal" href="#azure.eventgrid.models.MediaJobError" title="azure.eventgrid.models.MediaJobError"><em>MediaJobError</em></a>) – Gets the Job output error.</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the Job output label.</p></li>
+<li><p><strong>progress</strong> (<em>long</em>) – Required. Gets the Job output progress.</p></li>
+<li><p><strong>state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – Required. Gets the Job output state. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p></li>
+<li><p><strong>odatatype</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobOutputAsset">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobOutputAsset</code><span class="sig-paren">(</span><em>*</em>, <em>progress: int</em>, <em>state</em>, <em>error=None</em>, <em>label: str = None</em>, <em>asset_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_output_asset_py3.html#MediaJobOutputAsset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobOutputAsset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_output_py3.MediaJobOutput</span></code></p>
+<p>The event data for a Job output asset.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>error</strong> (<a class="reference internal" href="#azure.eventgrid.models.MediaJobError" title="azure.eventgrid.models.MediaJobError"><em>MediaJobError</em></a>) – Gets the Job output error.</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the Job output label.</p></li>
+<li><p><strong>progress</strong> (<em>long</em>) – Required. Gets the Job output progress.</p></li>
+<li><p><strong>state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – Required. Gets the Job output state. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p></li>
+<li><p><strong>odatatype</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>asset_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the Job output asset name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobOutputProgressEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobOutputProgressEventData</code><span class="sig-paren">(</span><em>*</em>, <em>label: str = None</em>, <em>progress: int = None</em>, <em>job_correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_output_progress_event_data_py3.html#MediaJobOutputProgressEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobOutputProgressEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Job Output Progress Event Data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the Job output label.</p></li>
+<li><p><strong>progress</strong> (<em>long</em>) – Gets the Job output progress.</p></li>
+<li><p><strong>job_correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobOutputStateChangeEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobOutputStateChangeEventData</code><span class="sig-paren">(</span><em>*</em>, <em>output=None</em>, <em>job_correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_output_state_change_event_data_py3.html#MediaJobOutputStateChangeEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobOutputStateChangeEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for a
+Microsoft.Media.JobOutputStateChange event.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>output</strong> (<a class="reference internal" href="#azure.eventgrid.models.MediaJobOutput" title="azure.eventgrid.models.MediaJobOutput"><em>MediaJobOutput</em></a>) – Gets the output.</p></li>
+<li><p><strong>job_correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobScheduledEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobScheduledEventData</code><span class="sig-paren">(</span><em>*</em>, <em>correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_scheduled_event_data_py3.html#MediaJobScheduledEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobScheduledEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_state_change_event_data_py3.MediaJobStateChangeEventData</span></code></p>
+<p>Job scheduled event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The new state of the Job. Possible values include:
+‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’, ‘Queued’,
+‘Scheduled’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobProcessingEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobProcessingEventData</code><span class="sig-paren">(</span><em>*</em>, <em>correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_processing_event_data_py3.html#MediaJobProcessingEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobProcessingEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_state_change_event_data_py3.MediaJobStateChangeEventData</span></code></p>
+<p>Job processing event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The new state of the Job. Possible values include:
+‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’, ‘Queued’,
+‘Scheduled’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobCancelingEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobCancelingEventData</code><span class="sig-paren">(</span><em>*</em>, <em>correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_canceling_event_data_py3.html#MediaJobCancelingEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobCancelingEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_state_change_event_data_py3.MediaJobStateChangeEventData</span></code></p>
+<p>Job canceling event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The new state of the Job. Possible values include:
+‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’, ‘Queued’,
+‘Scheduled’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobFinishedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobFinishedEventData</code><span class="sig-paren">(</span><em>*</em>, <em>correlation_data=None</em>, <em>outputs=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_finished_event_data_py3.html#MediaJobFinishedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobFinishedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_state_change_event_data_py3.MediaJobStateChangeEventData</span></code></p>
+<p>Job finished event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The new state of the Job. Possible values include:
+‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’, ‘Queued’,
+‘Scheduled’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+<li><p><strong>outputs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.eventgrid.models.MediaJobOutput" title="azure.eventgrid.models.MediaJobOutput"><em>MediaJobOutput</em></a><em>]</em>) – Gets the Job outputs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobCanceledEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobCanceledEventData</code><span class="sig-paren">(</span><em>*</em>, <em>correlation_data=None</em>, <em>outputs=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_canceled_event_data_py3.html#MediaJobCanceledEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobCanceledEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_state_change_event_data_py3.MediaJobStateChangeEventData</span></code></p>
+<p>Job canceled event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The new state of the Job. Possible values include:
+‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’, ‘Queued’,
+‘Scheduled’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+<li><p><strong>outputs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.eventgrid.models.MediaJobOutput" title="azure.eventgrid.models.MediaJobOutput"><em>MediaJobOutput</em></a><em>]</em>) – Gets the Job outputs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobErroredEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobErroredEventData</code><span class="sig-paren">(</span><em>*</em>, <em>correlation_data=None</em>, <em>outputs=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_errored_event_data_py3.html#MediaJobErroredEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobErroredEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_state_change_event_data_py3.MediaJobStateChangeEventData</span></code></p>
+<p>Job error state event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The new state of the Job. Possible values include:
+‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’, ‘Queued’,
+‘Scheduled’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+<li><p><strong>outputs</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.eventgrid.models.MediaJobOutput" title="azure.eventgrid.models.MediaJobOutput"><em>MediaJobOutput</em></a><em>]</em>) – Gets the Job outputs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobOutputCanceledEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobOutputCanceledEventData</code><span class="sig-paren">(</span><em>*</em>, <em>output=None</em>, <em>job_correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_output_canceled_event_data_py3.html#MediaJobOutputCanceledEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobOutputCanceledEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_output_state_change_event_data_py3.MediaJobOutputStateChangeEventData</span></code></p>
+<p>Job output canceled event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>output</strong> (<a class="reference internal" href="#azure.eventgrid.models.MediaJobOutput" title="azure.eventgrid.models.MediaJobOutput"><em>MediaJobOutput</em></a>) – Gets the output.</p></li>
+<li><p><strong>job_correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobOutputCancelingEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobOutputCancelingEventData</code><span class="sig-paren">(</span><em>*</em>, <em>output=None</em>, <em>job_correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_output_canceling_event_data_py3.html#MediaJobOutputCancelingEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobOutputCancelingEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_output_state_change_event_data_py3.MediaJobOutputStateChangeEventData</span></code></p>
+<p>Job output canceling event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>output</strong> (<a class="reference internal" href="#azure.eventgrid.models.MediaJobOutput" title="azure.eventgrid.models.MediaJobOutput"><em>MediaJobOutput</em></a>) – Gets the output.</p></li>
+<li><p><strong>job_correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobOutputErroredEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobOutputErroredEventData</code><span class="sig-paren">(</span><em>*</em>, <em>output=None</em>, <em>job_correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_output_errored_event_data_py3.html#MediaJobOutputErroredEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobOutputErroredEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_output_state_change_event_data_py3.MediaJobOutputStateChangeEventData</span></code></p>
+<p>Job output error event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>output</strong> (<a class="reference internal" href="#azure.eventgrid.models.MediaJobOutput" title="azure.eventgrid.models.MediaJobOutput"><em>MediaJobOutput</em></a>) – Gets the output.</p></li>
+<li><p><strong>job_correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobOutputFinishedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobOutputFinishedEventData</code><span class="sig-paren">(</span><em>*</em>, <em>output=None</em>, <em>job_correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_output_finished_event_data_py3.html#MediaJobOutputFinishedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobOutputFinishedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_output_state_change_event_data_py3.MediaJobOutputStateChangeEventData</span></code></p>
+<p>Job output finished event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>output</strong> (<a class="reference internal" href="#azure.eventgrid.models.MediaJobOutput" title="azure.eventgrid.models.MediaJobOutput"><em>MediaJobOutput</em></a>) – Gets the output.</p></li>
+<li><p><strong>job_correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobOutputProcessingEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobOutputProcessingEventData</code><span class="sig-paren">(</span><em>*</em>, <em>output=None</em>, <em>job_correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_output_processing_event_data_py3.html#MediaJobOutputProcessingEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobOutputProcessingEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_output_state_change_event_data_py3.MediaJobOutputStateChangeEventData</span></code></p>
+<p>Job output processing event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>output</strong> (<a class="reference internal" href="#azure.eventgrid.models.MediaJobOutput" title="azure.eventgrid.models.MediaJobOutput"><em>MediaJobOutput</em></a>) – Gets the output.</p></li>
+<li><p><strong>job_correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobOutputScheduledEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobOutputScheduledEventData</code><span class="sig-paren">(</span><em>*</em>, <em>output=None</em>, <em>job_correlation_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_job_output_scheduled_event_data_py3.html#MediaJobOutputScheduledEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobOutputScheduledEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.media_job_output_state_change_event_data_py3.MediaJobOutputStateChangeEventData</span></code></p>
+<p>Job output scheduled event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>previous_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.eventgrid.models.MediaJobState" title="azure.eventgrid.models.MediaJobState"><em>MediaJobState</em></a>) – The previous state of the Job. Possible values
+include: ‘Canceled’, ‘Canceling’, ‘Error’, ‘Finished’, ‘Processing’,
+‘Queued’, ‘Scheduled’</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>output</strong> (<a class="reference internal" href="#azure.eventgrid.models.MediaJobOutput" title="azure.eventgrid.models.MediaJobOutput"><em>MediaJobOutput</em></a>) – Gets the output.</p></li>
+<li><p><strong>job_correlation_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Gets the Job correlation data.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaLiveEventEncoderConnectedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaLiveEventEncoderConnectedEventData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_live_event_encoder_connected_event_data_py3.html#MediaLiveEventEncoderConnectedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaLiveEventEncoderConnectedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Encoder connect event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ingest_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the ingest URL provided by the live event.</p></li>
+<li><p><strong>stream_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the stream Id.</p></li>
+<li><p><strong>encoder_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the remote IP.</p></li>
+<li><p><strong>encoder_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the remote port.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaLiveEventConnectionRejectedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaLiveEventConnectionRejectedEventData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_live_event_connection_rejected_event_data_py3.html#MediaLiveEventConnectionRejectedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaLiveEventConnectionRejectedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Encoder connection rejected event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ingest_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the ingest URL provided by the live event.</p></li>
+<li><p><strong>stream_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the stream Id.</p></li>
+<li><p><strong>encoder_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the remote IP.</p></li>
+<li><p><strong>encoder_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the remote port.</p></li>
+<li><p><strong>result_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the result code.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaLiveEventEncoderDisconnectedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaLiveEventEncoderDisconnectedEventData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_live_event_encoder_disconnected_event_data_py3.html#MediaLiveEventEncoderDisconnectedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaLiveEventEncoderDisconnectedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Encoder disconnected event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ingest_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the ingest URL provided by the live event.</p></li>
+<li><p><strong>stream_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the stream Id.</p></li>
+<li><p><strong>encoder_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the remote IP.</p></li>
+<li><p><strong>encoder_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the remote port.</p></li>
+<li><p><strong>result_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the result code.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaLiveEventIncomingStreamReceivedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaLiveEventIncomingStreamReceivedEventData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_live_event_incoming_stream_received_event_data_py3.html#MediaLiveEventIncomingStreamReceivedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaLiveEventIncomingStreamReceivedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Encoder connect event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ingest_url</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the ingest URL provided by the live event.</p></li>
+<li><p><strong>track_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the type of the track (Audio / Video).</p></li>
+<li><p><strong>track_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the track name.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.media.models.html#azure.mgmt.media.models.FilterTrackPropertyType.bitrate" title="azure.mgmt.media.models.FilterTrackPropertyType.bitrate"><strong>bitrate</strong></a> (<em>long</em>) – Gets the bitrate of the track.</p></li>
+<li><p><strong>encoder_ip</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the remote IP.</p></li>
+<li><p><strong>encoder_port</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the remote port.</p></li>
+<li><p><strong>timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the first timestamp of the data chunk received.</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the duration of the first data chunk.</p></li>
+<li><p><strong>timescale</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timescale in which timestamp is represented.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaLiveEventIncomingStreamsOutOfSyncEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaLiveEventIncomingStreamsOutOfSyncEventData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_live_event_incoming_streams_out_of_sync_event_data_py3.html#MediaLiveEventIncomingStreamsOutOfSyncEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaLiveEventIncomingStreamsOutOfSyncEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Incoming streams out of sync event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min_last_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the minimum last timestamp received.</p></li>
+<li><p><strong>type_of_stream_with_min_last_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the type of stream with
+minimum last timestamp.</p></li>
+<li><p><strong>max_last_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the maximum timestamp among all the tracks
+(audio or video).</p></li>
+<li><p><strong>type_of_stream_with_max_last_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the type of stream with
+maximum last timestamp.</p></li>
+<li><p><strong>timescale_of_min_last_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timescale in which
+“MinLastTimestamp” is represented.</p></li>
+<li><p><strong>timescale_of_max_last_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timescale in which
+“MaxLastTimestamp” is represented.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaLiveEventIncomingVideoStreamsOutOfSyncEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaLiveEventIncomingVideoStreamsOutOfSyncEventData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_live_event_incoming_video_streams_out_of_sync_event_data_py3.html#MediaLiveEventIncomingVideoStreamsOutOfSyncEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaLiveEventIncomingVideoStreamsOutOfSyncEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Incoming video stream out of synch event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>first_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the first timestamp received for one of the
+quality levels.</p></li>
+<li><p><strong>first_duration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the duration of the data chunk with first
+timestamp.</p></li>
+<li><p><strong>second_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timestamp received for some other quality
+levels.</p></li>
+<li><p><strong>second_duration</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the duration of the data chunk with second
+timestamp.</p></li>
+<li><p><strong>timescale</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timescale in which both the timestamps and
+durations are represented.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaLiveEventIncomingDataChunkDroppedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaLiveEventIncomingDataChunkDroppedEventData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_live_event_incoming_data_chunk_dropped_event_data_py3.html#MediaLiveEventIncomingDataChunkDroppedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaLiveEventIncomingDataChunkDroppedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Ingest fragment dropped event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timestamp of the data chunk dropped.</p></li>
+<li><p><strong>track_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the type of the track (Audio / Video).</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.media.models.html#azure.mgmt.media.models.FilterTrackPropertyType.bitrate" title="azure.mgmt.media.models.FilterTrackPropertyType.bitrate"><strong>bitrate</strong></a> (<em>long</em>) – Gets the bitrate of the track.</p></li>
+<li><p><strong>timescale</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timescale of the Timestamp.</p></li>
+<li><p><strong>result_code</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the result code for fragment drop operation.</p></li>
+<li><p><strong>track_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the name of the track for which fragment is
+dropped.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaLiveEventIngestHeartbeatEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaLiveEventIngestHeartbeatEventData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_live_event_ingest_heartbeat_event_data_py3.html#MediaLiveEventIngestHeartbeatEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaLiveEventIngestHeartbeatEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Ingest fragment dropped event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>track_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the type of the track (Audio / Video).</p></li>
+<li><p><strong>track_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the track name.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.media.models.html#azure.mgmt.media.models.FilterTrackPropertyType.bitrate" title="azure.mgmt.media.models.FilterTrackPropertyType.bitrate"><strong>bitrate</strong></a> (<em>long</em>) – Gets the bitrate of the track.</p></li>
+<li><p><strong>incoming_bitrate</strong> (<em>long</em>) – Gets the incoming bitrate.</p></li>
+<li><p><strong>last_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the last timestamp.</p></li>
+<li><p><strong>timescale</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timescale of the last timestamp.</p></li>
+<li><p><strong>overlap_count</strong> (<em>long</em>) – Gets the fragment Overlap count.</p></li>
+<li><p><strong>discontinuity_count</strong> (<em>long</em>) – Gets the fragment Discontinuity count.</p></li>
+<li><p><strong>nonincreasing_count</strong> (<em>long</em>) – Gets Non increasing count.</p></li>
+<li><p><strong>unexpected_bitrate</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Gets a value indicating whether unexpected
+bitrate is present or not.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the state of the live event.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.iothub.models.html#azure.mgmt.iothub.models.EndpointHealthStatus.healthy" title="azure.mgmt.iothub.models.EndpointHealthStatus.healthy"><strong>healthy</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Gets a value indicating whether preview is healthy or not.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaLiveEventTrackDiscontinuityDetectedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaLiveEventTrackDiscontinuityDetectedEventData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/media_live_event_track_discontinuity_detected_event_data_py3.html#MediaLiveEventTrackDiscontinuityDetectedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaLiveEventTrackDiscontinuityDetectedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Ingest track discontinuity detected event data.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>track_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the type of the track (Audio / Video).</p></li>
+<li><p><strong>track_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the track name.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.media.models.html#azure.mgmt.media.models.FilterTrackPropertyType.bitrate" title="azure.mgmt.media.models.FilterTrackPropertyType.bitrate"><strong>bitrate</strong></a> (<em>long</em>) – Gets the bitrate.</p></li>
+<li><p><strong>previous_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timestamp of the previous fragment.</p></li>
+<li><p><strong>new_timestamp</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timestamp of the current fragment.</p></li>
+<li><p><strong>timescale</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the timescale in which both timestamps and
+discontinuity gap are represented.</p></li>
+<li><p><strong>discontinuity_gap</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Gets the discontinuity gap between
+PreviousTimestamp and NewTimestamp.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MapsGeofenceEnteredEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MapsGeofenceEnteredEventData</code><span class="sig-paren">(</span><em>*</em>, <em>expired_geofence_geometry_id=None</em>, <em>geometries=None</em>, <em>invalid_period_geofence_geometry_id=None</em>, <em>is_event_published: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/maps_geofence_entered_event_data_py3.html#MapsGeofenceEnteredEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MapsGeofenceEnteredEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.maps_geofence_event_properties_py3.MapsGeofenceEventProperties</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for a
+Microsoft.Maps.GeofenceEntered event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>expired_geofence_geometry_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Lists of the geometry ID of the
+geofence which is expired relative to the user time in the request.</p></li>
+<li><p><strong>geometries</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.eventgrid.models.MapsGeofenceGeometry" title="azure.eventgrid.models.MapsGeofenceGeometry"><em>MapsGeofenceGeometry</em></a><em>]</em>) – Lists the fence geometries that either fully contain
+the coordinate position or have an overlap with the searchBuffer around
+the fence.</p></li>
+<li><p><strong>invalid_period_geofence_geometry_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Lists of the geometry ID of
+the geofence which is in invalid period relative to the user time in the
+request.</p></li>
+<li><p><strong>is_event_published</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True if at least one event is published to the
+Azure Maps event subscriber, false if no event is published to the Azure
+Maps event subscriber.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MapsGeofenceExitedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MapsGeofenceExitedEventData</code><span class="sig-paren">(</span><em>*</em>, <em>expired_geofence_geometry_id=None</em>, <em>geometries=None</em>, <em>invalid_period_geofence_geometry_id=None</em>, <em>is_event_published: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/maps_geofence_exited_event_data_py3.html#MapsGeofenceExitedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MapsGeofenceExitedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.maps_geofence_event_properties_py3.MapsGeofenceEventProperties</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for a
+Microsoft.Maps.GeofenceExited event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>expired_geofence_geometry_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Lists of the geometry ID of the
+geofence which is expired relative to the user time in the request.</p></li>
+<li><p><strong>geometries</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.eventgrid.models.MapsGeofenceGeometry" title="azure.eventgrid.models.MapsGeofenceGeometry"><em>MapsGeofenceGeometry</em></a><em>]</em>) – Lists the fence geometries that either fully contain
+the coordinate position or have an overlap with the searchBuffer around
+the fence.</p></li>
+<li><p><strong>invalid_period_geofence_geometry_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Lists of the geometry ID of
+the geofence which is in invalid period relative to the user time in the
+request.</p></li>
+<li><p><strong>is_event_published</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True if at least one event is published to the
+Azure Maps event subscriber, false if no event is published to the Azure
+Maps event subscriber.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MapsGeofenceResultEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MapsGeofenceResultEventData</code><span class="sig-paren">(</span><em>*</em>, <em>expired_geofence_geometry_id=None</em>, <em>geometries=None</em>, <em>invalid_period_geofence_geometry_id=None</em>, <em>is_event_published: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/maps_geofence_result_event_data_py3.html#MapsGeofenceResultEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MapsGeofenceResultEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.eventgrid.models.maps_geofence_event_properties_py3.MapsGeofenceEventProperties</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for a
+Microsoft.Maps.GeofenceResult event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>expired_geofence_geometry_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Lists of the geometry ID of the
+geofence which is expired relative to the user time in the request.</p></li>
+<li><p><strong>geometries</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.eventgrid.models.MapsGeofenceGeometry" title="azure.eventgrid.models.MapsGeofenceGeometry"><em>MapsGeofenceGeometry</em></a><em>]</em>) – Lists the fence geometries that either fully contain
+the coordinate position or have an overlap with the searchBuffer around
+the fence.</p></li>
+<li><p><strong>invalid_period_geofence_geometry_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Lists of the geometry ID of
+the geofence which is in invalid period relative to the user time in the
+request.</p></li>
+<li><p><strong>is_event_published</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True if at least one event is published to the
+Azure Maps event subscriber, false if no event is published to the Azure
+Maps event subscriber.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MapsGeofenceGeometry">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MapsGeofenceGeometry</code><span class="sig-paren">(</span><em>*</em>, <em>device_id: str = None</em>, <em>distance: float = None</em>, <em>geometry_id: str = None</em>, <em>nearest_lat: float = None</em>, <em>nearest_lon: float = None</em>, <em>ud_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/maps_geofence_geometry_py3.html#MapsGeofenceGeometry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MapsGeofenceGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>The geofence geometry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – ID of the device.</p></li>
+<li><p><strong>distance</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Distance from the coordinate to the closest border of the
+geofence. Positive means the coordinate is outside of the geofence. If the
+coordinate is outside of the geofence, but more than the value of
+searchBuffer away from the closest geofence border, then the value is 999.
+Negative means the coordinate is inside of the geofence. If the coordinate
+is inside the polygon, but more than the value of searchBuffer away from
+the closest geofencing border,then the value is -999. A value of 999 means
+that there is great confidence the coordinate is well outside the
+geofence. A value of -999 means that there is great confidence the
+coordinate is well within the geofence.</p></li>
+<li><p><strong>geometry_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique ID for the geofence geometry.</p></li>
+<li><p><strong>nearest_lat</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Latitude of the nearest point of the geometry.</p></li>
+<li><p><strong>nearest_lon</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#float" title="(in Python v3.5)"><em>float</em></a>) – Longitude of the nearest point of the geometry.</p></li>
+<li><p><strong>ud_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The unique id returned from user upload service when
+uploading a geofence. Will not be included in geofencing post API.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MapsGeofenceEventProperties">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MapsGeofenceEventProperties</code><span class="sig-paren">(</span><em>*</em>, <em>expired_geofence_geometry_id=None</em>, <em>geometries=None</em>, <em>invalid_period_geofence_geometry_id=None</em>, <em>is_event_published: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/maps_geofence_event_properties_py3.html#MapsGeofenceEventProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MapsGeofenceEventProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for a Geofence event
+(GeofenceEntered, GeofenceExited, GeofenceResult).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>expired_geofence_geometry_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Lists of the geometry ID of the
+geofence which is expired relative to the user time in the request.</p></li>
+<li><p><strong>geometries</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.eventgrid.models.MapsGeofenceGeometry" title="azure.eventgrid.models.MapsGeofenceGeometry"><em>MapsGeofenceGeometry</em></a><em>]</em>) – Lists the fence geometries that either fully contain
+the coordinate position or have an overlap with the searchBuffer around
+the fence.</p></li>
+<li><p><strong>invalid_period_geofence_geometry_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Lists of the geometry ID of
+the geofence which is in invalid period relative to the user time in the
+request.</p></li>
+<li><p><strong>is_event_published</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – True if at least one event is published to the
+Azure Maps event subscriber, false if no event is published to the Azure
+Maps event subscriber.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.AppConfigurationKeyValueModifiedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">AppConfigurationKeyValueModifiedEventData</code><span class="sig-paren">(</span><em>*</em>, <em>key: str = None</em>, <em>label: str = None</em>, <em>etag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/app_configuration_key_value_modified_event_data_py3.html#AppConfigurationKeyValueModifiedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.AppConfigurationKeyValueModifiedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for an
+Microsoft.AppConfiguration.KeyValueModified event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The key used to identify the key-value that was modified.</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The label, if any, used to identify the key-value that was
+modified.</p></li>
+<li><p><strong>etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The etag representing the new state of the key-value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.AppConfigurationKeyValueDeletedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">AppConfigurationKeyValueDeletedEventData</code><span class="sig-paren">(</span><em>*</em>, <em>key: str = None</em>, <em>label: str = None</em>, <em>etag: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/app_configuration_key_value_deleted_event_data_py3.html#AppConfigurationKeyValueDeletedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.AppConfigurationKeyValueDeletedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for an
+Microsoft.AppConfiguration.KeyValueDeleted event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The key used to identify the key-value that was deleted.</p></li>
+<li><p><strong>label</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The label, if any, used to identify the key-value that was
+deleted.</p></li>
+<li><p><strong>etag</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The etag representing the key-value that was deleted.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.SignalRServiceClientConnectionConnectedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">SignalRServiceClientConnectionConnectedEventData</code><span class="sig-paren">(</span><em>*</em>, <em>timestamp=None</em>, <em>hub: str = None</em>, <em>connection_id: str = None</em>, <em>user_id: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/signal_rservice_client_connection_connected_event_data_py3.html#SignalRServiceClientConnectionConnectedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.SignalRServiceClientConnectionConnectedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for a
+Microsoft.SignalRService.ClientConnectionConnected event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timestamp</strong> (<em>datetime</em>) – The time at which the event occurred.</p></li>
+<li><p><strong>hub</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The hub of connected client connection.</p></li>
+<li><p><strong>connection_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The connection Id of connected client connection.</p></li>
+<li><p><strong>user_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user Id of connected client connection.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.SignalRServiceClientConnectionDisconnectedEventData">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">SignalRServiceClientConnectionDisconnectedEventData</code><span class="sig-paren">(</span><em>*</em>, <em>timestamp=None</em>, <em>hub: str = None</em>, <em>connection_id: str = None</em>, <em>user_id: str = None</em>, <em>error_message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/eventgrid/models/signal_rservice_client_connection_disconnected_event_data_py3.html#SignalRServiceClientConnectionDisconnectedEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.SignalRServiceClientConnectionDisconnectedEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Schema of the Data property of an EventGridEvent for a
+Microsoft.SignalRService.ClientConnectionDisconnected event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timestamp</strong> (<em>datetime</em>) – The time at which the event occurred.</p></li>
+<li><p><strong>hub</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The hub of connected client connection.</p></li>
+<li><p><strong>connection_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The connection Id of connected client connection.</p></li>
+<li><p><strong>user_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The user Id of connected client connection.</p></li>
+<li><p><strong>error_message</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The message of error that cause the client
+connection disconnected.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobState">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobState</code><a class="reference internal" href="../_modules/azure/eventgrid/models/event_grid_client_enums.html#MediaJobState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
 <p>An enumeration.</p>
 <dl class="attribute">
-<dt id="azure.eventgrid.models.JobState.canceled">
-<code class="descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.eventgrid.models.JobState.canceled" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.eventgrid.models.MediaJobState.canceled">
+<code class="descname">canceled</code><em class="property"> = 'Canceled'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobState.canceled" title="Permalink to this definition">¶</a></dt>
 <dd><p>The job was canceled. This is a final state for the job.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="azure.eventgrid.models.JobState.canceling">
-<code class="descname">canceling</code><em class="property"> = 'Canceling'</em><a class="headerlink" href="#azure.eventgrid.models.JobState.canceling" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.eventgrid.models.MediaJobState.canceling">
+<code class="descname">canceling</code><em class="property"> = 'Canceling'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobState.canceling" title="Permalink to this definition">¶</a></dt>
 <dd><p>The job is in the process of being canceled. This is a transient state for the job.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="azure.eventgrid.models.JobState.error">
-<code class="descname">error</code><em class="property"> = 'Error'</em><a class="headerlink" href="#azure.eventgrid.models.JobState.error" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.eventgrid.models.MediaJobState.error">
+<code class="descname">error</code><em class="property"> = 'Error'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobState.error" title="Permalink to this definition">¶</a></dt>
 <dd><p>The job has encountered an error. This is a final state for the job.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="azure.eventgrid.models.JobState.finished">
-<code class="descname">finished</code><em class="property"> = 'Finished'</em><a class="headerlink" href="#azure.eventgrid.models.JobState.finished" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.eventgrid.models.MediaJobState.finished">
+<code class="descname">finished</code><em class="property"> = 'Finished'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobState.finished" title="Permalink to this definition">¶</a></dt>
 <dd><p>The job is finished. This is a final state for the job.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="azure.eventgrid.models.JobState.processing">
-<code class="descname">processing</code><em class="property"> = 'Processing'</em><a class="headerlink" href="#azure.eventgrid.models.JobState.processing" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.eventgrid.models.MediaJobState.processing">
+<code class="descname">processing</code><em class="property"> = 'Processing'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobState.processing" title="Permalink to this definition">¶</a></dt>
 <dd><p>The job is processing. This is a transient state for the job.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="azure.eventgrid.models.JobState.queued">
-<code class="descname">queued</code><em class="property"> = 'Queued'</em><a class="headerlink" href="#azure.eventgrid.models.JobState.queued" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.eventgrid.models.MediaJobState.queued">
+<code class="descname">queued</code><em class="property"> = 'Queued'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobState.queued" title="Permalink to this definition">¶</a></dt>
 <dd><p>The job is in a queued state, waiting for resources to become available. This is a transient state.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="azure.eventgrid.models.JobState.scheduled">
-<code class="descname">scheduled</code><em class="property"> = 'Scheduled'</em><a class="headerlink" href="#azure.eventgrid.models.JobState.scheduled" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.eventgrid.models.MediaJobState.scheduled">
+<code class="descname">scheduled</code><em class="property"> = 'Scheduled'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobState.scheduled" title="Permalink to this definition">¶</a></dt>
 <dd><p>The job is being scheduled to run on an available resource. This is a transient state, between queued and processing states.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobErrorCode">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobErrorCode</code><a class="reference internal" href="../_modules/azure/eventgrid/models/event_grid_client_enums.html#MediaJobErrorCode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCode.configuration_unsupported">
+<code class="descname">configuration_unsupported</code><em class="property"> = 'ConfigurationUnsupported'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCode.configuration_unsupported" title="Permalink to this definition">¶</a></dt>
+<dd><p>There was a problem with the combination of input files and the configuration settings applied, fix the configuration settings and retry with the same input, or change input to match the configuration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCode.content_malformed">
+<code class="descname">content_malformed</code><em class="property"> = 'ContentMalformed'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCode.content_malformed" title="Permalink to this definition">¶</a></dt>
+<dd><p>There was a problem with the input content (for example: zero byte files, or corrupt/non-decodable files), check the input files.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCode.content_unsupported">
+<code class="descname">content_unsupported</code><em class="property"> = 'ContentUnsupported'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCode.content_unsupported" title="Permalink to this definition">¶</a></dt>
+<dd><p>There was a problem with the format of the input (not valid media file, or an unsupported file/codec), check the validity of the input files.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCode.download_not_accessible">
+<code class="descname">download_not_accessible</code><em class="property"> = 'DownloadNotAccessible'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCode.download_not_accessible" title="Permalink to this definition">¶</a></dt>
+<dd><p>While trying to download the input files, the files were not accessible, please check the availability of the source.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCode.download_transient_error">
+<code class="descname">download_transient_error</code><em class="property"> = 'DownloadTransientError'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCode.download_transient_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>While trying to download the input files, there was an issue during transfer (storage service, network errors), see details and check your source.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCode.service_error">
+<code class="descname">service_error</code><em class="property"> = 'ServiceError'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCode.service_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fatal service error, please contact support.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCode.service_transient_error">
+<code class="descname">service_transient_error</code><em class="property"> = 'ServiceTransientError'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCode.service_transient_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transient error, please retry, if retry is unsuccessful, please contact support.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCode.upload_not_accessible">
+<code class="descname">upload_not_accessible</code><em class="property"> = 'UploadNotAccessible'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCode.upload_not_accessible" title="Permalink to this definition">¶</a></dt>
+<dd><p>While trying to upload the output files, the destination was not reachable, please check the availability of the destination.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCode.upload_transient_error">
+<code class="descname">upload_transient_error</code><em class="property"> = 'UploadTransientError'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCode.upload_transient_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>While trying to upload the output files, there was an issue during transfer (storage service, network errors), see details and check your destination.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobErrorCategory">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobErrorCategory</code><a class="reference internal" href="../_modules/azure/eventgrid/models/event_grid_client_enums.html#MediaJobErrorCategory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCategory.configuration">
+<code class="descname">configuration</code><em class="property"> = 'Configuration'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCategory.configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The error is configuration related.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCategory.content">
+<code class="descname">content</code><em class="property"> = 'Content'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCategory.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>The error is related to data in the input files.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCategory.download">
+<code class="descname">download</code><em class="property"> = 'Download'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCategory.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>The error is download related.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCategory.service">
+<code class="descname">service</code><em class="property"> = 'Service'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCategory.service" title="Permalink to this definition">¶</a></dt>
+<dd><p>The error is service related.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobErrorCategory.upload">
+<code class="descname">upload</code><em class="property"> = 'Upload'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobErrorCategory.upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>The error is upload related.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.eventgrid.models.MediaJobRetry">
+<em class="property">class </em><code class="descclassname">azure.eventgrid.models.</code><code class="descname">MediaJobRetry</code><a class="reference internal" href="../_modules/azure/eventgrid/models/event_grid_client_enums.html#MediaJobRetry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.eventgrid.models.MediaJobRetry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobRetry.do_not_retry">
+<code class="descname">do_not_retry</code><em class="property"> = 'DoNotRetry'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobRetry.do_not_retry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Issue needs to be investigated and then the job resubmitted with corrections or retried once the underlying issue has been corrected.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="azure.eventgrid.models.MediaJobRetry.may_retry">
+<code class="descname">may_retry</code><em class="property"> = 'MayRetry'</em><a class="headerlink" href="#azure.eventgrid.models.MediaJobRetry.may_retry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Issue may be resolved after waiting for a period of time and resubmitting the same Job.</p>
 </dd></dl>
 
 </dd></dl>

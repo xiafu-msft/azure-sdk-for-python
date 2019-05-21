@@ -325,11 +325,13 @@
 <span class="sd">    :ivar previous_state: The previous state of the Job. Possible values</span>
 <span class="sd">     include: &#39;Canceled&#39;, &#39;Canceling&#39;, &#39;Error&#39;, &#39;Finished&#39;, &#39;Processing&#39;,</span>
 <span class="sd">     &#39;Queued&#39;, &#39;Scheduled&#39;</span>
-<span class="sd">    :vartype previous_state: str or ~azure.eventgrid.models.JobState</span>
+<span class="sd">    :vartype previous_state: str or ~azure.eventgrid.models.MediaJobState</span>
 <span class="sd">    :ivar state: The new state of the Job. Possible values include:</span>
 <span class="sd">     &#39;Canceled&#39;, &#39;Canceling&#39;, &#39;Error&#39;, &#39;Finished&#39;, &#39;Processing&#39;, &#39;Queued&#39;,</span>
 <span class="sd">     &#39;Scheduled&#39;</span>
-<span class="sd">    :vartype state: str or ~azure.eventgrid.models.JobState</span>
+<span class="sd">    :vartype state: str or ~azure.eventgrid.models.MediaJobState</span>
+<span class="sd">    :param correlation_data: Gets the Job correlation data.</span>
+<span class="sd">    :type correlation_data: dict[str, str]</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
@@ -338,14 +340,16 @@
     <span class="p">}</span>
 
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;previous_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;previousState&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;JobState&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;JobState&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;previous_state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;previousState&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;MediaJobState&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;state&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;MediaJobState&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;correlation_data&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;correlationData&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">{str}</span><span class="s1">&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">correlation_data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">MediaJobStateChangeEventData</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">previous_state</span> <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="kc">None</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">correlation_data</span> <span class="o">=</span> <span class="n">correlation_data</span></div>
 </pre></div>
 
            </div>

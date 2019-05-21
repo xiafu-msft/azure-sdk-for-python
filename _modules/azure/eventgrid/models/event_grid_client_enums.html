@@ -315,7 +315,7 @@
 <span class="kn">from</span> <span class="nn">enum</span> <span class="k">import</span> <span class="n">Enum</span>
 
 
-<div class="viewcode-block" id="JobState"><a class="viewcode-back" href="../../../../ref/azure.eventgrid.models.html#azure.eventgrid.models.JobState">[docs]</a><span class="k">class</span> <span class="nc">JobState</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+<div class="viewcode-block" id="MediaJobState"><a class="viewcode-back" href="../../../../ref/azure.eventgrid.models.html#azure.eventgrid.models.MediaJobState">[docs]</a><span class="k">class</span> <span class="nc">MediaJobState</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">canceled</span> <span class="o">=</span> <span class="s2">&quot;Canceled&quot;</span>  <span class="c1">#: The job was canceled. This is a final state for the job.</span>
     <span class="n">canceling</span> <span class="o">=</span> <span class="s2">&quot;Canceling&quot;</span>  <span class="c1">#: The job is in the process of being canceled. This is a transient state for the job.</span>
@@ -324,6 +324,34 @@
     <span class="n">processing</span> <span class="o">=</span> <span class="s2">&quot;Processing&quot;</span>  <span class="c1">#: The job is processing. This is a transient state for the job.</span>
     <span class="n">queued</span> <span class="o">=</span> <span class="s2">&quot;Queued&quot;</span>  <span class="c1">#: The job is in a queued state, waiting for resources to become available. This is a transient state.</span>
     <span class="n">scheduled</span> <span class="o">=</span> <span class="s2">&quot;Scheduled&quot;</span>  <span class="c1">#: The job is being scheduled to run on an available resource. This is a transient state, between queued and processing states.</span></div>
+
+
+<div class="viewcode-block" id="MediaJobErrorCode"><a class="viewcode-back" href="../../../../ref/azure.eventgrid.models.html#azure.eventgrid.models.MediaJobErrorCode">[docs]</a><span class="k">class</span> <span class="nc">MediaJobErrorCode</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">service_error</span> <span class="o">=</span> <span class="s2">&quot;ServiceError&quot;</span>  <span class="c1">#: Fatal service error, please contact support.</span>
+    <span class="n">service_transient_error</span> <span class="o">=</span> <span class="s2">&quot;ServiceTransientError&quot;</span>  <span class="c1">#: Transient error, please retry, if retry is unsuccessful, please contact support.</span>
+    <span class="n">download_not_accessible</span> <span class="o">=</span> <span class="s2">&quot;DownloadNotAccessible&quot;</span>  <span class="c1">#: While trying to download the input files, the files were not accessible, please check the availability of the source.</span>
+    <span class="n">download_transient_error</span> <span class="o">=</span> <span class="s2">&quot;DownloadTransientError&quot;</span>  <span class="c1">#: While trying to download the input files, there was an issue during transfer (storage service, network errors), see details and check your source.</span>
+    <span class="n">upload_not_accessible</span> <span class="o">=</span> <span class="s2">&quot;UploadNotAccessible&quot;</span>  <span class="c1">#: While trying to upload the output files, the destination was not reachable, please check the availability of the destination.</span>
+    <span class="n">upload_transient_error</span> <span class="o">=</span> <span class="s2">&quot;UploadTransientError&quot;</span>  <span class="c1">#: While trying to upload the output files, there was an issue during transfer (storage service, network errors), see details and check your destination.</span>
+    <span class="n">configuration_unsupported</span> <span class="o">=</span> <span class="s2">&quot;ConfigurationUnsupported&quot;</span>  <span class="c1">#: There was a problem with the combination of input files and the configuration settings applied, fix the configuration settings and retry with the same input, or change input to match the configuration.</span>
+    <span class="n">content_malformed</span> <span class="o">=</span> <span class="s2">&quot;ContentMalformed&quot;</span>  <span class="c1">#: There was a problem with the input content (for example: zero byte files, or corrupt/non-decodable files), check the input files.</span>
+    <span class="n">content_unsupported</span> <span class="o">=</span> <span class="s2">&quot;ContentUnsupported&quot;</span>  <span class="c1">#: There was a problem with the format of the input (not valid media file, or an unsupported file/codec), check the validity of the input files.</span></div>
+
+
+<div class="viewcode-block" id="MediaJobErrorCategory"><a class="viewcode-back" href="../../../../ref/azure.eventgrid.models.html#azure.eventgrid.models.MediaJobErrorCategory">[docs]</a><span class="k">class</span> <span class="nc">MediaJobErrorCategory</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">service</span> <span class="o">=</span> <span class="s2">&quot;Service&quot;</span>  <span class="c1">#: The error is service related.</span>
+    <span class="n">download</span> <span class="o">=</span> <span class="s2">&quot;Download&quot;</span>  <span class="c1">#: The error is download related.</span>
+    <span class="n">upload</span> <span class="o">=</span> <span class="s2">&quot;Upload&quot;</span>  <span class="c1">#: The error is upload related.</span>
+    <span class="n">configuration</span> <span class="o">=</span> <span class="s2">&quot;Configuration&quot;</span>  <span class="c1">#: The error is configuration related.</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;Content&quot;</span>  <span class="c1">#: The error is related to data in the input files.</span></div>
+
+
+<div class="viewcode-block" id="MediaJobRetry"><a class="viewcode-back" href="../../../../ref/azure.eventgrid.models.html#azure.eventgrid.models.MediaJobRetry">[docs]</a><span class="k">class</span> <span class="nc">MediaJobRetry</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">do_not_retry</span> <span class="o">=</span> <span class="s2">&quot;DoNotRetry&quot;</span>  <span class="c1">#: Issue needs to be investigated and then the job resubmitted with corrections or retried once the underlying issue has been corrected.</span>
+    <span class="n">may_retry</span> <span class="o">=</span> <span class="s2">&quot;MayRetry&quot;</span>  <span class="c1">#: Issue may be resolved after waiting for a period of time and resubmitting the same Job.</span></div>
 </pre></div>
 
            </div>
