@@ -331,7 +331,7 @@
 </ul>
 </dd>
 <dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. Current version is 2015-06-01. Constant value: “2018-11-01-preview”.</p>
+<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. Current version is 2019-03-01-preview. Constant value: “2019-03-01-preview”.</p>
 </dd>
 </dl>
 <dl class="method">
@@ -363,120 +363,7 @@ ClientRawResponse</p>
 
 <dl class="attribute">
 <dt id="azure.mgmt.subscription.operations.Operations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.subscription.models' from 'd:\\a\\1\\s\\azure-mgmt-subscription\\azure\\mgmt\\subscription\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.subscription.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.subscription.operations.SubscriptionOperationOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.subscription.operations.</code><code class="descname">SubscriptionOperationOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/operations/subscription_operation_operations.html#SubscriptionOperationOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionOperationOperations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>SubscriptionOperationOperations operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> – Client for service requests.</p></li>
-<li><p><strong>config</strong> – Configuration of service client.</p></li>
-<li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. Current version is 2015-06-01. Constant value: “2018-11-01-preview”.</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="azure.mgmt.subscription.operations.SubscriptionOperationOperations.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>operation_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/operations/subscription_operation_operations.html#SubscriptionOperationOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionOperationOperations.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the status of the pending Microsoft.Subscription API operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>operation_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The operation ID, which can be found from the
-Location field in the generate recommendation response header.</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
-deserialized response</p></li>
-<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
-overrides</span>.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>SubscriptionCreationResult or ClientRawResponse if raw=true</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.subscription.models.html#azure.mgmt.subscription.models.SubscriptionCreationResult" title="azure.mgmt.subscription.models.SubscriptionCreationResult">SubscriptionCreationResult</a> or
-ClientRawResponse</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CloudError</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.subscription.operations.SubscriptionOperationOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.subscription.models' from 'd:\\a\\1\\s\\azure-mgmt-subscription\\azure\\mgmt\\subscription\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionOperationOperations.models" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.subscription.operations.SubscriptionFactoryOperations">
-<em class="property">class </em><code class="descclassname">azure.mgmt.subscription.operations.</code><code class="descname">SubscriptionFactoryOperations</code><span class="sig-paren">(</span><em>client</em>, <em>config</em>, <em>serializer</em>, <em>deserializer</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/operations/subscription_factory_operations.html#SubscriptionFactoryOperations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionFactoryOperations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>SubscriptionFactoryOperations operations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> – Client for service requests.</p></li>
-<li><p><strong>config</strong> – Configuration of service client.</p></li>
-<li><p><strong>serializer</strong> – An object model serializer.</p></li>
-<li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – Version of the API to be used with the client request. Current version is 2015-06-01. Constant value: “2018-11-01-preview”.</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="azure.mgmt.subscription.operations.SubscriptionFactoryOperations.create_subscription">
-<code class="descname">create_subscription</code><span class="sig-paren">(</span><em>billing_account_name</em>, <em>invoice_section_name</em>, <em>body</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>polling=True</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/operations/subscription_factory_operations.html#SubscriptionFactoryOperations.create_subscription"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionFactoryOperations.create_subscription" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates an Azure subscription.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>billing_account_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the commerce root billing
-account.</p></li>
-<li><p><strong>invoice_section_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The name of the invoice section.</p></li>
-<li><p><strong>body</strong> (<a class="reference internal" href="azure.mgmt.subscription.models.html#azure.mgmt.subscription.models.SubscriptionCreationParameters" title="azure.mgmt.subscription.models.SubscriptionCreationParameters"><em>SubscriptionCreationParameters</em></a>) – The subscription creation parameters.</p></li>
-<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
-<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The poller return type is ClientRawResponse, the
-direct response alongside the deserialized response</p></li>
-<li><p><strong>polling</strong> – True for ARMPolling, False for no polling, or a
-polling object for personal polling strategy</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>An instance of LROPoller that returns
-SubscriptionCreationResult or
-ClientRawResponse&lt;SubscriptionCreationResult&gt; if raw==True</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>AzureOperationPoller[<a class="reference internal" href="azure.mgmt.subscription.models.html#azure.mgmt.subscription.models.SubscriptionCreationResult" title="azure.mgmt.subscription.models.SubscriptionCreationResult">SubscriptionCreationResult</a>]
-or
-AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure.mgmt.subscription.models.html#azure.mgmt.subscription.models.SubscriptionCreationResult" title="azure.mgmt.subscription.models.SubscriptionCreationResult">SubscriptionCreationResult</a>]]</p>
-</dd>
-<dt class="field-even">Raises</dt>
-<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.subscription.models.html#azure.mgmt.subscription.models.ErrorResponseException" title="azure.mgmt.subscription.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="azure.mgmt.subscription.operations.SubscriptionFactoryOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.subscription.models' from 'd:\\a\\1\\s\\azure-mgmt-subscription\\azure\\mgmt\\subscription\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionFactoryOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.subscription.models' from 'd:\\a\\1\\s\\sdk\\subscription\\azure-mgmt-subscription\\azure\\mgmt\\subscription\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.subscription.operations.Operations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -495,10 +382,34 @@ AzureOperationPoller[ClientRawResponse[<a class="reference internal" href="azure
 <li><p><strong>deserializer</strong> – An object model deserializer.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Variables</dt>
-<dd class="field-even"><p><strong>api_version</strong> – The API version to use for the operation. Constant value: “2016-06-01”.</p>
+</dl>
+<dl class="method">
+<dt id="azure.mgmt.subscription.operations.SubscriptionsOperations.cancel">
+<code class="descname">cancel</code><span class="sig-paren">(</span><em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/operations/subscriptions_operations.html#SubscriptionsOperations.cancel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionsOperations.cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancels the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>CanceledSubscriptionId or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.subscription.models.html#azure.mgmt.subscription.models.CanceledSubscriptionId" title="azure.mgmt.subscription.models.CanceledSubscriptionId">CanceledSubscriptionId</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.subscription.models.html#azure.mgmt.subscription.models.ErrorResponseException" title="azure.mgmt.subscription.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
 </dd>
 </dl>
+</dd></dl>
+
 <dl class="method">
 <dt id="azure.mgmt.subscription.operations.SubscriptionsOperations.get">
 <code class="descname">get</code><span class="sig-paren">(</span><em>subscription_id</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/operations/subscriptions_operations.html#SubscriptionsOperations.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionsOperations.get" title="Permalink to this definition">¶</a></dt>
@@ -585,8 +496,36 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.subscription.operations.SubscriptionsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.subscription.models' from 'd:\\a\\1\\s\\azure-mgmt-subscription\\azure\\mgmt\\subscription\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.subscription.models' from 'd:\\a\\1\\s\\sdk\\subscription\\azure-mgmt-subscription\\azure\\mgmt\\subscription\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="azure.mgmt.subscription.operations.SubscriptionsOperations.rename">
+<code class="descname">rename</code><span class="sig-paren">(</span><em>subscription_name=None</em>, <em>custom_headers=None</em>, <em>raw=False</em>, <em>**operation_config</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/operations/subscriptions_operations.html#SubscriptionsOperations.rename"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.operations.SubscriptionsOperations.rename" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renames the subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>subscription_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – New subscription name</p></li>
+<li><p><strong>custom_headers</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a>) – headers that will be added to the request</p></li>
+<li><p><strong>raw</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – returns the direct response alongside the
+deserialized response</p></li>
+<li><p><strong>operation_config</strong> – <span class="xref std std-ref">Operation configuration
+overrides</span>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>RenamedSubscriptionId or ClientRawResponse if raw=true</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.subscription.models.html#azure.mgmt.subscription.models.RenamedSubscriptionId" title="azure.mgmt.subscription.models.RenamedSubscriptionId">RenamedSubscriptionId</a> or
+ClientRawResponse</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="azure.mgmt.subscription.models.html#azure.mgmt.subscription.models.ErrorResponseException" title="azure.mgmt.subscription.models.ErrorResponseException"><code class="xref py py-class docutils literal notranslate"><span class="pre">ErrorResponseException</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
@@ -636,7 +575,7 @@ overrides</span>.</p></li>
 
 <dl class="attribute">
 <dt id="azure.mgmt.subscription.operations.TenantsOperations.models">
-<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.subscription.models' from 'd:\\a\\1\\s\\azure-mgmt-subscription\\azure\\mgmt\\subscription\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.subscription.operations.TenantsOperations.models" title="Permalink to this definition">¶</a></dt>
+<code class="descname">models</code><em class="property"> = &lt;module 'azure.mgmt.subscription.models' from 'd:\\a\\1\\s\\sdk\\subscription\\azure-mgmt-subscription\\azure\\mgmt\\subscription\\models\\__init__.py'&gt;</em><a class="headerlink" href="#azure.mgmt.subscription.operations.TenantsOperations.models" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

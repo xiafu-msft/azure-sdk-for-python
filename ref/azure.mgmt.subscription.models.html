@@ -317,52 +317,6 @@
   <div class="section" id="module-azure.mgmt.subscription.models">
 <span id="azure-mgmt-subscription-models-module"></span><h1>azure.mgmt.subscription.models module<a class="headerlink" href="#module-azure.mgmt.subscription.models" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="azure.mgmt.subscription.models.SubscriptionCreationResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.subscription.models.</code><code class="descname">SubscriptionCreationResult</code><span class="sig-paren">(</span><em>*</em>, <em>subscription_link: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/models/subscription_creation_result_py3.html#SubscriptionCreationResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.models.SubscriptionCreationResult" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>The created subscription object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>subscription_link</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The link to the new subscription.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.subscription.models.AdPrincipal">
-<em class="property">class </em><code class="descclassname">azure.mgmt.subscription.models.</code><code class="descname">AdPrincipal</code><span class="sig-paren">(</span><em>*</em>, <em>object_id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/models/ad_principal_py3.html#AdPrincipal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.models.AdPrincipal" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Active Directory Principal for subscription creation delegated permission.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>object_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Object id of the Principal</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
-<dt id="azure.mgmt.subscription.models.SubscriptionCreationParameters">
-<em class="property">class </em><code class="descclassname">azure.mgmt.subscription.models.</code><code class="descname">SubscriptionCreationParameters</code><span class="sig-paren">(</span><em>*</em>, <em>display_name: str = None</em>, <em>billing_profile_id: str = None</em>, <em>sku_id: str = None</em>, <em>cost_center: str = None</em>, <em>owner=None</em>, <em>additional_parameters=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/models/subscription_creation_parameters_py3.html#SubscriptionCreationParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.models.SubscriptionCreationParameters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Subscription Creation Parameters required to create a new Azure
-subscription.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>display_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The display name of the subscription.</p></li>
-<li><p><strong>billing_profile_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The ARM id of the billing profile.</p></li>
-<li><p><strong>sku_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The commerce id of the sku.</p></li>
-<li><p><strong>cost_center</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – optional customer cost center</p></li>
-<li><p><strong>owner</strong> (<a class="reference internal" href="#azure.mgmt.subscription.models.AdPrincipal" title="azure.mgmt.subscription.models.AdPrincipal"><em>AdPrincipal</em></a>) – rbac owner of the subscription</p></li>
-<li><p><strong>additional_parameters</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/functions.html#object" title="(in Python v3.5)"><em>object</em></a><em>]</em>) – Additional, untyped parameters to support
-custom subscription creation scenarios.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.subscription.models.ErrorResponse">
 <em class="property">class </em><code class="descclassname">azure.mgmt.subscription.models.</code><code class="descname">ErrorResponse</code><span class="sig-paren">(</span><em>*</em>, <em>code: str = None</em>, <em>message: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/models/error_response_py3.html#ErrorResponse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.models.ErrorResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
@@ -393,33 +347,41 @@ custom subscription creation scenarios.</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.subscription.models.SubscriptionOperation">
-<em class="property">class </em><code class="descclassname">azure.mgmt.subscription.models.</code><code class="descname">SubscriptionOperation</code><span class="sig-paren">(</span><em>*</em>, <em>status: str = None</em>, <em>status_detail: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/models/subscription_operation_py3.html#SubscriptionOperation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.models.SubscriptionOperation" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.subscription.models.CanceledSubscriptionId">
+<em class="property">class </em><code class="descclassname">azure.mgmt.subscription.models.</code><code class="descname">CanceledSubscriptionId</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/models/canceled_subscription_id_py3.html#CanceledSubscriptionId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.models.CanceledSubscriptionId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>status of the subscription POST operation.</p>
+<p>Canceled Subscription Id.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The operation Id.</p>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Status of the pending subscription</p></li>
-<li><p><strong>status_detail</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Status Detail of the pending subscription</p></li>
-</ul>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Canceled Subscription Id</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.subscription.models.SubscriptionOperationListResult">
-<em class="property">class </em><code class="descclassname">azure.mgmt.subscription.models.</code><code class="descname">SubscriptionOperationListResult</code><span class="sig-paren">(</span><em>*</em>, <em>value=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/models/subscription_operation_list_result_py3.html#SubscriptionOperationListResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.models.SubscriptionOperationListResult" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.subscription.models.RenamedSubscriptionId">
+<em class="property">class </em><code class="descclassname">azure.mgmt.subscription.models.</code><code class="descname">RenamedSubscriptionId</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/models/renamed_subscription_id_py3.html#RenamedSubscriptionId"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.models.RenamedSubscriptionId" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>A list of pending subscription operations.</p>
+<p>Renamed Subscription Id.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.mgmt.datafactory.models.html#azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value" title="azure.mgmt.datafactory.models.PolybaseSettingsRejectType.value"><strong>value</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Renamed Subscription Id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.subscription.models.SubscriptionName">
+<em class="property">class </em><code class="descclassname">azure.mgmt.subscription.models.</code><code class="descname">SubscriptionName</code><span class="sig-paren">(</span><em>*</em>, <em>subscription_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/subscription/models/subscription_name_py3.html#SubscriptionName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.subscription.models.SubscriptionName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>New name of the subscription.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.subscription.models.SubscriptionOperation" title="azure.mgmt.subscription.models.SubscriptionOperation"><em>SubscriptionOperation</em></a><em>]</em>) – A list of pending SubscriptionOperations</p>
+<dd class="field-odd"><p><strong>subscription_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – New subscription name</p>
 </dd>
 </dl>
 </dd></dl>

@@ -317,8 +317,6 @@
 <span class="kn">from</span> <span class="nn">msrestazure</span> <span class="k">import</span> <span class="n">AzureConfiguration</span>
 <span class="kn">from</span> <span class="nn">.version</span> <span class="k">import</span> <span class="n">VERSION</span>
 <span class="kn">from</span> <span class="nn">.operations.operations</span> <span class="k">import</span> <span class="n">Operations</span>
-<span class="kn">from</span> <span class="nn">.operations.subscription_operation_operations</span> <span class="k">import</span> <span class="n">SubscriptionOperationOperations</span>
-<span class="kn">from</span> <span class="nn">.operations.subscription_factory_operations</span> <span class="k">import</span> <span class="n">SubscriptionFactoryOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.subscriptions_operations</span> <span class="k">import</span> <span class="n">SubscriptionsOperations</span>
 <span class="kn">from</span> <span class="nn">.operations.tenants_operations</span> <span class="k">import</span> <span class="n">TenantsOperations</span>
 <span class="kn">from</span> <span class="nn">.</span> <span class="k">import</span> <span class="n">models</span>
@@ -332,14 +330,18 @@
 <span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
 <span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
 <span class="sd">     object&lt;msrestazure.azure_active_directory&gt;`</span>
+<span class="sd">    :param subscription_id: Subscription Id.</span>
+<span class="sd">    :type subscription_id: str</span>
 <span class="sd">    :param str base_url: Service URL</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 
         <span class="k">if</span> <span class="n">credentials</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Parameter &#39;credentials&#39; must not be None.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">subscription_id</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Parameter &#39;subscription_id&#39; must not be None.&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">base_url</span><span class="p">:</span>
             <span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;https://management.azure.com&#39;</span>
 
@@ -349,6 +351,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">add_user_agent</span><span class="p">(</span><span class="s1">&#39;Azure-SDK-For-Python&#39;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span> <span class="o">=</span> <span class="n">credentials</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_id</span> <span class="o">=</span> <span class="n">subscription_id</span>
 
 
 <div class="viewcode-block" id="SubscriptionClient"><a class="viewcode-back" href="../../../../ref/azure.mgmt.subscription.html#azure.mgmt.subscription.SubscriptionClient">[docs]</a><span class="k">class</span> <span class="nc">SubscriptionClient</span><span class="p">(</span><span class="n">SDKClient</span><span class="p">):</span>
@@ -359,10 +362,6 @@
 
 <span class="sd">    :ivar operations: Operations operations</span>
 <span class="sd">    :vartype operations: azure.mgmt.subscription.operations.Operations</span>
-<span class="sd">    :ivar subscription_operation: SubscriptionOperation operations</span>
-<span class="sd">    :vartype subscription_operation: azure.mgmt.subscription.operations.SubscriptionOperationOperations</span>
-<span class="sd">    :ivar subscription_factory: SubscriptionFactory operations</span>
-<span class="sd">    :vartype subscription_factory: azure.mgmt.subscription.operations.SubscriptionFactoryOperations</span>
 <span class="sd">    :ivar subscriptions: Subscriptions operations</span>
 <span class="sd">    :vartype subscriptions: azure.mgmt.subscription.operations.SubscriptionsOperations</span>
 <span class="sd">    :ivar tenants: Tenants operations</span>
@@ -371,13 +370,15 @@
 <span class="sd">    :param credentials: Credentials needed for the client to connect to Azure.</span>
 <span class="sd">    :type credentials: :mod:`A msrestazure Credentials</span>
 <span class="sd">     object&lt;msrestazure.azure_active_directory&gt;`</span>
+<span class="sd">    :param subscription_id: Subscription Id.</span>
+<span class="sd">    :type subscription_id: str</span>
 <span class="sd">    :param str base_url: Service URL</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">SubscriptionClientConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">SubscriptionClientConfiguration</span><span class="p">(</span><span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="n">base_url</span><span class="p">)</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">SubscriptionClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span>
 
         <span class="n">client_models</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">type</span><span class="p">)}</span>
@@ -385,10 +386,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">Deserializer</span><span class="p">(</span><span class="n">client_models</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">operations</span> <span class="o">=</span> <span class="n">Operations</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_operation</span> <span class="o">=</span> <span class="n">SubscriptionOperationOperations</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">subscription_factory</span> <span class="o">=</span> <span class="n">SubscriptionFactoryOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">subscriptions</span> <span class="o">=</span> <span class="n">SubscriptionsOperations</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">)</span>

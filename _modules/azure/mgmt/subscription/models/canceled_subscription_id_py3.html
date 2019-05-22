@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>azure.mgmt.subscription.operations.operations &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  <title>azure.mgmt.subscription.models.canceled_subscription_id_py3 &mdash; Azure SDK for Python 2.0.0 documentation</title>
   
 
   
@@ -285,7 +285,7 @@
         
           <li><a href="../../../../index.html">Module code</a> &raquo;</li>
         
-      <li>azure.mgmt.subscription.operations.operations</li>
+      <li>azure.mgmt.subscription.models.canceled_subscription_id_py3</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -300,7 +300,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for azure.mgmt.subscription.operations.operations</h1><div class="highlight"><pre>
+  <h1>Source code for azure.mgmt.subscription.models.canceled_subscription_id_py3</h1><div class="highlight"><pre>
 <span></span><span class="c1"># coding=utf-8</span>
 <span class="c1"># --------------------------------------------------------------------------</span>
 <span class="c1"># Copyright (c) Microsoft Corporation. All rights reserved.</span>
@@ -312,83 +312,30 @@
 <span class="c1"># regenerated.</span>
 <span class="c1"># --------------------------------------------------------------------------</span>
 
-<span class="kn">import</span> <span class="nn">uuid</span>
-<span class="kn">from</span> <span class="nn">msrest.pipeline</span> <span class="k">import</span> <span class="n">ClientRawResponse</span>
-
-<span class="kn">from</span> <span class="nn">..</span> <span class="k">import</span> <span class="n">models</span>
+<span class="kn">from</span> <span class="nn">msrest.serialization</span> <span class="k">import</span> <span class="n">Model</span>
 
 
-<div class="viewcode-block" id="Operations"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.subscription.operations.html#azure.mgmt.subscription.operations.Operations">[docs]</a><span class="k">class</span> <span class="nc">Operations</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Operations operations.</span>
+<div class="viewcode-block" id="CanceledSubscriptionId"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.subscription.models.html#azure.mgmt.subscription.models.CanceledSubscriptionId">[docs]</a><span class="k">class</span> <span class="nc">CanceledSubscriptionId</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Canceled Subscription Id.</span>
 
-<span class="sd">    :param client: Client for service requests.</span>
-<span class="sd">    :param config: Configuration of service client.</span>
-<span class="sd">    :param serializer: An object model serializer.</span>
-<span class="sd">    :param deserializer: An object model deserializer.</span>
-<span class="sd">    :ivar api_version: Version of the API to be used with the client request. Current version is 2019-03-01-preview. Constant value: &quot;2019-03-01-preview&quot;.</span>
+<span class="sd">    Variables are only populated by the server, and will be ignored when</span>
+<span class="sd">    sending a request.</span>
+
+<span class="sd">    :ivar value: Canceled Subscription Id</span>
+<span class="sd">    :vartype value: str</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">models</span> <span class="o">=</span> <span class="n">models</span>
+    <span class="n">_validation</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;readonly&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">},</span>
+    <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">serializer</span><span class="p">,</span> <span class="n">deserializer</span><span class="p">):</span>
+    <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;value&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">_client</span> <span class="o">=</span> <span class="n">client</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span> <span class="o">=</span> <span class="n">serializer</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span> <span class="o">=</span> <span class="n">deserializer</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span> <span class="o">=</span> <span class="s2">&quot;2019-03-01-preview&quot;</span>
-
-        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
-
-<div class="viewcode-block" id="Operations.list"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.subscription.operations.html#azure.mgmt.subscription.operations.Operations.list">[docs]</a>    <span class="k">def</span> <span class="nf">list</span><span class="p">(</span>
-            <span class="bp">self</span><span class="p">,</span> <span class="n">custom_headers</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">raw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Lists all of the available Microsoft.Subscription API operations.</span>
-
-<span class="sd">        :param dict custom_headers: headers that will be added to the request</span>
-<span class="sd">        :param bool raw: returns the direct response alongside the</span>
-<span class="sd">         deserialized response</span>
-<span class="sd">        :param operation_config: :ref:`Operation configuration</span>
-<span class="sd">         overrides&lt;msrest:optionsforoperations&gt;`.</span>
-<span class="sd">        :return: OperationListResult or ClientRawResponse if raw=true</span>
-<span class="sd">        :rtype: ~azure.mgmt.subscription.models.OperationListResult or</span>
-<span class="sd">         ~msrest.pipeline.ClientRawResponse</span>
-<span class="sd">        :raises:</span>
-<span class="sd">         :class:`ErrorResponseException&lt;azure.mgmt.subscription.models.ErrorResponseException&gt;`</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1"># Construct URL</span>
-        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;url&#39;</span><span class="p">]</span>
-
-        <span class="c1"># Construct parameters</span>
-        <span class="n">query_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">query_parameters</span><span class="p">[</span><span class="s1">&#39;api-version&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;self.api_version&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_version</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
-
-        <span class="c1"># Construct headers</span>
-        <span class="n">header_parameters</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;Accept&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">generate_client_request_id</span><span class="p">:</span>
-            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;x-ms-client-request-id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid1</span><span class="p">())</span>
-        <span class="k">if</span> <span class="n">custom_headers</span><span class="p">:</span>
-            <span class="n">header_parameters</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">custom_headers</span><span class="p">)</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">header_parameters</span><span class="p">[</span><span class="s1">&#39;accept-language&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;self.config.accept_language&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">accept_language</span><span class="p">,</span> <span class="s1">&#39;str&#39;</span><span class="p">)</span>
-
-        <span class="c1"># Construct and send request</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">query_parameters</span><span class="p">,</span> <span class="n">header_parameters</span><span class="p">)</span>
-        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">operation_config</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">]:</span>
-            <span class="k">raise</span> <span class="n">models</span><span class="o">.</span><span class="n">ErrorResponseException</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-
-        <span class="n">deserialized</span> <span class="o">=</span> <span class="kc">None</span>
-
-        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-            <span class="n">deserialized</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_deserialize</span><span class="p">(</span><span class="s1">&#39;OperationListResult&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">raw</span><span class="p">:</span>
-            <span class="n">client_raw_response</span> <span class="o">=</span> <span class="n">ClientRawResponse</span><span class="p">(</span><span class="n">deserialized</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">client_raw_response</span>
-
-        <span class="k">return</span> <span class="n">deserialized</span></div>
-    <span class="nb">list</span><span class="o">.</span><span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;url&#39;</span><span class="p">:</span> <span class="s1">&#39;/providers/Microsoft.Subscription/operations&#39;</span><span class="p">}</span></div>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">CanceledSubscriptionId</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="kc">None</span></div>
 </pre></div>
 
            </div>
