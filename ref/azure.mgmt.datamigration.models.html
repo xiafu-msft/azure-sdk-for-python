@@ -373,7 +373,7 @@ sending a request.</p>
 a leading period and must match the extension from filePath.</p></li>
 <li><p><strong>file_path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Relative path of this file resource. This property can
 be set when creating or updating the file resource.</p></li>
-<li><p><strong>media_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – File content type. This propery can be modified to
+<li><p><strong>media_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – File content type. This property can be modified to
 reflect the file content type.</p></li>
 </ul>
 </dd>
@@ -448,13 +448,73 @@ exception</p></li>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.datamigration.models.MigrateSyncCompleteCommandOutput">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSyncCompleteCommandOutput</code><span class="sig-paren">(</span><em>*</em>, <em>errors=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sync_complete_command_output_py3.html#MigrateSyncCompleteCommandOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSyncCompleteCommandOutput" title="Permalink to this definition">¶</a></dt>
+<dt id="azure.mgmt.datamigration.models.MigrateMISyncCompleteCommandOutput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateMISyncCompleteCommandOutput</code><span class="sig-paren">(</span><em>*</em>, <em>errors=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_mi_sync_complete_command_output_py3.html#MigrateMISyncCompleteCommandOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateMISyncCompleteCommandOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Output for command that completes sync migration for a database.</p>
+<p>Output for command that completes online migration for an Azure SQL
+Database Managed Instance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ReportableException" title="azure.mgmt.datamigration.models.ReportableException"><em>ReportableException</em></a><em>]</em>) – List of errors that happened during the command execution</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MigrateMISyncCompleteCommandInput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateMISyncCompleteCommandInput</code><span class="sig-paren">(</span><em>*</em>, <em>source_database_name: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_mi_sync_complete_command_input_py3.html#MigrateMISyncCompleteCommandInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateMISyncCompleteCommandInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Input for command that completes online migration for an Azure SQL Database
+Managed Instance.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>source_database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of managed instance database</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MigrateMISyncCompleteCommandProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateMISyncCompleteCommandProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_mi_sync_complete_command_properties_py3.html#MigrateMISyncCompleteCommandProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateMISyncCompleteCommandProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.command_properties_py3.CommandProperties</span></code></p>
+<p>Properties for the command that completes online migration for an Azure SQL
+Database Managed Instance.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ODataError" title="azure.mgmt.datamigration.models.ODataError"><em>ODataError</em></a><em>]</em>) – Array of errors. This is ignored if submitted.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datamigration.models.CommandState" title="azure.mgmt.datamigration.models.CommandState"><em>CommandState</em></a>) – The state of the command. This is ignored if submitted.
+Possible values include: ‘Unknown’, ‘Accepted’, ‘Running’, ‘Succeeded’,
+‘Failed’</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.StreamType.output" title="azure.mgmt.automation.models.StreamType.output"><strong>output</strong></a> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateMISyncCompleteCommandOutput" title="azure.mgmt.datamigration.models.MigrateMISyncCompleteCommandOutput"><em>MigrateMISyncCompleteCommandOutput</em></a>) – Command output. This is ignored if submitted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>command_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateMISyncCompleteCommandInput" title="azure.mgmt.datamigration.models.MigrateMISyncCompleteCommandInput"><em>MigrateMISyncCompleteCommandInput</em></a>) – Command input</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MigrateSyncCompleteCommandOutput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSyncCompleteCommandOutput</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sync_complete_command_output_py3.html#MigrateSyncCompleteCommandOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSyncCompleteCommandOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Output for command that completes sync migration for a database.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Result identifier</p></li>
+<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ReportableException" title="azure.mgmt.datamigration.models.ReportableException"><em>ReportableException</em></a><em>]</em>) – List of errors that happened during the command execution</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -509,8 +569,9 @@ Possible values include: ‘Unknown’, ‘Accepted’, ‘Running’, ‘Succee
 <p>Base class for all types of DMS command properties. If command is not
 supported by current client, this object is returned.</p>
 <p>You probably want to use the sub-classes and not this class directly. Known
-sub-classes are: MigrateSyncCompleteCommandProperties,
-MongoDbCancelCommand, MongoDbFinishCommand, MongoDbRestartCommand</p>
+sub-classes are: MigrateMISyncCompleteCommandProperties,
+MigrateSyncCompleteCommandProperties, MongoDbCancelCommand,
+MongoDbFinishCommand, MongoDbRestartCommand</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
@@ -551,7 +612,7 @@ sending a request.</p>
 <dt id="azure.mgmt.datamigration.models.SelectedCertificateInput">
 <em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">SelectedCertificateInput</code><span class="sig-paren">(</span><em>*</em>, <em>certificate_name: str</em>, <em>password: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/selected_certificate_input_py3.html#SelectedCertificateInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.SelectedCertificateInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Info for ertificate to be exported for TDE enabled databases.</p>
+<p>Info for certificate to be exported for TDE enabled databases.</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -577,6 +638,26 @@ certificate.</p></li>
 <li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Password credential used to connect to the share
 location.</p></li>
 <li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. The folder path for this share.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MiSqlConnectionInfo">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MiSqlConnectionInfo</code><span class="sig-paren">(</span><em>*</em>, <em>managed_instance_resource_id: str</em>, <em>user_name: str = None</em>, <em>password: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/mi_sql_connection_info_py3.html#MiSqlConnectionInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MiSqlConnectionInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.connection_info_py3.ConnectionInfo</span></code></p>
+<p>Properties required to create a connection to Azure SQL database Managed
+instance.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – User name</p></li>
+<li><p><strong>password</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Password credential.</p></li>
+<li><p><strong>type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>managed_instance_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Resource id for Azure SQL
+database Managed instance</p></li>
 </ul>
 </dd>
 </dl>
@@ -647,8 +728,8 @@ userName and password properties</p></li>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Defines the connection properties of a server.</p>
 <p>You probably want to use the sub-classes and not this class directly. Known
-sub-classes are: PostgreSqlConnectionInfo, MySqlConnectionInfo,
-MongoDbConnectionInfo, SqlConnectionInfo</p>
+sub-classes are: MiSqlConnectionInfo, PostgreSqlConnectionInfo,
+MySqlConnectionInfo, MongoDbConnectionInfo, SqlConnectionInfo</p>
 <p>All required parameters must be populated in order to send to Azure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -712,7 +793,7 @@ and corresponding password to use for encrypting the exported certificate.</p></
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.GetTdeCertificatesSqlTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">GetTdeCertificatesSqlTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/get_tde_certificates_sql_task_properties_py3.html#GetTdeCertificatesSqlTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.GetTdeCertificatesSqlTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">GetTdeCertificatesSqlTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/get_tde_certificates_sql_task_properties_py3.html#GetTdeCertificatesSqlTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.GetTdeCertificatesSqlTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that gets TDE certificates in Base64 encoded
 format.</p>
@@ -732,6 +813,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.GetTdeCertificatesSqlTaskInput" title="azure.mgmt.datamigration.models.GetTdeCertificatesSqlTaskInput"><em>GetTdeCertificatesSqlTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -1080,7 +1163,7 @@ migration</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ValidateMongoDbTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ValidateMongoDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/validate_mongo_db_task_properties_py3.html#ValidateMongoDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ValidateMongoDbTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ValidateMongoDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/validate_mongo_db_task_properties_py3.html#ValidateMongoDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ValidateMongoDbTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that validates a migration between MongoDB data
 sources.</p>
@@ -1100,8 +1183,155 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MongoDbMigrationSettings" title="azure.mgmt.datamigration.models.MongoDbMigrationSettings"><em>MongoDbMigrationSettings</em></a>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMISyncTaskOutput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ValidateMigrationInputSqlServerSqlMISyncTaskOutput</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/validate_migration_input_sql_server_sql_mi_sync_task_output_py3.html#ValidateMigrationInputSqlServerSqlMISyncTaskOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMISyncTaskOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Output for task that validates migration input for Azure SQL Database
+Managed Instance online migration.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Database identifier</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.alertsmanagement.models.html#azure.mgmt.alertsmanagement.models.AlertsSortByFields.name" title="azure.mgmt.alertsmanagement.models.AlertsSortByFields.name"><strong>name</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of database</p></li>
+<li><p><strong>validation_errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ReportableException" title="azure.mgmt.datamigration.models.ReportableException"><em>ReportableException</em></a><em>]</em>) – Errors associated with a selected database object</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.AzureActiveDirectoryApp">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">AzureActiveDirectoryApp</code><span class="sig-paren">(</span><em>*</em>, <em>application_id: str</em>, <em>app_key: str</em>, <em>tenant_id: str</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/azure_active_directory_app_py3.html#AzureActiveDirectoryApp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.AzureActiveDirectoryApp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Azure Active Directory Application.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>application_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Application ID of the Azure Active
+Directory Application</p></li>
+<li><p><strong>app_key</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Key used to authenticate to the Azure Active
+Directory Application</p></li>
+<li><p><strong>tenant_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Tenant id of the customer</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlMIDatabaseInput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlMIDatabaseInput</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>restore_database_name: str</em>, <em>backup_file_share=None</em>, <em>backup_file_paths=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_mi_database_input_py3.html#MigrateSqlServerSqlMIDatabaseInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMIDatabaseInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Database specific information for SQL to Azure SQL DB Managed Instance
+migration task inputs.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the database</p></li>
+<li><p><strong>restore_database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the database at
+destination</p></li>
+<li><p><strong>backup_file_share</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.FileShare" title="azure.mgmt.datamigration.models.FileShare"><em>FileShare</em></a>) – Backup file share information for backing up
+this database.</p></li>
+<li><p><strong>backup_file_paths</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of backup files to be used in case of
+existing backups.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.SqlServerSqlMISyncTaskInput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">SqlServerSqlMISyncTaskInput</code><span class="sig-paren">(</span><em>*</em>, <em>selected_databases</em>, <em>storage_resource_id: str</em>, <em>source_connection_info</em>, <em>target_connection_info</em>, <em>azure_app</em>, <em>backup_file_share=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/sql_server_sql_mi_sync_task_input_py3.html#SqlServerSqlMISyncTaskInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.SqlServerSqlMISyncTaskInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Input for task that migrates SQL Server databases to Azure SQL Database
+Managed Instance online scenario.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selected_databases</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMIDatabaseInput" title="azure.mgmt.datamigration.models.MigrateSqlServerSqlMIDatabaseInput"><em>MigrateSqlServerSqlMIDatabaseInput</em></a><em>]</em>) – Required. Databases to migrate</p></li>
+<li><p><strong>backup_file_share</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.FileShare" title="azure.mgmt.datamigration.models.FileShare"><em>FileShare</em></a>) – Backup file share information for all selected
+databases.</p></li>
+<li><p><strong>storage_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Fully qualified resourceId of
+storage</p></li>
+<li><p><strong>source_connection_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.SqlConnectionInfo" title="azure.mgmt.datamigration.models.SqlConnectionInfo"><em>SqlConnectionInfo</em></a>) – Required. Connection information for source
+SQL Server</p></li>
+<li><p><strong>target_connection_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MiSqlConnectionInfo" title="azure.mgmt.datamigration.models.MiSqlConnectionInfo"><em>MiSqlConnectionInfo</em></a>) – Required. Connection information for Azure
+SQL Database Managed Instance</p></li>
+<li><p><strong>azure_app</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.AzureActiveDirectoryApp" title="azure.mgmt.datamigration.models.AzureActiveDirectoryApp"><em>AzureActiveDirectoryApp</em></a>) – Required. Azure Active Directory Application the DMS
+instance will use to connect to the target instance of Azure SQL Database
+Managed Instance and the Azure Storage Account</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMISyncTaskInput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ValidateMigrationInputSqlServerSqlMISyncTaskInput</code><span class="sig-paren">(</span><em>*</em>, <em>selected_databases</em>, <em>storage_resource_id: str</em>, <em>source_connection_info</em>, <em>target_connection_info</em>, <em>azure_app</em>, <em>backup_file_share=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/validate_migration_input_sql_server_sql_mi_sync_task_input_py3.html#ValidateMigrationInputSqlServerSqlMISyncTaskInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMISyncTaskInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.sql_server_sql_mi_sync_task_input_py3.SqlServerSqlMISyncTaskInput</span></code></p>
+<p>Input for task that migrates SQL Server databases to Azure SQL Database
+Managed Instance online scenario.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selected_databases</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMIDatabaseInput" title="azure.mgmt.datamigration.models.MigrateSqlServerSqlMIDatabaseInput"><em>MigrateSqlServerSqlMIDatabaseInput</em></a><em>]</em>) – Required. Databases to migrate</p></li>
+<li><p><strong>backup_file_share</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.FileShare" title="azure.mgmt.datamigration.models.FileShare"><em>FileShare</em></a>) – Backup file share information for all selected
+databases.</p></li>
+<li><p><strong>storage_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Fully qualified resourceId of
+storage</p></li>
+<li><p><strong>source_connection_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.SqlConnectionInfo" title="azure.mgmt.datamigration.models.SqlConnectionInfo"><em>SqlConnectionInfo</em></a>) – Required. Connection information for source
+SQL Server</p></li>
+<li><p><strong>target_connection_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MiSqlConnectionInfo" title="azure.mgmt.datamigration.models.MiSqlConnectionInfo"><em>MiSqlConnectionInfo</em></a>) – Required. Connection information for Azure
+SQL Database Managed Instance</p></li>
+<li><p><strong>azure_app</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.AzureActiveDirectoryApp" title="azure.mgmt.datamigration.models.AzureActiveDirectoryApp"><em>AzureActiveDirectoryApp</em></a>) – Required. Azure Active Directory Application the DMS
+instance will use to connect to the target instance of Azure SQL Database
+Managed Instance and the Azure Storage Account</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMISyncTaskProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ValidateMigrationInputSqlServerSqlMISyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/validate_migration_input_sql_server_sql_mi_sync_task_properties_py3.html#ValidateMigrationInputSqlServerSqlMISyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMISyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
+<p>Properties for task that validates migration input for SQL to Azure SQL
+Database Managed Instance sync scenario.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ODataError" title="azure.mgmt.datamigration.models.ODataError"><em>ODataError</em></a><em>]</em>) – Array of errors. This is ignored if submitted.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datamigration.models.TaskState" title="azure.mgmt.datamigration.models.TaskState"><em>TaskState</em></a>) – The state of the task. This is ignored if submitted. Possible
+values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘Succeeded’,
+‘Failed’, ‘FailedInputValidation’, ‘Faulted’</p></li>
+<li><p><strong>commands</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.CommandProperties" title="azure.mgmt.datamigration.models.CommandProperties"><em>CommandProperties</em></a><em>]</em>) – Array of command properties.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.StreamType.output" title="azure.mgmt.automation.models.StreamType.output"><strong>output</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMISyncTaskOutput" title="azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMISyncTaskOutput"><em>ValidateMigrationInputSqlServerSqlMISyncTaskOutput</em></a><em>]</em>) – Task output. This is ignored if submitted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
+<li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMISyncTaskInput" title="azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMISyncTaskInput"><em>ValidateMigrationInputSqlServerSqlMISyncTaskInput</em></a>) – Task input</p></li>
 </ul>
 </dd>
 </dl>
@@ -1179,28 +1409,6 @@ backup mode is used.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlMIDatabaseInput">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlMIDatabaseInput</code><span class="sig-paren">(</span><em>*</em>, <em>name: str</em>, <em>restore_database_name: str</em>, <em>backup_file_share=None</em>, <em>backup_file_paths=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_mi_database_input_py3.html#MigrateSqlServerSqlMIDatabaseInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMIDatabaseInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Database specific information for SQL to Azure SQL DB Managed Instance
-migration task inputs.</p>
-<p>All required parameters must be populated in order to send to Azure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the database</p></li>
-<li><p><strong>restore_database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Name of the database at
-destination</p></li>
-<li><p><strong>backup_file_share</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.FileShare" title="azure.mgmt.datamigration.models.FileShare"><em>FileShare</em></a>) – Backup file share information for backing up
-this database.</p></li>
-<li><p><strong>backup_file_paths</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – The list of backup files to be used in case of
-existing backups.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="class">
 <dt id="azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMITaskInput">
 <em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ValidateMigrationInputSqlServerSqlMITaskInput</code><span class="sig-paren">(</span><em>*</em>, <em>source_connection_info</em>, <em>target_connection_info</em>, <em>selected_databases</em>, <em>backup_blob_share</em>, <em>selected_logins=None</em>, <em>backup_file_share=None</em>, <em>backup_mode=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/validate_migration_input_sql_server_sql_mi_task_input_py3.html#ValidateMigrationInputSqlServerSqlMITaskInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMITaskInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
@@ -1230,7 +1438,7 @@ or create new backup. Possible values include: ‘CreateBackup’,
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMITaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ValidateMigrationInputSqlServerSqlMITaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/validate_migration_input_sql_server_sql_mi_task_properties_py3.html#ValidateMigrationInputSqlServerSqlMITaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMITaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ValidateMigrationInputSqlServerSqlMITaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/validate_migration_input_sql_server_sql_mi_task_properties_py3.html#ValidateMigrationInputSqlServerSqlMITaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMITaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for task that validates migration input for SQL to Azure SQL
 Database Managed Instance.</p>
@@ -1250,6 +1458,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMITaskInput" title="azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlMITaskInput"><em>ValidateMigrationInputSqlServerSqlMITaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -1321,7 +1531,7 @@ target</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlDbSyncTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ValidateMigrationInputSqlServerSqlDbSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/validate_migration_input_sql_server_sql_db_sync_task_properties_py3.html#ValidateMigrationInputSqlServerSqlDbSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlDbSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ValidateMigrationInputSqlServerSqlDbSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/validate_migration_input_sql_server_sql_db_sync_task_properties_py3.html#ValidateMigrationInputSqlServerSqlDbSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ValidateMigrationInputSqlServerSqlDbSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for task that validates migration input for SQL to Azure SQL DB
 sync migrations.</p>
@@ -1341,6 +1551,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ValidateSyncMigrationInputSqlServerTaskInput" title="azure.mgmt.datamigration.models.ValidateSyncMigrationInputSqlServerTaskInput"><em>ValidateSyncMigrationInputSqlServerTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -1539,7 +1751,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInput">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInput</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>target_database_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_postgre_sql_azure_db_for_postgre_sql_sync_database_input_py3.html#MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInput" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInput</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>target_database_name: str = None</em>, <em>migration_setting=None</em>, <em>source_setting=None</em>, <em>target_setting=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_postgre_sql_azure_db_for_postgre_sql_sync_database_input_py3.html#MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Database specific information for PostgreSQL to Azure Database for
 PostgreSQL migration task inputs.</p>
@@ -1549,6 +1761,12 @@ PostgreSQL migration task inputs.</p>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the database</p></li>
 <li><p><strong>target_database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of target database. Note: Target
 database will be truncated before starting migration.</p></li>
+<li><p><strong>migration_setting</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Migration settings which tune the migration
+behavior</p></li>
+<li><p><strong>source_setting</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Source settings to tune source endpoint migration
+behavior</p></li>
+<li><p><strong>target_setting</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Target settings to tune target endpoint migration
+behavior</p></li>
 </ul>
 </dd>
 </dl>
@@ -1576,7 +1794,7 @@ PostgreSQL</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_postgre_sql_azure_db_for_postgre_sql_sync_task_properties_py3.html#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_postgre_sql_azure_db_for_postgre_sql_sync_task_properties_py3.html#MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that migrates PostgreSQL databases to Azure
 Database for PostgreSQL for online migrations.</p>
@@ -1596,6 +1814,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInput" title="azure.mgmt.datamigration.models.MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInput"><em>MigratePostgreSqlAzureDbForPostgreSqlSyncTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -1775,7 +1995,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.MigrateMySqlAzureDbForMySqlSyncDatabaseInput">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateMySqlAzureDbForMySqlSyncDatabaseInput</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>target_database_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_my_sql_azure_db_for_my_sql_sync_database_input_py3.html#MigrateMySqlAzureDbForMySqlSyncDatabaseInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateMySqlAzureDbForMySqlSyncDatabaseInput" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateMySqlAzureDbForMySqlSyncDatabaseInput</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>target_database_name: str = None</em>, <em>migration_setting=None</em>, <em>source_setting=None</em>, <em>target_setting=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_my_sql_azure_db_for_my_sql_sync_database_input_py3.html#MigrateMySqlAzureDbForMySqlSyncDatabaseInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateMySqlAzureDbForMySqlSyncDatabaseInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Database specific information for MySQL to Azure Database for MySQL
 migration task inputs.</p>
@@ -1785,6 +2005,12 @@ migration task inputs.</p>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the database</p></li>
 <li><p><strong>target_database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of target database. Note: Target
 database will be truncated before starting migration.</p></li>
+<li><p><strong>migration_setting</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Migration settings which tune the migration
+behavior</p></li>
+<li><p><strong>source_setting</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Source settings to tune source endpoint migration
+behavior</p></li>
+<li><p><strong>target_setting</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Target settings to tune target endpoint migration
+behavior</p></li>
 </ul>
 </dd>
 </dl>
@@ -1812,7 +2038,7 @@ Azure Database for MySQL</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.MigrateMySqlAzureDbForMySqlSyncTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateMySqlAzureDbForMySqlSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_my_sql_azure_db_for_my_sql_sync_task_properties_py3.html#MigrateMySqlAzureDbForMySqlSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateMySqlAzureDbForMySqlSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateMySqlAzureDbForMySqlSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_my_sql_azure_db_for_my_sql_sync_task_properties_py3.html#MigrateMySqlAzureDbForMySqlSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateMySqlAzureDbForMySqlSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that migrates MySQL databases to Azure Database for
 MySQL for online migrations.</p>
@@ -1832,6 +2058,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateMySqlAzureDbForMySqlSyncTaskInput" title="azure.mgmt.datamigration.models.MigrateMySqlAzureDbForMySqlSyncTaskInput"><em>MigrateMySqlAzureDbForMySqlSyncTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -2073,7 +2301,7 @@ target</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlDbSyncTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlDbSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_db_sync_task_properties_py3.html#MigrateSqlServerSqlDbSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlDbSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlDbSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_db_sync_task_properties_py3.html#MigrateSqlServerSqlDbSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlDbSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that migrates on-prem SQL Server databases to Azure
 SQL Database for online migrations.</p>
@@ -2093,6 +2321,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlDbSyncTaskInput" title="azure.mgmt.datamigration.models.MigrateSqlServerSqlDbSyncTaskInput"><em>MigrateSqlServerSqlDbSyncTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -2609,7 +2839,7 @@ target database.</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlDbTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_db_task_properties_py3.html#MigrateSqlServerSqlDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlDbTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_db_task_properties_py3.html#MigrateSqlServerSqlDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlDbTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that migrates on-prem SQL Server databases to Azure
 SQL Database.</p>
@@ -2629,8 +2859,229 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlDbTaskInput" title="azure.mgmt.datamigration.models.MigrateSqlServerSqlDbTaskInput"><em>MigrateSqlServerSqlDbTaskInput</em></a>) – Task input</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskOutputError">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlMISyncTaskOutputError</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_mi_sync_task_output_error_py3.html#MigrateSqlServerSqlMISyncTaskOutputError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskOutputError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.migrate_sql_server_sql_mi_sync_task_output_py3.MigrateSqlServerSqlMISyncTaskOutput</span></code></p>
+<p>MigrateSqlServerSqlMISyncTaskOutputError.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Result identifier</p></li>
+<li><p><a class="reference internal" href="azure.eventgrid.models.html#azure.eventgrid.models.MediaJobState.error" title="azure.eventgrid.models.MediaJobState.error"><strong>error</strong></a> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ReportableException" title="azure.mgmt.datamigration.models.ReportableException"><em>ReportableException</em></a>) – Migration error</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>result_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.BackupFileInfo">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">BackupFileInfo</code><span class="sig-paren">(</span><em>*</em>, <em>file_location: str = None</em>, <em>family_sequence_number: int = None</em>, <em>status=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/backup_file_info_py3.html#BackupFileInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.BackupFileInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Information of the backup file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_location</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Location of the backup file in shared folder</p></li>
+<li><p><strong>family_sequence_number</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Sequence number of the backup file in the
+backup set</p></li>
+<li><p><strong>status</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datamigration.models.BackupFileStatus" title="azure.mgmt.datamigration.models.BackupFileStatus"><em>BackupFileStatus</em></a>) – Status of the backup file during migration. Possible values
+include: ‘Arrived’, ‘Queued’, ‘Uploading’, ‘Uploaded’, ‘Restoring’,
+‘Restored’, ‘Cancelled’</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.BackupSetInfo">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">BackupSetInfo</code><span class="sig-paren">(</span><em>*</em>, <em>backup_set_id: str = None</em>, <em>first_lsn: str = None</em>, <em>last_lsn: str = None</em>, <em>last_modified_time=None</em>, <em>backup_type=None</em>, <em>list_of_backup_files=None</em>, <em>database_name: str = None</em>, <em>backup_start_date=None</em>, <em>backup_finished_date=None</em>, <em>is_backup_restored: bool = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/backup_set_info_py3.html#BackupSetInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.BackupSetInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Information of backup set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>backup_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Id for the set of backup files</p></li>
+<li><p><strong>first_lsn</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – First log sequence number of the backup file</p></li>
+<li><p><strong>last_lsn</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Last log sequence number of the backup file</p></li>
+<li><p><strong>last_modified_time</strong> (<em>datetime</em>) – Last modified time of the backup file in share
+location</p></li>
+<li><p><strong>backup_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datamigration.models.BackupType" title="azure.mgmt.datamigration.models.BackupType"><em>BackupType</em></a>) – Enum of the different backup types. Possible values
+include: ‘Database’, ‘TransactionLog’, ‘File’, ‘DifferentialDatabase’,
+‘DifferentialFile’, ‘Partial’, ‘DifferentialPartial’</p></li>
+<li><p><strong>list_of_backup_files</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.BackupFileInfo" title="azure.mgmt.datamigration.models.BackupFileInfo"><em>BackupFileInfo</em></a><em>]</em>) – List of files in the backup set</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the database to which the backup set belongs</p></li>
+<li><p><strong>backup_start_date</strong> (<em>datetime</em>) – Date and time that the backup operation began</p></li>
+<li><p><strong>backup_finished_date</strong> (<em>datetime</em>) – Date and time that the backup operation
+finished</p></li>
+<li><p><strong>is_backup_restored</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether the backup set is restored or not</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_mi_sync_task_output_database_level_py3.html#MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.migrate_sql_server_sql_mi_sync_task_output_py3.MigrateSqlServerSqlMISyncTaskOutput</span></code></p>
+<p>MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Result identifier</p></li>
+<li><p><strong>source_database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the database</p></li>
+<li><p><strong>migration_state</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
+</em><a class="reference internal" href="#azure.mgmt.datamigration.models.DatabaseMigrationState" title="azure.mgmt.datamigration.models.DatabaseMigrationState"><em>DatabaseMigrationState</em></a>) – Current state of database. Possible values include:
+‘UNDEFINED’, ‘INITIAL’, ‘FULL_BACKUP_UPLOAD_START’, ‘LOG_SHIPPING_START’,
+‘UPLOAD_LOG_FILES_START’, ‘CUTOVER_START’, ‘POST_CUTOVER_COMPLETE’,
+‘COMPLETED’, ‘CANCELLED’, ‘FAILED’</p></li>
+<li><p><strong>started_on</strong> (<em>datetime</em>) – Database migration start time</p></li>
+<li><p><strong>ended_on</strong> (<em>datetime</em>) – Database migration end time</p></li>
+<li><p><strong>full_backup_set_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.BackupSetInfo" title="azure.mgmt.datamigration.models.BackupSetInfo"><em>BackupSetInfo</em></a>) – Details of full backup set</p></li>
+<li><p><strong>last_restored_backup_set_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.BackupSetInfo" title="azure.mgmt.datamigration.models.BackupSetInfo"><em>BackupSetInfo</em></a>) – Last applied backup set information</p></li>
+<li><p><strong>active_backup_sets</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.BackupSetInfo" title="azure.mgmt.datamigration.models.BackupSetInfo"><em>BackupSetInfo</em></a><em>]</em>) – Backup sets that are currently active (Either
+being uploaded or getting restored)</p></li>
+<li><p><strong>container_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of container created in the Azure Storage
+account where backups are copied to</p></li>
+<li><p><strong>error_prefix</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – prefix string to use for querying errors for this
+database</p></li>
+<li><p><strong>is_full_backup_restored</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – Whether full backup has been applied to the
+target database or not</p></li>
+<li><p><strong>exceptions_and_warnings</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ReportableException" title="azure.mgmt.datamigration.models.ReportableException"><em>ReportableException</em></a><em>]</em>) – Migration exceptions and warnings</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>result_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskOutputMigrationLevel">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlMISyncTaskOutputMigrationLevel</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_mi_sync_task_output_migration_level_py3.html#MigrateSqlServerSqlMISyncTaskOutputMigrationLevel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskOutputMigrationLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.migrate_sql_server_sql_mi_sync_task_output_py3.MigrateSqlServerSqlMISyncTaskOutput</span></code></p>
+<p>MigrateSqlServerSqlMISyncTaskOutputMigrationLevel.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Result identifier</p></li>
+<li><p><strong>database_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Count of databases</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datamigration.models.MigrationState" title="azure.mgmt.datamigration.models.MigrationState"><em>MigrationState</em></a>) – Current state of migration. Possible values include: ‘None’,
+‘InProgress’, ‘Failed’, ‘Warning’, ‘Completed’, ‘Skipped’, ‘Stopped’</p></li>
+<li><p><strong>started_on</strong> (<em>datetime</em>) – Migration start time</p></li>
+<li><p><strong>ended_on</strong> (<em>datetime</em>) – Migration end time</p></li>
+<li><p><strong>source_server_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Source server name</p></li>
+<li><p><strong>source_server_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Source server version</p></li>
+<li><p><strong>source_server_brand_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Source server brand version</p></li>
+<li><p><strong>target_server_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Target server name</p></li>
+<li><p><strong>target_server_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Target server version</p></li>
+<li><p><strong>target_server_brand_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Target server brand version</p></li>
+<li><p><strong>database_error_count</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#int" title="(in Python v3.5)"><em>int</em></a>) – Number of database level errors</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>result_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskOutput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlMISyncTaskOutput</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_mi_sync_task_output_py3.html#MigrateSqlServerSqlMISyncTaskOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Output for task that migrates SQL Server databases to Azure SQL Database
+Managed Instance using Log Replay Service.</p>
+<p>You probably want to use the sub-classes and not this class directly. Known
+sub-classes are: MigrateSqlServerSqlMISyncTaskOutputError,
+MigrateSqlServerSqlMISyncTaskOutputDatabaseLevel,
+MigrateSqlServerSqlMISyncTaskOutputMigrationLevel</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Result identifier</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>result_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskInput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlMISyncTaskInput</code><span class="sig-paren">(</span><em>*</em>, <em>selected_databases</em>, <em>storage_resource_id: str</em>, <em>source_connection_info</em>, <em>target_connection_info</em>, <em>azure_app</em>, <em>backup_file_share=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_mi_sync_task_input_py3.html#MigrateSqlServerSqlMISyncTaskInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.sql_server_sql_mi_sync_task_input_py3.SqlServerSqlMISyncTaskInput</span></code></p>
+<p>Input for task that migrates SQL Server databases to Azure SQL Database
+Managed Instance online scenario.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selected_databases</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMIDatabaseInput" title="azure.mgmt.datamigration.models.MigrateSqlServerSqlMIDatabaseInput"><em>MigrateSqlServerSqlMIDatabaseInput</em></a><em>]</em>) – Required. Databases to migrate</p></li>
+<li><p><strong>backup_file_share</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.FileShare" title="azure.mgmt.datamigration.models.FileShare"><em>FileShare</em></a>) – Backup file share information for all selected
+databases.</p></li>
+<li><p><strong>storage_resource_id</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Fully qualified resourceId of
+storage</p></li>
+<li><p><strong>source_connection_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.SqlConnectionInfo" title="azure.mgmt.datamigration.models.SqlConnectionInfo"><em>SqlConnectionInfo</em></a>) – Required. Connection information for source
+SQL Server</p></li>
+<li><p><strong>target_connection_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MiSqlConnectionInfo" title="azure.mgmt.datamigration.models.MiSqlConnectionInfo"><em>MiSqlConnectionInfo</em></a>) – Required. Connection information for Azure
+SQL Database Managed Instance</p></li>
+<li><p><strong>azure_app</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.AzureActiveDirectoryApp" title="azure.mgmt.datamigration.models.AzureActiveDirectoryApp"><em>AzureActiveDirectoryApp</em></a>) – Required. Azure Active Directory Application the DMS
+instance will use to connect to the target instance of Azure SQL Database
+Managed Instance and the Azure Storage Account</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlMISyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_mi_sync_task_properties_py3.html#MigrateSqlServerSqlMISyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
+<p>Properties for task that migrates SQL Server databases to Azure SQL
+Database Managed Instance sync scenario.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ODataError" title="azure.mgmt.datamigration.models.ODataError"><em>ODataError</em></a><em>]</em>) – Array of errors. This is ignored if submitted.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datamigration.models.TaskState" title="azure.mgmt.datamigration.models.TaskState"><em>TaskState</em></a>) – The state of the task. This is ignored if submitted. Possible
+values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘Succeeded’,
+‘Failed’, ‘FailedInputValidation’, ‘Faulted’</p></li>
+<li><p><strong>commands</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.CommandProperties" title="azure.mgmt.datamigration.models.CommandProperties"><em>CommandProperties</em></a><em>]</em>) – Array of command properties.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.StreamType.output" title="azure.mgmt.automation.models.StreamType.output"><strong>output</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskOutput" title="azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskOutput"><em>MigrateSqlServerSqlMISyncTaskOutput</em></a><em>]</em>) – Task output. This is ignored if submitted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
+<li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskInput" title="azure.mgmt.datamigration.models.MigrateSqlServerSqlMISyncTaskInput"><em>MigrateSqlServerSqlMISyncTaskInput</em></a>) – Task input</p></li>
 </ul>
 </dd>
 </dl>
@@ -2750,6 +3201,21 @@ sending a request.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.datamigration.models.OrphanedUserInfo">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">OrphanedUserInfo</code><span class="sig-paren">(</span><em>*</em>, <em>name: str = None</em>, <em>database_name: str = None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/orphaned_user_info_py3.html#OrphanedUserInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.OrphanedUserInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Information of orphaned users on the SQL server database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Name of the orphaned user</p></li>
+<li><p><strong>database_name</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Parent database of the user</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.datamigration.models.StartMigrationScenarioServerRoleResult">
 <em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">StartMigrationScenarioServerRoleResult</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/start_migration_scenario_server_role_result_py3.html#StartMigrationScenarioServerRoleResult"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.StartMigrationScenarioServerRoleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
@@ -2793,7 +3259,7 @@ sending a request.</p>
 <li><p><a class="reference internal" href="#azure.mgmt.datamigration.models.Severity.message" title="azure.mgmt.datamigration.models.Severity.message"><strong>message</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Migration progress message</p></li>
 <li><p><strong>server_role_results</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>,
 </em><a class="reference internal" href="#azure.mgmt.datamigration.models.StartMigrationScenarioServerRoleResult" title="azure.mgmt.datamigration.models.StartMigrationScenarioServerRoleResult"><em>StartMigrationScenarioServerRoleResult</em></a><em>]</em>) – Map of server role migration results.</p></li>
-<li><p><strong>orphaned_users</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Map of users to database name of orphaned users.</p></li>
+<li><p><strong>orphaned_users_info</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.OrphanedUserInfo" title="azure.mgmt.datamigration.models.OrphanedUserInfo"><em>OrphanedUserInfo</em></a><em>]</em>) – List of orphaned users.</p></li>
 <li><p><strong>databases</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Selected databases as a map from database name to
 database id</p></li>
 <li><p><strong>source_server_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Source server version</p></li>
@@ -2866,7 +3332,7 @@ required to be provided in selectedDatabases. Possible values include:
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.MigrateSqlServerSqlMITaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlMITaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_mi_task_properties_py3.html#MigrateSqlServerSqlMITaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMITaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSqlServerSqlMITaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_sql_server_sql_mi_task_properties_py3.html#MigrateSqlServerSqlMITaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMITaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for task that migrates SQL Server databases to Azure SQL
 Database Managed Instance.</p>
@@ -2886,6 +3352,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateSqlServerSqlMITaskInput" title="azure.mgmt.datamigration.models.MigrateSqlServerSqlMITaskInput"><em>MigrateSqlServerSqlMITaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -2895,7 +3363,7 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.MigrateMongoDbTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateMongoDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_mongo_db_task_properties_py3.html#MigrateMongoDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateMongoDbTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateMongoDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_mongo_db_task_properties_py3.html#MigrateMongoDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateMongoDbTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that migrates data between MongoDB data sources.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -2914,6 +3382,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MongoDbMigrationSettings" title="azure.mgmt.datamigration.models.MongoDbMigrationSettings"><em>MongoDbMigrationSettings</em></a>) – </p></li>
 </ul>
@@ -2963,7 +3433,7 @@ Azure Database for MySQL server</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ConnectToTargetAzureDbForMySqlTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetAzureDbForMySqlTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_azure_db_for_my_sql_task_properties_py3.html#ConnectToTargetAzureDbForMySqlTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetAzureDbForMySqlTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetAzureDbForMySqlTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_azure_db_for_my_sql_task_properties_py3.html#ConnectToTargetAzureDbForMySqlTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetAzureDbForMySqlTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that validates connection to Azure Database for
 MySQL and target server requirements.</p>
@@ -2983,8 +3453,80 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToTargetAzureDbForMySqlTaskInput" title="azure.mgmt.datamigration.models.ConnectToTargetAzureDbForMySqlTaskInput"><em>ConnectToTargetAzureDbForMySqlTaskInput</em></a>) – Task input</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ConnectToTargetSqlMISyncTaskOutput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetSqlMISyncTaskOutput</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_sql_mi_sync_task_output_py3.html#ConnectToTargetSqlMISyncTaskOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlMISyncTaskOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Output for the task that validates connection to Azure SQL Database Managed
+Instance.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_server_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Target server version</p></li>
+<li><p><strong>target_server_brand_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Target server brand version</p></li>
+<li><p><strong>validation_errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ReportableException" title="azure.mgmt.datamigration.models.ReportableException"><em>ReportableException</em></a><em>]</em>) – Validation errors</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ConnectToTargetSqlMISyncTaskInput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetSqlMISyncTaskInput</code><span class="sig-paren">(</span><em>*</em>, <em>target_connection_info</em>, <em>azure_app</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_sql_mi_sync_task_input_py3.html#ConnectToTargetSqlMISyncTaskInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlMISyncTaskInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Input for the task that validates connection to Azure SQL Database Managed
+Instance online scenario.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_connection_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MiSqlConnectionInfo" title="azure.mgmt.datamigration.models.MiSqlConnectionInfo"><em>MiSqlConnectionInfo</em></a>) – Required. Connection information for Azure
+SQL Database Managed Instance</p></li>
+<li><p><strong>azure_app</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.AzureActiveDirectoryApp" title="azure.mgmt.datamigration.models.AzureActiveDirectoryApp"><em>AzureActiveDirectoryApp</em></a>) – Required. Azure Active Directory Application the DMS
+instance will use to connect to the target instance of Azure SQL Database
+Managed Instance and the Azure Storage Account</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ConnectToTargetSqlMISyncTaskProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetSqlMISyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_sql_mi_sync_task_properties_py3.html#ConnectToTargetSqlMISyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlMISyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
+<p>Properties for the task that validates connection to Azure SQL Database
+Managed Instance.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ODataError" title="azure.mgmt.datamigration.models.ODataError"><em>ODataError</em></a><em>]</em>) – Array of errors. This is ignored if submitted.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datamigration.models.TaskState" title="azure.mgmt.datamigration.models.TaskState"><em>TaskState</em></a>) – The state of the task. This is ignored if submitted. Possible
+values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘Succeeded’,
+‘Failed’, ‘FailedInputValidation’, ‘Faulted’</p></li>
+<li><p><strong>commands</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.CommandProperties" title="azure.mgmt.datamigration.models.CommandProperties"><em>CommandProperties</em></a><em>]</em>) – Array of command properties.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.StreamType.output" title="azure.mgmt.automation.models.StreamType.output"><strong>output</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlMISyncTaskOutput" title="azure.mgmt.datamigration.models.ConnectToTargetSqlMISyncTaskOutput"><em>ConnectToTargetSqlMISyncTaskOutput</em></a><em>]</em>) – Task output. This is ignored if submitted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
+<li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlMISyncTaskInput" title="azure.mgmt.datamigration.models.ConnectToTargetSqlMISyncTaskInput"><em>ConnectToTargetSqlMISyncTaskInput</em></a>) – Task input</p></li>
 </ul>
 </dd>
 </dl>
@@ -3029,7 +3571,7 @@ SQL Server</p>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ConnectToTargetSqlMITaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetSqlMITaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_sql_mi_task_properties_py3.html#ConnectToTargetSqlMITaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlMITaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetSqlMITaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_sql_mi_task_properties_py3.html#ConnectToTargetSqlMITaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlMITaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that validates connection to Azure SQL Database
 Managed Instance.</p>
@@ -3049,6 +3591,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlMITaskInput" title="azure.mgmt.datamigration.models.ConnectToTargetSqlMITaskInput"><em>ConnectToTargetSqlMITaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -3122,7 +3666,7 @@ to collect tables for</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.GetUserTablesSqlSyncTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">GetUserTablesSqlSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/get_user_tables_sql_sync_task_properties_py3.html#GetUserTablesSqlSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.GetUserTablesSqlSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">GetUserTablesSqlSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/get_user_tables_sql_sync_task_properties_py3.html#GetUserTablesSqlSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.GetUserTablesSqlSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that collects user tables for the given list of
 databases.</p>
@@ -3142,6 +3686,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.GetUserTablesSqlSyncTaskInput" title="azure.mgmt.datamigration.models.GetUserTablesSqlSyncTaskInput"><em>GetUserTablesSqlSyncTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -3189,7 +3735,7 @@ tables for</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.GetUserTablesSqlTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">GetUserTablesSqlTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/get_user_tables_sql_task_properties_py3.html#GetUserTablesSqlTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.GetUserTablesSqlTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">GetUserTablesSqlTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/get_user_tables_sql_task_properties_py3.html#GetUserTablesSqlTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.GetUserTablesSqlTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that collects user tables for the given list of
 databases.</p>
@@ -3209,8 +3755,81 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.GetUserTablesSqlTaskInput" title="azure.mgmt.datamigration.models.GetUserTablesSqlTaskInput"><em>GetUserTablesSqlTaskInput</em></a>) – Task input</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_azure_db_for_postgre_sql_sync_task_output_py3.html#ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Output for the task that validates connection to Azure Database for
+PostgreSQL and target server requirements.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Result identifier</p></li>
+<li><p><strong>target_server_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Version of the target server</p></li>
+<li><p><strong>databases</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of databases on target server</p></li>
+<li><p><strong>target_server_brand_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Target server brand version</p></li>
+<li><p><strong>validation_errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ReportableException" title="azure.mgmt.datamigration.models.ReportableException"><em>ReportableException</em></a><em>]</em>) – Validation errors associated with the task</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ConnectToTargetAzureDbForPostgreSqlSyncTaskInput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetAzureDbForPostgreSqlSyncTaskInput</code><span class="sig-paren">(</span><em>*</em>, <em>source_connection_info</em>, <em>target_connection_info</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_azure_db_for_postgre_sql_sync_task_input_py3.html#ConnectToTargetAzureDbForPostgreSqlSyncTaskInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetAzureDbForPostgreSqlSyncTaskInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Input for the task that validates connection to Azure Database for
+PostgreSQL and target server requirements.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_connection_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.PostgreSqlConnectionInfo" title="azure.mgmt.datamigration.models.PostgreSqlConnectionInfo"><em>PostgreSqlConnectionInfo</em></a>) – Required. Connection information for source
+PostgreSQL server</p></li>
+<li><p><strong>target_connection_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.PostgreSqlConnectionInfo" title="azure.mgmt.datamigration.models.PostgreSqlConnectionInfo"><em>PostgreSqlConnectionInfo</em></a>) – Required. Connection information for target
+Azure Database for PostgreSQL server</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ConnectToTargetAzureDbForPostgreSqlSyncTaskProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetAzureDbForPostgreSqlSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_azure_db_for_postgre_sql_sync_task_properties_py3.html#ConnectToTargetAzureDbForPostgreSqlSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetAzureDbForPostgreSqlSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
+<p>Properties for the task that validates connection to Azure Database For
+PostgreSQL server and target server requirements for online migration.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ODataError" title="azure.mgmt.datamigration.models.ODataError"><em>ODataError</em></a><em>]</em>) – Array of errors. This is ignored if submitted.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datamigration.models.TaskState" title="azure.mgmt.datamigration.models.TaskState"><em>TaskState</em></a>) – The state of the task. This is ignored if submitted. Possible
+values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘Succeeded’,
+‘Failed’, ‘FailedInputValidation’, ‘Faulted’</p></li>
+<li><p><strong>commands</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.CommandProperties" title="azure.mgmt.datamigration.models.CommandProperties"><em>CommandProperties</em></a><em>]</em>) – Array of command properties.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.StreamType.output" title="azure.mgmt.automation.models.StreamType.output"><strong>output</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput" title="azure.mgmt.datamigration.models.ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput"><em>ConnectToTargetAzureDbForPostgreSqlSyncTaskOutput</em></a><em>]</em>) – Task output. This is ignored if submitted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
+<li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToTargetAzureDbForPostgreSqlSyncTaskInput" title="azure.mgmt.datamigration.models.ConnectToTargetAzureDbForPostgreSqlSyncTaskInput"><em>ConnectToTargetAzureDbForPostgreSqlSyncTaskInput</em></a>) – Task input</p></li>
 </ul>
 </dd>
 </dl>
@@ -3258,7 +3877,7 @@ SQL DB</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ConnectToTargetSqlSqlDbSyncTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetSqlSqlDbSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_sql_sql_db_sync_task_properties_py3.html#ConnectToTargetSqlSqlDbSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlSqlDbSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetSqlSqlDbSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_sql_sql_db_sync_task_properties_py3.html#ConnectToTargetSqlSqlDbSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlSqlDbSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that validates connection to SQL DB and target
 server requirements for online migration.</p>
@@ -3278,6 +3897,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlSqlDbSyncTaskInput" title="azure.mgmt.datamigration.models.ConnectToTargetSqlSqlDbSyncTaskInput"><em>ConnectToTargetSqlSqlDbSyncTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -3302,7 +3923,7 @@ SQL DB</p>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ConnectToTargetSqlDbTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetSqlDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_sql_db_task_properties_py3.html#ConnectToTargetSqlDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlDbTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToTargetSqlDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_target_sql_db_task_properties_py3.html#ConnectToTargetSqlDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlDbTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that validates connection to SQL DB and target
 server requirements.</p>
@@ -3322,8 +3943,77 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToTargetSqlDbTaskInput" title="azure.mgmt.datamigration.models.ConnectToTargetSqlDbTaskInput"><em>ConnectToTargetSqlDbTaskInput</em></a>) – Task input</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ConnectToSourcePostgreSqlSyncTaskOutput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToSourcePostgreSqlSyncTaskOutput</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_source_postgre_sql_sync_task_output_py3.html#ConnectToSourcePostgreSqlSyncTaskOutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToSourcePostgreSqlSyncTaskOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Output for the task that validates connection to PostgreSQL and source
+server requirements.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="azure.keyvault.html#azure.keyvault.KeyVaultId.id" title="azure.keyvault.KeyVaultId.id"><strong>id</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Result identifier</p></li>
+<li><p><strong>source_server_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Version of the source server</p></li>
+<li><p><strong>databases</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – List of databases on source server</p></li>
+<li><p><strong>source_server_brand_version</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Source server brand version</p></li>
+<li><p><strong>validation_errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ReportableException" title="azure.mgmt.datamigration.models.ReportableException"><em>ReportableException</em></a><em>]</em>) – Validation errors associated with the task</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ConnectToSourcePostgreSqlSyncTaskInput">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToSourcePostgreSqlSyncTaskInput</code><span class="sig-paren">(</span><em>*</em>, <em>source_connection_info</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_source_postgre_sql_sync_task_input_py3.html#ConnectToSourcePostgreSqlSyncTaskInput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToSourcePostgreSqlSyncTaskInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
+<p>Input for the task that validates connection to PostgreSQL and source
+server requirements.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>source_connection_info</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.PostgreSqlConnectionInfo" title="azure.mgmt.datamigration.models.PostgreSqlConnectionInfo"><em>PostgreSqlConnectionInfo</em></a>) – Required. Connection information for source
+PostgreSQL server</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.ConnectToSourcePostgreSqlSyncTaskProperties">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToSourcePostgreSqlSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_source_postgre_sql_sync_task_properties_py3.html#ConnectToSourcePostgreSqlSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToSourcePostgreSqlSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
+<p>Properties for the task that validates connection to PostgreSQL server and
+source server requirements for online migration.</p>
+<p>Variables are only populated by the server, and will be ignored when
+sending a request.</p>
+<p>All required parameters must be populated in order to send to Azure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ODataError" title="azure.mgmt.datamigration.models.ODataError"><em>ODataError</em></a><em>]</em>) – Array of errors. This is ignored if submitted.</p></li>
+<li><p><a class="reference internal" href="azure.cognitiveservices.search.entitysearch.models.html#azure.cognitiveservices.search.entitysearch.models.EntityType.state" title="azure.cognitiveservices.search.entitysearch.models.EntityType.state"><strong>state</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or </em><a class="reference internal" href="#azure.mgmt.datamigration.models.TaskState" title="azure.mgmt.datamigration.models.TaskState"><em>TaskState</em></a>) – The state of the task. This is ignored if submitted. Possible
+values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘Succeeded’,
+‘Failed’, ‘FailedInputValidation’, ‘Faulted’</p></li>
+<li><p><strong>commands</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.CommandProperties" title="azure.mgmt.datamigration.models.CommandProperties"><em>CommandProperties</em></a><em>]</em>) – Array of command properties.</p></li>
+<li><p><a class="reference internal" href="azure.mgmt.automation.models.html#azure.mgmt.automation.models.StreamType.output" title="azure.mgmt.automation.models.StreamType.output"><strong>output</strong></a> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToSourcePostgreSqlSyncTaskOutput" title="azure.mgmt.datamigration.models.ConnectToSourcePostgreSqlSyncTaskOutput"><em>ConnectToSourcePostgreSqlSyncTaskOutput</em></a><em>]</em>) – Task output. This is ignored if submitted.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
+<li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+<li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToSourcePostgreSqlSyncTaskInput" title="azure.mgmt.datamigration.models.ConnectToSourcePostgreSqlSyncTaskInput"><em>ConnectToSourcePostgreSqlSyncTaskInput</em></a>) – Task input</p></li>
 </ul>
 </dd>
 </dl>
@@ -3368,8 +4058,8 @@ sending a request.</p>
 <li><p><strong>last_executed_on</strong> (<em>datetime</em>) – UTC Date and time when the Agent Job was last
 executed.</p></li>
 <li><p><strong>validation_errors</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#list" title="(in Python v3.5)"><em>list</em></a><em>[</em><a class="reference internal" href="#azure.mgmt.datamigration.models.ReportableException" title="azure.mgmt.datamigration.models.ReportableException"><em>ReportableException</em></a><em>]</em>) – Validation errors</p></li>
-<li><p><strong>migration_eligibility</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrationEligibilityInfo" title="azure.mgmt.datamigration.models.MigrationEligibilityInfo"><em>MigrationEligibilityInfo</em></a>) – Information about eligiblity of agent job for
-migration.</p></li>
+<li><p><strong>migration_eligibility</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrationEligibilityInfo" title="azure.mgmt.datamigration.models.MigrationEligibilityInfo"><em>MigrationEligibilityInfo</em></a>) – Information about eligibility of agent job
+for migration.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
@@ -3397,7 +4087,7 @@ sending a request.</p>
 ‘ExternalUser’, ‘ExternalGroup’</p></li>
 <li><p><strong>default_database</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – The default database for the login.</p></li>
 <li><p><strong>is_enabled</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/functions.html#bool" title="(in Python v3.5)"><em>bool</em></a>) – The state of the login.</p></li>
-<li><p><strong>migration_eligibility</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrationEligibilityInfo" title="azure.mgmt.datamigration.models.MigrationEligibilityInfo"><em>MigrationEligibilityInfo</em></a>) – Information about eligiblity of login for
+<li><p><strong>migration_eligibility</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrationEligibilityInfo" title="azure.mgmt.datamigration.models.MigrationEligibilityInfo"><em>MigrationEligibilityInfo</em></a>) – Information about eligibility of login for
 migration.</p></li>
 </ul>
 </dd>
@@ -3544,7 +4234,7 @@ Certificate names from source server. Default value: False .</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ConnectToSourceSqlServerSyncTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToSourceSqlServerSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_source_sql_server_sync_task_properties_py3.html#ConnectToSourceSqlServerSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToSourceSqlServerSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToSourceSqlServerSyncTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_source_sql_server_sync_task_properties_py3.html#ConnectToSourceSqlServerSyncTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToSourceSqlServerSyncTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that validates connection to SQL Server and source
 server requirements for online migration.</p>
@@ -3564,6 +4254,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToSourceSqlServerTaskInput" title="azure.mgmt.datamigration.models.ConnectToSourceSqlServerTaskInput"><em>ConnectToSourceSqlServerTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -3573,7 +4265,7 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ConnectToSourceSqlServerTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToSourceSqlServerTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_source_sql_server_task_properties_py3.html#ConnectToSourceSqlServerTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToSourceSqlServerTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToSourceSqlServerTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_source_sql_server_task_properties_py3.html#ConnectToSourceSqlServerTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToSourceSqlServerTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that validates connection to SQL Server and also
 validates source server requirements.</p>
@@ -3593,6 +4285,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToSourceSqlServerTaskInput" title="azure.mgmt.datamigration.models.ConnectToSourceSqlServerTaskInput"><em>ConnectToSourceSqlServerTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -3728,7 +4422,7 @@ collections</p></li>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ConnectToMongoDbTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToMongoDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_mongo_db_task_properties_py3.html#ConnectToMongoDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToMongoDbTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToMongoDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_mongo_db_task_properties_py3.html#ConnectToMongoDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToMongoDbTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that validates the connection to and provides
 information about a MongoDB server.</p>
@@ -3748,6 +4442,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MongoDbConnectionInfo" title="azure.mgmt.datamigration.models.MongoDbConnectionInfo"><em>MongoDbConnectionInfo</em></a>) – </p></li>
 </ul>
@@ -3757,23 +4453,29 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ProjectTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ProjectTaskProperties</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/project_task_properties_py3.html#ProjectTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ProjectTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ProjectTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/project_task_properties_py3.html#ProjectTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ProjectTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
 <p>Base class for all types of DMS task properties. If task is not supported
 by current client, this object is returned.</p>
 <p>You probably want to use the sub-classes and not this class directly. Known
 sub-classes are: GetTdeCertificatesSqlTaskProperties,
 ValidateMongoDbTaskProperties,
+ValidateMigrationInputSqlServerSqlMISyncTaskProperties,
 ValidateMigrationInputSqlServerSqlMITaskProperties,
 ValidateMigrationInputSqlServerSqlDbSyncTaskProperties,
 MigratePostgreSqlAzureDbForPostgreSqlSyncTaskProperties,
 MigrateMySqlAzureDbForMySqlSyncTaskProperties,
 MigrateSqlServerSqlDbSyncTaskProperties,
-MigrateSqlServerSqlDbTaskProperties, MigrateSqlServerSqlMITaskProperties,
-MigrateMongoDbTaskProperties, ConnectToTargetAzureDbForMySqlTaskProperties,
-ConnectToTargetSqlMITaskProperties, GetUserTablesSqlSyncTaskProperties,
-GetUserTablesSqlTaskProperties, ConnectToTargetSqlSqlDbSyncTaskProperties,
+MigrateSqlServerSqlDbTaskProperties,
+MigrateSqlServerSqlMISyncTaskProperties,
+MigrateSqlServerSqlMITaskProperties, MigrateMongoDbTaskProperties,
+ConnectToTargetAzureDbForMySqlTaskProperties,
+ConnectToTargetSqlMISyncTaskProperties, ConnectToTargetSqlMITaskProperties,
+GetUserTablesSqlSyncTaskProperties, GetUserTablesSqlTaskProperties,
+ConnectToTargetAzureDbForPostgreSqlSyncTaskProperties,
+ConnectToTargetSqlSqlDbSyncTaskProperties,
 ConnectToTargetSqlDbTaskProperties,
+ConnectToSourcePostgreSqlSyncTaskProperties,
 ConnectToSourceSqlServerSyncTaskProperties,
 ConnectToSourceSqlServerTaskProperties, ConnectToMongoDbTaskProperties,
 ConnectToSourceMySqlTaskProperties,
@@ -3792,7 +4494,11 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </ul>
 </dd>
 <dt class="field-even">Parameters</dt>
-<dd class="field-even"><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
+<li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -4180,7 +4886,7 @@ include: ‘QuotaId’, ‘NotAvailableForSubscription’</p></li>
 <dt id="azure.mgmt.datamigration.models.ResourceSkuCapabilities">
 <em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ResourceSkuCapabilities</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/resource_sku_capabilities_py3.html#ResourceSkuCapabilities"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ResourceSkuCapabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">msrest.serialization.Model</span></code></p>
-<p>Describes The SKU capabilites object.</p>
+<p>Describes The SKU capabilities object.</p>
 <p>Variables are only populated by the server, and will be ignored when
 sending a request.</p>
 <dl class="field-list simple">
@@ -4273,7 +4979,7 @@ This is empty if there are no restrictions.</p></li>
 MySQL source</p></li>
 <li><p><strong>target_platform</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
 </em><a class="reference internal" href="#azure.mgmt.datamigration.models.MySqlTargetPlatformType" title="azure.mgmt.datamigration.models.MySqlTargetPlatformType"><em>MySqlTargetPlatformType</em></a>) – Target Platform for the migration. Possible values
-include: ‘AzureDbForMySQL’</p></li>
+include: ‘SqlServer’, ‘AzureDbForMySQL’</p></li>
 <li><p><strong>check_permissions_group</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em> or
 </em><a class="reference internal" href="#azure.mgmt.datamigration.models.ServerLevelPermissionsGroup" title="azure.mgmt.datamigration.models.ServerLevelPermissionsGroup"><em>ServerLevelPermissionsGroup</em></a>) – Permission group for validations. Possible
 values include: ‘Default’, ‘MigrationFromSqlServerToAzureDB’,
@@ -4326,7 +5032,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.ConnectToSourceMySqlTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToSourceMySqlTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_source_my_sql_task_properties_py3.html#ConnectToSourceMySqlTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToSourceMySqlTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">ConnectToSourceMySqlTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/connect_to_source_my_sql_task_properties_py3.html#ConnectToSourceMySqlTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.ConnectToSourceMySqlTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for the task that validates MySQL database connection.</p>
 <p>Variables are only populated by the server, and will be ignored when
@@ -4345,6 +5051,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.ConnectToSourceMySqlTaskInput" title="azure.mgmt.datamigration.models.ConnectToSourceMySqlTaskInput"><em>ConnectToSourceMySqlTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -4431,7 +5139,7 @@ sending a request.</p>
 
 <dl class="class">
 <dt id="azure.mgmt.datamigration.models.MigrateSchemaSqlServerSqlDbTaskProperties">
-<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSchemaSqlServerSqlDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_schema_sql_server_sql_db_task_properties_py3.html#MigrateSchemaSqlServerSqlDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSchemaSqlServerSqlDbTaskProperties" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">MigrateSchemaSqlServerSqlDbTaskProperties</code><span class="sig-paren">(</span><em>*</em>, <em>client_data=None</em>, <em>input=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/migrate_schema_sql_server_sql_db_task_properties_py3.html#MigrateSchemaSqlServerSqlDbTaskProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.MigrateSchemaSqlServerSqlDbTaskProperties" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">azure.mgmt.datamigration.models.project_task_properties_py3.ProjectTaskProperties</span></code></p>
 <p>Properties for task that migrates Schema for SQL Server databases to Azure
 SQL databases.</p>
@@ -4451,6 +5159,8 @@ values include: ‘Unknown’, ‘Queued’, ‘Running’, ‘Canceled’, ‘S
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
+<li><p><strong>client_data</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#dict" title="(in Python v3.5)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a><em>]</em>) – Key value pairs of client data to attach meta data
+information to task</p></li>
 <li><p><strong>task_type</strong> (<a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><em>str</em></a>) – Required. Constant filled by server.</p></li>
 <li><p><strong>input</strong> (<a class="reference internal" href="#azure.mgmt.datamigration.models.MigrateSchemaSqlServerSqlDbTaskInput" title="azure.mgmt.datamigration.models.MigrateSchemaSqlServerSqlDbTaskInput"><em>MigrateSchemaSqlServerSqlDbTaskInput</em></a>) – Task input</p></li>
 </ul>
@@ -5619,6 +6329,105 @@ contains the table name and the value the table result object</p></li>
 </dd></dl>
 
 <dl class="class">
+<dt id="azure.mgmt.datamigration.models.BackupFileStatus">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">BackupFileStatus</code><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/data_migration_service_client_enums.html#BackupFileStatus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.BackupFileStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.BackupFileStatus.arrived">
+<code class="descname">arrived</code><em class="property"> = 'Arrived'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.BackupFileStatus.arrived" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.BackupFileStatus.cancelled">
+<code class="descname">cancelled</code><em class="property"> = 'Cancelled'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.BackupFileStatus.cancelled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.BackupFileStatus.queued">
+<code class="descname">queued</code><em class="property"> = 'Queued'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.BackupFileStatus.queued" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.BackupFileStatus.restored">
+<code class="descname">restored</code><em class="property"> = 'Restored'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.BackupFileStatus.restored" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.BackupFileStatus.restoring">
+<code class="descname">restoring</code><em class="property"> = 'Restoring'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.BackupFileStatus.restoring" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.BackupFileStatus.uploaded">
+<code class="descname">uploaded</code><em class="property"> = 'Uploaded'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.BackupFileStatus.uploaded" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.BackupFileStatus.uploading">
+<code class="descname">uploading</code><em class="property"> = 'Uploading'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.BackupFileStatus.uploading" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState">
+<em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">DatabaseMigrationState</code><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/data_migration_service_client_enums.html#DatabaseMigrationState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState.cancelled">
+<code class="descname">cancelled</code><em class="property"> = 'CANCELLED'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState.cancelled" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState.completed">
+<code class="descname">completed</code><em class="property"> = 'COMPLETED'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState.completed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState.cutover_start">
+<code class="descname">cutover_start</code><em class="property"> = 'CUTOVER_START'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState.cutover_start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState.failed">
+<code class="descname">failed</code><em class="property"> = 'FAILED'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState.failed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState.full_backup_upload_start">
+<code class="descname">full_backup_upload_start</code><em class="property"> = 'FULL_BACKUP_UPLOAD_START'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState.full_backup_upload_start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState.initial">
+<code class="descname">initial</code><em class="property"> = 'INITIAL'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState.initial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState.log_shipping_start">
+<code class="descname">log_shipping_start</code><em class="property"> = 'LOG_SHIPPING_START'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState.log_shipping_start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState.post_cutover_complete">
+<code class="descname">post_cutover_complete</code><em class="property"> = 'POST_CUTOVER_COMPLETE'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState.post_cutover_complete" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState.undefined">
+<code class="descname">undefined</code><em class="property"> = 'UNDEFINED'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState.undefined" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.DatabaseMigrationState.upload_log_files_start">
+<code class="descname">upload_log_files_start</code><em class="property"> = 'UPLOAD_LOG_FILES_START'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.DatabaseMigrationState.upload_log_files_start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="azure.mgmt.datamigration.models.LoginMigrationStage">
 <em class="property">class </em><code class="descclassname">azure.mgmt.datamigration.models.</code><code class="descname">LoginMigrationStage</code><a class="reference internal" href="../_modules/azure/mgmt/datamigration/models/data_migration_service_client_enums.html#LoginMigrationStage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#azure.mgmt.datamigration.models.LoginMigrationStage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.5/library/stdtypes.html#str" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3.5/library/enum.html#enum.Enum" title="(in Python v3.5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
@@ -6175,6 +6984,11 @@ contains the table name and the value the table result object</p></li>
 <dl class="attribute">
 <dt id="azure.mgmt.datamigration.models.MySqlTargetPlatformType.azure_db_for_my_sql">
 <code class="descname">azure_db_for_my_sql</code><em class="property"> = 'AzureDbForMySQL'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.MySqlTargetPlatformType.azure_db_for_my_sql" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="azure.mgmt.datamigration.models.MySqlTargetPlatformType.sql_server">
+<code class="descname">sql_server</code><em class="property"> = 'SqlServer'</em><a class="headerlink" href="#azure.mgmt.datamigration.models.MySqlTargetPlatformType.sql_server" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

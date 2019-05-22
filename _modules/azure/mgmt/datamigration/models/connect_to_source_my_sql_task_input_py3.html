@@ -325,7 +325,7 @@
 <span class="sd">    :type source_connection_info:</span>
 <span class="sd">     ~azure.mgmt.datamigration.models.MySqlConnectionInfo</span>
 <span class="sd">    :param target_platform: Target Platform for the migration. Possible values</span>
-<span class="sd">     include: &#39;AzureDbForMySQL&#39;</span>
+<span class="sd">     include: &#39;SqlServer&#39;, &#39;AzureDbForMySQL&#39;</span>
 <span class="sd">    :type target_platform: str or</span>
 <span class="sd">     ~azure.mgmt.datamigration.models.MySqlTargetPlatformType</span>
 <span class="sd">    :param check_permissions_group: Permission group for validations. Possible</span>
@@ -342,7 +342,7 @@
     <span class="n">_attribute_map</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s1">&#39;source_connection_info&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;sourceConnectionInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;MySqlConnectionInfo&#39;</span><span class="p">},</span>
         <span class="s1">&#39;target_platform&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;targetPlatform&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
-        <span class="s1">&#39;check_permissions_group&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;checkPermissionsGroup&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;str&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;check_permissions_group&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;key&#39;</span><span class="p">:</span> <span class="s1">&#39;checkPermissionsGroup&#39;</span><span class="p">,</span> <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ServerLevelPermissionsGroup&#39;</span><span class="p">},</span>
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">source_connection_info</span><span class="p">,</span> <span class="n">target_platform</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">check_permissions_group</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>

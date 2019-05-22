@@ -486,6 +486,31 @@
     <span class="n">completed_with_warnings</span> <span class="o">=</span> <span class="s2">&quot;CompletedWithWarnings&quot;</span></div>
 
 
+<div class="viewcode-block" id="BackupFileStatus"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.BackupFileStatus">[docs]</a><span class="k">class</span> <span class="nc">BackupFileStatus</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">arrived</span> <span class="o">=</span> <span class="s2">&quot;Arrived&quot;</span>
+    <span class="n">queued</span> <span class="o">=</span> <span class="s2">&quot;Queued&quot;</span>
+    <span class="n">uploading</span> <span class="o">=</span> <span class="s2">&quot;Uploading&quot;</span>
+    <span class="n">uploaded</span> <span class="o">=</span> <span class="s2">&quot;Uploaded&quot;</span>
+    <span class="n">restoring</span> <span class="o">=</span> <span class="s2">&quot;Restoring&quot;</span>
+    <span class="n">restored</span> <span class="o">=</span> <span class="s2">&quot;Restored&quot;</span>
+    <span class="n">cancelled</span> <span class="o">=</span> <span class="s2">&quot;Cancelled&quot;</span></div>
+
+
+<div class="viewcode-block" id="DatabaseMigrationState"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.DatabaseMigrationState">[docs]</a><span class="k">class</span> <span class="nc">DatabaseMigrationState</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">undefined</span> <span class="o">=</span> <span class="s2">&quot;UNDEFINED&quot;</span>
+    <span class="n">initial</span> <span class="o">=</span> <span class="s2">&quot;INITIAL&quot;</span>
+    <span class="n">full_backup_upload_start</span> <span class="o">=</span> <span class="s2">&quot;FULL_BACKUP_UPLOAD_START&quot;</span>
+    <span class="n">log_shipping_start</span> <span class="o">=</span> <span class="s2">&quot;LOG_SHIPPING_START&quot;</span>
+    <span class="n">upload_log_files_start</span> <span class="o">=</span> <span class="s2">&quot;UPLOAD_LOG_FILES_START&quot;</span>
+    <span class="n">cutover_start</span> <span class="o">=</span> <span class="s2">&quot;CUTOVER_START&quot;</span>
+    <span class="n">post_cutover_complete</span> <span class="o">=</span> <span class="s2">&quot;POST_CUTOVER_COMPLETE&quot;</span>
+    <span class="n">completed</span> <span class="o">=</span> <span class="s2">&quot;COMPLETED&quot;</span>
+    <span class="n">cancelled</span> <span class="o">=</span> <span class="s2">&quot;CANCELLED&quot;</span>
+    <span class="n">failed</span> <span class="o">=</span> <span class="s2">&quot;FAILED&quot;</span></div>
+
+
 <div class="viewcode-block" id="LoginMigrationStage"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.LoginMigrationStage">[docs]</a><span class="k">class</span> <span class="nc">LoginMigrationStage</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
 
     <span class="n">none</span> <span class="o">=</span> <span class="s2">&quot;None&quot;</span>
@@ -642,6 +667,7 @@
 
 <div class="viewcode-block" id="MySqlTargetPlatformType"><a class="viewcode-back" href="../../../../../ref/azure.mgmt.datamigration.models.html#azure.mgmt.datamigration.models.MySqlTargetPlatformType">[docs]</a><span class="k">class</span> <span class="nc">MySqlTargetPlatformType</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">Enum</span><span class="p">):</span>
 
+    <span class="n">sql_server</span> <span class="o">=</span> <span class="s2">&quot;SqlServer&quot;</span>
     <span class="n">azure_db_for_my_sql</span> <span class="o">=</span> <span class="s2">&quot;AzureDbForMySQL&quot;</span></div>
 
 

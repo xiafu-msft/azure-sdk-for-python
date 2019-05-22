@@ -319,8 +319,8 @@
     <span class="sd">&quot;&quot;&quot;Defines the connection properties of a server.</span>
 
 <span class="sd">    You probably want to use the sub-classes and not this class directly. Known</span>
-<span class="sd">    sub-classes are: PostgreSqlConnectionInfo, MySqlConnectionInfo,</span>
-<span class="sd">    MongoDbConnectionInfo, SqlConnectionInfo</span>
+<span class="sd">    sub-classes are: MiSqlConnectionInfo, PostgreSqlConnectionInfo,</span>
+<span class="sd">    MySqlConnectionInfo, MongoDbConnectionInfo, SqlConnectionInfo</span>
 
 <span class="sd">    All required parameters must be populated in order to send to Azure.</span>
 
@@ -343,7 +343,7 @@
     <span class="p">}</span>
 
     <span class="n">_subtype_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;PostgreSqlConnectionInfo&#39;</span><span class="p">:</span> <span class="s1">&#39;PostgreSqlConnectionInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;MySqlConnectionInfo&#39;</span><span class="p">:</span> <span class="s1">&#39;MySqlConnectionInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;MongoDbConnectionInfo&#39;</span><span class="p">:</span> <span class="s1">&#39;MongoDbConnectionInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;SqlConnectionInfo&#39;</span><span class="p">:</span> <span class="s1">&#39;SqlConnectionInfo&#39;</span><span class="p">}</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;MiSqlConnectionInfo&#39;</span><span class="p">:</span> <span class="s1">&#39;MiSqlConnectionInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;PostgreSqlConnectionInfo&#39;</span><span class="p">:</span> <span class="s1">&#39;PostgreSqlConnectionInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;MySqlConnectionInfo&#39;</span><span class="p">:</span> <span class="s1">&#39;MySqlConnectionInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;MongoDbConnectionInfo&#39;</span><span class="p">:</span> <span class="s1">&#39;MongoDbConnectionInfo&#39;</span><span class="p">,</span> <span class="s1">&#39;SqlConnectionInfo&#39;</span><span class="p">:</span> <span class="s1">&#39;SqlConnectionInfo&#39;</span><span class="p">}</span>
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">user_name</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>

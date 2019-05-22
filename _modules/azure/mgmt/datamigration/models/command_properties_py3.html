@@ -320,8 +320,9 @@
 <span class="sd">    supported by current client, this object is returned.</span>
 
 <span class="sd">    You probably want to use the sub-classes and not this class directly. Known</span>
-<span class="sd">    sub-classes are: MigrateSyncCompleteCommandProperties,</span>
-<span class="sd">    MongoDbCancelCommand, MongoDbFinishCommand, MongoDbRestartCommand</span>
+<span class="sd">    sub-classes are: MigrateMISyncCompleteCommandProperties,</span>
+<span class="sd">    MigrateSyncCompleteCommandProperties, MongoDbCancelCommand,</span>
+<span class="sd">    MongoDbFinishCommand, MongoDbRestartCommand</span>
 
 <span class="sd">    Variables are only populated by the server, and will be ignored when</span>
 <span class="sd">    sending a request.</span>
@@ -351,7 +352,7 @@
     <span class="p">}</span>
 
     <span class="n">_subtype_map</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;command_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Migrate.Sync.Complete.Database&#39;</span><span class="p">:</span> <span class="s1">&#39;MigrateSyncCompleteCommandProperties&#39;</span><span class="p">,</span> <span class="s1">&#39;cancel&#39;</span><span class="p">:</span> <span class="s1">&#39;MongoDbCancelCommand&#39;</span><span class="p">,</span> <span class="s1">&#39;finish&#39;</span><span class="p">:</span> <span class="s1">&#39;MongoDbFinishCommand&#39;</span><span class="p">,</span> <span class="s1">&#39;restart&#39;</span><span class="p">:</span> <span class="s1">&#39;MongoDbRestartCommand&#39;</span><span class="p">}</span>
+        <span class="s1">&#39;command_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;Migrate.SqlServer.AzureDbSqlMi.Complete&#39;</span><span class="p">:</span> <span class="s1">&#39;MigrateMISyncCompleteCommandProperties&#39;</span><span class="p">,</span> <span class="s1">&#39;Migrate.Sync.Complete.Database&#39;</span><span class="p">:</span> <span class="s1">&#39;MigrateSyncCompleteCommandProperties&#39;</span><span class="p">,</span> <span class="s1">&#39;cancel&#39;</span><span class="p">:</span> <span class="s1">&#39;MongoDbCancelCommand&#39;</span><span class="p">,</span> <span class="s1">&#39;finish&#39;</span><span class="p">:</span> <span class="s1">&#39;MongoDbFinishCommand&#39;</span><span class="p">,</span> <span class="s1">&#39;restart&#39;</span><span class="p">:</span> <span class="s1">&#39;MongoDbRestartCommand&#39;</span><span class="p">}</span>
     <span class="p">}</span>
 
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
