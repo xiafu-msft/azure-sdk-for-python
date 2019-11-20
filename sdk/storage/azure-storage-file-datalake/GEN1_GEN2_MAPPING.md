@@ -39,8 +39,8 @@
 <td><strong>get_directory_properties</strong></td>
 </tr>
 <tr>
-<td>unlink/remove/rm</td>
-<td>Remove a file or directory</td>
+<td rowspan="2">unlink/remove/rm</td>
+<td rowspan="2">Remove a file or directory</td>
 <td><strong>delete_file</strong></td>
 <td rowspan="2">The Gen1 api is split into two separate ones in ADLS Gen2.</td>
 </tr>
@@ -64,7 +64,6 @@
 <tr>
 <td>walk</td>
 <td>Walk a path recursively and returns list of files and dirs(if parameter set)</td>
-<td></td>
 <td><strong>get_paths()</strong> or <strong>get_paths(recursive=True)</strong> is equal to <strong>walk</strong>. <strong>recursive</strong> is <strong>True</strong> by default.</td>
 </tr>
 <tr>
