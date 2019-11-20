@@ -1,4 +1,3 @@
-<p>#</p>
 <h1>Mapping from ADLS Gen1 API -> ADLS Gen2 API</h1>
 <table>
 <thead>
@@ -30,20 +29,24 @@
 </tr>
 <tr>
 <td>stat/info</td>
-<td rowspan="2">File information for path</td>
+<td>File information for path</td>
 <td><strong>get_file_properties</strong></td>
-<td>The Gen1 api is split into two separate ones in ADLS Gen2.</td>
+<td rowspan="2">The Gen1 api is split into two separate ones in ADLS Gen2.</td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td><strong>get_directory_properties</strong></td>
 </tr>
 <tr>
 <td>unlink/remove/rm</td>
 <td>Remove a file or directory</td>
 <td><strong>delete_file</strong></td>
-<td>The Gen1 api is split into two separate ones in ADLS Gen2.</td>
+<td rowspan="2">The Gen1 api is split into two separate ones in ADLS Gen2.</td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td><strong>delete_directory</strong></td>
 </tr>
 <tr>
@@ -55,12 +58,13 @@
 <tr>
 <td>ls/listdir</td>
 <td>List all elements under directory specified with path</td>
-<td><strong>get paths</strong></td>
+<td rowspan="2"><strong>get paths</strong></td>
 <td><strong>get_paths(recursive=False)</strong> is equal to <strong>ls/listdir</strong></td>
 </tr>
 <tr>
 <td>walk</td>
 <td>Walk a path recursively and returns list of files and dirs(if parameter set)</td>
+<td></td>
 <td><strong>get_paths()</strong> or <strong>get_paths(recursive=True)</strong> is equal to <strong>walk</strong>. <strong>recursive</strong> is <strong>True</strong> by default.</td>
 </tr>
 <tr>
@@ -72,8 +76,8 @@
 <tr>
 <td>cat</td>
 <td>Return contents of file</td>
-<td><strong>read_file</strong></td>
-<td>Put the expected range parameters in Gen2 api will achieve the same function of the 4 Gen1 APIs.</td>
+<td rowspan="4"><strong>read_file</strong></td>
+<td rowspan="4">Put the expected range parameters in Gen2 api will achieve the same function of the 4 Gen1 APIs.</td>
 </tr>
 <tr>
 <td>head</td>
@@ -97,16 +101,18 @@
 <td>rename/mv</td>
 <td>Move file between locations on ADL</td>
 <td><strong>rename_file</strong></td>
-<td>Currently ADLS Gen2 only support rename.Move isn&#39;t supported yet.</td>
+<td rowspan="2">Currently ADLS Gen2 only support rename.Move isn&#39;t supported yet.</td>
 </tr>
 <tr>
+<td></td>
+<td></td>
 <td><strong>rename_directory</strong></td>
 </tr>
 <tr>
 <td>chown</td>
 <td>Change owner and/or owning group</td>
-<td><strong>set_access_control</strong></td>
-<td>Users can set owner, group, acl etc. using the same API.</td>
+<td rowspan="4"><strong>set_access_control</strong></td>
+<td rowspan="4">Users can set owner, group, acl etc. using the same API.</td>
 </tr>
 <tr>
 <td>chmod</td>
@@ -129,8 +135,8 @@
 <tr>
 <td>remove_acl_entries</td>
 <td>Remove existing, named, Access Control List (ACL) entries on a file or folder.If the entry does not exist already it is ignored. Default entries cannot be removed this way, please use remove_default_acl for that. Unnamed entries cannot be removed in this way, please use remove_acl for that. Note: this is by default not recursive, and applies only to the file or folder specified.</td>
-<td>N/A</td>
-<td>Probably users can achieve the same purpose by calling set_access_control with related parameters.</td>
+<td rowspan="3">N/A</td>
+<td rowspan="3">Probably users can achieve the same purpose by calling set_access_control with related parameters.</td>
 </tr>
 <tr>
 <td><a href="https://docs.microsoft.com/en-us/python/api/azure-datalake-store/azure.datalake.store.core.azuredlfilesystem?view=azure-python#remove-acl-path-"><strong>remove_acl</strong></a></td>
