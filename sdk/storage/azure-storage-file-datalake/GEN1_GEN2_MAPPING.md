@@ -28,14 +28,12 @@
 <td>The API has the same main purpose for Gen1 and Gen2. However Gen2 <strong>create_directory</strong> api could accept more parameters along with creation.</td>
 </tr>
 <tr>
-<td>stat/info</td>
-<td>File information for path</td>
+<td rowspan="2">stat/info</td>
+<td rowspan="2">File information for path</td>
 <td><strong>get_file_properties</strong></td>
 <td rowspan="2">The Gen1 api is split into two separate ones in ADLS Gen2.</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
 <td><strong>get_directory_properties</strong></td>
 </tr>
 <tr>
@@ -45,8 +43,6 @@
 <td rowspan="2">The Gen1 api is split into two separate ones in ADLS Gen2.</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
 <td><strong>delete_directory</strong></td>
 </tr>
 <tr>
@@ -97,14 +93,12 @@
 <td>Passing a <strong>stream</strong> parameter in <strong>read_file</strong> should do the same thing as Gen1 <strong>get</strong> api does</td>
 </tr>
 <tr>
-<td>rename/mv</td>
-<td>Move file between locations on ADL</td>
+<td rowspan="2">rename/mv</td>
+<td rowspan="2">Move file between locations on ADL</td>
 <td><strong>rename_file</strong></td>
 <td rowspan="2">Currently ADLS Gen2 only support rename.Move isn&#39;t supported yet.</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
 <td><strong>rename_directory</strong></td>
 </tr>
 <tr>
