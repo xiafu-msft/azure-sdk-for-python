@@ -6,6 +6,12 @@
 # license information.
 # --------------------------------------------------------------------------
 import json
+from collections import deque
+from io import BytesIO
+
+from avro.datafile import DataFileReader
+from avro.io import DatumReader
+
 """
 FILE: blob_samples_container.py
 DESCRIPTION:
@@ -38,7 +44,7 @@ class ContainerSamples(object):
         blob_service_client = BlobServiceClient.from_connection_string(self.connection_string)
 
         # Instantiate a ContainerClient
-        container_client = blob_service_client.get_container_client("myblobscontaine")
+        container_client = blob_service_client.get_container_client("myblobscontainer8")
 
         # Create new Container
         container_client.create_container()
@@ -76,9 +82,13 @@ class ContainerSamples(object):
                         file_content = container_client2.get_blob_client(change_feed_file_path.name).download_blob()
                         data = file_content.readall()
                         print(file_content)
-
-        except:
-            pass
+                        stream = DataFileReader(BytesIO(data), DatumReader())
+                        data = next(stream)
+                        while data:
+                            print(data)
+                            data = next(stream)
+        except Exception as e:
+            print("error")
         # [END list_blobs_in_container]
 
 
@@ -97,4 +107,9 @@ class ContainerSamples(object):
 
 if __name__ == '__main__':
     sample = ContainerSamples()
-    sample.list_blobs_in_container()
+    chunks = deque()
+    if not chunks:
+        print("empty")
+    chunks.append("a")
+    if chunks:
+        print("a")
