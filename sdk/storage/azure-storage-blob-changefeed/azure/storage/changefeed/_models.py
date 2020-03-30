@@ -11,6 +11,7 @@ from io import BytesIO
 
 from avro.datafile import DataFileReader
 from avro.io import DatumReader
+from datetime import datetime
 
 from azure.core.exceptions import HttpResponseError
 from azure.core.paging import PageIterator, ItemPaged
@@ -18,7 +19,10 @@ from azure.core.paging import PageIterator, ItemPaged
 from ._shared import decode_base64_to_text
 from ._shared.response_handlers import return_context_and_deserialized, process_storage_error
 
-
+# ===============================================================================================
+SEGMENT_COMMON_PATH = "idx/segments/"
+PATH_DELIMITER = "/"
+# ===============================================================================================
 class ChangeFeedPaged(PageIterator):
     """An Iterable of Blob properties.
 
@@ -95,11 +99,13 @@ class ChangeFeedPaged(PageIterator):
 
 
 class ChangeFeed(object):
-    def __init__(self, client, page_size):
+    def __init__(self, client, page_size, start_time=None, end_time=None):
         self.client = client
         self.page_size = page_size
         self.unprocessed_segment_paths = []
         self.current_segment = None
+        self.start_time = start_time,
+        self.end_time = end_time,
         self._initialize()
 
     def __iter__(self):
@@ -118,7 +124,7 @@ class ChangeFeed(object):
 
         while len(change_feed) < self.page_size and self.current_segment:
             page_of_events = next(self.current_segment)
-            # can we append a list to another list?????
+            # extend the current page of events
             change_feed.extend(page_of_events)
             remaining_to_load -= len(page_of_events)
             if not remaining_to_load:
@@ -130,15 +136,40 @@ class ChangeFeed(object):
     next = __next__  # Python 2 compatibility.
 
     def _initialize(self):
-        self.unprocessed_segment_paths = list(self.client.list_blobs(
-            name_starts_with="idx/segments/"))
+
+        self.unprocessed_segment_paths = collections.deque(self.client.list_blobs(
+            name_starts_with=SEGMENT_COMMON_PATH))
+        if self.start_time:
+            while self.unprocessed_segment_paths and \
+                    self._is_earlier_than_start_time(self.unprocessed_segment_paths[0]):
+                self.unprocessed_segment_paths.popleft()
         self.current_segment = self._get_next_segment(self.page_size)
 
     def _get_next_segment(self, page_size):
         if self.unprocessed_segment_paths:
-            segment_path = self.unprocessed_segment_paths.pop(0)
+            segment_path = self.unprocessed_segment_paths.popleft()
+            if self._is_later_than_end_time(segment_path):
+                self.unprocessed_segment_paths = []
+                return None
             return Segment(self.client, segment_path, page_size)
         return None
+
+    def _parse_datetime_from_segment_path(self, segment_path):
+        path_tokens = segment_path.split("/")
+        return datetime(int(path_tokens[2]), int(path_tokens[3]), int(path_tokens[4]), int(path_tokens[5][:2]))
+
+    def _is_earlier_than_start_time(self, segment_path):
+        segment_date = self._parse_datetime_from_segment_path(segment_path)
+        opaque_start_date = datetime(self.start_time.year, self.start_time.month,
+                                     self.start_time.day, self.start_time.hour)
+
+        return segment_date < opaque_start_date
+
+    def _is_later_than_end_time(self, segment_path):
+        segment_date = self._parse_datetime_from_segment_path(segment_path)
+        opaque_end_date = datetime(self.end_time.year, self.end_time.month,
+                                     self.end_time.day, self.end_time.hour)
+        return segment_date > opaque_end_date
 
 
 class Segment(object):

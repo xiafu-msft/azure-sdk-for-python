@@ -12,6 +12,8 @@ from io import BytesIO
 from avro.datafile import DataFileReader
 from avro.io import DatumReader
 
+from azure.storage.fileshare._parser import _parse_datetime_from_str, _parse_datetime_from_segment_path
+
 """
 FILE: blob_samples_container.py
 DESCRIPTION:
@@ -44,7 +46,7 @@ class ContainerSamples(object):
         blob_service_client = BlobServiceClient.from_connection_string(self.connection_string)
 
         # Instantiate a ContainerClient
-        container_client = blob_service_client.get_container_client("myblobscontainer8")
+        container_client = blob_service_client.get_container_client("myblobscontainer9")
 
         # Create new Container
         container_client.create_container()
@@ -60,33 +62,33 @@ class ContainerSamples(object):
 
         # [START list_blobs_in_container]
         container_client2 = blob_service_client.get_container_client("$blobchangefeed")
-        blobs_list = container_client2.list_blobs(name_starts_with='idx/segments/2020/03/25')
-        # blobs_list = container_client2.list_blobs()
-
+        # blobs_list = container_client2.list_blobs(name_starts_with='idx/segments/2020/03/25')
+        blobs_list = container_client2.list_blobs()
+        blobs_queue = deque(blobs_list)
         try:
-            for blob in blobs_list:
-                # print(blob.name + '\n')
+            for blob in blobs_queue:
+                print(blob.name + '\n')
                 # get segment content
-                content = container_client2.get_blob_client(blob.name).download_blob().readall()
-                segment_content = content.decode()
-                segment_dict = json.loads(segment_content)
-
-                # get chunk file paths
-                chunk_file_paths = segment_dict['chunkFilePaths']
-
-                for chunk_file_path in chunk_file_paths:
-                    chunk_file_path = chunk_file_path.replace('$blobchangefeed/', '', 1)
-                    # get chunks
-                    change_feed_file_paths = container_client2.list_blobs(name_starts_with=chunk_file_path)
-                    for change_feed_file_path in change_feed_file_paths:
-                        file_content = container_client2.get_blob_client(change_feed_file_path.name).download_blob()
-                        data = file_content.readall()
-                        print(file_content)
-                        stream = DataFileReader(BytesIO(data), DatumReader())
-                        data = next(stream)
-                        while data:
-                            print(data)
-                            data = next(stream)
+                # content = container_client2.get_blob_client(blob.name).download_blob().readall()
+                # segment_content = content.decode()
+                # segment_dict = json.loads(segment_content)
+                #
+                # # get chunk file paths
+                # chunk_file_paths = segment_dict['chunkFilePaths']
+                #
+                # for chunk_file_path in chunk_file_paths:
+                #     chunk_file_path = chunk_file_path.replace('$blobchangefeed/', '', 1)
+                #     # get chunks
+                #     change_feed_file_paths = container_client2.list_blobs(name_starts_with=chunk_file_path)
+                #     for change_feed_file_path in change_feed_file_paths:
+                #         file_content = container_client2.get_blob_client(change_feed_file_path.name).download_blob()
+                #         data = file_content.readall()
+                #         print(file_content)
+                #         stream = DataFileReader(BytesIO(data), DatumReader())
+                #         data = next(stream)
+                #         while data:
+                #             print(data)
+                #             data = next(stream)
         except Exception as e:
             print("error")
         # [END list_blobs_in_container]
@@ -107,9 +109,8 @@ class ContainerSamples(object):
 
 if __name__ == '__main__':
     sample = ContainerSamples()
-    chunks = deque()
-    if not chunks:
-        print("empty")
-    chunks.append("a")
-    if chunks:
-        print("a")
+    # sample.list_blobs_in_container()
+    data = "idx/segments/2020/03/05/1700/meta.json"
+    time1 = _parse_datetime_from_segment_path(data)
+    t2 = datetime()
+    print(time1)
