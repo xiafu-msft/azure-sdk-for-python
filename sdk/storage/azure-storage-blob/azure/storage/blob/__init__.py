@@ -3,6 +3,7 @@
 # Licensed under the MIT License. See License.txt in the project root for
 # license information.
 # --------------------------------------------------------------------------
+__path__ = __import__('pkgutil').extend_path(__path__, __name__)  # type: str
 
 import os
 
@@ -13,6 +14,7 @@ from ._container_client import ContainerClient
 from ._blob_service_client import BlobServiceClient
 from ._lease import BlobLeaseClient
 from ._download import StorageStreamDownloader
+from ._quick_query_helper import QuickQueryReader
 from ._shared_access_signature import generate_account_sas, generate_container_sas, generate_blob_sas
 from ._shared.policies import ExponentialRetry, LinearRetry
 from ._shared.response_handlers import PartialBatchErrorException
@@ -40,6 +42,7 @@ from ._models import (
     CorsRule,
     ContainerProperties,
     BlobProperties,
+    FilteredBlob,
     LeaseProperties,
     ContentSettings,
     CopyProperties,
@@ -49,7 +52,10 @@ from ._models import (
     ContainerSasPermissions,
     BlobSasPermissions,
     CustomerProvidedEncryptionKey,
-    ContainerEncryptionScope
+    ContainerEncryptionScope,
+    QuickQueryError,
+    JsonTextConfiguration,
+    DelimitedTextConfiguration
 )
 
 __version__ = VERSION
@@ -189,6 +195,7 @@ __all__ = [
     'CorsRule',
     'ContainerProperties',
     'BlobProperties',
+    'FilteredBlob',
     'LeaseProperties',
     'ContentSettings',
     'CopyProperties',
@@ -206,5 +213,9 @@ __all__ = [
     'generate_container_sas',
     'generate_blob_sas',
     'PartialBatchErrorException',
-    'ContainerEncryptionScope'
+    'ContainerEncryptionScope',
+    'QuickQueryError',
+    'JsonTextConfiguration',
+    'DelimitedTextConfiguration',
+    'QuickQueryReader'
 ]

@@ -4,6 +4,10 @@
 # license information.
 # --------------------------------------------------------------------------
 # pylint: disable=no-self-use
+try:
+    from urllib.parse import quote
+except ImportError:
+    from urllib2 import quote  # type: ignore
 
 from azure.core import MatchConditions
 
@@ -12,7 +16,14 @@ from ._generated.models import (
     ModifiedAccessConditions,
     SourceModifiedAccessConditions,
     CpkScopeInfo,
-    ContainerCpkScopeInfo
+    ContainerCpkScopeInfo,
+    QuickQueryFormat,
+    QuickQuerySerialization,
+    DelimitedTextConfiguration,
+    JsonTextConfiguration,
+    QuickQueryFormatType,
+    BlobTag,
+    BlobTags
 )
 
 
@@ -103,3 +114,44 @@ def get_api_version(kwargs, default):
         versions = '\n'.join(_SUPPORTED_API_VERSIONS)
         raise ValueError("Unsupported API version '{}'. Please select from:\n{}".format(api_version, versions))
     return api_version or default
+
+
+def get_quick_query_serialization_info(serialization_settings=None):
+    if serialization_settings:
+        if isinstance(serialization_settings, DelimitedTextConfiguration):
+            qq_format = QuickQueryFormat(type=QuickQueryFormatType.delimited,
+                                         delimited_text_configuration=serialization_settings)
+        elif isinstance(serialization_settings, str):
+            qq_format = QuickQueryFormat(type=QuickQueryFormatType.delimited,
+                                         json_text_configuration=JsonTextConfiguration(
+                                             record_separator=serialization_settings))
+        else:
+            raise ValueError("the class type of serialization settings should be either DelimitedTextConfiguration"
+                             "or JsonTextConfiguration")
+        return QuickQuerySerialization(format=qq_format)
+    return None
+
+
+def serialize_blob_tags_header(tags=None):
+    # type: (Optional[Dict[str, str]]) -> str
+    components = list()
+    if tags:
+        for key, value in tags.items():
+            components.append(quote(key, safe='.-'))
+            components.append('=')
+            components.append(quote(value, safe='.-'))
+            components.append('&')
+
+    if components:
+        del components[-1]
+
+    return ''.join(components)
+
+
+def serialize_blob_tags(tags=None):
+    # type: (Optional[Dict[str, str]]) -> Union[BlobTags, None]
+    tag_list = list()
+    if tags:
+        for tag_key, tag_value in tags.items():
+            tag_list.append(BlobTag(key=tag_key, value=tag_value))
+    return BlobTags(blob_tag_set=tag_list)

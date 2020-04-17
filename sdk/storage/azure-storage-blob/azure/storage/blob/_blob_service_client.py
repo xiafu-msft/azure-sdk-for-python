@@ -28,7 +28,7 @@ from ._generated import AzureBlobStorage, VERSION
 from ._generated.models import StorageErrorException, StorageServiceProperties, KeyInfo
 from ._container_client import ContainerClient
 from ._blob_client import BlobClient
-from ._models import ContainerPropertiesPaged
+from ._models import ContainerPropertiesPaged, FilteredBlobPaged
 from ._serialize import get_api_version
 from ._deserialize import service_stats_deserialize, service_properties_deserialize
 
@@ -383,6 +383,12 @@ class BlobServiceClient(StorageAccountHostsMixin):
         :param bool include_metadata:
             Specifies that container metadata to be returned in the response.
             The default value is `False`.
+        :keyword bool include_deleted:
+            Specifies that deleted containers to be returned in the response. This is for container restore enabled
+            account. The default value is `False`.
+
+            .. versionadded:: 12.4.0
+
         :keyword int results_per_page:
             The maximum number of container names to retrieve per API
             call. If the request does not specify the server will return up to 5,000 items.
@@ -400,7 +406,11 @@ class BlobServiceClient(StorageAccountHostsMixin):
                 :dedent: 12
                 :caption: Listing the containers in the blob service.
         """
-        include = ['metadata'] if include_metadata else None
+        include = ['metadata'] if include_metadata else []
+        include_deleted = kwargs.pop('include_deleted', None)
+        if include_deleted:
+            include.append("deleted")
+
         timeout = kwargs.pop('timeout', None)
         results_per_page = kwargs.pop('results_per_page', None)
         command = functools.partial(
@@ -415,6 +425,36 @@ class BlobServiceClient(StorageAccountHostsMixin):
                 results_per_page=results_per_page,
                 page_iterator_class=ContainerPropertiesPaged
             )
+
+    @distributed_trace
+    def filter_blobs(self, where=None, **kwargs):
+        # type: (Optional[str], Optional[Any], **Any) -> ItemPaged[BlobProperties]
+        """The Filter Blobs operation enables callers to list blobs across all
+        containers whose tags match a given search expression.  Filter blobs
+        searches across all containers within a storage account but can be
+        scoped within the expression to a single container.
+
+        :param str where:
+            Filters the results to return only to return only blobs
+            whose tags match the specified expression.
+        :keyword int results_per_page:
+            The max result per page when paginating.
+        :keyword int timeout:
+            The timeout parameter is expressed in seconds.
+        :returns: An iterable (auto-paging) response of BlobProperties.
+        :rtype: ~azure.core.paging.ItemPaged[~azure.storage.blob.BlobProperties]
+        """
+
+        results_per_page = kwargs.pop('results_per_page', None)
+        timeout = kwargs.pop('timeout', None)
+        command = functools.partial(
+            self._client.service.filter_blobs,
+            where=where,
+            timeout=timeout,
+            **kwargs)
+        return ItemPaged(
+            command, results_per_page=results_per_page,
+            page_iterator_class=FilteredBlobPaged)
 
     @distributed_trace
     def create_container(

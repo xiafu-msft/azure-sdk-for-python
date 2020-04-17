@@ -344,6 +344,32 @@ class ContainerClient(StorageAccountHostsMixin):
             process_storage_error(error)
 
     @distributed_trace
+    def undelete_container(self, deleted_container_name, deleted_container_version, **kwargs):
+        # type: (str, str, **Any) -> None
+        """Restores soft-deleted container.
+
+        Operation will only be successful if used within the specified number of days
+        set in the delete retention policy.
+
+        .. versionadded:: 12.4.0
+            This operation was introduced in API version '2019-12-12'.
+
+        :param str deleted_container_name:
+            Specifies the name of the deleted container to restore.
+        :param str deleted_container_version:
+            Specifies the version of the deleted container to restore.
+        :keyword int timeout:
+            The timeout parameter is expressed in seconds.
+        :rtype: None
+        """
+        try:
+            self._client.container.restore(deleted_container_name=deleted_container_name,
+                                           deleted_container_version=deleted_container_version,
+                                           timeout=kwargs.pop('timeout', None), **kwargs)
+        except StorageErrorException as error:
+            process_storage_error(error)
+
+    @distributed_trace
     def acquire_lease(
             self, lease_duration=-1,  # type: int
             lease_id=None,  # type: Optional[str]
@@ -634,7 +660,7 @@ class ContainerClient(StorageAccountHostsMixin):
 
     @distributed_trace
     def list_blobs(self, name_starts_with=None, include=None, **kwargs):
-        # type: (Optional[str], Optional[Any], **Any) -> ItemPaged[BlobProperties]
+        # type: (Optional[str], Optional[Union[str, List[str]]], **Any) -> ItemPaged[BlobProperties]
         """Returns a generator to list the blobs under the specified container.
         The generator will lazily follow the continuation tokens returned by
         the service.
@@ -642,9 +668,9 @@ class ContainerClient(StorageAccountHostsMixin):
         :param str name_starts_with:
             Filters the results to return only blobs whose names
             begin with the specified prefix.
-        :param list[str] include:
+        :param list[str] or str include:
             Specifies one or more additional datasets to include in the response.
-            Options include: 'snapshots', 'metadata', 'uncommittedblobs', 'copy', 'deleted'.
+            Options include: 'snapshots', 'metadata', 'uncommittedblobs', 'copy', 'deleted', 'tags'.
         :keyword int timeout:
             The timeout parameter is expressed in seconds.
         :returns: An iterable (auto-paging) response of BlobProperties.
