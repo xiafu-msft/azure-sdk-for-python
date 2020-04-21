@@ -94,7 +94,8 @@ setup(
     install_requires=[
         "azure-core<2.0.0,>=1.2.2",
         "msrest>=0.6.10",
-        "cryptography>=2.1.4"
+        "cryptography>=2.1.4",
+        "avro-python3"
     ],
     extras_require={
         ":python_version<'3.0'": ['futures', 'azure-storage-nspkg<4.0.0,>=3.0.0'],
