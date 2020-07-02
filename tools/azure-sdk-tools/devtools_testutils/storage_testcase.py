@@ -7,7 +7,7 @@ from collections import namedtuple
 import os
 
 from azure.mgmt.storage import StorageManagementClient
-from azure.mgmt.storage.models import StorageAccount, Endpoints
+from azure.mgmt.storage.models import StorageAccount, Endpoints, BlobServiceProperties
 
 from azure_devtools.scenario_tests.preparers import (
     AbstractPreparer,
@@ -31,7 +31,8 @@ class StorageAccountPreparer(AzureMgmtPreparer):
                  resource_group_parameter_name=RESOURCE_GROUP_PARAM,
                  disable_recording=True, playback_fake_resource=None,
                  client_kwargs=None,
-                 random_name_enabled=False):
+                 random_name_enabled=False,
+                 enable_versioning=False):
         super(StorageAccountPreparer, self).__init__(name_prefix, 24,
                                                      disable_recording=disable_recording,
                                                      playback_fake_resource=playback_fake_resource,
@@ -46,6 +47,7 @@ class StorageAccountPreparer(AzureMgmtPreparer):
         self.resource_moniker = self.name_prefix
         if random_name_enabled:
             self.resource_moniker += "storname"
+        self.enable_versioning = enable_versioning
 
     def create_resource(self, name, **kwargs):
         if self.is_live:
@@ -61,6 +63,9 @@ class StorageAccountPreparer(AzureMgmtPreparer):
                     'enable_https_traffic_only': True,
                 }
             )
+            if self.enable_versioning:
+                blob_service_props = BlobServiceProperties(is_versioning_enabled=True)
+                self.client.blob_services.set_service_properties(group.name, name, blob_service_props)
             self.resource = storage_async_operation.result()
             storage_keys = {
                 v.key_name: v.value
